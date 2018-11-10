@@ -122,9 +122,9 @@
                 </instance>
                 <instance type="timetext" uid="4">
                     <properties>
-                        <text>Text</text>
+                        <text>Time</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
+                        <font>Courier New,-24,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -138,8 +138,62 @@
                         <x>125</x>
                         <y>217</y>
                         <z>0</z>
-                        <width>802</width>
-                        <height>101</height>
+                        <width>275</width>
+                        <height>161</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SeedText" uid="8">
+                    <properties>
+                        <text>Seed</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Courier New,-20,700,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>505</x>
+                        <y>123</y>
+                        <z>0</z>
+                        <width>325</width>
+                        <height>270</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SeedName" uid="9">
+                    <properties>
+                        <text>Seed:</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Courier New,-21,700,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>274</x>
+                        <y>421</y>
+                        <z>0</z>
+                        <width>574</width>
+                        <height>66</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

@@ -76,6 +76,12 @@
         <object-type name="Keyboard" sid="487864322639546">
             <plugin id="Keyboard" />
         </object-type>
+        <object-type name="SeedText" sid="149562057923982">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="SeedName" sid="502990701081895">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

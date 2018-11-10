@@ -29,7 +29,11 @@
                 <action id="0" name="Set text" sid="427946222885809" type="Text">
                     <param id="0" name="Text">&quot;&quot;</param>
                 </action>
+                <action id="0" name="Set text" sid="873157592262958" type="SeedText">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
                 <action id="0" name="Clear" sid="594830314850278" type="Array" />
+                <action id="0" name="Clear" sid="365420776708934" type="Seed" />
                 <action id="11" name="Load" sid="493571389318032" type="Array2">
                     <param id="0" name="JSON">Array1</param>
                 </action>
@@ -877,38 +881,11 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Datos de Matrizgral en texto</comment>
-                <event-block sid="271660869888690">
-                    <conditions>
-                        <condition id="3" name="For each element" sid="860491130272352" type="Array">
-                            <param id="0" name="Axes">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Append text" sid="392942378346151" type="Text">
-                            <param id="0" name="Text">&quot;&quot;&amp;Array.CurValue</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="971511930818037">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="782652406353717" type="System">
-                                    <param id="0" name="First value">Array.CurY</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">49</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Append text" sid="326688155563792" type="Text">
-                                    <param id="0" name="Text">&quot;&quot;&amp;newline</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
+                <comment bookmark="1">REMEMBER DELETE ALL PUT 0</comment>
                 <event-group description="" sid="765320262991409" title="Creacion Seed">
                     <sub-events>
                         <variable constant="0" name="Aux" sid="227305365432770" static="0" type="number">0</variable>
+                        <comment>1:Centro</comment>
                         <event-block sid="337666404114162">
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="873883658134566" type="System" />
@@ -917,153 +894,12 @@
                                 <action id="3" name="Set at XY" sid="143469441125338" type="Seed">
                                     <param id="0" name="X">2</param>
                                     <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">choose(1,2,3,4,5)</param>
+                                    <param id="2" name="Value">choose(2,3,4,5)</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="477855864620562">
-                                    <conditions>
-                                        <condition id="1" name="Compare at XY" sid="875848374126703" type="Seed">
-                                            <param id="0" name="X">2</param>
-                                            <param id="1" name="Y">2</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="688427480161782" type="System">
-                                            <param id="0" name="Variable">Aux</param>
-                                            <param id="1" name="Value">choose(1,2,3,4)</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="437339431908118">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="605912941602841" type="System">
-                                                    <param id="0" name="Variable">Aux</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="3" name="Set at XY" sid="219144182034337" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="378036457637061" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="126449360481552" type="Seed">
-                                                    <param id="0" name="X">1</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="172068461326033" type="Seed">
-                                                    <param id="0" name="X">3</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="370212700327676">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="140063793825586" type="System">
-                                                    <param id="0" name="Variable">Aux</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">2</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="3" name="Set at XY" sid="749502627295448" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="227135508427089" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="195979636390284" type="Seed">
-                                                    <param id="0" name="X">1</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="385468208910857" type="Seed">
-                                                    <param id="0" name="X">3</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="451740225896160">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="500255588951413" type="System">
-                                                    <param id="0" name="Variable">Aux</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">3</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="3" name="Set at XY" sid="309037919128175" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="233678854125435" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="870160193104072" type="Seed">
-                                                    <param id="0" name="X">1</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="591850680697614" type="Seed">
-                                                    <param id="0" name="X">3</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="838263117945443">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="858092609011177" type="System">
-                                                    <param id="0" name="Variable">Aux</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">4</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="3" name="Set at XY" sid="535827755426497" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="418996117168986" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="221701483768121" type="Seed">
-                                                    <param id="0" name="X">1</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="994075746705589" type="Seed">
-                                                    <param id="0" name="X">3</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block bookmark="1" sid="801122049035272">
+                                <comment>Codo</comment>
+                                <event-block sid="801122049035272">
                                     <conditions>
                                         <condition id="1" name="Compare at XY" sid="469117774656795" type="Seed">
                                             <param id="0" name="X">2</param>
@@ -1088,25 +924,15 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="3" name="Set at XY" sid="182985820895634" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
                                                 <action id="3" name="Set at XY" sid="714996577889525" type="Seed">
                                                     <param id="0" name="X">2</param>
                                                     <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="649114324860023" type="Seed">
-                                                    <param id="0" name="X">1</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="866284126379785" type="Seed">
                                                     <param id="0" name="X">3</param>
                                                     <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1122,22 +948,12 @@
                                                 <action id="3" name="Set at XY" sid="760322187028305" type="Seed">
                                                     <param id="0" name="X">2</param>
                                                     <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="575608893736196" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="752023485956750" type="Seed">
                                                     <param id="0" name="X">1</param>
                                                     <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="507452473480151" type="Seed">
-                                                    <param id="0" name="X">3</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1150,25 +966,15 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="3" name="Set at XY" sid="725580991010209" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
                                                 <action id="3" name="Set at XY" sid="305375440405918" type="Seed">
                                                     <param id="0" name="X">2</param>
                                                     <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="812096914150971" type="Seed">
                                                     <param id="0" name="X">1</param>
                                                     <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="502615145715763" type="Seed">
-                                                    <param id="0" name="X">3</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1184,27 +990,18 @@
                                                 <action id="3" name="Set at XY" sid="270842948471560" type="Seed">
                                                     <param id="0" name="X">2</param>
                                                     <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="423993382033349" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="466002216087653" type="Seed">
-                                                    <param id="0" name="X">1</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="781270649824527" type="Seed">
                                                     <param id="0" name="X">3</param>
                                                     <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <comment>Tri</comment>
                                 <event-block sid="978202538736517">
                                     <conditions>
                                         <condition id="1" name="Compare at XY" sid="884401987173227" type="Seed">
@@ -1233,22 +1030,17 @@
                                                 <action id="3" name="Set at XY" sid="747072618634701" type="Seed">
                                                     <param id="0" name="X">2</param>
                                                     <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="973892673242755" type="Seed">
                                                     <param id="0" name="X">2</param>
                                                     <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="160367402177895" type="Seed">
                                                     <param id="0" name="X">1</param>
                                                     <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="729310384841627" type="Seed">
-                                                    <param id="0" name="X">3</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1261,25 +1053,20 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="3" name="Set at XY" sid="284505786647310" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
                                                 <action id="3" name="Set at XY" sid="679523398655111" type="Seed">
                                                     <param id="0" name="X">2</param>
                                                     <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="508150105263864" type="Seed">
                                                     <param id="0" name="X">1</param>
                                                     <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="943810527887059" type="Seed">
                                                     <param id="0" name="X">3</param>
                                                     <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1295,22 +1082,17 @@
                                                 <action id="3" name="Set at XY" sid="365594432113936" type="Seed">
                                                     <param id="0" name="X">2</param>
                                                     <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="227974164567796" type="Seed">
                                                     <param id="0" name="X">2</param>
                                                     <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="276575468928549" type="Seed">
-                                                    <param id="0" name="X">1</param>
-                                                    <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="313588041503646" type="Seed">
                                                     <param id="0" name="X">3</param>
                                                     <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1326,27 +1108,23 @@
                                                 <action id="3" name="Set at XY" sid="595102709951475" type="Seed">
                                                     <param id="0" name="X">2</param>
                                                     <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </action>
-                                                <action id="3" name="Set at XY" sid="400483790401983" type="Seed">
-                                                    <param id="0" name="X">2</param>
-                                                    <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="344030927730307" type="Seed">
                                                     <param id="0" name="X">1</param>
                                                     <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="561568502733433" type="Seed">
                                                     <param id="0" name="X">3</param>
                                                     <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <comment>Cruz</comment>
                                 <event-block sid="332560664648438">
                                     <conditions>
                                         <condition id="1" name="Compare at XY" sid="428415084022939" type="Seed">
@@ -1360,25 +1138,26 @@
                                         <action id="3" name="Set at XY" sid="551952060494792" type="Seed">
                                             <param id="0" name="X">2</param>
                                             <param id="1" name="Y">3</param>
-                                            <param id="2" name="Value">0</param>
+                                            <param id="2" name="Value">1</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="125524998722654" type="Seed">
                                             <param id="0" name="X">2</param>
                                             <param id="1" name="Y">1</param>
-                                            <param id="2" name="Value">0</param>
+                                            <param id="2" name="Value">1</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="583972104855288" type="Seed">
                                             <param id="0" name="X">1</param>
                                             <param id="1" name="Y">2</param>
-                                            <param id="2" name="Value">0</param>
+                                            <param id="2" name="Value">1</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="464986531408327" type="Seed">
                                             <param id="0" name="X">3</param>
                                             <param id="1" name="Y">2</param>
-                                            <param id="2" name="Value">0</param>
+                                            <param id="2" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
+                                <comment>Tunel</comment>
                                 <event-block sid="745050651653845">
                                     <conditions>
                                         <condition id="1" name="Compare at XY" sid="512029711177116" type="Seed">
@@ -1407,12 +1186,12 @@
                                                 <action id="3" name="Set at XY" sid="524390104289285" type="Seed">
                                                     <param id="0" name="X">2</param>
                                                     <param id="1" name="Y">3</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="534459969742306" type="Seed">
                                                     <param id="0" name="X">2</param>
                                                     <param id="1" name="Y">1</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="346768987297194" type="Seed">
                                                     <param id="0" name="X">1</param>
@@ -1448,12 +1227,12 @@
                                                 <action id="3" name="Set at XY" sid="795477018514160" type="Seed">
                                                     <param id="0" name="X">1</param>
                                                     <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                                 <action id="3" name="Set at XY" sid="740215524108232" type="Seed">
                                                     <param id="0" name="X">3</param>
                                                     <param id="1" name="Y">2</param>
-                                                    <param id="2" name="Value">0</param>
+                                                    <param id="2" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1461,8 +1240,1047 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>2:Centro Arriba</comment>
+                        <event-block sid="392532700202930">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="467255516205808" type="Seed">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">2</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="180930065703140" type="Seed">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">2</param>
+                                    <param id="2" name="Value">choose(1,2,3)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Codo</comment>
+                                <event-block sid="743551775037338">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="916977842073464" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="921874055727260" type="System">
+                                            <param id="0" name="Variable">Aux</param>
+                                            <param id="1" name="Value">choose(1,4)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="216187948896400">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="860899722012246" type="System">
+                                                    <param id="0" name="Variable">Aux</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="769965514982700" type="Seed">
+                                                    <param id="0" name="X">0</param>
+                                                    <param id="1" name="Y">1</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="436049629483492">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="126697706287693" type="System">
+                                                    <param id="0" name="Variable">Aux</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="955472906448757" type="Seed">
+                                                    <param id="0" name="X">0</param>
+                                                    <param id="1" name="Y">3</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Tri</comment>
+                                <event-block sid="768942513168805">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="556455768771414" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="101110990470620" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="125932722094055" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">3</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="435391793673600">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="918411043421588" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="770334486365750" type="Seed">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">2</param>
+                                    <param id="2" name="Value">choose(0,1,5)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Base</comment>
+                                <event-block sid="316275100779794">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="156892583142074" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="258676484746105" type="System">
+                                            <param id="0" name="Variable">Aux</param>
+                                            <param id="1" name="Value">choose(2,4)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="276996918743241">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="362781258867041" type="System">
+                                                    <param id="0" name="Variable">Aux</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="296538428540951" type="Seed">
+                                                    <param id="0" name="X">0</param>
+                                                    <param id="1" name="Y">3</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="170753492363774">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="262156165227256" type="System">
+                                                    <param id="0" name="Variable">Aux</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="723604222847940" type="Seed">
+                                                    <param id="0" name="X">0</param>
+                                                    <param id="1" name="Y">1</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Tunel</comment>
+                                <event-block sid="263158084845442">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="656712699787578" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="212640313039364" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="114123056668061" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">3</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>3:Izquierda Arriba</comment>
+                        <event-block sid="601897238765606">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="111849635523374" type="Seed">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="567158891627667" type="Seed">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">choose(1,2)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Base</comment>
+                                <event-block sid="963715888402201">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="240788658654962" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="200214585042340" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Codo</comment>
+                                <event-block sid="831290979114416">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="657965002593715" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="775211436626792" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="167775368423048" type="Seed">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="476188507330077">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="490681255897644" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="618259434657860" type="Seed">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">choose(0,1)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Base</comment>
+                                <event-block sid="355671017702193">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="120598751864248" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="913283122435503" type="Seed">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>4:Centro Derecha</comment>
+                        <event-block sid="599840223230000">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="790663360925420" type="Seed">
+                                    <param id="0" name="X">2</param>
+                                    <param id="1" name="Y">3</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="743247050045826" type="Seed">
+                                    <param id="0" name="X">2</param>
+                                    <param id="1" name="Y">4</param>
+                                    <param id="2" name="Value">choose(1,2,3)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Codo</comment>
+                                <event-block sid="713767713285225">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="440301373609103" type="Seed">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="645077459476799" type="System">
+                                            <param id="0" name="Variable">Aux</param>
+                                            <param id="1" name="Value">choose(1,3)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="424000002091395">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="620038668756069" type="System">
+                                                    <param id="0" name="Variable">Aux</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="556233556086981" type="Seed">
+                                                    <param id="0" name="X">3</param>
+                                                    <param id="1" name="Y">4</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="746129341329772">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="961242676542422" type="System">
+                                                    <param id="0" name="Variable">Aux</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="279154612388044" type="Seed">
+                                                    <param id="0" name="X">1</param>
+                                                    <param id="1" name="Y">4</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Tri</comment>
+                                <event-block sid="805680015674650">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="503480772907158" type="Seed">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="868041749033880" type="Seed">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="314016302592329" type="Seed">
+                                            <param id="0" name="X">3</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="407167885649587">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="893636362533643" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="987066267388906" type="Seed">
+                                    <param id="0" name="X">2</param>
+                                    <param id="1" name="Y">4</param>
+                                    <param id="2" name="Value">choose(0,1,5)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Base</comment>
+                                <event-block sid="643296750491165">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="726642188197152" type="Seed">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="377393829549920" type="System">
+                                            <param id="0" name="Variable">Aux</param>
+                                            <param id="1" name="Value">choose(1,3)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="407342204671637">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="777803085087400" type="System">
+                                                    <param id="0" name="Variable">Aux</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="107260679931849" type="Seed">
+                                                    <param id="0" name="X">3</param>
+                                                    <param id="1" name="Y">4</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="697181172325833">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="978022713387718" type="System">
+                                                    <param id="0" name="Variable">Aux</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="921464848704204" type="Seed">
+                                                    <param id="0" name="X">1</param>
+                                                    <param id="1" name="Y">4</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Tunel</comment>
+                                <event-block sid="744776865030940">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="638650854443024" type="Seed">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="768729903915786" type="Seed">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="976001557815322" type="Seed">
+                                            <param id="0" name="X">3</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>5:Derecha Arriba</comment>
+                        <event-block sid="152952518933247">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="852139106009088" type="Seed">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">3</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="954073633819603">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="195559103187124" type="Seed">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="356105438800051" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="528511032794743">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="717860299455770" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="333422523831503" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="748320848189401">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="452502798679659" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="118016303185487">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="513592649192181" type="Seed">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="887937142880964" type="Seed">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>6:Centro Izquierda</comment>
+                        <event-block sid="871815447664252">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="137997670322702" type="Seed">
+                                    <param id="0" name="X">2</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="256855838469657">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="671790122650795" type="Seed">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="447121267376004" type="Seed">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">choose(2,3)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="652441072317612">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="525317728955840" type="Seed">
+                                                    <param id="0" name="X">2</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="655480304377275" type="Seed">
+                                                    <param id="0" name="X">3</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="730599738401534">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="219396966939829" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="466928238558895" type="Seed">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">choose(1,2)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="120286208909945">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="507080107991475" type="Seed">
+                                                    <param id="0" name="X">2</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="462819597399838" type="Seed">
+                                                    <param id="0" name="X">3</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="849249850538118">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="715264910136176" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="499584437012180">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="394953686704559" type="Seed">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="972565875654350" type="Seed">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">choose(1,5)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="823453100981640">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="223655508596473" type="Seed">
+                                                    <param id="0" name="X">2</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="202255400802981" type="Seed">
+                                                    <param id="0" name="X">3</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="952509570655848">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="294073979807741" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="818015786294789" type="Seed">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">choose(0,1)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="633661318064126">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="656907714212544" type="Seed">
+                                                    <param id="0" name="X">2</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="550441061222105" type="Seed">
+                                                    <param id="0" name="X">3</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>7:Abajo izquierda</comment>
+                        <event-block sid="419670774360153">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="654464017943722" type="Seed">
+                                    <param id="0" name="X">3</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="270132153950085" type="Seed">
+                                    <param id="0" name="X">4</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">choose(1,2)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="676244436709824">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="715670052092489" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="559567083220190" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="771236353725926">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="220716326421703" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="967511857228974" type="Seed">
+                                    <param id="0" name="X">4</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">choose(0,1)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="494044646634368">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="121397904594586" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="828025704303238" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>8:Centro Abajo</comment>
+                        <event-block sid="361964168764662">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="255353603115234" type="Seed">
+                                    <param id="0" name="X">3</param>
+                                    <param id="1" name="Y">2</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="452249719509564">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="243447946001204" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="287184555864774" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">choose(2,3)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="280346745766767">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="793013364561684" type="Seed">
+                                                    <param id="0" name="X">4</param>
+                                                    <param id="1" name="Y">2</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="724371112785676" type="Seed">
+                                                    <param id="0" name="X">4</param>
+                                                    <param id="1" name="Y">3</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="125503367607705">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="995193733180954" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="167553454416451" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">choose(1,2)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="608745951353970">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="768305761190140" type="Seed">
+                                                    <param id="0" name="X">4</param>
+                                                    <param id="1" name="Y">2</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="656390917882732" type="Seed">
+                                                    <param id="0" name="X">4</param>
+                                                    <param id="1" name="Y">3</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="621636919735345">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="244742534643402" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="223401292405488">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="560136824090581" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="345582109467034" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">choose(1,5)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="207620803888618">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="299786097039812" type="Seed">
+                                                    <param id="0" name="X">4</param>
+                                                    <param id="1" name="Y">2</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="794685772678565" type="Seed">
+                                                    <param id="0" name="X">4</param>
+                                                    <param id="1" name="Y">3</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="313737153110907">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="702208116485099" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="293847245421800" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">choose(0,1)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="372292576624693">
+                                            <conditions>
+                                                <condition id="1" name="Compare at XY" sid="712997805097909" type="Seed">
+                                                    <param id="0" name="X">4</param>
+                                                    <param id="1" name="Y">2</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="939429884320418" type="Seed">
+                                                    <param id="0" name="X">4</param>
+                                                    <param id="1" name="Y">3</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>9:Abajo Derecha</comment>
+                        <event-block sid="524237093117539">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="909961627180295" type="Seed">
+                                    <param id="0" name="X">3</param>
+                                    <param id="1" name="Y">4</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="671215459829616">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="381748679520999" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">3</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="607650287724626" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="645564755990292">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="630892673142399" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="638877991436674" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="480449333640621">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="934500951608442" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="433982680832293">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="965160940451595" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">3</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="735447143629964" type="Seed">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="220998888211299">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="177902805748315" type="SeedName">
+                                    <param id="0" name="Text">&quot;Seed: &quot; &amp;str(Seed.At(0,0)) &amp;str(Seed.At(0,2)) &amp;str(Seed.At(0,4)) &amp;str(Seed.At(2,0)) &amp;str(Seed.At(2,2)) &amp;str(Seed.At(2,4)) &amp;str(Seed.At(4,0)) &amp;str(Seed.At(4,2)) &amp;str(Seed.At(4,4))</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
+                <comment>Datos de MatrizSEED en texto</comment>
+                <event-block sid="383603341552342">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="345437688262693" type="Seed">
+                            <param id="0" name="Axes">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="190002683470336" type="SeedText">
+                            <param id="0" name="Text">&quot;&quot;&amp;Seed.CurValue</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="848701340752516">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="206714124379533" type="System">
+                                    <param id="0" name="First value">Seed.CurY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="610028875690054" type="SeedText">
+                                    <param id="0" name="Text">&quot;&quot;&amp;newline</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Datos de Matrizgral en texto</comment>
+                <event-block sid="271660869888690">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="860491130272352" type="Array">
+                            <param id="0" name="Axes">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="392942378346151" type="Text">
+                            <param id="0" name="Text">&quot;&quot;&amp;Array.CurValue</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="971511930818037">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="782652406353717" type="System">
+                                    <param id="0" name="First value">Array.CurY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">49</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="326688155563792" type="Text">
+                                    <param id="0" name="Text">&quot;&quot;&amp;newline</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="337881405651759">
                     <conditions />
                     <actions>
