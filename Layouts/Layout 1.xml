@@ -65,7 +65,7 @@
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Courier,-16,400,0</font>
+                        <font>Courier,-12,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -103,7 +103,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>0</x>
-                        <y>0</y>
+                        <y>-6</y>
                         <z>0</z>
                         <width>10000</width>
                         <height>5000</height>
@@ -123,7 +123,7 @@
                 <instance type="timetext" uid="4">
                     <properties>
                         <text>Time</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Courier New,-24,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -135,10 +135,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>125</x>
-                        <y>217</y>
+                        <x>61</x>
+                        <y>260</y>
                         <z>0</z>
-                        <width>275</width>
+                        <width>634</width>
                         <height>161</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -150,8 +150,8 @@
                 <instance type="SeedText" uid="8">
                     <properties>
                         <text>Seed</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Courier New,-20,700,0</font>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Courier New,-37,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -162,22 +162,22 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>505</x>
-                        <y>123</y>
+                        <x>408</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>325</width>
-                        <height>270</height>
+                        <width>448</width>
+                        <height>373</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
+                        <angle>-1.570793152</angle>
+                        <opacity>0.5</opacity>
                     </world>
                 </instance>
                 <instance type="SeedName" uid="9">
                     <properties>
                         <text>Seed:</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Courier New,-21,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -189,8 +189,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>274</x>
-                        <y>421</y>
+                        <x>204</x>
+                        <y>143</y>
                         <z>0</z>
                         <width>574</width>
                         <height>66</height>
@@ -206,14 +206,14 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="Array" uid="1">
+        <instance type="Mother" uid="1">
             <properties>
-                <width>50</width>
-                <height>50</height>
+                <width>60</width>
+                <height>60</height>
                 <depth>1</depth>
             </properties>
         </instance>
-        <instance type="Array2" uid="2">
+        <instance type="Tipo12" uid="2">
             <properties>
                 <width>4</width>
                 <height>5</height>
@@ -224,6 +224,111 @@
             <properties>
                 <width>5</width>
                 <height>5</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo0" uid="10">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo21" uid="11">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo31" uid="12">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo4" uid="13">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo51" uid="14">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo11" uid="15">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo13" uid="16">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo14" uid="17">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo22" uid="18">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo23" uid="19">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo24" uid="20">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo32" uid="21">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo33" uid="22">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo34" uid="23">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Tipo52" uid="24">
+            <properties>
+                <width>10</width>
+                <height>1</height>
                 <depth>1</depth>
             </properties>
         </instance>

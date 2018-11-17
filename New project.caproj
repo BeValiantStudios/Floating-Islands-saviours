@@ -44,6 +44,56 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
+        <object-folder name="Chunks">
+            <object-type global="1" name="Tipo0" sid="565837873085002">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo11" sid="604731538183010">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo14" sid="105087847650623">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo13" sid="883725931677289">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo12" sid="559609349450874">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo21" sid="921234415625709">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo31" sid="946405904844924">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo4" sid="120617976870860">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo51" sid="472293985125257">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo22" sid="855289447396025">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo23" sid="936038685386235">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo24" sid="219298513271249">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo32" sid="385286819389068">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo33" sid="697721423707418">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo34" sid="767789892114578">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Tipo52" sid="587543219564848">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
         <object-type name="TiledBackground" sid="937670772775555">
             <plugin id="TiledBg" />
             <texture />
@@ -53,14 +103,11 @@
             <texture />
             <tiles />
         </object-type>
-        <object-type global="1" name="Array" sid="290350865867999">
+        <object-type global="1" name="Mother" sid="290350865867999">
             <plugin id="Arr" />
         </object-type>
         <object-type name="Text" sid="705909393634356">
             <plugin id="Text" />
-        </object-type>
-        <object-type global="1" name="Array2" sid="559609349450874">
-            <plugin id="Arr" />
         </object-type>
         <object-type name="timetext" sid="717437748254044">
             <plugin id="Text" />
@@ -83,7 +130,28 @@
             <plugin id="Text" />
         </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Chunks" plugin-id="Arr" sid="616409896347598">
+            <members>
+                <member>Tipo0</member>
+                <member>Tipo11</member>
+                <member>Tipo12</member>
+                <member>Tipo13</member>
+                <member>Tipo14</member>
+                <member>Tipo21</member>
+                <member>Tipo22</member>
+                <member>Tipo23</member>
+                <member>Tipo24</member>
+                <member>Tipo31</member>
+                <member>Tipo32</member>
+                <member>Tipo33</member>
+                <member>Tipo34</member>
+                <member>Tipo4</member>
+                <member>Tipo51</member>
+                <member>Tipo52</member>
+            </members>
+        </family>
+    </families>
     <layout-folder>
         <layout>Layout 1.xml</layout>
     </layout-folder>
