@@ -11,19 +11,25 @@
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>1000</width>
-        <height>500</height>
+        <width>640</width>
+        <height>360</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -35,12 +41,12 @@
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Construct 2 splash</prop>
-        <prop name="Orientations">Any</prop>
+        <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
         <prop name="Preview browser">(default)</prop>
-        <prop name="Sampling">Linear</prop>
+        <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
@@ -94,39 +100,121 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-type name="TiledBackground" sid="937670772775555">
-            <plugin id="TiledBg" />
-            <texture />
+        <object-folder name="Text">
+            <object-type name="SeedName" sid="502990701081895">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="SeedText" sid="149562057923982">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Text" sid="705909393634356">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="timetext" sid="717437748254044">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Map">
+            <object-type global="1" name="Mother" sid="290350865867999">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Seed" sid="101943012370127">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="TilemapSolid" sid="195971456049369">
+                <plugin id="Tilemap" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="868502480001690">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+                <tiles />
+            </object-type>
+            <object-type name="TilemapGround" sid="748943506646186">
+                <plugin id="Tilemap" />
+                <texture />
+                <tiles />
+            </object-type>
+        </object-folder>
+        <object-folder name="Miscelaneos">
+            <object-type name="Keyboard" sid="487864322639546">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Touch" sid="686150438064408">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type name="Browser" sid="798513713974665">
+                <plugin id="Browser" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Controles">
+            <object-type name="Arriba" sid="199489448201259">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818731275491958" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Abajo" sid="180488980049453">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="595152277340381" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Izquierda" sid="605405022953022">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="815786948863707" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Derecha" sid="196382685505884">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="895203767990473" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="R" sid="391225388589485">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802191036283985" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="W" sid="702989840516259">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="742671314101358" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Player" sid="401086822086892">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="150732981857979">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="972808559773556">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="393418052881730" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
-        <object-type name="Tilemap" sid="195971456049369">
-            <plugin id="Tilemap" />
-            <texture />
-            <tiles />
-        </object-type>
-        <object-type global="1" name="Mother" sid="290350865867999">
-            <plugin id="Arr" />
-        </object-type>
-        <object-type name="Text" sid="705909393634356">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="timetext" sid="717437748254044">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Tilemap2" sid="748943506646186">
-            <plugin id="Tilemap" />
-            <texture />
-            <tiles />
-        </object-type>
-        <object-type global="1" name="Seed" sid="101943012370127">
-            <plugin id="Arr" />
-        </object-type>
-        <object-type name="Keyboard" sid="487864322639546">
-            <plugin id="Keyboard" />
-        </object-type>
-        <object-type name="SeedText" sid="149562057923982">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="SeedName" sid="502990701081895">
+        <object-type name="CPUFPS" sid="723217774656077">
             <plugin id="Text" />
         </object-type>
     </object-folder>
@@ -160,6 +248,12 @@
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="7" />
+        <global-instance type="Touch" uid="33">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="34" />
     </global-instances>
     <sounds-folder />
     <music-folder />
