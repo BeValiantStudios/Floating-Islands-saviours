@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Character</name>
+    <events>
+        <comment>Character: Ira todo lo referente a mecanicas y animaciones de nuestro personaje principal</comment>
+        <event-group description="" sid="629184469884550" title="Controles">
+            <sub-events>
+                <event-block sid="814240546958486">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="598112356264392" type="Touch">
+                            <param id="0" name="Object">Abajo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="530239240001353" type="Player">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="177977473984499">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="509817353673459" type="Touch">
+                            <param id="0" name="Object">Arriba</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="729761970263535" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="729344376134979">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="626369609440624" type="Touch">
+                            <param id="0" name="Object">Derecha</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="598464822613776" type="Player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="825547623031503">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="915796160756479" type="Touch">
+                            <param id="0" name="Object">Izquierda</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="942897519999387" type="Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

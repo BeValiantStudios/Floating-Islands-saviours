@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Main</name>
+    <events>
+        <include>Map</include>
+        <include>Variables</include>
+        <include>Enemies</include>
+        <include>Character</include>
+        <comment>Main</comment>
+        <event-group description="" sid="839258583437842" title="Miscelaneos">
+            <sub-events>
+                <event-block sid="818564046312857">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="666240638490536" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="659737707544411" type="System">
+                            <param id="0" name="Variable">Number4</param>
+                            <param id="1" name="Value">wallclocktime</param>
+                        </action>
+                        <action id="11" name="Load" sid="507133265973800" type="Tipo0">
+                            <param id="0" name="JSON">tipo0</param>
+                        </action>
+                        <action id="11" name="Load" sid="694508606184503" type="Tipo11">
+                            <param id="0" name="JSON">tipo11</param>
+                        </action>
+                        <action id="11" name="Load" sid="442716814117074" type="Tipo12">
+                            <param id="0" name="JSON">tipo12</param>
+                        </action>
+                        <action id="11" name="Load" sid="640724667532379" type="Tipo13">
+                            <param id="0" name="JSON">tipo13</param>
+                        </action>
+                        <action id="11" name="Load" sid="927448098346982" type="Tipo14">
+                            <param id="0" name="JSON">tipo14</param>
+                        </action>
+                        <action id="11" name="Load" sid="878042236905779" type="Tipo21">
+                            <param id="0" name="JSON">tipo21</param>
+                        </action>
+                        <action id="11" name="Load" sid="950285095560205" type="Tipo22">
+                            <param id="0" name="JSON">tipo22</param>
+                        </action>
+                        <action id="11" name="Load" sid="921924158100399" type="Tipo23">
+                            <param id="0" name="JSON">tipo23</param>
+                        </action>
+                        <action id="11" name="Load" sid="789212146154955" type="Tipo24">
+                            <param id="0" name="JSON">tipo24</param>
+                        </action>
+                        <action id="11" name="Load" sid="456734692437185" type="Tipo31">
+                            <param id="0" name="JSON">tipo31</param>
+                        </action>
+                        <action id="11" name="Load" sid="417985046673752" type="Tipo32">
+                            <param id="0" name="JSON">tipo32</param>
+                        </action>
+                        <action id="11" name="Load" sid="712412842057634" type="Tipo33">
+                            <param id="0" name="JSON">tipo33</param>
+                        </action>
+                        <action id="11" name="Load" sid="180200046798121" type="Tipo34">
+                            <param id="0" name="JSON">tipo34</param>
+                        </action>
+                        <action id="11" name="Load" sid="307795329029088" type="Tipo4">
+                            <param id="0" name="JSON">tipo4</param>
+                        </action>
+                        <action id="11" name="Load" sid="851549443818756" type="Tipo51">
+                            <param id="0" name="JSON">tipo51</param>
+                        </action>
+                        <action id="11" name="Load" sid="623149037861037" type="Tipo52">
+                            <param id="0" name="JSON">tipo52</param>
+                        </action>
+                        <action id="4" name="Load" sid="110150138350557" type="Chonks">
+                            <param id="0" name="JSON">CHUNKS</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="109611857012164">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="852623657707124" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="258731150113108" type="CPUFPS">
+                            <param id="0" name="Text">&quot;FPS: &quot;&amp;fps &amp;newline &amp;&quot;CPU&quot;&amp;cpuutilisation</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

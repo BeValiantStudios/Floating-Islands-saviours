@@ -2,7 +2,7 @@
 <c2layout>
     <name>Layout 1</name>
     <sid>930017061970781</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>Main</event-sheet>
     <size>
         <width>1920</width>
         <height>1920</height>
@@ -139,7 +139,7 @@
                                 <deceleration>500</deceleration>
                                 <directions>8 directions</directions>
                                 <set-angle>360 degree (smooth)</set-angle>
-                                <default-controls>No</default-controls>
+                                <default-controls>Yes</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -595,6 +595,7 @@
                 <depth>1</depth>
             </properties>
         </instance>
+        <instance type="Chonks" uid="35" />
     </nonworld-instances>
     <effects />
 </c2layout>

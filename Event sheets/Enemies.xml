@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Enemies</name>
+    <events>
+        <comment>Enemies: Todo lo relacionado con las MECANICAS de enemigos; y mecanicas del spawn de enemigos, el spawn se generara aleatoriamente en #Map</comment>
+    </events>
+</c2eventsheet>
