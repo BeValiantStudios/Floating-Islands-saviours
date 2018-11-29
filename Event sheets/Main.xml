@@ -70,6 +70,10 @@
                         <action id="4" name="Load" sid="110150138350557" type="Chonks">
                             <param id="0" name="JSON">CHUNKS</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="192438329845184" type="stade">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="109611857012164">
@@ -81,6 +85,9 @@
                     <actions>
                         <action id="0" name="Set text" sid="258731150113108" type="CPUFPS">
                             <param id="0" name="Text">&quot;FPS: &quot;&amp;fps &amp;newline &amp;&quot;CPU&quot;&amp;cpuutilisation</param>
+                        </action>
+                        <action id="0" name="Set text" sid="496010689756032" type="stade">
+                            <param id="0" name="Text">Player.AnimationName</param>
                         </action>
                     </actions>
                 </event-block>

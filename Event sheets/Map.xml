@@ -47,8 +47,21 @@
                     <param id="0" name="Variable">Direccion</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-20" name="Set layout scale" sid="953356646788859" type="System">
+                    <param id="0" name="Scale">0.4</param>
+                </action>
             </actions>
             <sub-events>
+                <comment>Scale</comment>
+                <event-block sid="200540059168577">
+                    <conditions />
+                    <actions>
+                        <action id="-12" name="Set group active" sid="460614422150938" type="System">
+                            <param id="0" name="Group name">&quot;InicioCamera&quot;</param>
+                            <param id="1" name="State">2</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>REMEMBER DELETE ALL PUT 0</comment>
                 <variable constant="0" name="Aux" sid="227305365432770" static="0" type="number">0</variable>
                 <event-group bookmark="1" description="" sid="765320262991409" title="Creacion Seed">
@@ -2747,6 +2760,67 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>MOTHER to Tile</comment>
+                <event-block sid="948606587098403">
+                    <conditions />
+                    <actions>
+                        <action id="2" name="Erase tile range" sid="923293741213939" type="TilemapGround">
+                            <param id="0" name="Tile X">0</param>
+                            <param id="1" name="Tile Y">0</param>
+                            <param id="2" name="Width">Self.Width</param>
+                            <param id="3" name="Height">Self.Height</param>
+                        </action>
+                        <action id="2" name="Erase tile range" sid="857598114204210" type="TilemapSolid">
+                            <param id="0" name="Tile X">0</param>
+                            <param id="1" name="Tile Y">0</param>
+                            <param id="2" name="Width">Self.Width</param>
+                            <param id="3" name="Height">Self.Height</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="550272879190641">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="291565250930967" type="Mother">
+                                    <param id="0" name="Axes">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set tile" sid="976107404456430" type="TilemapGround">
+                                    <param id="0" name="Tile X">Mother.CurX</param>
+                                    <param id="1" name="Tile Y">Mother.CurY</param>
+                                    <param id="2" name="Tile">4</param>
+                                    <param id="3" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="137552242294681">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="932275423028065" type="Mother">
+                                    <param id="0" name="Axes">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="333693285079113">
+                                    <conditions>
+                                        <condition id="4" name="Compare current value" sid="697943279240469" type="Mother">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set tile" sid="470042324467327" type="TilemapSolid">
+                                            <param id="0" name="Tile X">Mother.CurX</param>
+                                            <param id="1" name="Tile Y">Mother.CurY</param>
+                                            <param id="2" name="Tile">9</param>
+                                            <param id="3" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="337881405651759">
                     <conditions />
                     <actions>
@@ -2765,73 +2839,52 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <comment>MOTHER to Tile</comment>
-        <event-block any="1" sid="732943531670698">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="134289399957457" type="Keyboard">
-                    <param id="0" name="Key">87</param>
-                </condition>
-                <condition id="3" name="On touched object" sid="344672700233919" type="Touch">
-                    <param id="0" name="Object">W</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="2" name="Erase tile range" sid="923293741213939" type="TilemapGround">
-                    <param id="0" name="Tile X">0</param>
-                    <param id="1" name="Tile Y">0</param>
-                    <param id="2" name="Width">Self.Width</param>
-                    <param id="3" name="Height">Self.Height</param>
-                </action>
-                <action id="2" name="Erase tile range" sid="857598114204210" type="TilemapSolid">
-                    <param id="0" name="Tile X">0</param>
-                    <param id="1" name="Tile Y">0</param>
-                    <param id="2" name="Width">Self.Width</param>
-                    <param id="3" name="Height">Self.Height</param>
-                </action>
-            </actions>
+        <event-group description="" inactive="1" sid="179293780284770" title="InicioCamera">
             <sub-events>
-                <event-block sid="550272879190641">
+                <event-block sid="508035595172908">
                     <conditions>
-                        <condition id="3" name="For each element" sid="291565250930967" type="Mother">
-                            <param id="0" name="Axes">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set tile" sid="976107404456430" type="TilemapGround">
-                            <param id="0" name="Tile X">Mother.CurX</param>
-                            <param id="1" name="Tile Y">Mother.CurY</param>
-                            <param id="2" name="Tile">4</param>
-                            <param id="3" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="137552242294681">
-                    <conditions>
-                        <condition id="3" name="For each element" sid="932275423028065" type="Mother">
-                            <param id="0" name="Axes">1</param>
+                        <condition id="-8" name="Compare two values" sid="254398729614843" type="System">
+                            <param id="0" name="First value">LayoutScale</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">1</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="333693285079113">
+                        <event-block sid="983911252449704">
                             <conditions>
-                                <condition id="4" name="Compare current value" sid="697943279240469" type="Mother">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Value">1</param>
-                                </condition>
+                                <condition id="-1" name="Every tick" sid="764751943962872" type="System" />
                             </conditions>
                             <actions>
-                                <action id="1" name="Set tile" sid="470042324467327" type="TilemapSolid">
-                                    <param id="0" name="Tile X">Mother.CurX</param>
-                                    <param id="1" name="Tile Y">Mother.CurY</param>
-                                    <param id="2" name="Tile">9</param>
-                                    <param id="3" name="State">0</param>
+                                <action id="-20" name="Set layout scale" sid="884842030552120" type="System">
+                                    <param id="0" name="Scale">LayoutScale + 0.01</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="917238191874721">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="486735427656602" type="System">
+                            <param id="0" name="First value">LayoutScale</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="684475408538383">
+                            <conditions />
+                            <actions>
+                                <action id="-12" name="Set group active" sid="399209818959478" type="System">
+                                    <param id="0" name="Group name">&quot;InicioCamera&quot;</param>
+                                    <param id="1" name="State">2</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>

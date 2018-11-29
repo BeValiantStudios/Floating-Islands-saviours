@@ -3,7 +3,101 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Character</name>
     <events>
+        <variable constant="0" name="PlayerAngle" sid="448046092520706" static="0" type="number">0</variable>
+        <variable constant="0" name="cangle3" sid="636781564239460" static="0" type="number">0</variable>
         <comment>Character: Ira todo lo referente a mecanicas y animaciones de nuestro personaje principal</comment>
+        <event-group description="" sid="693525521275843" title="Animation">
+            <sub-events>
+                <event-block sid="264955172274416">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" name="Is moving" sid="541255606847362" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="713625202906060">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="627924442214597" type="System">
+                                    <param id="0" name="First value">abs( Player.8Direction.VectorX )</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">abs( Player.8Direction.VectorY )</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="248883511819271">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="905290289469748" type="System">
+                                            <param id="0" name="First value">Player.8Direction.VectorX</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="312100184254776" type="Player">
+                                            <param id="0" name="Animation">&quot;East&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="568586650453944">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="836149812291663" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="255163915425314" type="Player">
+                                            <param id="0" name="Animation">&quot;West&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="417358159410208">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="877762080962218" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="112448083338325">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="333445827504372" type="System">
+                                            <param id="0" name="First value">Player.8Direction.VectorY</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="529553109522200" type="Player">
+                                            <param id="0" name="Animation">&quot;South&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="384679795029365">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="984885296651383" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="905161727003359" type="Player">
+                                            <param id="0" name="Animation">&quot;North&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="379232802906551">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="132125953100513" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="536412268730997" type="Player" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="605975533094852" title="Sticks">
             <sub-events>
                 <comment>Joystick Izquierdo</comment>
@@ -231,12 +325,97 @@
                                     <param id="0" name="Instance variable">YP</param>
                                     <param id="1" name="Value">((AtaqueStik.Y - AtaqueJoystick.Y)  / radius2) * 100</param>
                                 </action>
-                                <action id="-8" name="Set angle" sid="430010114198245" type="Player">
-                                    <param id="0" name="Angle">cangle2</param>
+                                <action id="-9" name="Set value" sid="947873894741400" type="System">
+                                    <param id="0" name="Variable">cangle3</param>
+                                    <param id="1" name="Value">angle(AtaqueJoystick.x,AtaqueJoystick.Y,AtaqueStik.X,AtaqueStik.Y)</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="375578076742717" type="System">
+                                    <param id="0" name="Group name">&quot;Animation&quot;</param>
+                                    <param id="1" name="State">2</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="565657594459956">
+                                <event-block bookmark="1" sid="132714237440219">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="853251504104333" type="System">
+                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">-45</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="893164286749781" type="System">
+                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">45</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="874252142383961" type="Player">
+                                            <param id="0" name="Animation">&quot;East&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="410629488890973">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="592175433472210" type="System">
+                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">45</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="994113359364459" type="System">
+                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">135</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="259604930508156" type="Player">
+                                            <param id="0" name="Animation">&quot;South&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="832239823917487">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="875940939536015" type="System">
+                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">135</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="106914625183621" type="System">
+                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">-135</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="494378458602775" type="Player">
+                                            <param id="0" name="Animation">&quot;West&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="492080960621081">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="733882878562028" type="System">
+                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">-135</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="355292690485838" type="System">
+                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">-45</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="229009422088734" type="Player">
+                                            <param id="0" name="Animation">&quot;North&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block bookmark="1" sid="565657594459956">
                                     <conditions>
                                         <condition id="-6" name="Every X seconds" sid="512020335706697" type="System">
                                             <param id="0" name="Interval (seconds)">1.0</param>
@@ -286,6 +465,10 @@
                                     <param id="0" name="Variable">touchID2</param>
                                     <param id="1" name="Value">-1</param>
                                 </action>
+                                <action id="-12" name="Set group active" sid="804601155527534" type="System">
+                                    <param id="0" name="Group name">&quot;Animation&quot;</param>
+                                    <param id="1" name="State">2</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -299,7 +482,7 @@
             </conditions>
             <actions>
                 <action id="-8" name="Set angle" sid="316272735444484" type="FlechaPrototipo">
-                    <param id="0" name="Angle">Player.Angle</param>
+                    <param id="0" name="Angle">cangle3</param>
                 </action>
             </actions>
         </event-block>
