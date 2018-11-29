@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -20,7 +21,10 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -29,8 +33,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>2002</width>
-        <height>2002</height>
+        <width>640</width>
+        <height>360</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -137,6 +141,9 @@
                 <texture />
                 <tiles />
             </object-type>
+            <object-type global="1" name="Chonks" sid="496891783876894">
+                <plugin id="Dictionary" />
+            </object-type>
         </object-folder>
         <object-folder name="Miscelaneos">
             <object-type name="Keyboard" sid="487864322639546">
@@ -148,40 +155,77 @@
             <object-type name="Browser" sid="798513713974665">
                 <plugin id="Browser" />
             </object-type>
+            <object-type name="Function" sid="542695279339140">
+                <plugin id="Function" />
+            </object-type>
         </object-folder>
         <object-folder name="Controles">
-            <object-type name="Arriba" sid="199489448201259">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818731275491958" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Abajo" sid="180488980049453">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="595152277340381" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Izquierda" sid="605405022953022">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="815786948863707" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Derecha" sid="196382685505884">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="895203767990473" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
+            <object-folder name="Movimiento">
+                <object-type name="MovimientoAreaJoystick" sid="194456411906903">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="418450435574316" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MovimientoJoystick" sid="478303125181046">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="994455555457434" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MovimientoStik" sid="342840557744925">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="radius" sid="250988234558850" type="number" />
+                        <instance-variable name="XP" sid="447737681794834" type="number" />
+                        <instance-variable name="YP" sid="967609090680227" type="number" />
+                        <instance-variable name="dist" sid="974725210016137" type="number" />
+                        <instance-variable name="conAngle" sid="412085748164547" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="887061430011771" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Ataque">
+                <object-type name="AtaqueAreaJoystick" sid="827577615474577">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="558703664145057" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="AtaqueJoystick" sid="815052686760252">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="776265676131550" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="AtaqueStik" sid="732164958868664">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="radius" sid="459711085099937" type="number" />
+                        <instance-variable name="XP" sid="524702516590697" type="number" />
+                        <instance-variable name="YP" sid="817058104614786" type="number" />
+                        <instance-variable name="dist" sid="880228563377800" type="number" />
+                        <instance-variable name="conAngle" sid="656120824745661" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="330747645957558" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-type name="R" sid="391225388589485">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -199,27 +243,73 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-type name="Player" sid="401086822086892">
+        <object-folder name="Player">
+            <object-type name="Player" sid="401086822086892">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="150732981857979">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                    <behavior-type name="8Direction" sid="972808559773556">
+                        <behavior id="EightDir" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="393418052881730" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="CPUFPS" sid="723217774656077">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="FlechaPrototipo" sid="908068360518763">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="ScrollTo" sid="150732981857979">
-                    <behavior id="scrollto" />
-                </behavior-type>
-                <behavior-type name="8Direction" sid="972808559773556">
-                    <behavior id="EightDir" />
+                <behavior-type name="Bullet" sid="276853952098615">
+                    <behavior id="Bullet" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="393418052881730" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="357044569083155" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemigoPrototipo" sid="394609587602310">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="SearchTime" sid="623773420834278" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="660137738125824">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="294356427650027">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="368551449579901" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="CPUFPS" sid="723217774656077">
-            <plugin id="Text" />
-        </object-type>
-        <object-type global="1" name="Chonks" sid="496891783876894">
-            <plugin id="Dictionary" />
+        <object-type name="SpawnPrototipo" sid="222723498309021">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="220614636625658" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -245,7 +335,8 @@
         </family>
     </families>
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Main.xml</layout>
+        <layout>Assets.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Map.xml</event-sheet>
@@ -262,6 +353,7 @@
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="34" />
+        <global-instance type="Function" uid="39" />
     </global-instances>
     <sounds-folder />
     <music-folder />

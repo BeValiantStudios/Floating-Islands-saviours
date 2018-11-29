@@ -50,9 +50,9 @@
             </actions>
             <sub-events>
                 <comment>REMEMBER DELETE ALL PUT 0</comment>
-                <event-group description="" sid="765320262991409" title="Creacion Seed">
+                <variable constant="0" name="Aux" sid="227305365432770" static="0" type="number">0</variable>
+                <event-group bookmark="1" description="" sid="765320262991409" title="Creacion Seed">
                     <sub-events>
-                        <variable constant="0" name="Aux" sid="227305365432770" static="0" type="number">0</variable>
                         <comment>1:Centro</comment>
                         <event-block sid="337666404114162">
                             <conditions>

@@ -4,57 +4,329 @@
     <name>Character</name>
     <events>
         <comment>Character: Ira todo lo referente a mecanicas y animaciones de nuestro personaje principal</comment>
-        <event-group description="" sid="629184469884550" title="Controles">
+        <event-group description="" sid="605975533094852" title="Sticks">
             <sub-events>
-                <event-block sid="814240546958486">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="598112356264392" type="Touch">
-                            <param id="0" name="Object">Abajo</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="530239240001353" type="Player">
-                            <param id="0" name="Control">3</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="177977473984499">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="509817353673459" type="Touch">
-                            <param id="0" name="Object">Arriba</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="729761970263535" type="Player">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="729344376134979">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="626369609440624" type="Touch">
-                            <param id="0" name="Object">Derecha</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="598464822613776" type="Player">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="825547623031503">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="915796160756479" type="Touch">
-                            <param id="0" name="Object">Izquierda</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="942897519999387" type="Player">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <comment>Joystick Izquierdo</comment>
+                <event-group bookmark="1" description="" sid="413935495368076" title="Joystick Movimiento">
+                    <sub-events>
+                        <variable constant="0" name="touchID" sid="266049554091838" static="1" type="number">-1</variable>
+                        <variable constant="0" name="dist" sid="480389966878137" static="0" type="number">0</variable>
+                        <variable constant="0" name="cangle" sid="557968449447053" static="0" type="number">0</variable>
+                        <variable comment="distance the stick can move from center" constant="0" name="radius" sid="651869691076604" static="1" type="number">50</variable>
+                        <event-block sid="590838719280749">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="269348562556703" type="Touch">
+                                    <param id="0" name="Object">MovimientoAreaJoystick</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="167052667426849" type="System">
+                                    <param id="0" name="Variable">touchID</param>
+                                    <param id="1" name="Value">touch.TouchID</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="854755263511709" type="MovimientoJoystick">
+                                    <param id="0" name="X">CanvasToLayerX(&quot;HUD&quot;, touch.AbsoluteXForID(touchID), touch.AbsoluteYForID(touchID) )</param>
+                                    <param id="1" name="Y">CanvasToLayerY(&quot;HUD&quot;, touch.AbsoluteXForID(touchID), touch.AbsoluteYForID(touchID) )</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="966028070627016" type="MovimientoStik">
+                                    <param id="0" name="Object">MovimientoJoystick</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="973352491067976">
+                            <conditions>
+                                <condition id="2" name="Is in touch" sid="441300228948227" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="349643372401038" type="System">
+                                    <param id="0" name="Variable">touchID</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="977115158372901" type="System">
+                                    <param id="0" name="Variable">dist</param>
+                                    <param id="1" name="Value">distance(MovimientoJoystick.X, MovimientoJoystick.Y, &#x0D;&#x0A;(CanvasToLayerX(&quot;HUD&quot;, touch.AbsoluteXForID(touchID), touch.AbsoluteYForID(touchID) )), &#x0D;&#x0A;(CanvasToLayerY(&quot;HUD&quot;, touch.AbsoluteXForID(touchID), touch.AbsoluteYForID(touchID) )) )</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="316322748099327" type="System">
+                                    <param id="0" name="Variable">cangle</param>
+                                    <param id="1" name="Value">angle(MovimientoJoystick.X, MovimientoJoystick.Y,(CanvasToLayerX(&quot;HUD&quot;, touch.AbsoluteXForID(touchID), touch.AbsoluteYForID(touchID) )), &#x0D;&#x0A;(CanvasToLayerY(&quot;HUD&quot;, touch.AbsoluteXForID(touchID), touch.AbsoluteYForID(touchID) )) )</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="360824287724944" type="MovimientoStik">
+                                    <param id="0" name="X">(cos(cangle) * (dist &lt; radius ? dist :  radius)) + MovimientoJoystick.X</param>
+                                    <param id="1" name="Y">(sin(cangle) * (dist &lt; radius ? dist :  radius)) + MovimientoJoystick.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="871897107670533" type="MovimientoStik">
+                                    <param id="0" name="Instance variable">conAngle</param>
+                                    <param id="1" name="Value">cangle</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="603619248637648" type="MovimientoStik">
+                                    <param id="0" name="Instance variable">XP</param>
+                                    <param id="1" name="Value">((MovimientoStik.X - MovimientoJoystick.X)  / radius) * 100</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="732601643777488" type="MovimientoStik">
+                                    <param id="0" name="Instance variable">YP</param>
+                                    <param id="1" name="Value">((MovimientoStik.Y - MovimientoJoystick.Y)  / radius) * 100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="318096837424852">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="797548810394444" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="882170821283163" type="System">
+                                    <param id="0" name="Variable">touchID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">touch.TouchID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="660522646656511" type="MovimientoJoystick">
+                                    <param id="0" name="X">-32</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="660823500041425" type="MovimientoStik">
+                                    <param id="0" name="Object">MovimientoJoystick</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="177017849323184" type="MovimientoStik">
+                                    <param id="0" name="Instance variable">XP</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="918748784980516" type="MovimientoStik">
+                                    <param id="0" name="Instance variable">YP</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="763519918336895" type="MovimientoStik">
+                                    <param id="0" name="Instance variable">conAngle</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="421745785034024" type="System">
+                                    <param id="0" name="Variable">touchID</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="484061309937516" title="Ejecucion Movimiento">
+                    <sub-events>
+                        <variable constant="0" name="deadzone" sid="920953929100755" static="0" type="number">0</variable>
+                        <event-block any="1" sid="357174205498098">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="833510986641636" type="MovimientoStik">
+                                    <param id="0" name="Instance variable">XP</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">deadzone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="716212506147873" type="Player">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="672966058811190">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="243257996481184" type="MovimientoStik">
+                                    <param id="0" name="Instance variable">XP</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">-deadzone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="522904972313427" type="Player">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="280017589010591">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="646069996776326" type="MovimientoStik">
+                                    <param id="0" name="Instance variable">YP</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">deadzone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="405289002393072" type="Player">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="548638230683303">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="676248684747896" type="MovimientoStik">
+                                    <param id="0" name="Instance variable">YP</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">-deadzone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="539377468659989" type="Player">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Joystick Derecho</comment>
+                <event-group bookmark="1" description="" sid="631545214502168" title="Joystick Ataque">
+                    <sub-events>
+                        <variable constant="0" name="touchID2" sid="826293763360464" static="1" type="number">-1</variable>
+                        <variable constant="0" name="dist2" sid="201874611327897" static="0" type="number">0</variable>
+                        <variable constant="0" name="cangle2" sid="892875718908227" static="0" type="number">0</variable>
+                        <variable comment="distance the stick can move from center" constant="0" name="radius2" sid="718013833871812" static="1" type="number">50</variable>
+                        <event-block sid="203631232921056">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="428864807319552" type="Touch">
+                                    <param id="0" name="Object">AtaqueAreaJoystick</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="328542371392265" type="System">
+                                    <param id="0" name="Variable">touchID2</param>
+                                    <param id="1" name="Value">touch.TouchID</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="541288463742165" type="AtaqueJoystick">
+                                    <param id="0" name="X">CanvasToLayerX(&quot;HUD&quot;, touch.AbsoluteXForID(touchID2), touch.AbsoluteYForID(touchID2) )</param>
+                                    <param id="1" name="Y">CanvasToLayerY(&quot;HUD&quot;, touch.AbsoluteXForID(touchID2), touch.AbsoluteYForID(touchID2) )</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="214154166770252" type="AtaqueStik">
+                                    <param id="0" name="Object">AtaqueJoystick</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="372667911535551">
+                            <conditions>
+                                <condition id="2" name="Is in touch" sid="987100808218328" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="938523760619769" type="System">
+                                    <param id="0" name="Variable">touchID2</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="515548039369064" type="System">
+                                    <param id="0" name="Variable">dist2</param>
+                                    <param id="1" name="Value">distance(AtaqueJoystick.X, AtaqueJoystick.Y, &#x0D;&#x0A;(CanvasToLayerX(&quot;HUD&quot;, touch.AbsoluteXForID(touchID2), touch.AbsoluteYForID(touchID2) )), &#x0D;&#x0A;(CanvasToLayerY(&quot;HUD&quot;, touch.AbsoluteXForID(touchID2), touch.AbsoluteYForID(touchID2) )) )</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="858430312043328" type="System">
+                                    <param id="0" name="Variable">cangle2</param>
+                                    <param id="1" name="Value">angle(AtaqueJoystick.X, AtaqueJoystick.Y,(CanvasToLayerX(&quot;HUD&quot;, touch.AbsoluteXForID(touchID2), touch.AbsoluteYForID(touchID2) )), &#x0D;&#x0A;(CanvasToLayerY(&quot;HUD&quot;, touch.AbsoluteXForID(touchID2), touch.AbsoluteYForID(touchID2) )) )</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="541665548989283" type="AtaqueStik">
+                                    <param id="0" name="X">(cos(cangle2) * (dist2 &lt; radius2 ? dist2 :  radius2)) + AtaqueJoystick.X</param>
+                                    <param id="1" name="Y">(sin(cangle2) * (dist2 &lt; radius2 ? dist2 :  radius2)) + AtaqueJoystick.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="411133332616743" type="AtaqueStik">
+                                    <param id="0" name="Instance variable">conAngle</param>
+                                    <param id="1" name="Value">cangle2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="105257466665577" type="AtaqueStik">
+                                    <param id="0" name="Instance variable">XP</param>
+                                    <param id="1" name="Value">((AtaqueStik.X - AtaqueJoystick.X)  / radius2) * 100</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="628572679179038" type="AtaqueStik">
+                                    <param id="0" name="Instance variable">YP</param>
+                                    <param id="1" name="Value">((AtaqueStik.Y - AtaqueJoystick.Y)  / radius2) * 100</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="430010114198245" type="Player">
+                                    <param id="0" name="Angle">cangle2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="565657594459956">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="512020335706697" type="System">
+                                            <param id="0" name="Interval (seconds)">1.0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="560760752006768" type="Player">
+                                            <param id="0" name="Object">FlechaPrototipo</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="632287272382799">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="674716311837175" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="768133639719205" type="System">
+                                    <param id="0" name="Variable">touchID2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">touch.TouchID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="669794420039381" type="AtaqueJoystick">
+                                    <param id="0" name="X">-32</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="470003689901424" type="AtaqueStik">
+                                    <param id="0" name="Object">AtaqueJoystick</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="206464842118034" type="AtaqueStik">
+                                    <param id="0" name="Instance variable">XP</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="278309013428474" type="AtaqueStik">
+                                    <param id="0" name="Instance variable">YP</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="983130439194461" type="AtaqueStik">
+                                    <param id="0" name="Instance variable">conAngle</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="991071555887192" type="System">
+                                    <param id="0" name="Variable">touchID2</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="612271224904117" title="Ejecucion Ataque" />
             </sub-events>
         </event-group>
+        <event-block sid="303275024122444">
+            <conditions>
+                <condition id="-18" name="On created" sid="587778408435333" type="FlechaPrototipo" />
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="316272735444484" type="FlechaPrototipo">
+                    <param id="0" name="Angle">Player.Angle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="888449024367441">
+            <conditions>
+                <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="821377970105470" type="FlechaPrototipo">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Distance">500</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="394716029465943" type="FlechaPrototipo" />
+            </actions>
+        </event-block>
+        <event-block sid="263416631639943">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="205625815396159" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="352743558792222" type="SpawnPrototipo">
+                    <param id="0" name="Object">EnemigoPrototipo</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
