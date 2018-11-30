@@ -4,7 +4,6 @@
     <name>Character</name>
     <events>
         <variable constant="0" name="PlayerAngle" sid="448046092520706" static="0" type="number">0</variable>
-        <variable constant="0" name="cangle3" sid="636781564239460" static="0" type="number">0</variable>
         <comment>Character: Ira todo lo referente a mecanicas y animaciones de nuestro personaje principal</comment>
         <event-group description="" sid="693525521275843" title="Animation">
             <sub-events>
@@ -325,25 +324,22 @@
                                     <param id="0" name="Instance variable">YP</param>
                                     <param id="1" name="Value">((AtaqueStik.Y - AtaqueJoystick.Y)  / radius2) * 100</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="947873894741400" type="System">
-                                    <param id="0" name="Variable">cangle3</param>
-                                    <param id="1" name="Value">angle(AtaqueJoystick.x,AtaqueJoystick.Y,AtaqueStik.X,AtaqueStik.Y)</param>
-                                </action>
                                 <action id="-12" name="Set group active" sid="375578076742717" type="System">
                                     <param id="0" name="Group name">&quot;Animation&quot;</param>
                                     <param id="1" name="State">2</param>
                                 </action>
                             </actions>
                             <sub-events>
+                                <comment>Desactiva la animacion general, para pasar a usar estas</comment>
                                 <event-block bookmark="1" sid="132714237440219">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="853251504104333" type="System">
-                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="0" name="First value">cangle2</param>
                                             <param id="1" name="Comparison">5</param>
                                             <param id="2" name="Second value">-45</param>
                                         </condition>
                                         <condition id="-8" name="Compare two values" sid="893164286749781" type="System">
-                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="0" name="First value">cangle2</param>
                                             <param id="1" name="Comparison">2</param>
                                             <param id="2" name="Second value">45</param>
                                         </condition>
@@ -358,12 +354,12 @@
                                 <event-block sid="410629488890973">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="592175433472210" type="System">
-                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="0" name="First value">cangle2</param>
                                             <param id="1" name="Comparison">5</param>
                                             <param id="2" name="Second value">45</param>
                                         </condition>
                                         <condition id="-8" name="Compare two values" sid="994113359364459" type="System">
-                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="0" name="First value">cangle2</param>
                                             <param id="1" name="Comparison">2</param>
                                             <param id="2" name="Second value">135</param>
                                         </condition>
@@ -378,12 +374,12 @@
                                 <event-block any="1" sid="832239823917487">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="875940939536015" type="System">
-                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="0" name="First value">cangle2</param>
                                             <param id="1" name="Comparison">5</param>
                                             <param id="2" name="Second value">135</param>
                                         </condition>
                                         <condition id="-8" name="Compare two values" sid="106914625183621" type="System">
-                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="0" name="First value">cangle2</param>
                                             <param id="1" name="Comparison">2</param>
                                             <param id="2" name="Second value">-135</param>
                                         </condition>
@@ -398,12 +394,12 @@
                                 <event-block sid="492080960621081">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="733882878562028" type="System">
-                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="0" name="First value">cangle2</param>
                                             <param id="1" name="Comparison">5</param>
                                             <param id="2" name="Second value">-135</param>
                                         </condition>
                                         <condition id="-8" name="Compare two values" sid="355292690485838" type="System">
-                                            <param id="0" name="First value">cangle3</param>
+                                            <param id="0" name="First value">cangle2</param>
                                             <param id="1" name="Comparison">2</param>
                                             <param id="2" name="Second value">-45</param>
                                         </condition>
@@ -471,32 +467,36 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Angulo de ataque</comment>
+                        <event-group description="" sid="612271224904117" title="Ejecucion Ataque">
+                            <sub-events>
+                                <event-block sid="303275024122444">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="587778408435333" type="FlechaPrototipo" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="316272735444484" type="FlechaPrototipo">
+                                            <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="888449024367441">
+                                    <conditions>
+                                        <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="821377970105470" type="FlechaPrototipo">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Distance">500</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="394716029465943" type="FlechaPrototipo" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="612271224904117" title="Ejecucion Ataque" />
             </sub-events>
         </event-group>
-        <event-block sid="303275024122444">
-            <conditions>
-                <condition id="-18" name="On created" sid="587778408435333" type="FlechaPrototipo" />
-            </conditions>
-            <actions>
-                <action id="-8" name="Set angle" sid="316272735444484" type="FlechaPrototipo">
-                    <param id="0" name="Angle">cangle3</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="888449024367441">
-            <conditions>
-                <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="821377970105470" type="FlechaPrototipo">
-                    <param id="0" name="Comparison">5</param>
-                    <param id="1" name="Distance">500</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="394716029465943" type="FlechaPrototipo" />
-            </actions>
-        </event-block>
         <event-block sid="263416631639943">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="205625815396159" type="System">
