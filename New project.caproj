@@ -393,6 +393,7 @@
         <event-sheet>Enemies.xml</event-sheet>
         <event-sheet>Variables.xml</event-sheet>
         <event-sheet>Main.xml</event-sheet>
+        <event-sheet>Functions.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="7" />
