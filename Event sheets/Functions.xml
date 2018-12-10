@@ -3,14 +3,292 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Functions</name>
     <events>
-        <variable constant="0" name="Variable1" sid="340173314428361" static="0" type="number">0</variable>
-        <event-block sid="478290801787023">
-            <conditions>
-                <condition id="0" name="On function" sid="360896210736262" type="f">
-                    <param id="0" name="Name">&quot;hjfa&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
+        <comment>ID | Cantidad | Stats | (Tipo, Nombre, Descripcion)</comment>
+        <event-group description="" sid="765484702388855" title="F_Inventario">
+            <sub-events>
+                <comment>Parametro 0: Id de la casilla - Parametro 1: Cantidad de objetos a eliminar</comment>
+                <variable constant="0" name="ItemsRemovidos" sid="469773879248260" static="0" type="number">0</variable>
+                <event-block sid="651447170810660">
+                    <conditions>
+                        <condition id="0" name="On function" sid="865419443232954" type="f">
+                            <param id="0" name="Name">&quot;EliminarDeInventario&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="143681390696044" type="System">
+                            <param id="0" name="Variable">ItemsRemovidos</param>
+                            <param id="1" name="Value">min(Inv.At(f.Param(0),1),f.Param(1))</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="522829568738136" type="Inv">
+                            <param id="0" name="X">f.Param(0)</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">Self.At(f.Param(0),1)  - ItemsRemovidos</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="448124330400564">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="659241387816660" type="Inv">
+                                    <param id="0" name="X">f.Param(0)</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set at X" sid="329445989674404" type="Inv">
+                                    <param id="0" name="X">f.Param(0)</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="615206240915791" type="Inv">
+                                    <param id="0" name="X">f.Param(0)</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="271136698557912" type="Inv">
+                                    <param id="0" name="X">f.Param(0)</param>
+                                    <param id="1" name="Y">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="284900822561498" type="Inv">
+                                    <param id="0" name="X">f.Param(0)</param>
+                                    <param id="1" name="Y">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="779889748868032">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="922887920173734" type="f">
+                                    <param id="0" name="Name">&quot;ActualizarInventario&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="588507414451505" type="f">
+                                    <param id="0" name="Value">ItemsRemovidos</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Parametro 0: Id objeto - Parametro 1: Cantidad - Parametro 2: Tipo de objeto</comment>
+                <variable constant="0" name="Empty_Slot" sid="707450405513968" static="0" type="number">-1</variable>
+                <variable constant="0" name="Found_Slot" sid="674854431385699" static="0" type="number">-1</variable>
+                <variable constant="0" name="Amount_to_add" sid="782161926066702" static="0" type="number">0</variable>
+                <event-block sid="141038656950254">
+                    <conditions>
+                        <condition id="0" name="On function" sid="957742336322075" type="f">
+                            <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="776246724310808" type="System">
+                            <param id="0" name="Variable">Found_Slot</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="888473842839292" type="System">
+                            <param id="0" name="Variable">Empty_Slot</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="955892489364922">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="240397296303244" type="System">
+                                    <param id="0" name="First value">f.ParamCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="932333461632058" type="System">
+                                    <param id="0" name="Variable">Amount_to_add</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="294085430316064">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="241928880650186" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="622214996872194" type="System">
+                                    <param id="0" name="Variable">Amount_to_add</param>
+                                    <param id="1" name="Value">f.Param(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Loop para buscar el elemento en el inventario</comment>
+                        <event-block sid="419762851322720">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="348909421824606" type="Inv">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="845554628346034" type="System">
+                                    <param id="0" name="First value">Found_Slot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Guarda la posicion de un cuadro vacio para guardalo posteriormente si no hay el mismo item en el inventario</comment>
+                                <event-block sid="474608495742932">
+                                    <conditions>
+                                        <condition id="4" name="Compare current value" sid="673156341497175" type="Inv">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="617947669716529" type="System">
+                                            <param id="0" name="First value">Empty_Slot</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="284754092871115" type="System">
+                                            <param id="0" name="Variable">Empty_Slot</param>
+                                            <param id="1" name="Value">Inv.CurX</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Si encuentra su mismo item, lo agrega y actualiza el inventario</comment>
+                                <event-block sid="885195154360711">
+                                    <conditions>
+                                        <condition id="4" name="Compare current value" sid="607488884595898" type="Inv">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Value">f.Param(0)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="192090670950416" type="System">
+                                            <param id="0" name="Variable">Found_Slot</param>
+                                            <param id="1" name="Value">Inv.CurX</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="760196513664938" type="Inv">
+                                            <param id="0" name="X">Self.CurX</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">Self.At(Self.CurX ,1) + Amount_to_add</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="364577834041115" type="f">
+                                            <param id="0" name="Name">&quot;ActualizarInventario&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Si no, lo guarda en la posicion obtenida anteriormente</comment>
+                                <event-block sid="143189387687974">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="475127561505692" type="System">
+                                            <param id="0" name="First value">Inv.CurX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">Inv.Width -1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="881502997086608" type="System">
+                                            <param id="0" name="First value">Found_Slot</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="459769863723692" type="System">
+                                            <param id="0" name="First value">Empty_Slot</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="2" name="Set at X" sid="385435528143665" type="Inv">
+                                            <param id="0" name="X">Empty_Slot</param>
+                                            <param id="1" name="Value">f.Param(0)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="435991416450087" type="Inv">
+                                            <param id="0" name="X">Empty_Slot</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">Amount_to_add</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="255059166577467" type="Inv">
+                                            <param id="0" name="X">Empty_Slot</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">f.Param(2)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="896717323793819" type="Inv">
+                                            <param id="0" name="X">Empty_Slot</param>
+                                            <param id="1" name="Y">3</param>
+                                            <param id="2" name="Value">f.Param(3)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="120459592137396" type="f">
+                                            <param id="0" name="Name">&quot;ActualizarInventario&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Busca un item dentro del inventario, si es encontrado retorna su posicion y si no retorna 0 || param0: id param1: cantidad</comment>
+                <event-block sid="290246738317603">
+                    <conditions>
+                        <condition id="0" name="On function" sid="120522487780269" type="f">
+                            <param id="0" name="Name">&quot;BuscarItem&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="Found" sid="860364017245724" static="0" type="number">0</variable>
+                        <event-block sid="299148116419438">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="507528432377853" type="Inv">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="346362831907272" type="System">
+                                    <param id="0" name="First value">f.Param(0)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">10000</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="478706255484382">
+                                    <conditions>
+                                        <condition id="4" name="Compare current value" sid="834473205370536" type="Inv">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Value">f.Param(0)</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="337461219563091" type="System">
+                                            <param id="0" name="First value">Inv.At(Inv.CurX ,1)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">f.Param(1)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="948222758538781" type="f">
+                                            <param id="0" name="Value">Inv.CurX</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="284536643038366" type="System">
+                                            <param id="0" name="Variable">Found</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="890481907123365">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="579433447037804" type="System">
+                                    <param id="0" name="Variable">Found</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="575640037322112" type="f">
+                                    <param id="0" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
