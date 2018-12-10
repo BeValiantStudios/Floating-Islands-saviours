@@ -3,6 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Map</name>
     <events>
+        <variable constant="0" name="Correccion1" sid="250538372332384" static="0" type="text"></variable>
+        <variable constant="0" name="Correccion2" sid="409038325102459" static="0" type="text"></variable>
+        <variable constant="0" name="Correccion3" sid="765362971337466" static="0" type="text"></variable>
+        <variable constant="0" name="Correccion4" sid="569909379811281" static="0" type="number">0</variable>
+        <variable constant="0" name="Correccion5" sid="987525090257170" static="0" type="text"></variable>
         <comment>Map: Event sheet donde se encuentra toda la generacion procedural. Incluidos objetos y spawn de enemigos.</comment>
         <comment>Creacion MOTHER</comment>
         <event-block any="1" sid="334183430745572">
@@ -47,13 +52,13 @@
                     <param id="0" name="Variable">Direccion</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-20" name="Set layout scale" sid="953356646788859" type="System">
+                <action disabled="1" id="-20" name="Set layout scale" sid="953356646788859" type="System">
                     <param id="0" name="Scale">0.4</param>
                 </action>
             </actions>
             <sub-events>
                 <comment>Scale</comment>
-                <event-block sid="200540059168577">
+                <event-block disabled="1" sid="200540059168577">
                     <conditions />
                     <actions>
                         <action id="-12" name="Set group active" sid="460614422150938" type="System">
@@ -1795,7 +1800,799 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <comment>(x -1) * 2</comment>
+                <comment>Corrige los espacios en blanco</comment>
+                <variable constant="0" name="X2" sid="961598643548237" static="1" type="number">0</variable>
+                <variable constant="0" name="Y2" sid="529066399989003" static="1" type="number">0</variable>
+                <variable constant="0" name="DireccionArreglo" sid="243769767914686" static="1" type="number">0</variable>
+                <variable constant="0" name="CorreccionActual" sid="580222057780448" static="1" type="number">1</variable>
+                <event-block sid="127644135026509">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="168140793656803" type="System">
+                            <param id="0" name="Variable">Correccion1</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="743663749530350" type="System">
+                            <param id="0" name="Variable">Correccion2</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="625489128304583" type="System">
+                            <param id="0" name="Variable">Correccion3</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="544077873288355" type="System">
+                            <param id="0" name="Variable">Correccion4</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="420876942604738" type="System">
+                            <param id="0" name="Variable">Correccion5</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="843072412163663" type="System">
+                            <param id="0" name="Variable">CorreccionActual</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="421774804090755">
+                    <conditions>
+                        <condition id="-10" name="For" sid="495472441268481" type="System">
+                            <param id="0" name="Name">&quot;Y1&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="373364599545668">
+                            <conditions>
+                                <condition id="-10" name="For" sid="756826576188334" type="System">
+                                    <param id="0" name="Name">&quot;X1&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="558335044485467">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="656495284004273" type="System">
+                                            <param id="0" name="First value">int(left(str(Seed.At((loopindex(&quot;X1&quot;)*2),(loopindex(&quot;Y1&quot;)*2))),1))</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="528652812289960" type="System">
+                                            <param id="0" name="Variable">DireccionArreglo</param>
+                                            <param id="1" name="Value">( int(Seed.At((loopindex(&quot;X1&quot;)*2)+1,(loopindex(&quot;Y1&quot;)*2))) - int(Seed.At((loopindex(&quot;X1&quot;)*2)-1,(loopindex(&quot;Y1&quot;)*2))) ) + ( (int(Seed.At((loopindex(&quot;X1&quot;)*2),(loopindex(&quot;Y1&quot;)*2)+1)) - int(Seed.At((loopindex(&quot;X1&quot;)*2),(loopindex(&quot;Y1&quot;)*2)-1)))*2 )</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="942910822586125" type="System">
+                                            <param id="0" name="Variable">X2</param>
+                                            <param id="1" name="Value">(loopindex(&quot;X1&quot;))*2</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="798869794664112" type="System">
+                                            <param id="0" name="Variable">Y2</param>
+                                            <param id="1" name="Value">(loopindex(&quot;Y1&quot;))*2</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="541061112452847">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="971694023841273" type="System">
+                                                    <param id="0" name="Variable">Correccion5</param>
+                                                    <param id="1" name="Value">&quot;_&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="149703823856688" type="System">
+                                                    <param id="0" name="Variable">Correccion5</param>
+                                                    <param id="1" name="Value">str( (X2*10)+(Y2) )&amp;&quot;,&quot;&amp;DireccionArreglo&amp;&quot;|&quot; </param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="635088745928797">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="938942748594228" type="System">
+                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="292311272769159" type="System">
+                                                    <param id="0" name="Variable">Correccion1</param>
+                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="544447209723116" type="System">
+                                                    <param id="0" name="Variable">Correccion1</param>
+                                                    <param id="1" name="Value">str( (loopindex(&quot;X1&quot;)*20)+(loopindex(&quot;Y1&quot;)*2) )</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="381809219519615">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="566535097456329" type="System">
+                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="746469913182295" type="System">
+                                                    <param id="0" name="Variable">Correccion2</param>
+                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="888230273390373" type="System">
+                                                    <param id="0" name="Variable">Correccion2</param>
+                                                    <param id="1" name="Value">str( (loopindex(&quot;X1&quot;)*20)+(loopindex(&quot;Y1&quot;)*2) )</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="816527598264808">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="730165065661637" type="System">
+                                                    <param id="0" name="First value">CorreccionActual</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">2</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="487314284586655" type="System">
+                                                    <param id="0" name="First value">Correccion2</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="943944260165668" type="System">
+                                                    <param id="0" name="First value">tokenat(Correccion1,0,&quot;|&quot;)</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">tokenat(Correccion2,(tokencount(Correccion2,&quot;|&quot;)-1),&quot;|&quot;)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="830870351551342" type="System">
+                                                    <param id="0" name="Variable">Correccion4</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="742339616003613">
+                                            <conditions>
+                                                <condition id="-23" name="While" sid="656693039872280" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="330084793628743">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="705586240963533" type="System">
+                                                            <param id="0" name="First value">DireccionArreglo</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="998430821953272" type="System">
+                                                            <param id="0" name="Variable">X2</param>
+                                                            <param id="1" name="Value">2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="807173751840064">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="167427604775067" type="System">
+                                                            <param id="0" name="First value">DireccionArreglo</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">-1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-11" name="Subtract from" sid="214013663873749" type="System">
+                                                            <param id="0" name="Variable">X2</param>
+                                                            <param id="1" name="Value">2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="145244753484756">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="352479567419402" type="System">
+                                                            <param id="0" name="First value">DireccionArreglo</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="535967241029189" type="System">
+                                                            <param id="0" name="Variable">Y2</param>
+                                                            <param id="1" name="Value">2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="955304882338144">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="610926834751039" type="System">
+                                                            <param id="0" name="First value">DireccionArreglo</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">-2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-11" name="Subtract from" sid="379219892981832" type="System">
+                                                            <param id="0" name="Variable">Y2</param>
+                                                            <param id="1" name="Value">2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="938952226984438">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="987612471001031" type="System">
+                                                            <param id="0" name="Variable">Correccion5</param>
+                                                            <param id="1" name="Value">str( (X2*10)+(Y2) )&amp;&quot;,&quot;&amp;DireccionArreglo&amp;&quot;|&quot; </param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <comment></comment>
+                                                <event-block sid="762413334706975">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="915267361678100" type="System">
+                                                            <param id="0" name="First value">(X2 = 2) &amp; (Y2=2)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="243343717267232">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="664285232619502" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="180282406782894" type="System">
+                                                                    <param id="0" name="Variable">Correccion1</param>
+                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="-24" name="Stop loop" sid="869777577767668" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="157672622878775">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="502866965895502" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="472102090555906" type="System">
+                                                                    <param id="0" name="Variable">Correccion2</param>
+                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="-24" name="Stop loop" sid="933215767526286" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="697046283642201">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="813371423723436" type="System">
+                                                            <param id="0" name="First value">int(left(str(Seed.At(X2,Y2)),1))</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="160861375315022">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="745750552191611" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Add to" sid="961982748179728" type="System">
+                                                                    <param id="0" name="Variable">Correccion1</param>
+                                                                    <param id="1" name="Value">&quot;|&quot; &amp; str( (X2*10)+(Y2) ) </param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="242114596656509" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Value">2</param>
+                                                                </action>
+                                                                <action id="-24" name="Stop loop" sid="496470886171970" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="714063600543905">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="187062502043179" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Add to" sid="809328983121109" type="System">
+                                                                    <param id="0" name="Variable">Correccion2</param>
+                                                                    <param id="1" name="Value">&quot;|&quot; &amp; str( (X2*10)+(Y2) )</param>
+                                                                </action>
+                                                                <action id="-24" name="Stop loop" sid="897222457465423" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="701469385253258">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="426182518364435" type="System">
+                                                            <param id="0" name="First value">int(left(str(Seed.At(X2,Y2)),1))</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">3</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="998502580932130">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="279459313192711" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="339075745842311" type="System">
+                                                                    <param id="0" name="Variable">Correccion1</param>
+                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="-24" name="Stop loop" sid="560764013852215" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="418030090695313">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="870693132808574" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="627688011018525" type="System">
+                                                                    <param id="0" name="Variable">Correccion2</param>
+                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="-24" name="Stop loop" sid="288438942938344" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="671720946134763">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="804158058373508" type="System">
+                                                            <param id="0" name="First value">int(left(str(Seed.At(X2,Y2)),1))</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="863589110481495">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="562652379782319" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="257509804544253" type="System">
+                                                                    <param id="0" name="Variable">Correccion1</param>
+                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="-24" name="Stop loop" sid="281568924314632" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="469989193790450">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="323284087486273" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="882690543261379" type="System">
+                                                                    <param id="0" name="Variable">Correccion2</param>
+                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="-24" name="Stop loop" sid="401920916955404" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="644300573357375">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="286560469834316" type="System">
+                                                            <param id="0" name="First value">int(left(str(Seed.At(X2,Y2)),1))</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">4</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="326958369620506">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="545167657057371" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="121566187619698" type="System">
+                                                                    <param id="0" name="Variable">Correccion1</param>
+                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="-24" name="Stop loop" sid="355944951386213" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="446457670081206">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="407978327030852" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="115433686485558" type="System">
+                                                                    <param id="0" name="Variable">Correccion2</param>
+                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="-24" name="Stop loop" sid="212312454480762" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="446399100288236">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="726053352026182" type="System">
+                                                            <param id="0" name="First value">int(left(str(Seed.At(X2,Y2)),1))</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">5</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Compare two values" sid="943936621430680" type="System">
+                                                            <param id="0" name="First value">(X2 = 2) &amp; (Y2=2)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="800728672001392">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="632828353202231" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Add to" sid="890386625910706" type="System">
+                                                                    <param id="0" name="Variable">Correccion1</param>
+                                                                    <param id="1" name="Value">&quot;|&quot; &amp; str( (X2*10)+(Y2) )</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="977217204136940">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="513303766898557" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Add to" sid="975227732791482" type="System">
+                                                                    <param id="0" name="Variable">Correccion2</param>
+                                                                    <param id="1" name="Value">&quot;|&quot; &amp; str( (X2*10)+(Y2) )</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block bookmark="1" sid="461539752199318">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="898328715208724" type="System">
+                                                            <param id="0" name="First value">int(left(str(Seed.At(X2,Y2)),1))</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">2</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Compare two values" sid="653727602423181" type="System">
+                                                            <param id="0" name="First value">(X2 = 0 | X2 = 4) &amp; (Y2 = 0 | Y2 = 4)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="944799819411899" type="System">
+                                                            <param id="0" name="Variable">Correccion3</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="330229812910284">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="928092892028867" type="System">
+                                                                    <param id="0" name="First value">int(right(str(Seed.At(X2,Y2)),1))</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="371544194758948">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="681286531017252" type="System">
+                                                                            <param id="0" name="First value">DireccionArreglo</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">1</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Set value" sid="162015602016943" type="System">
+                                                                            <param id="0" name="Variable">DireccionArreglo</param>
+                                                                            <param id="1" name="Value">2</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="563383488495873">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="486644382376313" type="System">
+                                                                            <param id="0" name="First value">DireccionArreglo</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">-2</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Set value" sid="723477309090141" type="System">
+                                                                            <param id="0" name="Variable">DireccionArreglo</param>
+                                                                            <param id="1" name="Value">-1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="781203042283363">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="344903031643780" type="System">
+                                                                    <param id="0" name="First value">int(right(str(Seed.At(X2,Y2)),1))</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="622245268252647">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="153859729277621" type="System">
+                                                                            <param id="0" name="First value">DireccionArreglo</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">-1</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Set value" sid="410447515025145" type="System">
+                                                                            <param id="0" name="Variable">DireccionArreglo</param>
+                                                                            <param id="1" name="Value">-2</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="803758134549307">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="272310735394681" type="System">
+                                                                            <param id="0" name="First value">DireccionArreglo</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">2</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Set value" sid="312070304085956" type="System">
+                                                                            <param id="0" name="Variable">DireccionArreglo</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="622488137817337">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="935559278469898" type="System">
+                                                                    <param id="0" name="First value">int(right(str(Seed.At(X2,Y2)),1))</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">3</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="699620876801927">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="490123642203182" type="System">
+                                                                            <param id="0" name="First value">DireccionArreglo</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">1</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Set value" sid="880930157655541" type="System">
+                                                                            <param id="0" name="Variable">DireccionArreglo</param>
+                                                                            <param id="1" name="Value">-2</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="426992928741330">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="739198489363396" type="System">
+                                                                            <param id="0" name="First value">DireccionArreglo</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">2</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Set value" sid="886519644959380" type="System">
+                                                                            <param id="0" name="Variable">DireccionArreglo</param>
+                                                                            <param id="1" name="Value">-1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="612398238800124">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="581147329445930" type="System">
+                                                                    <param id="0" name="First value">int(right(str(Seed.At(X2,Y2)),1))</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">4</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="588369077951456">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="111918887202523" type="System">
+                                                                            <param id="0" name="First value">DireccionArreglo</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">-1</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Set value" sid="337865097883892" type="System">
+                                                                            <param id="0" name="Variable">DireccionArreglo</param>
+                                                                            <param id="1" name="Value">2</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="249054041461530">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="741621827675247" type="System">
+                                                                            <param id="0" name="First value">DireccionArreglo</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">-2</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Set value" sid="117471346089477" type="System">
+                                                                            <param id="0" name="Variable">DireccionArreglo</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="987341938202506">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="338408139585318" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Add to" sid="728258074839181" type="System">
+                                                                    <param id="0" name="Variable">Correccion1</param>
+                                                                    <param id="1" name="Value">&quot;|&quot; &amp; str( (X2*10)+(Y2) )</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="498772370335407">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="869863061051865" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Add to" sid="658797618864083" type="System">
+                                                                    <param id="0" name="Variable">Correccion2</param>
+                                                                    <param id="1" name="Value">&quot;|&quot; &amp; str( (X2*10)+(Y2) )</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="189865008627329">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="102707949566545" type="System">
+                                                            <param id="0" name="First value">int(left(str(Seed.At(X2,Y2)),1))</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">2</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Compare two values" sid="768616716324656" type="System">
+                                                            <param id="0" name="First value">(X2 = 2) | (Y2=2)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="751481167736370">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="210333512121401" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="763047274532529" type="System">
+                                                                    <param id="0" name="Variable">Correccion1</param>
+                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="-24" name="Stop loop" sid="111510295731259" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="798831435955750">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="399926743396047" type="System">
+                                                                    <param id="0" name="Variable">CorreccionActual</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="685253105218139" type="System">
+                                                                    <param id="0" name="Variable">Correccion2</param>
+                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="-24" name="Stop loop" sid="533945685063934" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="577236823918702">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="194770033355547" type="System">
+                            <param id="0" name="First value">tokenat(Correccion1,0,&quot;|&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">tokenat(Correccion2,(tokencount(Correccion2,&quot;|&quot;)-1),&quot;|&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="991761642311697" type="System">
+                            <param id="0" name="Variable">Correccion2</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Creacion MOTHER Array</comment>
                 <event-block sid="890998342943472">
                     <conditions>
                         <condition id="-10" name="For" sid="251736182862539" type="System">
@@ -2761,7 +3558,7 @@
                     </sub-events>
                 </event-block>
                 <comment>MOTHER to Tile</comment>
-                <event-block sid="948606587098403">
+                <event-block bookmark="1" sid="948606587098403">
                     <conditions />
                     <actions>
                         <action id="2" name="Erase tile range" sid="923293741213939" type="TilemapGround">
@@ -2786,8 +3583,8 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set tile" sid="976107404456430" type="TilemapGround">
-                                    <param id="0" name="Tile X">Mother.CurX</param>
-                                    <param id="1" name="Tile Y">Mother.CurY</param>
+                                    <param id="0" name="Tile X">Mother.CurY</param>
+                                    <param id="1" name="Tile Y">Mother.CurX</param>
                                     <param id="2" name="Tile">4</param>
                                     <param id="3" name="State">0</param>
                                 </action>

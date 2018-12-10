@@ -511,5 +511,6 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="719613028872778" title="Inventario" />
     </events>
 </c2eventsheet>
