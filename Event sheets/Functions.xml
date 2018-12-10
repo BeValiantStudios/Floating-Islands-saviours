@@ -6,7 +6,7 @@
         <variable constant="0" name="Variable1" sid="340173314428361" static="0" type="number">0</variable>
         <event-block sid="478290801787023">
             <conditions>
-                <condition id="0" name="On function" sid="360896210736262" type="Function">
+                <condition id="0" name="On function" sid="360896210736262" type="f">
                     <param id="0" name="Name">&quot;hjfa&quot;</param>
                 </condition>
             </conditions>

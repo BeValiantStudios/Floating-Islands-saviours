@@ -156,7 +156,7 @@
             <object-type name="Browser" sid="798513713974665">
                 <plugin id="Browser" />
             </object-type>
-            <object-type name="Function" sid="542695279339140">
+            <object-type name="f" sid="542695279339140">
                 <plugin id="Function" />
             </object-type>
         </object-folder>
@@ -281,6 +281,17 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Inventario">
+            <object-type global="1" name="Crafteos" sid="493092433328784">
+                <plugin id="Dictionary" />
+            </object-type>
+            <object-type global="1" name="Chest" sid="107018717189076">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Inv" sid="849521525795427">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
         <object-type name="CPUFPS" sid="723217774656077">
             <plugin id="Text" />
         </object-type>
@@ -360,9 +371,6 @@
                 </behavior-type>
             </behaviors>
         </object-type>
-        <object-type global="1" name="Inv" sid="849521525795427">
-            <plugin id="Arr" />
-        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">
@@ -406,7 +414,7 @@
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="34" />
-        <global-instance type="Function" uid="39" />
+        <global-instance type="f" uid="39" />
     </global-instances>
     <sounds-folder />
     <music-folder />
