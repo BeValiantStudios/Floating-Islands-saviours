@@ -360,6 +360,9 @@
                 </behavior-type>
             </behaviors>
         </object-type>
+        <object-type global="1" name="Inv" sid="849521525795427">
+            <plugin id="Arr" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">

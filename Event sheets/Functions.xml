@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Functions</name>
     <events>
+        <variable constant="0" name="Variable1" sid="340173314428361" static="0" type="number">0</variable>
         <event-block sid="478290801787023">
             <conditions>
                 <condition id="0" name="On function" sid="360896210736262" type="Function">

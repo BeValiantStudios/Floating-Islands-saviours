@@ -726,6 +726,13 @@
             </properties>
         </instance>
         <instance type="Chonks" uid="35" />
+        <instance type="Inv" uid="44">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>
