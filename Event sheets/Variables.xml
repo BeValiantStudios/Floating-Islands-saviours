@@ -35,5 +35,7 @@
         <variable comment="0: Derecha, 1: Abajo, 2: Izquierda, 3:Derecha" constant="0" name="Number4" sid="437565077264142" static="0" type="number">0</variable>
         <comment>Diccionarios</comment>
         <variable constant="1" name="Chunks" sid="174177900689158" static="0" type="text">{&quot;c2dictionary&quot;:true,&quot;data&quot;:{&quot;0&quot;:10,&quot;11&quot;:17,&quot;12&quot;:2,&quot;13&quot;:16,&quot;14&quot;:15,&quot;21&quot;:11,&quot;22&quot;:18,&quot;23&quot;:19,&quot;24&quot;:20,&quot;31&quot;:12,&quot;32&quot;:21,&quot;33&quot;:22,&quot;34&quot;:23,&quot;40&quot;:13,&quot;51&quot;:14,&quot;52&quot;:24}}</variable>
+        <comment>Variable que define en que slot se guarda</comment>
+        <variable constant="0" name="SlotGuardado" sid="620088678026172" static="0" type="number">0</variable>
     </events>
 </c2eventsheet>

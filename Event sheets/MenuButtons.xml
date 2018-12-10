@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MenuButtons</name>
+    <events>
+        <event-block sid="994571020211585">
+            <conditions>
+                <condition id="17" name="On tap object" sid="906356710063142" type="Touch">
+                    <param id="0" name="Object">Play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="382634508999160" type="Play">
+                    <param id="0" name="Object">Slot1</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="990055362301040" type="Play">
+                    <param id="0" name="Object">Slot2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">2</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="786275844711632" type="Play">
+                    <param id="0" name="Object">Slot3</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">3</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="577852531522397" type="Play">
+                    <param id="0" name="Object">Load1</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">4</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="539215415513554" type="Play">
+                    <param id="0" name="Object">Load2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">5</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="559426160302274" type="Play">
+                    <param id="0" name="Object">Load3</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">6</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="579502295213833">
+            <conditions>
+                <condition id="3" name="On touched object" sid="118968388832378" type="Touch">
+                    <param id="0" name="Object">Slot1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="634490491611437">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="537533246107222" type="System">
+                            <param id="0" name="Variable">SlotGuardado</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="414083792871807" type="Play">
+                            <param id="0" name="Object">Go</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="769433640246765">
+            <conditions>
+                <condition id="3" name="On touched object" sid="721298510413203" type="Touch">
+                    <param id="0" name="Object">Slot2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="268370418801833">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="909167395436679" type="System">
+                            <param id="0" name="Variable">SlotGuardado</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="859965095527736" type="Play">
+                            <param id="0" name="Object">Go</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="213184464280721">
+            <conditions>
+                <condition id="3" name="On touched object" sid="924730215201236" type="Touch">
+                    <param id="0" name="Object">Slot3</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="139767291967313">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="365534159836099" type="System">
+                            <param id="0" name="Variable">SlotGuardado</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="389697537370665" type="Play">
+                            <param id="0" name="Object">Go</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="508713819539321">
+            <conditions>
+                <condition id="17" name="On tap object" sid="120790665843141" type="Touch">
+                    <param id="0" name="Object">Load1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-37" name="Load" sid="405828714454523" type="System">
+                    <param id="0" name="Slot">&quot;Slot1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="143508084905071">
+            <conditions>
+                <condition id="17" name="On tap object" sid="528694271896178" type="Touch">
+                    <param id="0" name="Object">Load2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-37" name="Load" sid="306026155774162" type="System">
+                    <param id="0" name="Slot">&quot;Slot2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="783214670319630">
+            <conditions>
+                <condition id="17" name="On tap object" sid="332411922493819" type="Touch">
+                    <param id="0" name="Object">Load3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-37" name="Load" sid="413657554830456" type="System">
+                    <param id="0" name="Slot">&quot;Slot3&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="382748784207136">
+            <conditions>
+                <condition id="17" name="On tap object" sid="224254365872793" type="Touch">
+                    <param id="0" name="Object">Go</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="769225980225663" type="System">
+                    <param id="0" name="Layout">Main</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="162164837192508">
+            <conditions>
+                <condition id="17" name="On tap object" sid="446839923634305" type="Touch">
+                    <param id="0" name="Object">Save</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="975859831636511" type="System">
+                    <param id="0" name="Variable">SlotGuardado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="285911656577614" type="System">
+                    <param id="0" name="Slot">&quot;Slot1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="193069390848561">
+            <conditions>
+                <condition id="17" name="On tap object" sid="287928161544831" type="Touch">
+                    <param id="0" name="Object">Save</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="895009858346721" type="System">
+                    <param id="0" name="Variable">SlotGuardado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="836094700568735" type="System">
+                    <param id="0" name="Slot">&quot;Slot2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="424776140897481">
+            <conditions>
+                <condition id="17" name="On tap object" sid="455512807862082" type="Touch">
+                    <param id="0" name="Object">Save</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="109380092058692" type="System">
+                    <param id="0" name="Variable">SlotGuardado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="626667468541854" type="System">
+                    <param id="0" name="Slot">&quot;Slot3&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
