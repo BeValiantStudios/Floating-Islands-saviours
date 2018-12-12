@@ -49,15 +49,15 @@
                     <param id="0" name="Variable">Direccion</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action disabled="1" id="-20" name="Set layout scale" sid="953356646788859" type="System">
-                    <param id="0" name="Scale">0.4</param>
-                </action>
             </actions>
             <sub-events>
                 <comment>Scale</comment>
                 <event-block disabled="1" sid="200540059168577">
                     <conditions />
                     <actions>
+                        <action disabled="1" id="-20" name="Set layout scale" sid="953356646788859" type="System">
+                            <param id="0" name="Scale">0.4</param>
+                        </action>
                         <action id="-12" name="Set group active" sid="460614422150938" type="System">
                             <param id="0" name="Group name">&quot;InicioCamera&quot;</param>
                             <param id="1" name="State">2</param>
@@ -1797,7 +1797,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <comment>Corrige los espacios en blanco</comment>
+                <comment>Busca salas no conectadas</comment>
                 <variable constant="0" name="X2" sid="961598643548237" static="1" type="number">0</variable>
                 <variable constant="0" name="Y2" sid="529066399989003" static="1" type="number">0</variable>
                 <variable constant="0" name="DireccionArreglo" sid="243769767914686" static="1" type="number">0</variable>
@@ -2343,14 +2343,15 @@
                                         <event-block sid="806227448277313">
                                             <conditions>
                                                 <condition id="3" name="For each element" sid="658901456346627" type="Chunks">
-                                                    <param id="0" name="Axes">1</param>
+                                                    <param id="0" name="Axes">0</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="3" name="Set at XY" sid="341685521224128" type="Mother">
+                                                <action id="4" name="Set at XYZ" sid="341685521224128" type="Mother">
                                                     <param id="0" name="X">Chunks.CurX + loopindex(&quot;X&quot;)*20</param>
                                                     <param id="1" name="Y">Chunks.CurY + loopindex(&quot;Y&quot;)*20</param>
-                                                    <param id="2" name="Value">Chunks.CurValue</param>
+                                                    <param id="2" name="Z">Chunks.CurZ</param>
+                                                    <param id="3" name="Value">Chunks.CurValue</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -3202,64 +3203,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Datos de MatrizSEED en texto</comment>
-                <event-block sid="383603341552342">
-                    <conditions>
-                        <condition id="3" name="For each element" sid="345437688262693" type="Seed">
-                            <param id="0" name="Axes">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Append text" sid="190002683470336" type="SeedText">
-                            <param id="0" name="Text">&quot;&quot;&amp;Seed.CurValue</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="848701340752516">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="206714124379533" type="System">
-                                    <param id="0" name="First value">Seed.CurY</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Append text" sid="610028875690054" type="SeedText">
-                                    <param id="0" name="Text">&quot;&quot;&amp;newline</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>Datos de Matrizgral en texto</comment>
-                <event-block sid="271660869888690">
-                    <conditions>
-                        <condition id="3" name="For each element" sid="860491130272352" type="Mother">
-                            <param id="0" name="Axes">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Append text" sid="392942378346151" type="Text">
-                            <param id="0" name="Text">&quot;&quot;&amp;Mother.CurValue</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="971511930818037">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="782652406353717" type="System">
-                                    <param id="0" name="First value">Mother.CurY</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">59</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Append text" sid="326688155563792" type="Text">
-                                    <param id="0" name="Text">&quot;&quot;&amp;newline</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <comment>MOTHER to Tile</comment>
                 <event-block bookmark="1" sid="948606587098403">
                     <conditions />
@@ -3276,43 +3219,69 @@
                             <param id="2" name="Width">Self.Width</param>
                             <param id="3" name="Height">Self.Height</param>
                         </action>
+                        <action id="2" name="Erase tile range" sid="294768588462304" type="TilemapGround2">
+                            <param id="0" name="Tile X">0</param>
+                            <param id="1" name="Tile Y">0</param>
+                            <param id="2" name="Width">Self.Width</param>
+                            <param id="3" name="Height">Self.Height</param>
+                        </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="550272879190641">
+                        <event-block sid="865755632724399">
                             <conditions>
-                                <condition id="3" name="For each element" sid="291565250930967" type="Mother">
-                                    <param id="0" name="Axes">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="1" name="Set tile" sid="976107404456430" type="TilemapGround">
-                                    <param id="0" name="Tile X">Mother.CurY</param>
-                                    <param id="1" name="Tile Y">Mother.CurX</param>
-                                    <param id="2" name="Tile">4</param>
-                                    <param id="3" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="137552242294681">
-                            <conditions>
-                                <condition id="3" name="For each element" sid="932275423028065" type="Mother">
-                                    <param id="0" name="Axes">1</param>
+                                <condition id="3" name="For each element" sid="185953968822498" type="Mother">
+                                    <param id="0" name="Axes">0</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="333693285079113">
+                                <event-block sid="194975831169518">
                                     <conditions>
-                                        <condition id="4" name="Compare current value" sid="697943279240469" type="Mother">
-                                            <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Value">1</param>
+                                        <condition id="-8" name="Compare two values" sid="961072251168828" type="System">
+                                            <param id="0" name="First value">Mother.CurZ</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set tile" sid="976107404456430" type="TilemapGround">
+                                            <param id="0" name="Tile X">Mother.CurY</param>
+                                            <param id="1" name="Tile Y">Mother.CurX</param>
+                                            <param id="2" name="Tile">Mother.CurValue</param>
+                                            <param id="3" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="862185282560636">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="202993259686518" type="System">
+                                            <param id="0" name="First value">Mother.CurZ</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set tile" sid="470042324467327" type="TilemapSolid">
-                                            <param id="0" name="Tile X">Mother.CurX</param>
-                                            <param id="1" name="Tile Y">Mother.CurY</param>
-                                            <param id="2" name="Tile">9</param>
+                                            <param id="0" name="Tile X">Mother.CurY</param>
+                                            <param id="1" name="Tile Y">Mother.CurX</param>
+                                            <param id="2" name="Tile">Mother.CurValue</param>
+                                            <param id="3" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="591180441677789">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="392863294785139" type="System">
+                                            <param id="0" name="First value">Mother.CurZ</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set tile" sid="789817360026513" type="TilemapGround2">
+                                            <param id="0" name="Tile X">Mother.CurY</param>
+                                            <param id="1" name="Tile Y">Mother.CurX</param>
+                                            <param id="2" name="Tile">Mother.CurValue</param>
                                             <param id="3" name="State">0</param>
                                         </action>
                                     </actions>

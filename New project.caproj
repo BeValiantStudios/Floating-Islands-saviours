@@ -36,8 +36,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>1920</width>
-        <height>1920</height>
+        <width>820</width>
+        <height>820</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -136,16 +136,21 @@
                         <behavior id="solid" />
                     </behavior-type>
                 </behaviors>
-                <texture />
+                <texture original-source="C:\Users\Multimedia5_20\Documents\GitHub\Floating-Islands-saviours\Assets\Tilemap\Tile map Fis 1.png" />
                 <tiles />
             </object-type>
             <object-type name="TilemapGround" sid="748943506646186">
                 <plugin id="Tilemap" />
-                <texture />
+                <texture original-source="C:\Users\Multimedia5_20\Documents\GitHub\Floating-Islands-saviours\Assets\Tilemap\Tile map Fis 1.png" />
                 <tiles />
             </object-type>
             <object-type global="1" name="Chonks" sid="496891783876894">
                 <plugin id="Dictionary" />
+            </object-type>
+            <object-type name="TilemapGround2" sid="677252665078299">
+                <plugin id="Tilemap" />
+                <texture original-source="C:\Users\Multimedia5_20\Documents\GitHub\Floating-Islands-saviours\Assets\Tilemap\Tile map Fis 1.png" />
+                <tiles />
             </object-type>
         </object-folder>
         <object-folder name="Miscelaneos">
