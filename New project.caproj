@@ -23,8 +23,10 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -372,6 +374,30 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Options" sid="990805233020118">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="601006895792260" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Start" sid="230547551011786">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="558000674366758">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="181855540883562" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="-0.4" />
+                            <image-point name="Imagepoint 2" x="0.5" y="1.4" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="CPUFPS" sid="723217774656077">
             <plugin id="Text" />
@@ -452,6 +478,17 @@
                 </behavior-type>
             </behaviors>
         </object-type>
+        <object-type name="Logo" sid="282879870287812">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="opacidad" sid="778934405272875" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232927597250565" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">
@@ -473,6 +510,26 @@
                 <member>Tipo51</member>
                 <member>Tipo52</member>
             </members>
+        </family>
+        <family name="Buttons" plugin-id="Sprite" sid="125396432698743">
+            <members>
+                <member>Go</member>
+                <member>Load1</member>
+                <member>Load2</member>
+                <member>Load3</member>
+                <member>Options</member>
+                <member>Play</member>
+                <member>Save</member>
+                <member>Slot1</member>
+                <member>Slot2</member>
+                <member>Slot3</member>
+                <member>Start</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Fade" sid="771824203942965">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>

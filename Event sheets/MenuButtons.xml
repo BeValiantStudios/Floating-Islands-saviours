@@ -40,6 +40,7 @@
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">6</param>
                 </action>
+                <action id="-9" name="Destroy" sid="432325838817729" type="Play" />
             </actions>
         </event-block>
         <event-block sid="579502295213833">
@@ -210,6 +211,61 @@
             <actions>
                 <action id="-36" name="Save" sid="626667468541854" type="System">
                     <param id="0" name="Slot">&quot;Slot3&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="979448243127860">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="302749346084672" type="System">
+                    <param id="0" name="Interval (seconds)">0.05</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="164305645124039" type="Logo">
+                    <param id="0" name="Instance variable">opacidad</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="398132903492025" type="Logo">
+                    <param id="0" name="Opacity">Logo.opacidad</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="786374222697583">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="153019909201138" type="Logo">
+                    <param id="0" name="Instance variable">opacidad</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="847358305090312" type="Start">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="844608634320421" type="Start">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="222158563949146">
+            <conditions>
+                <condition id="17" name="On tap object" sid="911073890019078" type="Touch">
+                    <param id="0" name="Object">Start</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="461326921031841" type="Start">
+                    <param id="0" name="Object">Play</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="756235304278534" type="Start">
+                    <param id="0" name="Object">Options</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">2</param>
+                </action>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="856064891087070" type="Start">
+                    <param id="0" name="Fade-out time">0.5</param>
                 </action>
             </actions>
         </event-block>
