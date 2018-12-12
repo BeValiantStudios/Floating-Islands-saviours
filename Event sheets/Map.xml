@@ -3242,6 +3242,11 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
+                                        <condition id="-8" name="Compare two values" sid="951666351178490" type="System">
+                                            <param id="0" name="First value">Mother.CurValue</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set tile" sid="976107404456430" type="TilemapGround">
@@ -3259,6 +3264,11 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">1</param>
                                         </condition>
+                                        <condition id="-8" name="Compare two values" sid="921433430027685" type="System">
+                                            <param id="0" name="First value">Mother.CurValue</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set tile" sid="470042324467327" type="TilemapSolid">
@@ -3275,6 +3285,11 @@
                                             <param id="0" name="First value">Mother.CurZ</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">2</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="581745526811501" type="System">
+                                            <param id="0" name="First value">Mother.CurValue</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>

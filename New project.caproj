@@ -10,11 +10,14 @@
     <unique-id>3jh3bpbz82u7b</unique-id>
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
@@ -24,9 +27,9 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
-        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -36,8 +39,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>820</width>
-        <height>820</height>
+        <width>512</width>
+        <height>288</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -165,6 +168,12 @@
             </object-type>
             <object-type name="f" sid="542695279339140">
                 <plugin id="Function" />
+            </object-type>
+            <object-type name="LocalStorage" sid="283986141524709">
+                <plugin id="LocalStorage" />
+            </object-type>
+            <object-type name="AJAX" sid="598223019380455">
+                <plugin id="AJAX" />
             </object-type>
         </object-folder>
         <object-folder name="Controles">
@@ -299,109 +308,115 @@
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
-        <object-folder name="Buttons">
-            <object-type name="Go" sid="305698967605841">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="249586077072183" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
+        <object-folder name="Menu">
+            <object-folder name="Buttons">
+                <object-type name="Back" sid="661070462529693">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="924367102576001">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="298526751960988" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Go" sid="305698967605841">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Fade" sid="148409957678839">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="249586077072183" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="9patch" sid="289241613320789">
+                <plugin id="NinePatch" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="227849975186993">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\Jhü\Desktop\asd123.png" />
             </object-type>
-            <object-type name="Load1" sid="689137031862365">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726001377244919" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Load2" sid="339836200330577">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="881091154231868" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Load3" sid="422046373252701">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="919209218890032" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Play" sid="417328754411913">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="783867626048497" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0" y="0" />
-                            <image-point name="Imagepoint 2" x="0.5" y="0" />
-                            <image-point name="Imagepoint 3" x="1" y="0" />
-                            <image-point name="Imagepoint 4" x="0" y="1" />
-                            <image-point name="Imagepoint 5" x="0.5" y="1" />
-                            <image-point name="Imagepoint 6" x="1" y="1" />
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Save" sid="865152719021330">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="551455751873776" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Slot1" sid="477744671263796">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="351340950392207" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Slot2" sid="845891560922201">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="488150824603664" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Slot3" sid="631950439780227">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677810972550701" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Options" sid="990805233020118">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="601006895792260" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Start" sid="230547551011786">
+            <object-type name="Logo" sid="282879870287812">
                 <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="Sine" sid="558000674366758">
-                        <behavior id="Sin" />
+                    <behavior-type name="Fade" sid="346609826947844">
+                        <behavior id="Fade" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="181855540883562" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="-0.4" />
-                            <image-point name="Imagepoint 2" x="0.5" y="1.4" />
-                        </frame>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232927597250565" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="File1" sid="929160010499595">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="261756292924652">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Enter" sid="236161800765506">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="433049252546404">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="553540236524203">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Select" sid="919946078675420">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="461902405710003">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="File2" sid="134541963249967">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="906132501773128">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="File3" sid="730373430970028">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="523766394410381">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Options" sid="717730418635019">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="777907317368098">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Load" sid="876855634045584">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="919846240863019">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
         </object-folder>
         <object-type name="CPUFPS" sid="723217774656077">
@@ -483,16 +498,8 @@
                 </behavior-type>
             </behaviors>
         </object-type>
-        <object-type name="Logo" sid="282879870287812">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="opacidad" sid="778934405272875" type="number" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232927597250565" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
+        <object-type name="Text2" sid="493995822297934">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families>
@@ -515,26 +522,6 @@
                 <member>Tipo51</member>
                 <member>Tipo52</member>
             </members>
-        </family>
-        <family name="Buttons" plugin-id="Sprite" sid="125396432698743">
-            <members>
-                <member>Go</member>
-                <member>Load1</member>
-                <member>Load2</member>
-                <member>Load3</member>
-                <member>Options</member>
-                <member>Play</member>
-                <member>Save</member>
-                <member>Slot1</member>
-                <member>Slot2</member>
-                <member>Slot3</member>
-                <member>Start</member>
-            </members>
-            <behaviors>
-                <behavior-type name="Fade" sid="771824203942965">
-                    <behavior id="Fade" />
-                </behavior-type>
-            </behaviors>
         </family>
     </families>
     <layout-folder>
@@ -560,6 +547,8 @@
         </global-instance>
         <global-instance type="Browser" uid="34" />
         <global-instance type="f" uid="39" />
+        <global-instance type="LocalStorage" uid="76" />
+        <global-instance type="AJAX" uid="77" />
     </global-instances>
     <sounds-folder />
     <music-folder />
