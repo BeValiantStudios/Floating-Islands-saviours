@@ -40,8 +40,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>512</width>
-        <height>288</height>
+        <width>920</width>
+        <height>920</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -267,32 +267,74 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="South" pingpong="0" repeatcount="1" repeatto="0" sid="393418052881730" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_1.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_1.png">
+                            <collision-poly>
+                                <point x="0.125" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.871094" y="0.875" />
+                                <point x="0.125" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_2.png">
+                            <collision-poly>
+                                <point x="0.125" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.871094" y="0.875" />
+                                <point x="0.125" y="0.875" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="2" loop="0" name="West" pingpong="0" repeatcount="1" repeatto="0" sid="938722481128122" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_3.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_4.png" />
-                    </animation>
-                    <animation framecount="2" loop="0" name="North" pingpong="0" repeatcount="1" repeatto="0" sid="582350829010017" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_5.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_6.png" />
-                    </animation>
-                    <animation framecount="2" loop="0" name="East" pingpong="0" repeatcount="1" repeatto="0" sid="304652904826021" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_3.png">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.125" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.871094" y="0.875" />
+                                <point x="0.125" y="0.875" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_4.png">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.125" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.871094" y="0.875" />
+                                <point x="0.125" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="North" pingpong="0" repeatcount="1" repeatto="0" sid="582350829010017" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_5.png">
+                            <collision-poly>
+                                <point x="0.125" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.871094" y="0.875" />
+                                <point x="0.125" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_6.png">
+                            <collision-poly>
+                                <point x="0.125" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.871094" y="0.875" />
+                                <point x="0.125" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="East" pingpong="0" repeatcount="1" repeatto="0" sid="304652904826021" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_3.png">
+                            <collision-poly>
+                                <point x="0.125" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.871094" y="0.875" />
+                                <point x="0.125" y="0.875" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_4.png">
+                            <collision-poly>
+                                <point x="0.125" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.871094" y="0.875" />
+                                <point x="0.125" y="0.875" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -613,6 +655,20 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
-        <file name="array1.json" />
+        <file-folder name="Chunks">
+            <file name="Chunk_11.json" />
+            <file name="Chunk_0.json" />
+            <file name="Chunk_13.json" />
+            <file name="Chunk_14.json" />
+            <file name="Chunk_51.json" />
+            <file name="Chunk_52.json" />
+            <file name="Chunk_12.json" />
+            <file name="Chunk_21.json" />
+            <file name="Chunk_22.json" />
+            <file name="Chunk_23.json" />
+            <file name="Chunk_24.json" />
+            <file name="Chunk_41.json" />
+            <file name="Chunk_31.json" />
+        </file-folder>
     </files-folder>
 </c2project>

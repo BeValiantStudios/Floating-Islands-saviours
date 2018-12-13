@@ -20,21 +20,6 @@
                             <param id="0" name="Variable">Number4</param>
                             <param id="1" name="Value">wallclocktime</param>
                         </action>
-                        <action id="11" name="Load" sid="507133265973800" type="Tipo0">
-                            <param id="0" name="JSON">tipo0</param>
-                        </action>
-                        <action id="11" name="Load" sid="694508606184503" type="Tipo11">
-                            <param id="0" name="JSON">tipo11</param>
-                        </action>
-                        <action id="11" name="Load" sid="442716814117074" type="Tipo12">
-                            <param id="0" name="JSON">tipo12</param>
-                        </action>
-                        <action id="11" name="Load" sid="640724667532379" type="Tipo13">
-                            <param id="0" name="JSON">tipo13</param>
-                        </action>
-                        <action id="11" name="Load" sid="927448098346982" type="Tipo14">
-                            <param id="0" name="JSON">tipo14</param>
-                        </action>
                         <action id="11" name="Load" sid="878042236905779" type="Tipo21">
                             <param id="0" name="JSON">tipo21</param>
                         </action>
@@ -62,12 +47,6 @@
                         <action id="11" name="Load" sid="307795329029088" type="Tipo4">
                             <param id="0" name="JSON">tipo4</param>
                         </action>
-                        <action id="11" name="Load" sid="851549443818756" type="Tipo51">
-                            <param id="0" name="JSON">tipo51</param>
-                        </action>
-                        <action id="11" name="Load" sid="623149037861037" type="Tipo52">
-                            <param id="0" name="JSON">tipo52</param>
-                        </action>
                         <action id="4" name="Load" sid="110150138350557" type="Chonks">
                             <param id="0" name="JSON">CHUNKS</param>
                         </action>
@@ -89,6 +68,226 @@
                         </action>
                         <action id="0" name="Set text" sid="496010689756032" type="stade">
                             <param id="0" name="Text">Player.AnimationName</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="974807127250882" title="ActualizarChunk">
+            <sub-events>
+                <comment>11 es 14 y 14 es 11</comment>
+                <event-block sid="315505672464644">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="608583517799463" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Request project file" sid="801262672096029" type="AJAX">
+                            <param id="0" name="Tag">&quot;c14&quot;</param>
+                            <param id="1" name="File">Chunk_11.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="861184051635151" type="AJAX">
+                            <param id="0" name="Tag">&quot;c12&quot;</param>
+                            <param id="1" name="File">Chunk_12.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="188263108432237" type="AJAX">
+                            <param id="0" name="Tag">&quot;c13&quot;</param>
+                            <param id="1" name="File">Chunk_13.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="914165950128056" type="AJAX">
+                            <param id="0" name="Tag">&quot;c11&quot;</param>
+                            <param id="1" name="File">Chunk_14.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="674898906950624" type="AJAX">
+                            <param id="0" name="Tag">&quot;c21&quot;</param>
+                            <param id="1" name="File">Chunk_21.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="934569859720434" type="AJAX">
+                            <param id="0" name="Tag">&quot;c22&quot;</param>
+                            <param id="1" name="File">Chunk_22.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="794343050050639" type="AJAX">
+                            <param id="0" name="Tag">&quot;c23&quot;</param>
+                            <param id="1" name="File">Chunk_23.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="204332608421175" type="AJAX">
+                            <param id="0" name="Tag">&quot;c24&quot;</param>
+                            <param id="1" name="File">Chunk_24.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="601350868466915" type="AJAX">
+                            <param id="0" name="Tag">&quot;c31&quot;</param>
+                            <param id="1" name="File">Chunk_31.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="538921232825442" type="AJAX">
+                            <param id="0" name="Tag">&quot;c41&quot;</param>
+                            <param id="1" name="File">Chunk_41.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="856166631025501" type="AJAX">
+                            <param id="0" name="Tag">&quot;c0&quot;</param>
+                            <param id="1" name="File">Chunk_0.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="750606295200549" type="AJAX">
+                            <param id="0" name="Tag">&quot;c51&quot;</param>
+                            <param id="1" name="File">Chunk_51.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="503869993045337" type="AJAX">
+                            <param id="0" name="Tag">&quot;c52&quot;</param>
+                            <param id="1" name="File">Chunk_52.json</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="228512223318936">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="110056303637068" type="AJAX">
+                            <param id="0" name="Tag">&quot;c11&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="150733359247240" type="Tipo11">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="642691899575870">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="715484683362771" type="AJAX">
+                            <param id="0" name="Tag">&quot;c12&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="955630073758148" type="Tipo12">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="881933158665184">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="835457253980523" type="AJAX">
+                            <param id="0" name="Tag">&quot;c13&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="200242137203185" type="Tipo13">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="455520953215810">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="922703902034500" type="AJAX">
+                            <param id="0" name="Tag">&quot;c14&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="600851985235551" type="Tipo14">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="428849918711764">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="489446360306232" type="AJAX">
+                            <param id="0" name="Tag">&quot;c21&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="503795004379682" type="Tipo21">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="232874888946281">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="332569700850203" type="AJAX">
+                            <param id="0" name="Tag">&quot;c22&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="803682346197049" type="Tipo22">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="958946394011993">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="829937440265353" type="AJAX">
+                            <param id="0" name="Tag">&quot;c23&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="109654275183797" type="Tipo23">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="758345926368247">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="311222494726413" type="AJAX">
+                            <param id="0" name="Tag">&quot;c24&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="388277033269644" type="Tipo24">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="473199580580385">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="201486268288108" type="AJAX">
+                            <param id="0" name="Tag">&quot;c31&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="270770708300574" type="Tipo31">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="285313518640671">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="842296241007164" type="AJAX">
+                            <param id="0" name="Tag">&quot;c41&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="886876918631116" type="Tipo4">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="130493445418249">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="150551614780234" type="AJAX">
+                            <param id="0" name="Tag">&quot;c0&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="260143676084628" type="Tipo0">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="881634490767425">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="993205272337866" type="AJAX">
+                            <param id="0" name="Tag">&quot;c51&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="343444759550467" type="Tipo51">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="907246016493233">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="236732270671905" type="AJAX">
+                            <param id="0" name="Tag">&quot;c52&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="145671305376513" type="Tipo52">
+                            <param id="0" name="JSON">AJAX.LastData</param>
                         </action>
                     </actions>
                 </event-block>
