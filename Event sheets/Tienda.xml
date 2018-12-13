@@ -2,38 +2,5 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Tienda</name>
-    <events>
-        <event-block sid="112246063500979">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="809648617799384" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="996742570326368" type="Recuento">
-                    <param id="0" name="Text">&quot;Oleada: &quot; &amp;Oleada &amp;newline &amp;&#x0D;&#x0A;&quot;Puntaje Conseguido: &quot; &amp;PuntajeOleada &amp;newline &amp;&#x0D;&#x0A;&quot;Puntaje Total: &quot; &amp;PuntajeGlobal &amp;newline &amp;&#x0D;&#x0A;&quot;Cantidad de enemigos abatidos: &quot; &amp; 20+(Oleada*2) &amp;newline &amp;newline &amp;&#x0D;&#x0A;&quot;Preparate para la siguiente oleada!&quot;</param>
-                </action>
-                <action id="-10" name="Add to" sid="702977883440391" type="System">
-                    <param id="0" name="Variable">Oleada</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="527026211364962" type="System">
-                    <param id="0" name="Variable">CantidadEnemigosOleada</param>
-                    <param id="1" name="Value">20 + (Oleada*2)</param>
-                </action>
-                <action id="-9" name="Set value" sid="554956466734543" type="System">
-                    <param id="0" name="Variable">EnemigosRestantes</param>
-                    <param id="1" name="Value">20 + (Oleada*2)</param>
-                </action>
-                <action id="-10" name="Add to" sid="398076927711817" type="System">
-                    <param id="0" name="Variable">PuntajeGlobal</param>
-                    <param id="1" name="Value">PuntajeOleada</param>
-                </action>
-                <action id="-16" name="Wait" sid="406384977313320" type="System">
-                    <param id="0" name="Seconds">5</param>
-                </action>
-                <action id="-25" name="Go to layout (by name)" sid="536039979676338" type="System">
-                    <param id="0" name="Layout">&quot;Main&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-    </events>
+    <events />
 </c2eventsheet>
