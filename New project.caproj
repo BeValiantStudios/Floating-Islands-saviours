@@ -607,6 +607,9 @@
                 </behavior-type>
             </behaviors>
         </object-type>
+        <object-type name="Recuento" sid="104974116700710">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">
@@ -634,6 +637,7 @@
         <layout>Main.xml</layout>
         <layout>Assets.xml</layout>
         <layout>Menu.xml</layout>
+        <layout>Tienda.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Map.xml</event-sheet>
@@ -643,6 +647,7 @@
         <event-sheet>Main.xml</event-sheet>
         <event-sheet>Functions.xml</event-sheet>
         <event-sheet>MenuButtons.xml</event-sheet>
+        <event-sheet>Tienda.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="7" />
