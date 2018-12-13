@@ -32,6 +32,7 @@
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -40,8 +41,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>920</width>
-        <height>920</height>
+        <width>432</width>
+        <height>243</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -266,7 +267,7 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="2" loop="0" name="South" pingpong="0" repeatcount="1" repeatto="0" sid="393418052881730" speed="5">
+                    <animation framecount="2" loop="0" name="South" pingpong="0" repeatcount="1" repeatto="0" sid="393418052881730" speed="7">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_1.png">
                             <collision-poly>
                                 <point x="0.125" y="0.125" />
@@ -284,7 +285,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="West" pingpong="0" repeatcount="1" repeatto="0" sid="938722481128122" speed="5">
+                    <animation framecount="2" loop="0" name="West" pingpong="0" repeatcount="1" repeatto="0" sid="938722481128122" speed="7">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_3.png">
                             <collision-poly>
                                 <point x="0.125" y="0.125" />
@@ -302,7 +303,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="North" pingpong="0" repeatcount="1" repeatto="0" sid="582350829010017" speed="5">
+                    <animation framecount="2" loop="0" name="North" pingpong="0" repeatcount="1" repeatto="0" sid="582350829010017" speed="7">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_5.png">
                             <collision-poly>
                                 <point x="0.125" y="0.125" />
@@ -320,7 +321,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="East" pingpong="0" repeatcount="1" repeatto="0" sid="304652904826021" speed="5">
+                    <animation framecount="2" loop="0" name="East" pingpong="0" repeatcount="1" repeatto="0" sid="304652904826021" speed="7">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\Player1\walk_3.png">
                             <collision-poly>
                                 <point x="0.125" y="0.125" />
@@ -595,6 +596,17 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="ten" sid="810157358019566">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="526029992515963">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="CustomMovement" sid="618439949159958">
+                    <behavior id="custom" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">
@@ -669,6 +681,9 @@
             <file name="Chunk_24.json" />
             <file name="Chunk_41.json" />
             <file name="Chunk_31.json" />
+            <file name="Chunk_32.json" />
+            <file name="Chunk_33.json" />
+            <file name="Chunk_34.json" />
         </file-folder>
     </files-folder>
 </c2project>

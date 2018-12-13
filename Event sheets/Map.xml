@@ -9,11 +9,8 @@
         <comment>Creacion MOTHER</comment>
         <event-block any="1" sid="334183430745572">
             <conditions>
-                <condition id="0" name="On key pressed" sid="978722397482708" type="Keyboard">
-                    <param id="0" name="Key">82</param>
-                </condition>
-                <condition id="3" name="On touched object" sid="254672403257253" type="Touch">
-                    <param id="0" name="Object">R</param>
+                <condition id="0" name="On function" sid="296235622600026" type="f">
+                    <param id="0" name="Name">&quot;ActualizarMapa&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -29,38 +26,37 @@
                 </action>
                 <action id="0" name="Clear" sid="594830314850278" type="Mother" />
                 <action id="0" name="Clear" sid="365420776708934" type="Seed" />
-                <action id="-9" name="Set value" sid="416533492790077" type="System">
-                    <param id="0" name="Variable">ActualX</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="890157527418862" type="System">
-                    <param id="0" name="Variable">ActualY</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="997570277521572" type="System">
-                    <param id="0" name="Variable">InicialX</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="487877970610088" type="System">
-                    <param id="0" name="Variable">InicialY</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="910714294365919" type="System">
-                    <param id="0" name="Variable">Direccion</param>
-                    <param id="1" name="Value">0</param>
-                </action>
             </actions>
             <sub-events>
-                <comment>Scale</comment>
-                <event-block disabled="1" sid="200540059168577">
+                <comment>Variables Limit Map</comment>
+                <variable constant="0" name="InicialX" sid="872279948596592" static="1" type="number">1</variable>
+                <variable constant="0" name="InicialY" sid="148752061623970" static="1" type="number">1</variable>
+                <variable constant="0" name="ActualX" sid="331198668223943" static="1" type="number">1</variable>
+                <variable constant="0" name="ActualY" sid="848728546527611" static="1" type="number">1</variable>
+                <variable comment="0: Derecha, 1: Abajo, 2: Izquierda, 3:Derecha" constant="0" name="Direccion" sid="115739326662524" static="1" type="number">0</variable>
+                <comment>Reset</comment>
+                <event-block sid="200540059168577">
                     <conditions />
                     <actions>
-                        <action disabled="1" id="-20" name="Set layout scale" sid="953356646788859" type="System">
-                            <param id="0" name="Scale">0.4</param>
+                        <action id="-9" name="Set value" sid="416533492790077" type="System">
+                            <param id="0" name="Variable">ActualX</param>
+                            <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-12" name="Set group active" sid="460614422150938" type="System">
-                            <param id="0" name="Group name">&quot;InicioCamera&quot;</param>
-                            <param id="1" name="State">2</param>
+                        <action id="-9" name="Set value" sid="890157527418862" type="System">
+                            <param id="0" name="Variable">ActualY</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="997570277521572" type="System">
+                            <param id="0" name="Variable">InicialX</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="487877970610088" type="System">
+                            <param id="0" name="Variable">InicialY</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="910714294365919" type="System">
+                            <param id="0" name="Variable">Direccion</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2362,7 +2358,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Creacion Matrizgral Bordes</comment>
-                <event-block sid="182929954549038">
+                <event-block disabled="1" sid="182929954549038">
                     <conditions>
                         <condition id="-10" name="For" sid="534235702917196" type="System">
                             <param id="0" name="Name">&quot;&quot;</param>
@@ -2377,7 +2373,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="281677386026008">
+                        <event-block disabled="1" sid="281677386026008">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="289008751437127" type="System">
                                     <param id="0" name="Variable">Direccion</param>
@@ -2387,7 +2383,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="960187763617699">
+                                <event-block disabled="1" sid="960187763617699">
                                     <conditions>
                                         <condition id="-14" inverted="1" name="Compare variable" sid="592321128489789" type="System">
                                             <param id="0" name="Variable">ActualY</param>
@@ -2397,7 +2393,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="691726628398345">
+                                        <event-block disabled="1" sid="691726628398345">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="847244414561351" type="System">
                                                     <param id="0" name="Variable">Number</param>
@@ -2421,7 +2417,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="719416311561640">
+                                                <event-block disabled="1" sid="719416311561640">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="394146086085224" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -2437,7 +2433,7 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="172644538942885">
+                                                <event-block disabled="1" sid="172644538942885">
                                                     <conditions />
                                                     <actions>
                                                         <action id="3" name="Set at XY" sid="673030624422928" type="Mother">
@@ -2449,7 +2445,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="321158301902689">
+                                        <event-block disabled="1" sid="321158301902689">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="514286869590908" type="System">
                                                     <param id="0" name="Variable">Number</param>
@@ -2464,7 +2460,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="197474947523765">
+                                                <event-block disabled="1" sid="197474947523765">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="697382013793308" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -2480,7 +2476,7 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="143078713010052">
+                                                <event-block disabled="1" sid="143078713010052">
                                                     <conditions />
                                                     <actions>
                                                         <action id="3" name="Set at XY" sid="502436912056924" type="Mother">
@@ -2492,7 +2488,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="216163636618869">
+                                        <event-block disabled="1" sid="216163636618869">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="452057830282371" type="System">
                                                     <param id="0" name="Variable">Number</param>
@@ -2516,7 +2512,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="550947736993639">
+                                                <event-block disabled="1" sid="550947736993639">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="593836675129428" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -2532,7 +2528,7 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="861002218366676">
+                                                <event-block disabled="1" sid="861002218366676">
                                                     <conditions />
                                                     <actions>
                                                         <action id="3" name="Set at XY" sid="624269842327055" type="Mother">
@@ -2544,7 +2540,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="535626962239813">
+                                        <event-block disabled="1" sid="535626962239813">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="225894418888893" type="System" />
                                             </conditions>
@@ -2555,7 +2551,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="370235864775800">
+                                                <event-block disabled="1" sid="370235864775800">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="623147397110160" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -2571,7 +2567,7 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="934179804999012">
+                                                <event-block disabled="1" sid="934179804999012">
                                                     <conditions />
                                                     <actions>
                                                         <action id="3" name="Set at XY" sid="949026440021893" type="Mother">
@@ -2585,7 +2581,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="663328896803547">
+                                <event-block disabled="1" sid="663328896803547">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="609913781741573" type="System" />
                                     </conditions>
@@ -2598,7 +2594,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="731641973830753">
+                        <event-block disabled="1" sid="731641973830753">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="821071955945416" type="System">
                                     <param id="0" name="Variable">Direccion</param>
@@ -2608,7 +2604,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="469271244292485">
+                                <event-block disabled="1" sid="469271244292485">
                                     <conditions>
                                         <condition id="-14" inverted="1" name="Compare variable" sid="636147105550014" type="System">
                                             <param id="0" name="Variable">ActualX</param>
@@ -2618,7 +2614,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="632093489104880">
+                                        <event-block disabled="1" sid="632093489104880">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="316229349013638" type="System">
                                                     <param id="0" name="Variable">Number</param>
@@ -2647,7 +2643,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="826843086287163">
+                                                <event-block disabled="1" sid="826843086287163">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="731584204577370" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -2665,7 +2661,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="199280053732801">
+                                        <event-block disabled="1" sid="199280053732801">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="889443353330999" type="System">
                                                     <param id="0" name="Variable">Number</param>
@@ -2685,7 +2681,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="460772489760328">
+                                                <event-block disabled="1" sid="460772489760328">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="172667761846460" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -2703,7 +2699,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="750227397828434">
+                                        <event-block disabled="1" sid="750227397828434">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="458360926553656" type="System">
                                                     <param id="0" name="Variable">Number</param>
@@ -2732,7 +2728,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="668536416561637">
+                                                <event-block disabled="1" sid="668536416561637">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="955835502379483" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -2750,7 +2746,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="300039112806297">
+                                        <event-block disabled="1" sid="300039112806297">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="754494099291166" type="System" />
                                             </conditions>
@@ -2766,7 +2762,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="499983782126518">
+                                                <event-block disabled="1" sid="499983782126518">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="940464383772066" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -2786,7 +2782,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="859750150390917">
+                                <event-block disabled="1" sid="859750150390917">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="405473773204994" type="System" />
                                     </conditions>
@@ -2799,7 +2795,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="561044200761745">
+                        <event-block disabled="1" sid="561044200761745">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="512526438175976" type="System">
                                     <param id="0" name="Variable">Direccion</param>
@@ -2809,7 +2805,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="104906506842246">
+                                <event-block disabled="1" sid="104906506842246">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="519567801508895" type="System">
                                             <param id="0" name="Variable">ActualY</param>
@@ -2819,7 +2815,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="483630064014243">
+                                        <event-block disabled="1" sid="483630064014243">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="597973915006976" type="System">
                                                     <param id="0" name="Variable">Number</param>
@@ -2848,7 +2844,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="537397895211357">
+                                                <event-block disabled="1" sid="537397895211357">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="186532380336863" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -2866,7 +2862,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="151729133884476">
+                                        <event-block disabled="1" sid="151729133884476">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="440873214081919" type="System">
                                                     <param id="0" name="Variable">Number</param>
@@ -2886,7 +2882,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="874969795092151">
+                                                <event-block disabled="1" sid="874969795092151">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="779031235374746" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -2904,7 +2900,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="864958849723604">
+                                        <event-block disabled="1" sid="864958849723604">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="448505013084184" type="System">
                                                     <param id="0" name="Variable">Number</param>
@@ -2933,7 +2929,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="274192402114055">
+                                                <event-block disabled="1" sid="274192402114055">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="814579443749719" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -2951,7 +2947,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="114394165947974">
+                                        <event-block disabled="1" sid="114394165947974">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="688665293581590" type="System" />
                                             </conditions>
@@ -2967,7 +2963,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="936406776310611">
+                                                <event-block disabled="1" sid="936406776310611">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="329624313983024" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -2987,7 +2983,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="775922525477811">
+                                <event-block disabled="1" sid="775922525477811">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="938459366734850" type="System" />
                                     </conditions>
@@ -3000,7 +2996,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="673353076697852">
+                        <event-block disabled="1" sid="673353076697852">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="857763347010780" type="System">
                                     <param id="0" name="Variable">Direccion</param>
@@ -3010,7 +3006,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="373168229001698">
+                                <event-block disabled="1" sid="373168229001698">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="513726704763937" type="System">
                                             <param id="0" name="Variable">ActualX</param>
@@ -3020,7 +3016,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="449908747741290">
+                                        <event-block disabled="1" sid="449908747741290">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="327264831101160" type="System">
                                                     <param id="0" name="Variable">Number</param>
@@ -3049,7 +3045,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="772255160757930">
+                                                <event-block disabled="1" sid="772255160757930">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="804432157834582" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -3067,7 +3063,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="448635524032560">
+                                        <event-block disabled="1" sid="448635524032560">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="109361677159474" type="System">
                                                     <param id="0" name="Variable">Number</param>
@@ -3087,7 +3083,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="586741567661005">
+                                                <event-block disabled="1" sid="586741567661005">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="936960145250612" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -3105,7 +3101,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="760295958126450">
+                                        <event-block disabled="1" sid="760295958126450">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="644504462787897" type="System">
                                                     <param id="0" name="Variable">Number</param>
@@ -3134,7 +3130,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="197954244548482">
+                                                <event-block disabled="1" sid="197954244548482">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="601697579841564" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -3152,7 +3148,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="797940486996706">
+                                        <event-block disabled="1" sid="797940486996706">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="895990031711305" type="System" />
                                             </conditions>
@@ -3168,7 +3164,7 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="452896022647207">
+                                                <event-block disabled="1" sid="452896022647207">
                                                     <conditions>
                                                         <condition id="-10" name="For" sid="853082953209844" type="System">
                                                             <param id="0" name="Name">&quot;fill&quot;</param>
@@ -3188,7 +3184,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="326856344598029">
+                                <event-block disabled="1" sid="326856344598029">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="672879901086277" type="System" />
                                     </conditions>
@@ -3323,52 +3319,21 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" inactive="1" sid="179293780284770" title="InicioCamera">
-            <sub-events>
-                <event-block sid="508035595172908">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="254398729614843" type="System">
-                            <param id="0" name="First value">LayoutScale</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="983911252449704">
-                            <conditions>
-                                <condition id="-1" name="Every tick" sid="764751943962872" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-20" name="Set layout scale" sid="884842030552120" type="System">
-                                    <param id="0" name="Scale">LayoutScale + 0.01</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="917238191874721">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="486735427656602" type="System">
-                            <param id="0" name="First value">LayoutScale</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="684475408538383">
-                            <conditions />
-                            <actions>
-                                <action id="-12" name="Set group active" sid="399209818959478" type="System">
-                                    <param id="0" name="Group name">&quot;InicioCamera&quot;</param>
-                                    <param id="1" name="State">2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
+        <event-block any="1" sid="951534316037384">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="978722397482708" type="Keyboard">
+                    <param id="0" name="Key">82</param>
+                </condition>
+                <condition id="3" name="On touched object" sid="254672403257253" type="Touch">
+                    <param id="0" name="Object">R</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="780979389257313" type="f">
+                    <param id="0" name="Name">&quot;ActualizarMapa&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

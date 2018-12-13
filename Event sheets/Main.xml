@@ -9,70 +9,6 @@
         <include>Enemies</include>
         <include>Character</include>
         <comment>Main</comment>
-        <event-group description="" sid="839258583437842" title="Miscelaneos">
-            <sub-events>
-                <event-block sid="818564046312857">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="666240638490536" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="659737707544411" type="System">
-                            <param id="0" name="Variable">Number4</param>
-                            <param id="1" name="Value">wallclocktime</param>
-                        </action>
-                        <action id="11" name="Load" sid="878042236905779" type="Tipo21">
-                            <param id="0" name="JSON">tipo21</param>
-                        </action>
-                        <action id="11" name="Load" sid="950285095560205" type="Tipo22">
-                            <param id="0" name="JSON">tipo22</param>
-                        </action>
-                        <action id="11" name="Load" sid="921924158100399" type="Tipo23">
-                            <param id="0" name="JSON">tipo23</param>
-                        </action>
-                        <action id="11" name="Load" sid="789212146154955" type="Tipo24">
-                            <param id="0" name="JSON">tipo24</param>
-                        </action>
-                        <action id="11" name="Load" sid="456734692437185" type="Tipo31">
-                            <param id="0" name="JSON">tipo31</param>
-                        </action>
-                        <action id="11" name="Load" sid="417985046673752" type="Tipo32">
-                            <param id="0" name="JSON">tipo32</param>
-                        </action>
-                        <action id="11" name="Load" sid="712412842057634" type="Tipo33">
-                            <param id="0" name="JSON">tipo33</param>
-                        </action>
-                        <action id="11" name="Load" sid="180200046798121" type="Tipo34">
-                            <param id="0" name="JSON">tipo34</param>
-                        </action>
-                        <action id="11" name="Load" sid="307795329029088" type="Tipo4">
-                            <param id="0" name="JSON">tipo4</param>
-                        </action>
-                        <action id="4" name="Load" sid="110150138350557" type="Chonks">
-                            <param id="0" name="JSON">CHUNKS</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="192438329845184" type="stade">
-                            <param id="0" name="Pin to">Player</param>
-                            <param id="1" name="Mode">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="109611857012164">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="852623657707124" type="System">
-                            <param id="0" name="Interval (seconds)">0.5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="258731150113108" type="CPUFPS">
-                            <param id="0" name="Text">&quot;FPS: &quot;&amp;fps &amp;newline &amp;&quot;CPU&quot;&amp;cpuutilisation</param>
-                        </action>
-                        <action id="0" name="Set text" sid="496010689756032" type="stade">
-                            <param id="0" name="Text">Player.AnimationName</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="974807127250882" title="ActualizarChunk">
             <sub-events>
                 <comment>11 es 14 y 14 es 11</comment>
@@ -116,6 +52,18 @@
                         <action id="1" name="Request project file" sid="601350868466915" type="AJAX">
                             <param id="0" name="Tag">&quot;c31&quot;</param>
                             <param id="1" name="File">Chunk_31.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="827317206213867" type="AJAX">
+                            <param id="0" name="Tag">&quot;c32&quot;</param>
+                            <param id="1" name="File">Chunk_32.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="420596534404225" type="AJAX">
+                            <param id="0" name="Tag">&quot;c33&quot;</param>
+                            <param id="1" name="File">Chunk_33.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="442067092072207" type="AJAX">
+                            <param id="0" name="Tag">&quot;c34&quot;</param>
+                            <param id="1" name="File">Chunk_34.json</param>
                         </action>
                         <action id="1" name="Request project file" sid="538921232825442" type="AJAX">
                             <param id="0" name="Tag">&quot;c41&quot;</param>
@@ -243,6 +191,42 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="682439077622060">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="622840798566616" type="AJAX">
+                            <param id="0" name="Tag">&quot;c32&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="828856294086806" type="Tipo32">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="163632500117161">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="132392157153381" type="AJAX">
+                            <param id="0" name="Tag">&quot;c33&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="437511280849508" type="Tipo33">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="500457877193131">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="194143840782965" type="AJAX">
+                            <param id="0" name="Tag">&quot;c34&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="781433330877438" type="Tipo34">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="285313518640671">
                     <conditions>
                         <condition id="0" name="On completed" sid="842296241007164" type="AJAX">
@@ -288,6 +272,47 @@
                     <actions>
                         <action id="11" name="Load" sid="145671305376513" type="Tipo52">
                             <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                        <action id="0" name="Call function" sid="447749686219183" type="f">
+                            <param id="0" name="Name">&quot;ActualizarMapa&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="839258583437842" title="Miscelaneos">
+            <sub-events>
+                <event-block sid="818564046312857">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="666240638490536" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="659737707544411" type="System">
+                            <param id="0" name="Variable">Number4</param>
+                            <param id="1" name="Value">wallclocktime</param>
+                        </action>
+                        <action id="4" name="Load" sid="110150138350557" type="Chonks">
+                            <param id="0" name="JSON">CHUNKS</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="192438329845184" type="stade">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="109611857012164">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="852623657707124" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="258731150113108" type="CPUFPS">
+                            <param id="0" name="Text">&quot;FPS: &quot;&amp;fps &amp;newline &amp;&quot;CPU&quot;&amp;cpuutilisation</param>
+                        </action>
+                        <action id="0" name="Set text" sid="496010689756032" type="stade">
+                            <param id="0" name="Text">Player.AnimationName</param>
                         </action>
                     </actions>
                 </event-block>

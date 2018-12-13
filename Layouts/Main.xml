@@ -196,7 +196,7 @@
                         </behavior-instance>
                         <behavior-instance type="8Direction">
                             <properties>
-                                <max-speed>350</max-speed>
+                                <max-speed>125</max-speed>
                                 <acceleration>600</acceleration>
                                 <deceleration>500</deceleration>
                                 <directions>8 directions</directions>
@@ -263,48 +263,6 @@
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="EnemigoPrototipo" uid="32">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <SearchTime>1</SearchTime>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>30</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
-                                <max-speed>200</max-speed>
-                                <acceleration>1000</acceleration>
-                                <deceleration>2000</deceleration>
-                                <rotate-speed>135</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Timer" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>530</x>
-                        <y>6</y>
-                        <z>0</z>
-                        <width>20</width>
-                        <height>34</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -490,16 +448,16 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-203.72744751</x>
-                        <y>166.636245728</y>
+                        <x>-199</x>
+                        <y>161</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>23.065124512</width>
+                        <height>23.065124512</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.5</opacity>
                     </world>
                 </instance>
                 <instance type="MovimientoStik" uid="37">
@@ -519,11 +477,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-118.72744751</x>
-                        <y>187.636245728</y>
+                        <x>-132.019165039</x>
+                        <y>174.344543457</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>37.416572571</width>
+                        <height>37.416572571</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -541,11 +499,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>151.590667725</x>
-                        <y>242.681671143</y>
+                        <x>96.5</x>
+                        <y>177</y>
                         <z>0</z>
-                        <width>330.384094238</width>
-                        <height>250.012283325</height>
+                        <width>195</width>
+                        <height>142</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -563,11 +521,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>501.938293457</x>
-                        <y>244.262390137</y>
+                        <x>341.5</x>
+                        <y>178.5</y>
                         <z>0</z>
-                        <width>280.284057617</width>
-                        <height>238.012176514</height>
+                        <width>191</width>
+                        <height>138</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -585,16 +543,16 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-214.878875732</x>
-                        <y>41.536117554</y>
+                        <x>-200</x>
+                        <y>40</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>23.065124512</width>
+                        <height>23.065124512</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.5</opacity>
                     </world>
                 </instance>
                 <instance type="AtaqueStik" uid="29">
@@ -614,16 +572,16 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-119.424026489</x>
-                        <y>38.809005737</y>
+                        <x>-132.715744019</x>
+                        <y>25.517303467</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>37.416572571</width>
+                        <height>37.416572571</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.5</opacity>
                     </world>
                 </instance>
             </instances>
