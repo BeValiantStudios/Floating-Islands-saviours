@@ -442,6 +442,16 @@
         </event-group>
         <event-group description="" sid="551313836373933" title="Buttons">
             <sub-events>
+                <event-block sid="477493322355680">
+                    <conditions>
+                        <condition id="-30" name="On load failed" sid="866375490680152" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="447798105352475" type="System">
+                            <param id="0" name="Layout">&quot;Main&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="382748784207136">
                     <conditions>
                         <condition id="17" name="On tap object" sid="224254365872793" type="Touch">
