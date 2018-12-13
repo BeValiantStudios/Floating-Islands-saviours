@@ -45,6 +45,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -535,6 +536,22 @@
         </object-type>
         <object-type name="Text2" sid="493995822297934">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="Delete" sid="187811923809187">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Target" sid="604110483443378" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Fade" sid="591126940625252">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757570985646364" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
