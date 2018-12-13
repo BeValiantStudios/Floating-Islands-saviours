@@ -103,7 +103,7 @@
                 <instance type="stade" uid="43">
                     <properties>
                         <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -421,7 +421,7 @@
                 <instance type="timetext" uid="4">
                     <properties>
                         <text>Time</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Courier New,-12,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -449,7 +449,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
+                        <font>Arial,-13,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -460,8 +460,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>433.798828125</x>
-                        <y>7</y>
+                        <x>306</x>
+                        <y>5</y>
                         <z>0</z>
                         <width>200</width>
                         <height>84</height>
@@ -493,7 +493,7 @@
             <instances>
                 <instance type="R" uid="31">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>

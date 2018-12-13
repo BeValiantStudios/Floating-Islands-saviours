@@ -67,7 +67,7 @@
         <event-block sid="513488361949894">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="996204910512091" type="System">
-                    <param id="0" name="Interval (seconds)">0.2</param>
+                    <param id="0" name="Interval (seconds)">1</param>
                 </condition>
             </conditions>
             <actions />

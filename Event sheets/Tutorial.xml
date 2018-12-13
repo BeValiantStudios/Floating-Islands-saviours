@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Tutorial</name>
+    <events>
+        <include>Character</include>
+        <event-block sid="791192263713610">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="995724751959813" type="FlechaPrototipo">
+                    <param id="0" name="Object">EnemigoIdle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="426258805332727" type="EnemigoIdle" />
+            </actions>
+        </event-block>
+        <event-block sid="448688014687741">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="976124723285903" type="Player">
+                    <param id="0" name="Object">hole</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="888782208170896" type="System">
+                    <param id="0" name="Layout">&quot;Main&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="826807338742088">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="513727093734501" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="949186378550745">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="766012506981499" type="System">
+                            <param id="0" name="First value">distance(Player.X,Player.Y,cartel.X,cartel.Y)</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="925350348564676" type="cartel">
+                            <param id="0" name="Object">Tutorial</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="432586725971592" type="Tutorial">
+                            <param id="0" name="Text">&quot;Intenta moverte con la esquina inferior izquierda de la pantalla! Aparecera un stick&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="859658974193089">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="326751341197563" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="524736727997406" type="Tutorial" />
+                    </actions>
+                </event-block>
+                <event-block sid="130954560597106">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="109541204790053" type="System">
+                            <param id="0" name="First value">distance(Player.X,Player.Y,cartel2.X,cartel2.Y)</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="374379515694796" type="cartel2">
+                            <param id="0" name="Object">Tutorial2</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="571512546076893" type="Tutorial2">
+                            <param id="0" name="Text">&quot;Parece que hay conejos por la zona, intenta dispararles con la esquina inferior derecha!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="602421539547098">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="880423205364369" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="759033099101954" type="Tutorial2" />
+                    </actions>
+                </event-block>
+                <event-block sid="165546246087715">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="127226316052338" type="System">
+                            <param id="0" name="First value">distance(Player.X,Player.Y,cartel3.X,cartel3.Y)</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="819685948118522" type="cartel3">
+                            <param id="0" name="Object">Tutorial3</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="912200184266097" type="Tutorial3">
+                            <param id="0" name="Text">&quot;Esta es una isla flotante un poco extraña, pareciera que cambia cada dia&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="703418320903459">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="469830789681140" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="428367619121772" type="Tutorial3" />
+                    </actions>
+                </event-block>
+                <event-block sid="669651347031463">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="381899828524280" type="System">
+                            <param id="0" name="First value">distance(Player.X,Player.Y,cartel4.X,cartel4.Y)</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="199625071004714" type="cartel4">
+                            <param id="0" name="Object">Tutorial4</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="876622697631195" type="Tutorial4">
+                            <param id="0" name="Text">&quot;Para terminar el tutorial, salta dentro del agujero!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="996127178429673">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="195646880899316" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="189836881411521" type="Tutorial4" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

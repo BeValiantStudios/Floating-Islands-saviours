@@ -420,7 +420,7 @@
                                     <actions>
                                         <action id="0" name="Spawn another object" sid="560760752006768" type="Player">
                                             <param id="0" name="Object">FlechaPrototipo</param>
-                                            <param id="1" name="Layer">0</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
                                     </actions>

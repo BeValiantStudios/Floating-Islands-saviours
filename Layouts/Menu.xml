@@ -551,7 +551,7 @@
                 </instance>
                 <instance type="Options" uid="75">
                     <properties>
-                        <text>Options</text>
+                        <text>Jugar</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
@@ -575,11 +575,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>224.182800293</x>
-                        <y>223.858642578</y>
+                        <x>236</x>
+                        <y>224</y>
                         <z>0</z>
-                        <width>200</width>
-                        <height>30</height>
+                        <width>59</width>
+                        <height>22</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
