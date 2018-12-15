@@ -269,6 +269,17 @@
                         <variable constant="0" name="dist2" sid="201874611327897" static="0" type="number">0</variable>
                         <variable constant="0" name="cangle2" sid="892875718908227" static="0" type="number">0</variable>
                         <variable comment="distance the stick can move from center" constant="0" name="radius2" sid="718013833871812" static="1" type="number">50</variable>
+                        <event-block sid="261839374062681">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Is in touch" sid="256442157812799" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="960229153046299" type="Armas">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="975275218531691" type="laser" />
+                            </actions>
+                        </event-block>
                         <event-block sid="203631232921056">
                             <conditions>
                                 <condition id="3" name="On touched object" sid="428864807319552" type="Touch">
@@ -349,6 +360,13 @@
                                             <param id="0" name="Animation">&quot;East&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="5" name="Set frame" sid="481347795361617" type="Armas">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="-29" name="Move to object" sid="984554907754769" type="Armas">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Object">Player</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="410629488890973">
@@ -368,6 +386,13 @@
                                         <action id="4" name="Set animation" sid="259604930508156" type="Player">
                                             <param id="0" name="Animation">&quot;South&quot;</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="421272175091358" type="Armas">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="-29" name="Move to object" sid="864007925711913" type="Armas">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Object">Player</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -389,6 +414,13 @@
                                             <param id="0" name="Animation">&quot;West&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="5" name="Set frame" sid="407549557480395" type="Armas">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="-29" name="Move to object" sid="191345280416779" type="Armas">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Object">Player</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="492080960621081">
@@ -409,19 +441,214 @@
                                             <param id="0" name="Animation">&quot;North&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="5" name="Set frame" sid="916167937405855" type="Armas">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="-29" name="Move to object" sid="204373284509654" type="Armas">
+                                            <param id="0" name="Where">1</param>
+                                            <param id="1" name="Object">Player</param>
+                                        </action>
                                     </actions>
                                 </event-block>
-                                <event-block bookmark="1" sid="565657594459956">
+                                <event-block sid="746370267106966">
                                     <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="512020335706697" type="System">
-                                            <param id="0" name="Interval (seconds)">1.0</param>
+                                        <condition id="-7" name="Compare instance variable" sid="441361665636466" type="Player">
+                                            <param id="0" name="Instance variable">ArmaActual</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Arco&quot;</param>
                                         </condition>
                                     </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block bookmark="1" sid="565657594459956">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="512020335706697" type="System">
+                                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="560760752006768" type="Player">
+                                                    <param id="0" name="Object">FlechaPrototipo</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Arma&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="348883149994730">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="195932792468266" type="Player">
+                                            <param id="0" name="Instance variable">ArmaActual</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Pistola&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block bookmark="1" sid="895133490717648">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="782698709163482" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.65</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="623482108993576" type="Pistola">
+                                                    <param id="0" name="Object">BalaPistola</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="581090942623734" type="Pistola">
+                                                    <param id="0" name="Object">flash</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="899481355276483">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="248546953514231" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="388180092406157">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="790074698651284" type="Player">
+                                                    <param id="0" name="Instance variable">ArmaActual</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Laser&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="613675464612568" type="PistolaLaser">
+                                                    <param id="0" name="Object">laser</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="288000791679223">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="321373173564870" type="Player">
+                                            <param id="0" name="Instance variable">ArmaActual</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;AK47&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block bookmark="1" sid="681908387034055">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="493549369389369" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="799613083338835" type="AK47">
+                                                    <param id="0" name="Object">BalaPistola</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="479628208310399" type="AK47">
+                                                    <param id="0" name="Object">flash</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="637653285771954">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="743434846789111" type="Player">
+                                            <param id="0" name="Instance variable">ArmaActual</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Sniper&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block bookmark="1" sid="213500222251485">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="588638225373875" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.9</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="552642556185506" type="Sniper">
+                                                    <param id="0" name="Object">BalaSniper</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Bala&quot;</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="315884637195547" type="Sniper">
+                                                    <param id="0" name="Object">flash</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="236676580332678">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="282081349997110" type="Player">
+                                            <param id="0" name="Instance variable">ArmaActual</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Escopeta&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block bookmark="1" sid="388763581495758">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="511613257521127" type="System">
+                                                    <param id="0" name="Interval (seconds)">1.2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="813439959412182" type="escopeta">
+                                                    <param id="0" name="Object">flash</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="280130278162461" type="escopeta">
+                                                    <param id="0" name="Object">BalaEscopeta</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="834103067223423" type="escopeta">
+                                                    <param id="0" name="Object">BalaEscopeta</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="670051999561289" type="escopeta">
+                                                    <param id="0" name="Object">BalaEscopeta</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="608182451404094" type="escopeta">
+                                                    <param id="0" name="Object">BalaEscopeta</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="651354660119833" type="escopeta">
+                                                    <param id="0" name="Object">BalaEscopeta</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="742759960756743">
+                                    <conditions />
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="560760752006768" type="Player">
-                                            <param id="0" name="Object">FlechaPrototipo</param>
-                                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="-8" name="Set angle" sid="974572545671464" type="Armas">
+                                            <param id="0" name="Angle">cangle2</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -480,6 +707,16 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="636176072384447">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="115692556467544" type="BalaPistola" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="584426540117482" type="BalaPistola">
+                                            <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block any="1" sid="888449024367441">
                                     <conditions>
                                         <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="821377970105470" type="FlechaPrototipo">
@@ -490,6 +727,97 @@
                                     <actions>
                                         <action id="-9" name="Destroy" sid="394716029465943" type="FlechaPrototipo" />
                                     </actions>
+                                </event-block>
+                                <event-block any="1" sid="396116885933613">
+                                    <conditions>
+                                        <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="381214251244073" type="BalaPistola">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Distance">500</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="332019804295713" type="BalaPistola" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="841222133205921">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="511439469668423" type="BalaSniper" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="293407404087746" type="BalaSniper">
+                                            <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                        <action id="-29" name="Move to object" sid="831769288950492" type="BalaSniper">
+                                            <param id="0" name="Where">1</param>
+                                            <param id="1" name="Object">Sniper</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="329239189855004">
+                                    <conditions>
+                                        <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="475160257261393" type="BalaSniper">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Distance">500</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="916943372419288" type="BalaSniper" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="776929868797667">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="934390496223072" type="BalaEscopeta" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="154915979370882" type="BalaEscopeta">
+                                            <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                        <action behavior="Bullet" id="0" name="Set speed" sid="903857724186894" type="BalaEscopeta">
+                                            <param id="0" name="Speed">random(180,250)</param>
+                                        </action>
+                                        <action id="-18" name="Rotate clockwise" sid="180312981449964" type="BalaEscopeta">
+                                            <param id="0" name="Degrees">random(-12,12)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="435589461335895">
+                                    <conditions>
+                                        <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="244086363243762" type="BalaEscopeta">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Distance">200</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="569048838878930" type="BalaEscopeta" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="431062867811192">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="883455487159558" type="laser" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-5" name="Set width" sid="971461822244493" type="laser">
+                                            <param id="0" name="Width">Self.Width+90</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="850545779468815" type="laser">
+                                            <param id="0" name="Pin to">PistolaLaser</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="684200524107247">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="392262109386173" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-8" name="Set angle" sid="664420304779968" type="laser">
+                                                    <param id="0" name="Angle">cangle2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>
@@ -506,6 +834,167 @@
                 <action behavior="CustomMovement" id="2" name="Set speed" sid="166236927836986" type="ten">
                     <param id="0" name="Which">2</param>
                     <param id="1" name="Speed">-20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="317312171406079">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="411397961358202" type="Player">
+                    <param id="0" name="Instance variable">ArmaActual</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Arco&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="953669199613319" type="Arco">
+                    <param id="0" name="Object">Player</param>
+                    <param id="1" name="Image point (optional)">&quot;Arma&quot;</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="297279311687777" type="Arco">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="585979824955069">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="419350215648099" type="Player">
+                    <param id="0" name="Instance variable">ArmaActual</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Pistola&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="968470668874432" type="Pistola">
+                    <param id="0" name="Object">Player</param>
+                    <param id="1" name="Image point (optional)">&quot;Arma&quot;</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="741006586282321" type="Pistola">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="298424671802586">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="195276051159416" type="Player">
+                    <param id="0" name="Instance variable">ArmaActual</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;AK47&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="303564552063936" type="AK47">
+                    <param id="0" name="Object">Player</param>
+                    <param id="1" name="Image point (optional)">&quot;Arma&quot;</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="855326733922656" type="AK47">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="901600794772051">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="313420253972766" type="Player">
+                    <param id="0" name="Instance variable">ArmaActual</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Escopeta&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="508494034346858" type="escopeta">
+                    <param id="0" name="Object">Player</param>
+                    <param id="1" name="Image point (optional)">&quot;Arma&quot;</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="272556240250235" type="escopeta">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="756369923278636">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="290635445767922" type="Player">
+                    <param id="0" name="Instance variable">ArmaActual</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Sniper&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="337973660505787" type="Sniper">
+                    <param id="0" name="Object">Player</param>
+                    <param id="1" name="Image point (optional)">&quot;Arma&quot;</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="880265595632811" type="Sniper">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="330813431394684">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="107507841267776" type="Player">
+                    <param id="0" name="Instance variable">ArmaActual</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Laser&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="526745051763975" type="PistolaLaser">
+                    <param id="0" name="Object">Player</param>
+                    <param id="1" name="Image point (optional)">&quot;Arma&quot;</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="471342794521708" type="PistolaLaser">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="416877690239706">
+            <conditions>
+                <condition id="-18" name="On created" sid="726129622406985" type="flash" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="750699970350200" type="System">
+                    <param id="0" name="Seconds">0.05</param>
+                </action>
+                <action id="-9" name="Destroy" sid="801781644098056" type="flash" />
+            </actions>
+        </event-block>
+        <event-block sid="361879422013332">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="220434557089970" type="laser">
+                    <param id="0" name="Object">EnemigoPrototipo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="697352982270083" type="laser">
+                    <param id="0" name="Width">distance(PistolaLaser.X,PistolaLaser.Y,EnemigoPrototipo.X,EnemigoPrototipo.Y)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="896125440583546">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="168048699597185" type="laser">
+                    <param id="0" name="Object">EnemigoPrototipo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="791445950182543" type="laser">
+                    <param id="0" name="Width">500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="192099947353292">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="635276324420921" type="laser">
+                    <param id="0" name="Object">TilemapSolid</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="459013489074642" type="laser">
+                    <param id="0" name="Width">distance(PistolaLaser.X,PistolaLaser.Y,TilemapSolid.X,TilemapSolid.Y)</param>
                 </action>
             </actions>
         </event-block>

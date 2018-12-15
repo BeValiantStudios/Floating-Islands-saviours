@@ -258,6 +258,9 @@
         <object-folder name="Player">
             <object-type name="Player" sid="401086822086892">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="ArmaActual" sid="920114190358085" type="string" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="ScrollTo" sid="150732981857979">
                         <behavior id="scrollto" />
@@ -269,6 +272,7 @@
                 <animation-folder>
                     <animation framecount="6" loop="1" name="South" pingpong="0" repeatcount="1" repeatto="0" sid="393418052881730" speed="12">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.3125" y="0.875" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -277,6 +281,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.3125" y="0.8125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -285,6 +290,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.34375" y="0.78125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -293,6 +299,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.3125" y="0.875" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -301,6 +308,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.3125" y="0.8125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -309,6 +317,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.34375" y="0.78125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -319,6 +328,7 @@
                     </animation>
                     <animation framecount="6" loop="1" name="West" pingpong="0" repeatcount="1" repeatto="0" sid="938722481128122" speed="12">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.28125" y="0.8125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -327,6 +337,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.3125" y="0.78125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -335,6 +346,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.3125" y="0.75" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -343,6 +355,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.28125" y="0.8125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -351,6 +364,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.3125" y="0.78125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -359,6 +373,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.3125" y="0.75" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -369,6 +384,7 @@
                     </animation>
                     <animation framecount="6" loop="1" name="North" pingpong="0" repeatcount="1" repeatto="0" sid="582350829010017" speed="12">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.6875" y="0.78125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -377,6 +393,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.6875" y="0.71875" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -385,6 +402,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.6875" y="0.6875" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -393,6 +411,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.6875" y="0.78125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -401,6 +420,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.6875" y="0.71875" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -409,6 +429,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.6875" y="0.6875" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -419,6 +440,7 @@
                     </animation>
                     <animation framecount="6" loop="1" name="East" pingpong="0" repeatcount="1" repeatto="0" sid="304652904826021" speed="12">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.71875" y="0.8125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -427,6 +449,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.71875" y="0.78125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -435,6 +458,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.71875" y="0.75" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -443,6 +467,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.75" y="0.8125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -451,6 +476,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.71875" y="0.78125" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -459,6 +485,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Arma" x="0.71875" y="0.75" />
                             <collision-poly>
                                 <point x="0.3125" y="0.40625" />
                                 <point x="0.71875" y="0.40625" />
@@ -889,6 +916,311 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Arma1" sid="427312994199106">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="776599108667760" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Arma2" sid="182096299210917">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="879803795833301" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Arco" sid="847322508471690">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="577822332143853" speed="5">
+                    <frame duration="1" hotspotX="0.478261" hotspotY="0.521739" original-source="C:\Users\Vermillion\Desktop\arco.png">
+                        <image-point name="Disparo" x="0.652174" y="0.521739" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.478261" hotspotY="0.478261">
+                        <image-point name="Disparo" x="0.652174" y="0.478261" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Pistola" sid="491557486692755">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="760119154627158" speed="0">
+                    <frame duration="1" hotspotX="0.21875" hotspotY="0.625" original-source="C:\Users\Vermillion\Desktop\pistola.png">
+                        <image-point name="Disparo" x="1" y="0.25" />
+                        <collision-poly>
+                            <point x="0.25" y="0.333333" />
+                            <point x="0.5" y="0.125" />
+                            <point x="1" y="0" />
+                            <point x="0.59375" y="0.5" />
+                            <point x="0.59375" y="0.458333" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.03125" y="0.958333" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.21875" hotspotY="0.375">
+                        <image-point name="Disparo" x="1" y="0.75" />
+                        <collision-poly>
+                            <point x="0.15625" y="0.5" />
+                            <point x="0.03125" y="0.0416667" />
+                            <point x="0.5" y="0.333333" />
+                            <point x="0.59375" y="0.541667" />
+                            <point x="0.59375" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.25" y="0.666667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BalaPistola" sid="826437488313398">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="639321674384601">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="290029022402288" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="flash" sid="405756975102230">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662084929054222" speed="5">
+                    <frame duration="1" hotspotX="0.0625" hotspotY="0.571429" original-source="C:\Users\Vermillion\Desktop\flash.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.285714" />
+                            <point x="0.5" y="0.285714" />
+                            <point x="0.625" y="0.428571" />
+                            <point x="1" y="0.5" />
+                            <point x="0.75" y="0.714286" />
+                            <point x="0.5" y="0.714286" />
+                            <point x="0.125" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AK47" sid="750386333954772">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="695170474554981" speed="5">
+                    <frame duration="1" hotspotX="0.3125" hotspotY="0.636364" original-source="C:\Users\Vermillion\Desktop\ak.png">
+                        <image-point name="Disparo" x="1" y="0.363636" />
+                        <collision-poly>
+                            <point x="0.09375" y="0.272727" />
+                            <point x="0.5" y="0.181818" />
+                            <point x="0.90625" y="0.272727" />
+                            <point x="0.65625" y="0.454545" />
+                            <point x="0.8125" y="0.454545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.125" y="0.636364" />
+                            <point x="0" y="0.454545" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.3125" hotspotY="0.363636">
+                        <image-point name="Disparo" x="1" y="0.636364" />
+                        <collision-poly>
+                            <point x="0" y="0.545455" />
+                            <point x="0.125" y="0.363636" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.545455" />
+                            <point x="0.65625" y="0.545455" />
+                            <point x="0.90625" y="0.727273" />
+                            <point x="0.5" y="0.818182" />
+                            <point x="0.09375" y="0.727273" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="escopeta" sid="330173886597563">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820443354750038" speed="5">
+                    <frame duration="1" hotspotX="0.125" hotspotY="0.473684" original-source="C:\Users\Vermillion\Desktop\escopeta.png">
+                        <image-point name="Disparo" x="1" y="0.157895" />
+                        <collision-poly>
+                            <point x="0.03125" y="0.105263" />
+                            <point x="0.5" y="0.0526316" />
+                            <point x="0.984375" y="0.0526316" />
+                            <point x="0.859375" y="0.526316" />
+                            <point x="0.5" y="0.526316" />
+                            <point x="0.015625" y="0.947368" />
+                            <point x="0.046875" y="0.473684" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.125" hotspotY="0.526316">
+                        <image-point name="Disparo" x="1" y="0.842105" />
+                        <collision-poly>
+                            <point x="0.046875" y="0.526316" />
+                            <point x="0.015625" y="0.0526316" />
+                            <point x="0.5" y="0.473684" />
+                            <point x="0.859375" y="0.473684" />
+                            <point x="0.984375" y="0.947368" />
+                            <point x="0.5" y="0.947368" />
+                            <point x="0.03125" y="0.894737" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BalaEscopeta" sid="917004787045043">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="800535174729459">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="367163026288447" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sniper" sid="419652022347632">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="383192748305599" speed="5">
+                    <frame duration="1" hotspotX="0.3125" hotspotY="0.666667" original-source="C:\Users\Vermillion\Desktop\Sniper.png">
+                        <image-point name="Disparo" x="1" y="0.47619" />
+                        <image-point name="Bala" x="0.3125" y="0.47619" />
+                        <collision-poly>
+                            <point x="0.125" y="0.380952" />
+                            <point x="0.5" y="0.047619" />
+                            <point x="0.875" y="0.380952" />
+                            <point x="1" y="0.47619" />
+                            <point x="0.859375" y="0.571429" />
+                            <point x="0.03125" y="0.904762" />
+                            <point x="0" y="0.47619" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.3125" hotspotY="0.333333">
+                        <image-point name="Disparo" x="1" y="0.52381" />
+                        <image-point name="Bala" x="0.3125" y="0.52381" />
+                        <collision-poly>
+                            <point x="0" y="0.52381" />
+                            <point x="0.03125" y="0.0952381" />
+                            <point x="0.859375" y="0.428571" />
+                            <point x="1" y="0.52381" />
+                            <point x="0.875" y="0.619048" />
+                            <point x="0.5" y="0.952381" />
+                            <point x="0.125" y="0.619048" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BalaSniper" sid="709349385411514">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="284326164314804">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493687349370348" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Vermillion\Desktop\Bala Sniper.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.428571" />
+                            <point x="0.859375" y="0.428571" />
+                            <point x="1" y="0.47619" />
+                            <point x="0.84375" y="0.52381" />
+                            <point x="0.5" y="0.52381" />
+                            <point x="0.3125" y="0.47619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="424408242759904">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="494021719519361" speed="5">
+                    <frame duration="1" hotspotX="0.501976" hotspotY="0.501976" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="laser" sid="916112620840325">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="230681219896571">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="840786318567012" speed="15">
+                    <frame duration="1" hotspotX="0" hotspotY="0.666667" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.666667" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.666667" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.666667" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.666667" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.666667" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.666667" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.666667" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PistolaLaser" sid="362446815810894">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="209482762740499" speed="5">
+                    <frame duration="1" hotspotX="0.3125" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Pistola laser.png">
+                        <image-point name="Disparo" x="0.96875" y="0.323529" />
+                        <collision-poly>
+                            <point x="0.875" y="0.5" />
+                            <point x="0.5625" y="0.588235" />
+                            <point x="0.5" y="0.588235" />
+                            <point x="0.1875" y="0.823529" />
+                            <point x="0.125" y="0.5" />
+                            <point x="0.15625" y="0.147059" />
+                            <point x="0.5" y="0.117647" />
+                            <point x="0.84375" y="0.147059" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.3125" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.96875" y="0.676471" />
+                        <collision-poly>
+                            <point x="0.84375" y="0.852941" />
+                            <point x="0.5" y="0.882353" />
+                            <point x="0.15625" y="0.852941" />
+                            <point x="0.125" y="0.5" />
+                            <point x="0.1875" y="0.176471" />
+                            <point x="0.5" y="0.411765" />
+                            <point x="0.5625" y="0.411765" />
+                            <point x="0.875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">
@@ -910,6 +1242,21 @@
                 <member>Tipo51</member>
                 <member>Tipo52</member>
             </members>
+        </family>
+        <family name="Armas" plugin-id="Sprite" sid="130501033817930">
+            <members>
+                <member>AK47</member>
+                <member>Arco</member>
+                <member>escopeta</member>
+                <member>Pistola</member>
+                <member>PistolaLaser</member>
+                <member>Sniper</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="594581540056643">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>
