@@ -329,7 +329,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ten" uid="54">
+                <instance type="Puntaje" uid="54">
                     <properties>
                         <text>+10!</text>
                         <initial-visibility>Visible</initial-visibility>

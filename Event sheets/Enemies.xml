@@ -103,7 +103,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="144249111165962" type="Player">
-                    <param id="0" name="Object">ten</param>
+                    <param id="0" name="Object">Puntaje</param>
                     <param id="1" name="Layer">&quot;Game&quot;</param>
                     <param id="2" name="Image point">0</param>
                 </action>
@@ -143,11 +143,11 @@
                     <param id="1" name="Y">Player.Y-80</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="640616557784077" type="9patch" />
-                <action id="-3" name="Set position" sid="359459843936156" type="Text3">
+                <action id="-3" name="Set position" sid="359459843936156" type="YouSurvived">
                     <param id="0" name="X">Player.X</param>
                     <param id="1" name="Y">Player.Y</param>
                 </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="583176089170710" type="Text3" />
+                <action behavior="Fade" id="1" name="Start fade" sid="583176089170710" type="YouSurvived" />
             </actions>
             <sub-events>
                 <event-block sid="637110180542940">

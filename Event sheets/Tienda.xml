@@ -8,9 +8,6 @@
                 <condition id="-2" name="On start of layout" sid="100268083980620" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="230837529472809" type="Recuento">
-                    <param id="0" name="Text">&quot;Oleada: &quot; &amp;Oleada &amp;newline &amp;&#x0D;&#x0A;&quot;Puntaje obtenido: &quot; &amp;PuntajeOleada &amp;newline &amp;&#x0D;&#x0A;&quot;Puntaje total: &quot; &amp;PuntajeGlobal &amp;newline &#x0D;&#x0A;&amp;newline &amp;&#x0D;&#x0A;&quot;Preparate para la siguiente oleada...&quot;</param>
-                </action>
                 <action id="-10" name="Add to" sid="286200872443521" type="System">
                     <param id="0" name="Variable">Oleada</param>
                     <param id="1" name="Value">1</param>

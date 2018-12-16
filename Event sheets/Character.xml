@@ -1210,10 +1210,10 @@
         <event-group description="" sid="719613028872778" title="Inventario" />
         <event-block sid="505463886546869">
             <conditions>
-                <condition id="-18" name="On created" sid="195141768822414" type="ten" />
+                <condition id="-18" name="On created" sid="195141768822414" type="Puntaje" />
             </conditions>
             <actions>
-                <action behavior="CustomMovement" id="2" name="Set speed" sid="166236927836986" type="ten">
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="166236927836986" type="Puntaje">
                     <param id="0" name="Which">2</param>
                     <param id="1" name="Speed">-20</param>
                 </action>
