@@ -267,6 +267,12 @@
                     </properties>
                     <instance-variables>
                         <ArmaActual>LanzaLlamas</ArmaActual>
+                        <LifeSteal>0</LifeSteal>
+                        <Armour>0</Armour>
+                        <MovSpeed>0</MovSpeed>
+                        <MaxLife>0</MaxLife>
+                        <Dmg>0</Dmg>
+                        <AtSpeed>0</AtSpeed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">

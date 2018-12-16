@@ -290,6 +290,12 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="ArmaActual" sid="920114190358085" type="string" />
+                    <instance-variable comment="% de 1 a 100" name="LifeSteal" sid="974752521486486" type="number" />
+                    <instance-variable comment="get 100% of dmg or less" name="Armour" sid="948458972268379" type="number" />
+                    <instance-variable comment="increase your movement" name="MovSpeed" sid="483405139755300" type="number" />
+                    <instance-variable name="MaxLife" sid="680787535634807" type="number" />
+                    <instance-variable name="Dmg" sid="912841863232912" type="number" />
+                    <instance-variable name="AtSpeed" sid="751021147141774" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="ScrollTo" sid="150732981857979">
