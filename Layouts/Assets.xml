@@ -383,6 +383,7 @@
                     </properties>
                     <instance-variables>
                         <SearchTime>1</SearchTime>
+                        <Quemado>0</Quemado>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">

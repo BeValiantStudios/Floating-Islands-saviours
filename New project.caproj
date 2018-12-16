@@ -695,6 +695,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="SearchTime" sid="623773420834278" type="number" />
+                    <instance-variable name="Quemado" sid="199275054194945" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Pathfinding" sid="660137738125824">
@@ -1227,6 +1228,1455 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="LanzaCohetes" sid="847742479798230">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="835103887673253" speed="5">
+                    <frame duration="1" hotspotX="0.640625" hotspotY="0.625" original-source="C:\Users\Vermillion\Desktop\LanzaCohetes.png">
+                        <image-point name="Disparo" x="1" y="0.458333" />
+                        <collision-poly>
+                            <point x="1" y="0.5" />
+                            <point x="0.859375" y="0.625" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.140625" y="0.625" />
+                            <point x="0" y="0.5" />
+                            <point x="0.125" y="0.333333" />
+                            <point x="0.5" y="0.291667" />
+                            <point x="0.875" y="0.333333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.640625" hotspotY="0.375">
+                        <image-point name="Disparo" x="1" y="0.541667" />
+                        <collision-poly>
+                            <point x="0.875" y="0.666667" />
+                            <point x="0.5" y="0.708333" />
+                            <point x="0.125" y="0.666667" />
+                            <point x="0" y="0.5" />
+                            <point x="0.140625" y="0.375" />
+                            <point x="0.5" y="0.333333" />
+                            <point x="0.859375" y="0.375" />
+                            <point x="1" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="misil" sid="189706744701841">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="394832180533810">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="445802996648325" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6" original-source="C:\Users\Vermillion\Desktop\misil.png">
+                        <collision-poly>
+                            <point x="1" y="0.4" />
+                            <point x="0.9375" y="0.8" />
+                            <point x="0.5" y="0.8" />
+                            <point x="0" y="1" />
+                            <point x="0.0625" y="0.4" />
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0.2" />
+                            <point x="0.9375" y="0.2" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Explosion" sid="740654597139184">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="16" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="739864156545181" speed="12">
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\0.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\1.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\2.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\3.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\4.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\5.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\6.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\7.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\8.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\9.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\10.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\11.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\12.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\13.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\14.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\15.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.375" />
+                            <point x="0.796875" y="0.375" />
+                            <point x="0.796875" y="0.763889" />
+                            <point x="0.28125" y="0.763889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LanzaGranadas" sid="702867786851623">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="387635592245178" speed="5">
+                    <frame duration="1" hotspotX="0.40625" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\LanzaGranadas.png">
+                        <image-point name="Disparo" x="0.953125" y="0.393939" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.40625" hotspotY="0.454545">
+                        <image-point name="Disparo" x="0.953125" y="0.606061" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="granada" sid="694055269691221">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Velocidad" sid="914608179860320" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="645518296455468">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="671250638149771" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.526316" original-source="C:\Users\Vermillion\Desktop\granada.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.157895" />
+                            <point x="0.466667" y="0" />
+                            <point x="0.866667" y="0.105263" />
+                            <point x="0.866667" y="0.473684" />
+                            <point x="0.733333" y="0.789474" />
+                            <point x="0.466667" y="1" />
+                            <point x="0.133333" y="0.894737" />
+                            <point x="0" y="0.473684" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Fuego" sid="118744778099533">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="266831131649119">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="165052819984884">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="90" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="793498091201357" speed="50">
+                    <frame duration="1" hotspotX="0.978261" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0000_Capa-90.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.1875" />
+                            <point x="0.869565" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.913043" y="0.75" />
+                            <point x="0.5" y="0.796875" />
+                            <point x="0.222826" y="0.359375" />
+                            <point x="0.288043" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977778" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0001_Capa-89.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.203125" />
+                            <point x="0.866667" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.911111" y="0.75" />
+                            <point x="0.5" y="0.859375" />
+                            <point x="0.222222" y="0.375" />
+                            <point x="0.272222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977778" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0002_Capa-88.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.1875" />
+                            <point x="0.866667" y="0.375" />
+                            <point x="0.977778" y="0.5" />
+                            <point x="0.911111" y="0.75" />
+                            <point x="0.5" y="0.796875" />
+                            <point x="0.116667" y="0.671875" />
+                            <point x="0.272222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976744" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0003_Capa-87.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0833333" />
+                            <point x="0.883721" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.906977" y="0.733333" />
+                            <point x="0.0523256" y="0.85" />
+                            <point x="0.238372" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97561" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0004_Capa-86.png">
+                        <collision-poly>
+                            <point x="0.103659" y="0.265625" />
+                            <point x="0.5" y="0.203125" />
+                            <point x="0.853659" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.902439" y="0.75" />
+                            <point x="0.5" y="0.796875" />
+                            <point x="0.121951" y="0.6875" />
+                            <point x="0.27439" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977273" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0005_Capa-85.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.236111" />
+                            <point x="0.863636" y="0.333333" />
+                            <point x="0.977273" y="0.5" />
+                            <point x="0.886364" y="0.722222" />
+                            <point x="0.5" y="0.708333" />
+                            <point x="0.00568182" y="0.986111" />
+                            <point x="0.278409" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976744" hotspotY="0.565789" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0006_Capa-84.png">
+                        <collision-poly>
+                            <point x="0.0290698" y="0.0657895" />
+                            <point x="0.5" y="0.171053" />
+                            <point x="0.860465" y="0.315789" />
+                            <point x="1" y="0.5" />
+                            <point x="0.883721" y="0.736842" />
+                            <point x="0.5" y="0.776316" />
+                            <point x="0.00581395" y="0.986842" />
+                            <point x="0.0988372" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97561" hotspotY="0.565789" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0007_Capa-83.png">
+                        <collision-poly>
+                            <point x="0.0304878" y="0.0657895" />
+                            <point x="0.5" y="0.171053" />
+                            <point x="0.853659" y="0.315789" />
+                            <point x="1" y="0.5" />
+                            <point x="0.878049" y="0.736842" />
+                            <point x="0.5" y="0.776316" />
+                            <point x="0.0304878" y="0.934211" />
+                            <point x="0.054878" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.98125" hotspotY="0.565789" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0008_Capa-82.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.0657895" />
+                            <point x="0.85" y="0.315789" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9" y="0.789474" />
+                            <point x="0.5" y="0.776316" />
+                            <point x="0.025" y="0.947368" />
+                            <point x="0.10625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.980769" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0009_Capa-81.png">
+                        <collision-poly>
+                            <point x="0.0320513" y="0.0694444" />
+                            <point x="0.5" y="0.222222" />
+                            <point x="0.794872" y="0.444444" />
+                            <point x="1" y="0.5" />
+                            <point x="0.897436" y="0.777778" />
+                            <point x="0.5" y="0.819444" />
+                            <point x="0.108974" y="0.763889" />
+                            <point x="0.211538" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.978448" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0010_Capa-80.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0694444" />
+                            <point x="0.896552" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.931035" y="0.777778" />
+                            <point x="0.5" y="0.652778" />
+                            <point x="0.344828" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97807" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0011_Capa-79.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0694444" />
+                            <point x="1" y="0.5" />
+                            <point x="0.929825" y="0.777778" />
+                            <point x="0.5" y="0.777778" />
+                            <point x="0.421053" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97807" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0012_Capa-78.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.078125" />
+                            <point x="0.894737" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.947368" y="0.8125" />
+                            <point x="0.5" y="0.671875" />
+                            <point x="0.267544" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976852" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0013_Capa-77.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0694444" />
+                            <point x="0.888889" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.925926" y="0.777778" />
+                            <point x="0.5" y="0.555556" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976415" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0014_Capa-76.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0735294" />
+                            <point x="0.886792" y="0.352941" />
+                            <point x="1" y="0.5" />
+                            <point x="0.924528" y="0.764706" />
+                            <point x="0.5" y="0.764706" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.975962" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0015_Capa-75.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0735294" />
+                            <point x="0.884615" y="0.352941" />
+                            <point x="0.980769" y="0.5" />
+                            <point x="0.923077" y="0.764706" />
+                            <point x="0.5" y="0.764706" />
+                            <point x="0.254808" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.98" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0016_Capa-74.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0735294" />
+                            <point x="0.88" y="0.352941" />
+                            <point x="0.98" y="0.5" />
+                            <point x="0.92" y="0.764706" />
+                            <point x="0.5" y="0.573529" />
+                            <point x="0.245" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.979592" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0017_Capa-73.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.897959" y="0.3125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.897959" y="0.6875" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.352041" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.979167" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0018_Capa-72.png">
+                        <collision-poly>
+                            <point x="0.213542" y="0.569444" />
+                            <point x="0.5" y="0.180556" />
+                            <point x="0.854167" y="0.388889" />
+                            <point x="0.979167" y="0.5" />
+                            <point x="0.895833" y="0.722222" />
+                            <point x="0.5" y="0.597222" />
+                            <point x="0.255208" y="0.319444" />
+                            <point x="0.234375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.978723" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0019_Capa-71.png">
+                        <collision-poly>
+                            <point x="0.175532" y="0.458333" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.851064" y="0.388889" />
+                            <point x="0.978723" y="0.5" />
+                            <point x="0.893617" y="0.722222" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.175532" y="0.541667" />
+                            <point x="0.154255" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977778" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0020_Capa-70.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.180556" />
+                            <point x="0.844444" y="0.388889" />
+                            <point x="1" y="0.5" />
+                            <point x="0.888889" y="0.722222" />
+                            <point x="0.5" y="0.722222" />
+                            <point x="0.177778" y="0.555556" />
+                            <point x="0.111111" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977273" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0021_Capa-69.png">
+                        <collision-poly>
+                            <point x="0.181818" y="0.470588" />
+                            <point x="0.5" y="0.176471" />
+                            <point x="0.863636" y="0.352941" />
+                            <point x="1" y="0.5" />
+                            <point x="0.909091" y="0.764706" />
+                            <point x="0.5" y="0.705882" />
+                            <point x="0.159091" y="0.588235" />
+                            <point x="0.0909091" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977273" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0022_Capa-68.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.191176" />
+                            <point x="0.863636" y="0.352941" />
+                            <point x="0.977273" y="0.5" />
+                            <point x="0.909091" y="0.764706" />
+                            <point x="0.5" y="0.705882" />
+                            <point x="0.159091" y="0.588235" />
+                            <point x="0.0284091" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976744" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0023_Capa-67.png">
+                        <collision-poly>
+                            <point x="0.186047" y="0.470588" />
+                            <point x="0.5" y="0.191176" />
+                            <point x="0.860465" y="0.352941" />
+                            <point x="0.976744" y="0.5" />
+                            <point x="0.906977" y="0.764706" />
+                            <point x="0.5" y="0.764706" />
+                            <point x="0.162791" y="0.588235" />
+                            <point x="0.0290698" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97619" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0024_Capa-66.png">
+                        <collision-poly>
+                            <point x="0.190476" y="0.470588" />
+                            <point x="0.5" y="0.191176" />
+                            <point x="0.857143" y="0.352941" />
+                            <point x="1" y="0.5" />
+                            <point x="0.904762" y="0.764706" />
+                            <point x="0.5" y="0.764706" />
+                            <point x="0.166667" y="0.588235" />
+                            <point x="0.0297619" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.98125" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0025_Capa-65.png">
+                        <collision-poly>
+                            <point x="0.18125" y="0.426471" />
+                            <point x="0.5" y="0.191176" />
+                            <point x="0.85" y="0.352941" />
+                            <point x="0.975" y="0.5" />
+                            <point x="0.9" y="0.764706" />
+                            <point x="0.5" y="0.764706" />
+                            <point x="0.175" y="0.588235" />
+                            <point x="0.03125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.98125" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0026_Capa-64.png">
+                        <collision-poly>
+                            <point x="0.08125" y="0.203125" />
+                            <point x="0.5" y="0.203125" />
+                            <point x="0.875" y="0.3125" />
+                            <point x="0.975" y="0.5" />
+                            <point x="0.9" y="0.75" />
+                            <point x="0.5" y="0.8125" />
+                            <point x="0.10625" y="0.734375" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.980392" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0027_Capa-63.png">
+                        <collision-poly>
+                            <point x="0.00490196" y="0.0138889" />
+                            <point x="0.5" y="0.236111" />
+                            <point x="0.843137" y="0.444444" />
+                            <point x="0.980392" y="0.5" />
+                            <point x="0.921569" y="0.777778" />
+                            <point x="0.5" y="0.930556" />
+                            <point x="0.215686" y="0.388889" />
+                            <point x="0.240196" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.98" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0028_Capa-62.png">
+                        <collision-poly>
+                            <point x="0.005" y="0.0147059" />
+                            <point x="0.5" y="0.426471" />
+                            <point x="0.86" y="0.411765" />
+                            <point x="0.96" y="0.5" />
+                            <point x="0.94" y="0.823529" />
+                            <point x="0.5" y="0.926471" />
+                            <point x="0.2" y="0.411765" />
+                            <point x="0.06" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.975962" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0029_Capa-61.png">
+                        <collision-poly>
+                            <point x="0.0432692" y="0.140625" />
+                            <point x="0.5" y="0.390625" />
+                            <point x="0.884615" y="0.375" />
+                            <point x="0.980769" y="0.5" />
+                            <point x="0.942308" y="0.8125" />
+                            <point x="0.5" y="0.921875" />
+                            <point x="0.153846" y="0.5" />
+                            <point x="0.230769" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.975962" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0030_Capa-60.png">
+                        <collision-poly>
+                            <point x="0.0432692" y="0.140625" />
+                            <point x="0.5" y="0.4375" />
+                            <point x="0.884615" y="0.375" />
+                            <point x="0.961538" y="0.5" />
+                            <point x="0.942308" y="0.8125" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.153846" y="0.5" />
+                            <point x="0.230769" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.975962" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0031_Capa-59.png">
+                        <collision-poly>
+                            <point x="0.0432692" y="0.140625" />
+                            <point x="0.5" y="0.203125" />
+                            <point x="0.884615" y="0.375" />
+                            <point x="0.961538" y="0.5" />
+                            <point x="0.942308" y="0.8125" />
+                            <point x="0.5" y="0.921875" />
+                            <point x="0.153846" y="0.5" />
+                            <point x="0.293269" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.980392" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0032_Capa-58.png">
+                        <collision-poly>
+                            <point x="0.0441176" y="0.15" />
+                            <point x="0.5" y="0.0833333" />
+                            <point x="0.901961" y="0.333333" />
+                            <point x="0.980392" y="0.5" />
+                            <point x="0.941176" y="0.8" />
+                            <point x="0.5" y="0.916667" />
+                            <point x="0.137255" y="0.533333" />
+                            <point x="0.137255" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.979592" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0033_Capa-57.png">
+                        <collision-poly>
+                            <point x="0.0255102" y="0.0833333" />
+                            <point x="0.5" y="0.0833333" />
+                            <point x="0.897959" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.938776" y="0.8" />
+                            <point x="0.5" y="0.916667" />
+                            <point x="0.142857" y="0.533333" />
+                            <point x="0.142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.98" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0034_Capa-56.png">
+                        <collision-poly>
+                            <point x="0.025" y="0.0833333" />
+                            <point x="0.5" y="0.15" />
+                            <point x="0.9" y="0.333333" />
+                            <point x="0.98" y="0.5" />
+                            <point x="0.94" y="0.8" />
+                            <point x="0.5" y="0.916667" />
+                            <point x="0.16" y="0.466667" />
+                            <point x="0.16" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.979167" hotspotY="0.571429" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0035_Capa-55.png">
+                        <collision-poly>
+                            <point x="0.046875" y="0.160714" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.875" y="0.428571" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9375" y="0.785714" />
+                            <point x="0.5" y="0.982143" />
+                            <point x="0.145833" y="0.5" />
+                            <point x="0.0260417" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.979167" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0036_Capa-54.png">
+                        <collision-poly>
+                            <point x="0.0677083" y="0.203125" />
+                            <point x="0.5" y="0.328125" />
+                            <point x="0.833333" y="0.5" />
+                            <point x="0.979167" y="0.5" />
+                            <point x="0.9375" y="0.8125" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.145833" y="0.5625" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.979592" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0037_Capa-53.png">
+                        <collision-poly>
+                            <point x="0.0663265" y="0.216667" />
+                            <point x="0.5" y="0.216667" />
+                            <point x="0.857143" y="0.466667" />
+                            <point x="0.979592" y="0.5" />
+                            <point x="0.938776" y="0.8" />
+                            <point x="0.5" y="0.983333" />
+                            <point x="0.209184" y="0.316667" />
+                            <point x="0.0459184" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.978723" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0038_Capa-52.png">
+                        <collision-poly>
+                            <point x="0.0691489" y="0.216667" />
+                            <point x="0.5" y="0.216667" />
+                            <point x="0.851064" y="0.466667" />
+                            <point x="0.978723" y="0.5" />
+                            <point x="0.93617" y="0.8" />
+                            <point x="0.5" y="0.983333" />
+                            <point x="0.148936" y="0.533333" />
+                            <point x="0.0265957" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.978261" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0039_Capa-51.png">
+                        <collision-poly>
+                            <point x="0.0706522" y="0.216667" />
+                            <point x="0.5" y="0.216667" />
+                            <point x="0.847826" y="0.466667" />
+                            <point x="0.978261" y="0.5" />
+                            <point x="0.934783" y="0.8" />
+                            <point x="0.5" y="0.85" />
+                            <point x="0.152174" y="0.533333" />
+                            <point x="0.0217391" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977778" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0040_Capa-50.png">
+                        <collision-poly>
+                            <point x="0.0722222" y="0.216667" />
+                            <point x="0.5" y="0.216667" />
+                            <point x="0.866667" y="0.4" />
+                            <point x="0.977778" y="0.5" />
+                            <point x="0.955556" y="0.866667" />
+                            <point x="0.5" y="0.716667" />
+                            <point x="0.2" y="0.4" />
+                            <point x="0.0444444" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977778" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0041_Capa-49.png">
+                        <collision-poly>
+                            <point x="0.0722222" y="0.216667" />
+                            <point x="0.5" y="0.2" />
+                            <point x="0.866667" y="0.4" />
+                            <point x="0.955556" y="0.5" />
+                            <point x="0.955556" y="0.866667" />
+                            <point x="0.5" y="0.8" />
+                            <point x="0.155556" y="0.533333" />
+                            <point x="0.0222222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977273" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0042_Capa-48.png">
+                        <collision-poly>
+                            <point x="0.0681818" y="0.125" />
+                            <point x="0.5" y="0.135417" />
+                            <point x="0.863636" y="0.25" />
+                            <point x="0.954545" y="0.5" />
+                            <point x="0.789773" y="0.614583" />
+                            <point x="0.5" y="0.489583" />
+                            <point x="0.232955" y="0.572917" />
+                            <point x="0.119318" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977273" hotspotY="0.565217" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0043_Capa-47.png">
+                        <collision-poly>
+                            <point x="0.0738636" y="0.141304" />
+                            <point x="0.5" y="0.141304" />
+                            <point x="0.840909" y="0.304348" />
+                            <point x="1" y="0.5" />
+                            <point x="0.789773" y="0.597826" />
+                            <point x="0.5" y="0.641304" />
+                            <point x="0.210227" y="0.597826" />
+                            <point x="0.142045" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976744" hotspotY="0.565217" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0044_Capa-46.png">
+                        <collision-poly>
+                            <point x="0.0755814" y="0.141304" />
+                            <point x="0.5" y="0.173913" />
+                            <point x="0.837209" y="0.304348" />
+                            <point x="1" y="0.5" />
+                            <point x="0.784884" y="0.597826" />
+                            <point x="0.5" y="0.641304" />
+                            <point x="0.215116" y="0.597826" />
+                            <point x="0.139535" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976744" hotspotY="0.565217" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0045_Capa-45.png">
+                        <collision-poly>
+                            <point x="0.0755814" y="0.141304" />
+                            <point x="0.5" y="0.173913" />
+                            <point x="0.837209" y="0.304348" />
+                            <point x="0.976744" y="0.5" />
+                            <point x="0.784884" y="0.597826" />
+                            <point x="0.5" y="0.641304" />
+                            <point x="0.215116" y="0.597826" />
+                            <point x="0.122093" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.979592" hotspotY="0.568182" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0046_Capa-44.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.193182" />
+                            <point x="0.877551" y="0.272727" />
+                            <point x="0.979592" y="0.5" />
+                            <point x="0.811224" y="0.579545" />
+                            <point x="0.5" y="0.579545" />
+                            <point x="0.147959" y="0.670455" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97807" hotspotY="0.559524" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0047_Capa-43.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.107143" />
+                            <point x="0.894737" y="0.285714" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855263" y="0.607143" />
+                            <point x="0.5" y="0.559524" />
+                            <point x="0.302632" y="0.178571" />
+                            <point x="0.385965" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977679" hotspotY="0.559524" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0048_Capa-42.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.107143" />
+                            <point x="0.892857" y="0.285714" />
+                            <point x="0.982143" y="0.5" />
+                            <point x="0.852679" y="0.607143" />
+                            <point x="0.5" y="0.559524" />
+                            <point x="0.308036" y="0.178571" />
+                            <point x="0.379464" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977273" hotspotY="0.559524" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0049_Capa-41.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.107143" />
+                            <point x="0.890909" y="0.285714" />
+                            <point x="1" y="0.5" />
+                            <point x="0.872727" y="0.666667" />
+                            <point x="0.5" y="0.559524" />
+                            <point x="0.240909" y="0.369048" />
+                            <point x="0.386364" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.978448" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0050_Capa-40.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.896552" y="0.3" />
+                            <point x="0.982759" y="0.5" />
+                            <point x="0.896552" y="0.7" />
+                            <point x="0.5" y="1" />
+                            <point x="0.176724" y="0.4875" />
+                            <point x="0.431034" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97807" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0051_Capa-39.png">
+                        <collision-poly>
+                            <point x="0.179825" y="0.5125" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.894737" y="0.3" />
+                            <point x="1" y="0.5" />
+                            <point x="0.872807" y="0.6375" />
+                            <point x="0.5" y="0.7375" />
+                            <point x="0.179825" y="0.4875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977679" hotspotY="0.565789" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0052_Capa-38.png">
+                        <collision-poly>
+                            <point x="0.0223214" y="0.0657895" />
+                            <point x="0.5" y="0.0131579" />
+                            <point x="0.910714" y="0.263158" />
+                            <point x="1" y="0.5" />
+                            <point x="0.870536" y="0.618421" />
+                            <point x="0.5" y="0.723684" />
+                            <point x="0.183036" y="0.460526" />
+                            <point x="0.183036" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976852" hotspotY="0.565789" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0053_Capa-37.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.473684" />
+                            <point x="0.5" y="0.0131579" />
+                            <point x="0.907407" y="0.263158" />
+                            <point x="1" y="0.5" />
+                            <point x="0.865741" y="0.618421" />
+                            <point x="0.5" y="0.723684" />
+                            <point x="0.166667" y="0.526316" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976415" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0054_Capa-36.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0138889" />
+                            <point x="0.90566" y="0.277778" />
+                            <point x="1" y="0.5" />
+                            <point x="0.882075" y="0.652778" />
+                            <point x="0.5" y="0.819444" />
+                            <point x="0.231132" y="0.319444" />
+                            <point x="0.188679" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.975962" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0055_Capa-35.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0138889" />
+                            <point x="0.903846" y="0.277778" />
+                            <point x="1" y="0.5" />
+                            <point x="0.879808" y="0.652778" />
+                            <point x="0.5" y="0.763889" />
+                            <point x="0.235577" y="0.319444" />
+                            <point x="0.192308" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.979592" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0056_Capa-34.png">
+                        <collision-poly>
+                            <point x="0.183673" y="0.5" />
+                            <point x="0.5" y="0.0138889" />
+                            <point x="0.918367" y="0.222222" />
+                            <point x="1" y="0.5" />
+                            <point x="0.872449" y="0.652778" />
+                            <point x="0.5" y="0.763889" />
+                            <point x="0.229592" y="0.375" />
+                            <point x="0.183673" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.979592" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0057_Capa-33.png">
+                        <collision-poly>
+                            <point x="0.183673" y="0.5" />
+                            <point x="0.5" y="0.0694444" />
+                            <point x="0.918367" y="0.222222" />
+                            <point x="1" y="0.5" />
+                            <point x="0.872449" y="0.652778" />
+                            <point x="0.5" y="0.763889" />
+                            <point x="0.229592" y="0.375" />
+                            <point x="0.183673" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.978723" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0058_Capa-32.png">
+                        <collision-poly>
+                            <point x="0.191489" y="0.529412" />
+                            <point x="0.5" y="0.0735294" />
+                            <point x="0.914894" y="0.235294" />
+                            <point x="0.978723" y="0.5" />
+                            <point x="0.888298" y="0.691176" />
+                            <point x="0.5" y="0.808824" />
+                            <point x="0.239362" y="0.338235" />
+                            <point x="0.303191" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.978261" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0059_Capa-31.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0735294" />
+                            <point x="0.913043" y="0.235294" />
+                            <point x="0.994565" y="0.5" />
+                            <point x="0.88587" y="0.691176" />
+                            <point x="0.5" y="0.808824" />
+                            <point x="0.222826" y="0.397059" />
+                            <point x="0.288043" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977273" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0060_Capa-30.png">
+                        <collision-poly>
+                            <point x="0.0909091" y="0.235294" />
+                            <point x="0.5" y="0.0735294" />
+                            <point x="0.909091" y="0.235294" />
+                            <point x="0.994318" y="0.5" />
+                            <point x="0.880682" y="0.691176" />
+                            <point x="0.5" y="0.808824" />
+                            <point x="0.227273" y="0.411765" />
+                            <point x="0.278409" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976744" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0061_Capa-29.png">
+                        <collision-poly>
+                            <point x="0.0930233" y="0.235294" />
+                            <point x="0.5" y="0.0735294" />
+                            <point x="0.906977" y="0.235294" />
+                            <point x="0.994186" y="0.5" />
+                            <point x="0.877907" y="0.691176" />
+                            <point x="0.5" y="0.808824" />
+                            <point x="0.0755814" y="0.808824" />
+                            <point x="0.261628" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97619" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0062_Capa-28.png">
+                        <collision-poly>
+                            <point x="0.214286" y="0.6" />
+                            <point x="0.5" y="0.0166667" />
+                            <point x="0.928571" y="0.2" />
+                            <point x="1" y="0.5" />
+                            <point x="0.89881" y="0.716667" />
+                            <point x="0.5" y="0.783333" />
+                            <point x="0.214286" y="0.4" />
+                            <point x="0.267857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97561" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0063_Capa-27.png">
+                        <collision-poly>
+                            <point x="0.219512" y="0.6" />
+                            <point x="0.5" y="0.0166667" />
+                            <point x="0.926829" y="0.2" />
+                            <point x="1" y="0.5" />
+                            <point x="0.896341" y="0.716667" />
+                            <point x="0.5" y="0.85" />
+                            <point x="0.219512" y="0.4" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977273" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0064_Capa-26.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0166667" />
+                            <point x="0.931818" y="0.2" />
+                            <point x="1" y="0.5" />
+                            <point x="0.909091" y="0.733333" />
+                            <point x="0.0511364" y="0.85" />
+                            <point x="0.323864" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977273" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0065_Capa-25.png">
+                        <collision-poly>
+                            <point x="0.0511364" y="0.15" />
+                            <point x="0.5" y="0.0166667" />
+                            <point x="0.931818" y="0.2" />
+                            <point x="1" y="0.5" />
+                            <point x="0.886364" y="0.666667" />
+                            <point x="0.0284091" y="0.916667" />
+                            <point x="0.323864" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976744" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0066_Capa-24.png">
+                        <collision-poly>
+                            <point x="0.0523256" y="0.140625" />
+                            <point x="0.5" y="0.078125" />
+                            <point x="0.883721" y="0.3125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.906977" y="0.75" />
+                            <point x="0.0523256" y="0.859375" />
+                            <point x="0.331395" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976744" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0067_Capa-23.png">
+                        <collision-poly>
+                            <point x="0.139535" y="0.375" />
+                            <point x="0.5" y="0.140625" />
+                            <point x="0.860465" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.906977" y="0.75" />
+                            <point x="0.5" y="0.859375" />
+                            <point x="0.0523256" y="0.859375" />
+                            <point x="0.0290698" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97619" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0068_Capa-22.png">
+                        <collision-poly>
+                            <point x="0.142857" y="0.375" />
+                            <point x="0.5" y="0.1875" />
+                            <point x="0.857143" y="0.375" />
+                            <point x="0.97619" y="0.5" />
+                            <point x="0.904762" y="0.75" />
+                            <point x="0.5" y="0.859375" />
+                            <point x="0.0297619" y="0.921875" />
+                            <point x="0.0297619" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.98" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0069_Capa-21.png">
+                        <collision-poly>
+                            <point x="0.045" y="0.140625" />
+                            <point x="0.5" y="0.203125" />
+                            <point x="0.88" y="0.375" />
+                            <point x="0.98" y="0.5" />
+                            <point x="0.92" y="0.75" />
+                            <point x="0.5" y="0.734375" />
+                            <point x="0.185" y="0.421875" />
+                            <point x="0.205" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.979167" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0070_Capa-20.png">
+                        <collision-poly>
+                            <point x="0.046875" y="0.140625" />
+                            <point x="0.5" y="0.203125" />
+                            <point x="0.895833" y="0.3125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9375" y="0.8125" />
+                            <point x="0.5" y="0.734375" />
+                            <point x="0.171875" y="0.484375" />
+                            <point x="0.192708" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.978723" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0071_Capa-19.png">
+                        <collision-poly>
+                            <point x="0.0265957" y="0.0735294" />
+                            <point x="0.5" y="0.294118" />
+                            <point x="0.87234" y="0.352941" />
+                            <point x="1" y="0.5" />
+                            <point x="0.93617" y="0.823529" />
+                            <point x="0.5" y="0.823529" />
+                            <point x="0.175532" y="0.514706" />
+                            <point x="0.175532" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.978261" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0072_Capa-18.png">
+                        <collision-poly>
+                            <point x="0.0271739" y="0.0735294" />
+                            <point x="0.5" y="0.294118" />
+                            <point x="0.869565" y="0.352941" />
+                            <point x="1" y="0.5" />
+                            <point x="0.934783" y="0.823529" />
+                            <point x="0.5" y="0.823529" />
+                            <point x="0.179348" y="0.514706" />
+                            <point x="0.179348" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.978261" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0073_Capa-17.png">
+                        <collision-poly>
+                            <point x="0.0271739" y="0.0735294" />
+                            <point x="0.5" y="0.308824" />
+                            <point x="0.869565" y="0.352941" />
+                            <point x="0.956522" y="0.5" />
+                            <point x="0.913043" y="0.764706" />
+                            <point x="0.5" y="0.823529" />
+                            <point x="0.179348" y="0.514706" />
+                            <point x="0.13587" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977778" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0074_Capa-16.png">
+                        <collision-poly>
+                            <point x="0.0277778" y="0.0735294" />
+                            <point x="0.5" y="0.294118" />
+                            <point x="0.866667" y="0.352941" />
+                            <point x="0.977778" y="0.5" />
+                            <point x="0.933333" y="0.823529" />
+                            <point x="0.5" y="0.823529" />
+                            <point x="0.183333" y="0.514706" />
+                            <point x="0.133333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976744" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0075_Capa-15.png">
+                        <collision-poly>
+                            <point x="0.00581395" y="0.0166667" />
+                            <point x="0.5" y="0.283333" />
+                            <point x="0.883721" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.953488" y="0.866667" />
+                            <point x="0.5" y="0.783333" />
+                            <point x="0.168605" y="0.516667" />
+                            <point x="0.139535" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976744" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0076_Capa-14.png">
+                        <collision-poly>
+                            <point x="0.0290698" y="0.0833333" />
+                            <point x="0.5" y="0.283333" />
+                            <point x="0.883721" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.906977" y="0.733333" />
+                            <point x="0.5" y="0.783333" />
+                            <point x="0.162791" y="0.533333" />
+                            <point x="0.162791" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97619" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0077_Capa-13.png">
+                        <collision-poly>
+                            <point x="0.0297619" y="0.0833333" />
+                            <point x="0.5" y="0.283333" />
+                            <point x="0.880952" y="0.333333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.904762" y="0.733333" />
+                            <point x="0.5" y="0.733333" />
+                            <point x="0.166667" y="0.533333" />
+                            <point x="0.166667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976744" hotspotY="0.558824" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0078_Capa-12.png">
+                        <collision-poly>
+                            <point x="0.0755814" y="0.191176" />
+                            <point x="0.5" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.906977" y="0.764706" />
+                            <point x="0.5" y="0.647059" />
+                            <point x="0.00581395" y="0.985294" />
+                            <point x="0.232558" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976744" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0079_Capa-11.png">
+                        <collision-poly>
+                            <point x="0.0755814" y="0.203125" />
+                            <point x="0.5" y="0.203125" />
+                            <point x="0.837209" y="0.4375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.906977" y="0.75" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.209302" y="0.4375" />
+                            <point x="0.261628" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97619" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0080_Capa-10.png">
+                        <collision-poly>
+                            <point x="0.077381" y="0.203125" />
+                            <point x="0.5" y="0.265625" />
+                            <point x="0.833333" y="0.4375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.928571" y="0.8125" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.00595238" y="0.984375" />
+                            <point x="0.267857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97619" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0081_Capa-9.png">
+                        <collision-poly>
+                            <point x="0.077381" y="0.203125" />
+                            <point x="0.833333" y="0.4375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.928571" y="0.8125" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.00595238" y="0.984375" />
+                            <point x="0.267857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97619" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0082_Capa-8.png">
+                        <collision-poly>
+                            <point x="0.10119" y="0.265625" />
+                            <point x="0.5" y="0.265625" />
+                            <point x="0.833333" y="0.4375" />
+                            <point x="0.97619" y="0.5" />
+                            <point x="0.928571" y="0.8125" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.00595238" y="0.984375" />
+                            <point x="0.220238" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97619" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0083_Capa-7.png">
+                        <collision-poly>
+                            <point x="0.10119" y="0.265625" />
+                            <point x="0.5" y="0.265625" />
+                            <point x="0.833333" y="0.4375" />
+                            <point x="0.97619" y="0.5" />
+                            <point x="0.928571" y="0.8125" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.0535714" y="0.859375" />
+                            <point x="0.220238" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97561" hotspotY="0.566667" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0084_Capa-6.png">
+                        <collision-poly>
+                            <point x="0.20122" y="0.55" />
+                            <point x="0.5" y="0.216667" />
+                            <point x="0.853659" y="0.4" />
+                            <point x="0.97561" y="0.5" />
+                            <point x="0.926829" y="0.8" />
+                            <point x="0.5" y="0.716667" />
+                            <point x="0.0304878" y="0.916667" />
+                            <point x="0.0731707" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977778" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0085_Capa-5.png">
+                        <collision-poly>
+                            <point x="0.222222" y="0.625" />
+                            <point x="0.5" y="0.140625" />
+                            <point x="0.866667" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.888889" y="0.6875" />
+                            <point x="0.5" y="0.796875" />
+                            <point x="0.00555556" y="0.984375" />
+                            <point x="0.272222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.977273" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0086_Capa-4.png">
+                        <collision-poly>
+                            <point x="0.159091" y="0.4375" />
+                            <point x="0.5" y="0.140625" />
+                            <point x="0.863636" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.886364" y="0.6875" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.00568182" y="0.984375" />
+                            <point x="0.278409" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97619" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0087_Capa-3.png">
+                        <collision-poly>
+                            <point x="0.220238" y="0.578125" />
+                            <point x="0.5" y="0.203125" />
+                            <point x="0.857143" y="0.375" />
+                            <point x="0.97619" y="0.5" />
+                            <point x="0.904762" y="0.75" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0" y="1" />
+                            <point x="0.267857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.97561" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0088_Capa-2.png">
+                        <collision-poly>
+                            <point x="0.22561" y="0.578125" />
+                            <point x="0.5" y="0.203125" />
+                            <point x="0.853659" y="0.375" />
+                            <point x="1" y="0.5" />
+                            <point x="0.902439" y="0.75" />
+                            <point x="0.5" y="0.796875" />
+                            <point x="0.00609756" y="0.984375" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.976744" hotspotY="0.5625" original-source="C:\Users\Vermillion\Desktop\Nueva carpeta\fire-02_orig_0089_Capa-1.png">
+                        <collision-poly>
+                            <point x="0.122093" y="0.328125" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.860465" y="0.375" />
+                            <point x="0.976744" y="0.5" />
+                            <point x="0.906977" y="0.75" />
+                            <point x="0.5" y="0.796875" />
+                            <point x="0.145349" y="0.609375" />
+                            <point x="0.261628" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LanzaLlamas" sid="747979955843163">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="867444883440451" speed="0">
+                    <frame duration="1" hotspotX="0.328125" hotspotY="0.6" original-source="C:\Users\Vermillion\Desktop\LanzaLlamas.png">
+                        <image-point name="Disparo" x="0.765625" y="0.5" />
+                        <collision-poly>
+                            <point x="0.140625" y="0.45" />
+                            <point x="0.5" y="0.15" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.5" y="0.6" />
+                            <point x="0.140625" y="0.55" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.328125" hotspotY="0.4">
+                        <image-point name="Disparo" x="0.765625" y="0.5" />
+                        <collision-poly>
+                            <point x="0.140625" y="0.45" />
+                            <point x="0.5" y="0.4" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.5" y="0.85" />
+                            <point x="0.140625" y="0.55" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Quemado" sid="259428633697624">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="638901755630149">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="11" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="297144470108588" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.28125" />
+                            <point x="0.59375" y="0.40625" />
+                            <point x="0.6875" y="0.5" />
+                            <point x="0.5" y="0.90625" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.28125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0.28125" />
+                            <point x="0.53125" y="0.46875" />
+                            <point x="0.65625" y="0.5" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.90625" />
+                            <point x="0.4375" y="0.5625" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.5625" y="0.4375" />
+                            <point x="0.65625" y="0.5" />
+                            <point x="0.5625" y="0.5625" />
+                            <point x="0.5" y="0.90625" />
+                            <point x="0.3125" y="0.6875" />
+                            <point x="0.53125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.28125" />
+                            <point x="0.5625" y="0.4375" />
+                            <point x="0.625" y="0.5" />
+                            <point x="0.5" y="0.90625" />
+                            <point x="0.40625" y="0.59375" />
+                            <point x="0.53125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.59375" y="0.40625" />
+                            <point x="0.53125" y="0.5" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.90625" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.34375" />
+                            <point x="0.5625" y="0.4375" />
+                            <point x="0.59375" y="0.5" />
+                            <point x="0.65625" y="0.65625" />
+                            <point x="0.5" y="0.90625" />
+                            <point x="0.28125" y="0.71875" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.34375" />
+                            <point x="0.59375" y="0.40625" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.5" y="0.90625" />
+                            <point x="0.21875" y="0.78125" />
+                            <point x="0.46875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.53125" />
+                            <point x="0.46875" y="0.53125" />
+                            <point x="0.40625" y="0.5" />
+                            <point x="0.65625" y="0.65625" />
+                            <point x="0.5" y="0.90625" />
+                            <point x="0.28125" y="0.71875" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.46875" />
+                            <point x="0.53125" y="0.46875" />
+                            <point x="0.625" y="0.5" />
+                            <point x="0.65625" y="0.65625" />
+                            <point x="0.5" y="0.90625" />
+                            <point x="0.34375" y="0.65625" />
+                            <point x="0.28125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.34375" y="0.34375" />
+                            <point x="0.5" y="0.40625" />
+                            <point x="0.65625" y="0.34375" />
+                            <point x="0.6875" y="0.5" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.5" y="0.90625" />
+                            <point x="0.40625" y="0.59375" />
+                            <point x="0.28125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.375" />
+                            <point x="0.6875" y="0.3125" />
+                            <point x="0.65625" y="0.5" />
+                            <point x="0.65625" y="0.65625" />
+                            <point x="0.5" y="0.90625" />
+                            <point x="0.3125" y="0.6875" />
+                            <point x="0.28125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">
@@ -1254,6 +2704,9 @@
                 <member>AK47</member>
                 <member>Arco</member>
                 <member>escopeta</member>
+                <member>LanzaCohetes</member>
+                <member>LanzaGranadas</member>
+                <member>LanzaLlamas</member>
                 <member>Pistola</member>
                 <member>PistolaLaser</member>
                 <member>Sniper</member>
