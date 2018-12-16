@@ -9,85 +9,87 @@
         <variable constant="0" name="PuntajeOleada" sid="589953596479189" static="0" type="number">20</variable>
         <variable constant="0" name="Oleada" sid="476472014731244" static="0" type="number">1</variable>
         <comment>Enemies: Todo lo relacionado con las MECANICAS de enemigos; y mecanicas del spawn de enemigos, el spawn se generara aleatoriamente en #Map</comment>
-        <event-block sid="780589194431975">
+        <event-block sid="845774905625396">
             <conditions>
-                <condition id="-18" name="On created" sid="786826313475595" type="EnemigoPrototipo" />
+                <condition id="-18" name="On created" sid="608804773393949" type="Enemigos" />
             </conditions>
             <actions>
-                <action behavior="Timer" id="0" name="Start timer" sid="115638736671328" type="EnemigoPrototipo">
+                <action behavior="Timer" id="0" name="Start timer" sid="772742582382594" type="Enemigos">
                     <param id="0" name="Duration">Self.SearchTime</param>
                     <param id="1" name="Type">1</param>
                     <param id="2" name="Tag">&quot;Search&quot;</param>
                 </action>
-                <action id="-11" name="Subtract from" sid="406157058660051" type="System">
+                <action id="-11" name="Subtract from" sid="302342845659458" type="System">
                     <param id="0" name="Variable">CantidadEnemigosOleada</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="172274440273834">
+        <event-block sid="499167455411233">
             <conditions>
-                <condition behavior="Timer" id="0" name="On timer" sid="333494051707369" type="EnemigoPrototipo">
+                <condition behavior="Timer" id="0" name="On timer" sid="142890714759114" type="Enemigos">
                     <param id="0" name="Tag">&quot;Search&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="0" name="Find path" sid="739725905706643" type="EnemigoPrototipo">
+                <action behavior="Pathfinding" id="0" name="Find path" sid="205093789517496" type="Enemigos">
                     <param id="0" name="X">Player.X</param>
                     <param id="1" name="Y">Player.Y</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="741811710709979">
+        <event-block sid="188437758324480">
             <conditions>
-                <condition behavior="Pathfinding" id="0" name="On path found" sid="248499942346260" type="EnemigoPrototipo" />
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="784642644435738" type="Enemigos" />
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="525486586544710" type="EnemigoPrototipo" />
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="826402170635782" type="Enemigos" />
             </actions>
         </event-block>
-        <event-block sid="914769396577480">
+        <event-block sid="231307370128968">
             <conditions>
-                <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="569133186516186" type="EnemigoPrototipo" />
+                <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="461997067426011" type="Enemigos" />
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="380940938789279" type="EnemigoPrototipo" />
+                <action id="-9" name="Destroy" sid="413221057615881" type="Enemigos" />
             </actions>
         </event-block>
-        <event-block sid="213133267235182">
+        <event-block sid="270259917936482">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="613210464879453" type="FlechaPrototipo">
-                    <param id="0" name="Object">EnemigoPrototipo</param>
+                <condition id="-7" name="Compare instance variable" sid="367326920187497" type="Enemigos">
+                    <param id="0" name="Instance variable">Vida</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="945166890996047" type="EnemigoPrototipo" />
+                <action id="-9" name="Destroy" sid="119297464512853" type="Enemigos" />
             </actions>
         </event-block>
-        <event-block sid="513488361949894">
+        <event-block sid="813178153904932">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="996204910512091" type="System">
+                <condition id="-6" name="Every X seconds" sid="345186915280256" type="System">
                     <param id="0" name="Interval (seconds)">1</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="271472090318802">
+                <event-block sid="413713296574138">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="850837827280213" type="System">
+                        <condition id="-14" name="Compare variable" sid="975185869594536" type="System">
                             <param id="0" name="Variable">CantidadEnemigosOleada</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="910432555047920" type="System">
+                        <condition id="-14" name="Compare variable" sid="348032349503403" type="System">
                             <param id="0" name="Variable">EnemigosRestantes</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="778312154761454" type="SpawnPrototipo">
-                            <param id="0" name="Object">EnemigoPrototipo</param>
+                        <action id="0" name="Spawn another object" sid="399452510365210" type="SpawnPrototipo">
+                            <param id="0" name="Object">Enemigos</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -95,71 +97,126 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="626616840761007">
+        <event-block sid="605353209800243">
             <conditions>
-                <condition id="-19" name="On destroyed" sid="652348277347477" type="EnemigoPrototipo" />
+                <condition id="-19" name="On destroyed" sid="951147524010853" type="Enemigos" />
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="363066260047030" type="Player">
+                <action id="0" name="Spawn another object" sid="144249111165962" type="Player">
                     <param id="0" name="Object">ten</param>
                     <param id="1" name="Layer">&quot;Game&quot;</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="-10" name="Add to" sid="529972994432506" type="System">
+                <action id="-10" name="Add to" sid="755707461265190" type="System">
                     <param id="0" name="Variable">PuntajeGlobal</param>
                     <param id="1" name="Value">10</param>
                 </action>
-                <action id="-10" name="Add to" sid="195243969775564" type="System">
+                <action id="-10" name="Add to" sid="768648268995510" type="System">
                     <param id="0" name="Variable">PuntajeOleada</param>
                     <param id="1" name="Value">10</param>
                 </action>
-                <action id="-11" name="Subtract from" sid="973360929983529" type="System">
+                <action id="-11" name="Subtract from" sid="523032573290051" type="System">
                     <param id="0" name="Variable">EnemigosRestantes</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="232015780760971">
+        <event-block sid="452269389460918">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="737947852423531" type="System">
+                <condition id="-14" name="Compare variable" sid="899235781346749" type="System">
                     <param id="0" name="Variable">CantidadEnemigosOleada</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
-                <condition id="-14" name="Compare variable" sid="860916901339936" type="System">
+                <condition id="-14" name="Compare variable" sid="332647344104819" type="System">
                     <param id="0" name="Variable">EnemigosRestantes</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="8" name="Set enabled" sid="702766228684933" type="Player">
+                <action behavior="8Direction" id="8" name="Set enabled" sid="552424313572763" type="Player">
                     <param id="0" name="State">0</param>
                 </action>
-                <action id="-3" name="Set position" sid="926029936373623" type="9patch">
+                <action id="-3" name="Set position" sid="236492569091220" type="9patch">
                     <param id="0" name="X">Player.X-90</param>
                     <param id="1" name="Y">Player.Y-80</param>
                 </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="693371576530192" type="9patch" />
-                <action id="-3" name="Set position" sid="459410868007042" type="Text3">
+                <action behavior="Fade" id="1" name="Start fade" sid="640616557784077" type="9patch" />
+                <action id="-3" name="Set position" sid="359459843936156" type="Text3">
                     <param id="0" name="X">Player.X</param>
                     <param id="1" name="Y">Player.Y</param>
                 </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="948625879982288" type="Text3" />
+                <action behavior="Fade" id="1" name="Start fade" sid="583176089170710" type="Text3" />
             </actions>
             <sub-events>
-                <event-block sid="869418385944194">
+                <event-block sid="637110180542940">
                     <conditions />
                     <actions>
-                        <action id="-16" name="Wait" sid="807781337146154" type="System">
+                        <action id="-16" name="Wait" sid="332221976679157" type="System">
                             <param id="0" name="Seconds">5</param>
                         </action>
-                        <action id="-2" name="Go to layout" sid="872177880394180" type="System">
+                        <action id="-2" name="Go to layout" sid="517349530633592" type="System">
                             <param id="0" name="Layout">Tienda</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="148119521091957">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="346861968376850" type="Esqueleto">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">Player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="577430120105451" type="Esqueleto">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="753425603747342">
+            <conditions>
+                <condition id="-22" name="Else" sid="163023859248567" type="System" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="592440012273622" type="Esqueleto">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="474458971171891">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="545552268877539" type="Esqueleto">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="874830655731719" type="Esqueleto" />
+            </actions>
+        </event-block>
+        <event-block sid="584838272146383">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="455063669542548" type="Esqueleto" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="259679967003810" type="Esqueleto">
+                    <param id="0" name="Object">ExplosionEsqueleto</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="524908078994014">
+            <conditions>
+                <condition id="4" name="On finished" sid="742043621714647" type="ExplosionEsqueleto">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="214991868866143" type="ExplosionEsqueleto" />
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

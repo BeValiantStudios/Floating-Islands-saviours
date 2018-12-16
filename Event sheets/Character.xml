@@ -997,7 +997,7 @@
                                 <event-block sid="487500671477664">
                                     <conditions>
                                         <condition id="1" name="Is overlapping another object" sid="961713943789799" type="misil">
-                                            <param id="0" name="Object">EnemigoPrototipo</param>
+                                            <param id="0" name="Object">Enemigos</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1049,53 +1049,153 @@
                                         <action id="-9" name="Destroy" sid="997037776546067" type="Explosion" />
                                     </actions>
                                 </event-block>
-                                <event-block sid="283348769660038">
+                                <event-block sid="561764746746387">
                                     <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="137460498286575" type="Fuego">
-                                            <param id="0" name="Object">EnemigoPrototipo</param>
+                                        <condition id="1" name="Is overlapping another object" sid="944796775915753" type="Fuego">
+                                            <param id="0" name="Object">Enemigos</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="255132020349154" type="EnemigoPrototipo">
+                                        <condition id="-7" name="Compare instance variable" sid="826741690036014" type="Enemigos">
                                             <param id="0" name="Instance variable">Quemado</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="719227894821406" type="EnemigoPrototipo">
+                                        <action id="-10" name="Set value" sid="827819253147381" type="Enemigos">
                                             <param id="0" name="Instance variable">Quemado</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="801142738789107">
+                                        <event-block sid="115033173873936">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="212692811813341" type="EnemigoPrototipo">
+                                                <condition id="-7" name="Compare instance variable" sid="546212725943125" type="Enemigos">
                                                     <param id="0" name="Instance variable">Quemado</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="219550696366454" type="EnemigoPrototipo">
+                                                <action id="0" name="Spawn another object" sid="149427807785667" type="Enemigos">
                                                     <param id="0" name="Object">Quemado</param>
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                                     <param id="2" name="Image point">0</param>
                                                 </action>
-                                                <action behavior="Pin" id="0" name="Pin to object" sid="158783694878828" type="Quemado">
-                                                    <param id="0" name="Pin to">EnemigoPrototipo</param>
+                                                <action behavior="Pin" id="0" name="Pin to object" sid="950488482690947" type="Quemado">
+                                                    <param id="0" name="Pin to">Enemigos</param>
                                                     <param id="1" name="Mode">0</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="873284207854870" type="EnemigoPrototipo">
+                                                <action id="-10" name="Set value" sid="248989067306491" type="Enemigos">
                                                     <param id="0" name="Instance variable">Quemado</param>
                                                     <param id="1" name="Value">2</param>
                                                 </action>
-                                                <action id="-16" name="Wait" sid="431336730012542" type="System">
+                                                <action id="-16" name="Wait" sid="285974164088185" type="System">
                                                     <param id="0" name="Seconds">4.0</param>
                                                 </action>
-                                                <action id="-9" name="Destroy" sid="347465863153528" type="Quemado" />
-                                                <action id="-10" name="Set value" sid="886366233464109" type="EnemigoPrototipo">
+                                                <action id="-9" name="Destroy" sid="166849042641236" type="Quemado" />
+                                                <action id="-10" name="Set value" sid="264273148499214" type="Enemigos">
                                                     <param id="0" name="Instance variable">Quemado</param>
                                                     <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="669405680988391">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="933256596933685" type="BalaPistola">
+                                            <param id="0" name="Object">Enemigos</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="995673822931694" type="Enemigos">
+                                            <param id="0" name="Instance variable">Vida</param>
+                                            <param id="1" name="Value">Pistola.Dano</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="564054237518052" type="BalaPistola" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="733206384450548">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="221049698697442" type="BalaEscopeta">
+                                            <param id="0" name="Object">Enemigos</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="417402353857771" type="Enemigos">
+                                            <param id="0" name="Instance variable">Vida</param>
+                                            <param id="1" name="Value">escopeta.Dano</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="544857975328643" type="BalaEscopeta" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="482817952550132">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="235337600321609" type="Explosion">
+                                            <param id="0" name="Object">Enemigos</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="990762980342023" type="Enemigos">
+                                            <param id="0" name="Instance variable">Vida</param>
+                                            <param id="1" name="Value">LanzaCohetes.Dano</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="964492574836314">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="713593437206671" type="Fuego">
+                                            <param id="0" name="Object">Enemigos</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="548335283715694" type="Enemigos">
+                                            <param id="0" name="Instance variable">Vida</param>
+                                            <param id="1" name="Value">LanzaLlamas.Dano</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="638662832270024">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="689605598290017" type="laser">
+                                            <param id="0" name="Object">Enemigos</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="609887859227384">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="408273155627060" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.05</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-12" name="Subtract from" sid="914743612393698" type="Enemigos">
+                                                    <param id="0" name="Instance variable">Vida</param>
+                                                    <param id="1" name="Value">PistolaLaser.Dano</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="901482378423482">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="242631186928837" type="Quemado">
+                                            <param id="0" name="Object">Enemigos</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="738802989451316">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="422374617723876" type="System">
+                                                    <param id="0" name="Interval (seconds)">1.25</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-12" name="Subtract from" sid="205566580151607" type="Enemigos">
+                                                    <param id="0" name="Instance variable">Vida</param>
+                                                    <param id="1" name="Value">PistolaLaser.Dano</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1306,19 +1406,19 @@
                 <event-block sid="361879422013332">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="220434557089970" type="laser">
-                            <param id="0" name="Object">EnemigoPrototipo</param>
+                            <param id="0" name="Object">Enemigos</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-5" name="Set width" sid="697352982270083" type="laser">
-                            <param id="0" name="Width">distance(PistolaLaser.X,PistolaLaser.Y,EnemigoPrototipo.X,EnemigoPrototipo.Y)-10</param>
+                            <param id="0" name="Width">distance(PistolaLaser.X,PistolaLaser.Y,Enemigos.X,Enemigos.Y)-10</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="896125440583546">
                     <conditions>
                         <condition id="1" inverted="1" name="Is overlapping another object" sid="168048699597185" type="laser">
-                            <param id="0" name="Object">EnemigoPrototipo</param>
+                            <param id="0" name="Object">Enemigos</param>
                         </condition>
                     </conditions>
                     <actions>

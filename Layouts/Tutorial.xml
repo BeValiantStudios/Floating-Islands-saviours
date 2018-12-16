@@ -197,7 +197,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ArmaActual>LanzaLlamas</ArmaActual>
+                        <ArmaActual>Laser</ArmaActual>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">

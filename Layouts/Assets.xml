@@ -384,6 +384,7 @@
                     <instance-variables>
                         <SearchTime>1</SearchTime>
                         <Quemado>0</Quemado>
+                        <Vida>100</Vida>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -391,9 +392,9 @@
                                 <cell-size>16</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>100</max-speed>
+                                <max-speed>160</max-speed>
                                 <acceleration>500</acceleration>
-                                <deceleration>500</deceleration>
+                                <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>
                                 <rotate-object>No</rotate-object>
                                 <diagonals>Enabled</diagonals>
