@@ -197,7 +197,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ArmaActual>Laser</ArmaActual>
+                        <ArmaActual>Espada</ArmaActual>
                         <LifeSteal>0</LifeSteal>
                         <Armour>0</Armour>
                         <MovSpeed>0</MovSpeed>

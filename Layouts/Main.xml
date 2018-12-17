@@ -184,8 +184,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-280.529876709</x>
-                        <y>740.816955566</y>
+                        <x>-280.727813721</x>
+                        <y>746.356628418</y>
                         <z>0</z>
                         <width>16</width>
                         <height>5</height>
@@ -227,14 +227,57 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-216.256286621</x>
-                        <y>774.724182129</y>
+                        <x>-202.102462769</x>
+                        <y>817.996704102</y>
                         <z>0</z>
-                        <width>39.222900391</width>
-                        <height>8.05479908</height>
+                        <width>40</width>
+                        <height>16</height>
                         <depth>0</depth>
-                        <hotspotX>0.978260875</hotspotX>
+                        <hotspotX>0.975000024</hotspotX>
                         <hotspotY>0.5625</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="colisionespada" uid="122">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>50</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0.2</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.8</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-246.644439697</x>
+                        <y>648.938842773</y>
+                        <z>0</z>
+                        <width>14</width>
+                        <height>26</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -266,7 +309,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ArmaActual>Escopeta</ArmaActual>
+                        <ArmaActual>Espada</ArmaActual>
                         <LifeSteal>0</LifeSteal>
                         <Armour>0</Armour>
                         <MovSpeed>0</MovSpeed>
@@ -687,11 +730,11 @@
                         <x>-308.58190918</x>
                         <y>719.843566895</y>
                         <z>0</z>
-                        <width>18.916400909</width>
-                        <height>20.098676682</height>
+                        <width>18</width>
+                        <height>11</height>
                         <depth>0</depth>
-                        <hotspotX>0.3125</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.333333343</hotspotX>
+                        <hotspotY>0.545454562</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -712,14 +755,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-220.831756592</x>
-                        <y>724.882873535</y>
+                        <x>-245.060653687</x>
+                        <y>725.477722168</y>
                         <z>0</z>
-                        <width>38.989608765</width>
-                        <height>14.621103287</height>
+                        <width>28</width>
+                        <height>11</height>
                         <depth>0</depth>
-                        <hotspotX>0.640625</hotspotX>
-                        <hotspotY>0.625</hotspotY>
+                        <hotspotX>0.392857134</hotspotX>
+                        <hotspotY>0.727272749</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -802,11 +845,11 @@
                         <x>-227.365646362</x>
                         <y>750.321350098</y>
                         <z>0</z>
-                        <width>36.145740509</width>
-                        <height>18.637647629</height>
+                        <width>28</width>
+                        <height>10</height>
                         <depth>0</depth>
-                        <hotspotX>0.40625</hotspotX>
-                        <hotspotY>0.545454562</hotspotY>
+                        <hotspotX>0.392857134</hotspotX>
+                        <hotspotY>0.600000024</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -824,8 +867,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-267</x>
-                        <y>901</y>
+                        <x>-265.216278076</x>
+                        <y>809.286865234</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -855,11 +898,11 @@
                         <x>-234.884414673</x>
                         <y>702.631591797</y>
                         <z>0</z>
-                        <width>37.86290741</width>
-                        <height>12.423766136</height>
+                        <width>30</width>
+                        <height>10</height>
                         <depth>0</depth>
-                        <hotspotX>0.3125</hotspotX>
-                        <hotspotY>0.666666687</hotspotY>
+                        <hotspotX>0.400000006</hotspotX>
+                        <hotspotY>0.800000012</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -883,11 +926,11 @@
                         <x>-285.276000977</x>
                         <y>761.319152832</y>
                         <z>0</z>
-                        <width>41.917556763</width>
-                        <height>13.099236488</height>
+                        <width>29</width>
+                        <height>11</height>
                         <depth>0</depth>
-                        <hotspotX>0.328125</hotspotX>
-                        <hotspotY>0.600000024</hotspotY>
+                        <hotspotX>0.37931034</hotspotX>
+                        <hotspotY>0.454545468</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -954,6 +997,34 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="espada" uid="123">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Dano>30</Dano>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-286.234375</x>
+                        <y>913.368164063</y>
+                        <z>0</z>
+                        <width>15</width>
+                        <height>15</height>
+                        <depth>0</depth>
+                        <hotspotX>0.266666681</hotspotX>
+                        <hotspotY>0.733333349</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
