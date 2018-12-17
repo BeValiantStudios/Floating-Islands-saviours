@@ -297,6 +297,9 @@
                     <instance-variable name="Dmg" sid="912841863232912" type="number" />
                     <instance-variable name="AtSpeed" sid="751021147141774" type="number" />
                     <instance-variable name="VidaActual" sid="858760703120172" type="number" />
+                    <instance-variable name="Arma1" sid="701170010603947" type="string" />
+                    <instance-variable name="Arma2" sid="955045564750282" type="string" />
+                    <instance-variable name="ArmaPrevia" sid="981107657618882" type="string" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="ScrollTo" sid="150732981857979">
@@ -1429,6 +1432,22 @@
                         <frame duration="1" hotspotX="0.37931" hotspotY="0.545455">
                             <image-point name="Disparo" x="0.965517" y="0.636364" />
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Arma1Fake" sid="831508939596272">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="913060713934363" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Arma2Fake" sid="173129595554092">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="447899356526709" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>

@@ -205,6 +205,9 @@
                         <Dmg>0</Dmg>
                         <AtSpeed>0</AtSpeed>
                         <VidaActual>10</VidaActual>
+                        <Arma1>Escopeta</Arma1>
+                        <Arma2>LanzaLlamas</Arma2>
+                        <ArmaPrevia></ArmaPrevia>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">

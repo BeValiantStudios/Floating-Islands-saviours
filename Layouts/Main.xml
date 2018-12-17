@@ -317,6 +317,9 @@
                         <Dmg>0</Dmg>
                         <AtSpeed>0</AtSpeed>
                         <VidaActual>10</VidaActual>
+                        <Arma1>Escopeta</Arma1>
+                        <Arma2>LanzaLlamas</Arma2>
+                        <ArmaPrevia></ArmaPrevia>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
@@ -603,8 +606,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-271.919372559</x>
-                        <y>679.382873535</y>
+                        <x>-271</x>
+                        <y>679</y>
                         <z>0</z>
                         <width>27</width>
                         <height>9</height>
@@ -1048,6 +1051,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="Arma1Fake" uid="124">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>483</x>
+                        <y>143</y>
+                        <z>0</z>
+                        <width>26</width>
+                        <height>26</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.800000012</opacity>
+                    </world>
+                </instance>
                 <instance type="SeedName" uid="9">
                     <properties>
                         <text>Seed:</text>
@@ -1166,8 +1191,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-224.73348999</x>
-                        <y>151.266494751</y>
+                        <x>483</x>
+                        <y>143</y>
                         <z>0</z>
                         <width>26</width>
                         <height>26</height>
@@ -1188,8 +1213,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-107.083099365</x>
-                        <y>128.083099365</y>
+                        <x>483</x>
+                        <y>83</y>
                         <z>0</z>
                         <width>26</width>
                         <height>26</height>
@@ -1220,6 +1245,28 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Arma2Fake" uid="125">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>483</x>
+                        <y>83</y>
+                        <z>0</z>
+                        <width>26</width>
+                        <height>26</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.800000012</opacity>
                     </world>
                 </instance>
             </instances>

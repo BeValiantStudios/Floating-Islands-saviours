@@ -1708,5 +1708,261 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="400627158029889" title="Cambio de arma">
+            <sub-events>
+                <event-block sid="162876720190519">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="169004599844211" type="Touch">
+                            <param id="0" name="Object">Arma1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="207733013287538" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Value">Player.ArmaActual</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="256356476212340" type="System">
+                            <param id="0" name="Seconds">0.05</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="682342813843405" type="Player">
+                            <param id="0" name="Instance variable">ArmaActual</param>
+                            <param id="1" name="Value">Player.Arma1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="905229851290175">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="168836841372942" type="Touch">
+                            <param id="0" name="Object">Arma2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="115298318155248" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Value">Player.ArmaActual</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="578446364827090" type="System">
+                            <param id="0" name="Seconds">0.05</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="490334097555208" type="Player">
+                            <param id="0" name="Instance variable">ArmaActual</param>
+                            <param id="1" name="Value">Player.Arma2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="292136094656926">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="878807781949236" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Espada&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="686654190013393" type="espada" />
+                        <action id="-3" name="Set position" sid="850646148018086" type="espada">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="353961715506365">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="825444173664743" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Pistola&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="623053076707363" type="Pistola" />
+                        <action id="-3" name="Set position" sid="667598862158502" type="Pistola">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="827581788052033">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="171454884530928" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Arco&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="407120956290163" type="Arco" />
+                        <action id="-3" name="Set position" sid="149795389786586" type="Arco">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="576830993275008">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="314906277914991" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;AK47&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="265669473573421" type="AK47" />
+                        <action id="-3" name="Set position" sid="852000182352860" type="AK47">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="714396347591864">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="585984911213976" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Escopeta&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="772137912164126" type="escopeta" />
+                        <action id="-3" name="Set position" sid="613585474864863" type="escopeta">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="476860103028746">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="439004657858323" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;LanzaCohetes&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="884683417549997" type="LanzaCohetes" />
+                        <action id="-3" name="Set position" sid="999261564748198" type="LanzaCohetes">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="382160954915281">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="219214016900859" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;LanzaGranadas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="495991740037119" type="LanzaGranadas" />
+                        <action id="-3" name="Set position" sid="552779663806869" type="LanzaGranadas">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="955174898658083">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="470507721488365" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;LanzaLlamas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="672254705586707" type="LanzaLlamas" />
+                        <action id="-3" name="Set position" sid="185140088163930" type="LanzaLlamas">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="502903781332999">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="410261664001022" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Laser&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="937384397510498" type="PistolaLaser" />
+                        <action id="-3" name="Set position" sid="759201138539225" type="PistolaLaser">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="856910625443206">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="597387126426595" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Sniper&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="200315334237222" type="Sniper" />
+                        <action id="-3" name="Set position" sid="280246286657044" type="Sniper">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="183527431298252">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="606015791707667" type="Player">
+                            <param id="0" name="Instance variable">ArmaActual</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Player.Arma1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="445456833821587" type="Arma1">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="337037625533670">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="972017164548368" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="175686439740022" type="Arma1">
+                            <param id="0" name="X">483</param>
+                            <param id="1" name="Y">143</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="726749367382495">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="704836338309676" type="Player">
+                            <param id="0" name="Instance variable">ArmaActual</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Player.Arma2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="517134896877258" type="Arma2">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="551635052026210">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="388982122346831" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="518531708894934" type="Arma2">
+                            <param id="0" name="X">483</param>
+                            <param id="1" name="Y">83</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
