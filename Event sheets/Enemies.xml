@@ -218,5 +218,18 @@
                 <action id="-9" name="Destroy" sid="214991868866143" type="ExplosionEsqueleto" />
             </actions>
         </event-block>
+        <event-block sid="765015876597773">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="532260314451393" type="ExplosionEsqueleto">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="110475067004500" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

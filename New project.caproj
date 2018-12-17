@@ -296,6 +296,7 @@
                     <instance-variable name="MaxLife" sid="680787535634807" type="number" />
                     <instance-variable name="Dmg" sid="912841863232912" type="number" />
                     <instance-variable name="AtSpeed" sid="751021147141774" type="number" />
+                    <instance-variable name="VidaActual" sid="858760703120172" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="ScrollTo" sid="150732981857979">
@@ -2283,11 +2284,11 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="577822332143853" speed="5">
-                        <frame duration="1" hotspotX="0.478261" hotspotY="0.521739" original-source="C:\Users\Vermillion\Desktop\arco.png">
-                            <image-point name="Disparo" x="0.652174" y="0.521739" />
+                        <frame duration="1" hotspotX="0.3" hotspotY="0.47619" original-source="C:\Users\Vermillion\Desktop\arco.png">
+                            <image-point name="Disparo" x="0.8" y="0.47619" />
                         </frame>
-                        <frame duration="1" hotspotX="0.478261" hotspotY="0.478261">
-                            <image-point name="Disparo" x="0.652174" y="0.478261" />
+                        <frame duration="1" hotspotX="0.3" hotspotY="0.52381">
+                            <image-point name="Disparo" x="0.8" y="0.52381" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -2304,31 +2305,11 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="695170474554981" speed="0">
-                        <frame duration="1" hotspotX="0.3125" hotspotY="0.636364" original-source="C:\Users\Vermillion\Desktop\ak.png">
-                            <image-point name="Disparo" x="1" y="0.363636" />
-                            <collision-poly>
-                                <point x="0.09375" y="0.272727" />
-                                <point x="0.5" y="0.181818" />
-                                <point x="0.90625" y="0.272727" />
-                                <point x="0.65625" y="0.454545" />
-                                <point x="0.8125" y="0.454545" />
-                                <point x="0.5" y="1" />
-                                <point x="0.125" y="0.636364" />
-                                <point x="0" y="0.454545" />
-                            </collision-poly>
+                        <frame duration="1" hotspotX="0.296296" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\ak47.png">
+                            <image-point name="Disparo" x="1" y="0.333333" />
                         </frame>
-                        <frame duration="1" hotspotX="0.3125" hotspotY="0.363636">
-                            <image-point name="Disparo" x="1" y="0.636364" />
-                            <collision-poly>
-                                <point x="0" y="0.545455" />
-                                <point x="0.125" y="0.363636" />
-                                <point x="0.5" y="0" />
-                                <point x="0.8125" y="0.545455" />
-                                <point x="0.65625" y="0.545455" />
-                                <point x="0.90625" y="0.727273" />
-                                <point x="0.5" y="0.818182" />
-                                <point x="0.09375" y="0.727273" />
-                            </collision-poly>
+                        <frame duration="1" hotspotX="0.296296" hotspotY="0.444444">
+                            <image-point name="Disparo" x="1" y="0.666667" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -2345,29 +2326,11 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820443354750038" speed="0">
-                        <frame duration="1" hotspotX="0.125" hotspotY="0.473684" original-source="C:\Users\Vermillion\Desktop\escopeta.png">
-                            <image-point name="Disparo" x="1" y="0.157895" />
-                            <collision-poly>
-                                <point x="0.03125" y="0.105263" />
-                                <point x="0.5" y="0.0526316" />
-                                <point x="0.984375" y="0.0526316" />
-                                <point x="0.859375" y="0.526316" />
-                                <point x="0.5" y="0.526316" />
-                                <point x="0.015625" y="0.947368" />
-                                <point x="0.046875" y="0.473684" />
-                            </collision-poly>
+                        <frame duration="1" hotspotX="0.344828" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\rifle.png">
+                            <image-point name="Disparo" x="1" y="0.333333" />
                         </frame>
-                        <frame duration="1" hotspotX="0.125" hotspotY="0.526316">
-                            <image-point name="Disparo" x="1" y="0.842105" />
-                            <collision-poly>
-                                <point x="0.046875" y="0.526316" />
-                                <point x="0.015625" y="0.0526316" />
-                                <point x="0.5" y="0.473684" />
-                                <point x="0.859375" y="0.473684" />
-                                <point x="0.984375" y="0.947368" />
-                                <point x="0.5" y="0.947368" />
-                                <point x="0.03125" y="0.894737" />
-                            </collision-poly>
+                        <frame duration="1" hotspotX="0.344828" hotspotY="0.444444">
+                            <image-point name="Disparo" x="1" y="0.666667" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -2431,31 +2394,11 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="760119154627158" speed="0">
-                        <frame duration="1" hotspotX="0.21875" hotspotY="0.625" original-source="C:\Users\Vermillion\Desktop\pistola.png">
-                            <image-point name="Disparo" x="1" y="0.25" />
-                            <collision-poly>
-                                <point x="0.25" y="0.333333" />
-                                <point x="0.5" y="0.125" />
-                                <point x="1" y="0" />
-                                <point x="0.59375" y="0.5" />
-                                <point x="0.59375" y="0.458333" />
-                                <point x="0.5" y="0.666667" />
-                                <point x="0.03125" y="0.958333" />
-                                <point x="0.15625" y="0.5" />
-                            </collision-poly>
+                        <frame duration="1" hotspotX="0.2" hotspotY="0.666667" original-source="C:\Users\Vermillion\Desktop\pistolaaaa.png">
+                            <image-point name="Disparo" x="1" y="0.333333" />
                         </frame>
-                        <frame duration="1" hotspotX="0.21875" hotspotY="0.375">
-                            <image-point name="Disparo" x="1" y="0.75" />
-                            <collision-poly>
-                                <point x="0.15625" y="0.5" />
-                                <point x="0.03125" y="0.0416667" />
-                                <point x="0.5" y="0.333333" />
-                                <point x="0.59375" y="0.541667" />
-                                <point x="0.59375" y="0.5" />
-                                <point x="1" y="1" />
-                                <point x="0.5" y="0.875" />
-                                <point x="0.25" y="0.666667" />
-                            </collision-poly>
+                        <frame duration="1" hotspotX="0.2" hotspotY="0.333333">
+                            <image-point name="Disparo" x="1" y="0.666667" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -2876,6 +2819,123 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-type name="VidaHUD" sid="801468058590550">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="326996317925763" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida0.png">
+                        <collision-poly>
+                            <point x="0.00684932" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993151" y="0.0416667" />
+                            <point x="0.993151" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00684932" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida1.png">
+                        <collision-poly>
+                            <point x="0.00684932" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993151" y="0.0416667" />
+                            <point x="0.993151" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00684932" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida2.png">
+                        <collision-poly>
+                            <point x="0.00684932" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993151" y="0.0416667" />
+                            <point x="0.993151" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00684932" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida3.png">
+                        <collision-poly>
+                            <point x="0.00684932" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993151" y="0.0416667" />
+                            <point x="0.993151" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00684932" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida4.png">
+                        <collision-poly>
+                            <point x="0.00684932" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993151" y="0.0416667" />
+                            <point x="0.993151" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00684932" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida5.png">
+                        <collision-poly>
+                            <point x="0.00684932" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993151" y="0.0416667" />
+                            <point x="0.993151" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00684932" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida6.png">
+                        <collision-poly>
+                            <point x="0.00684932" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993151" y="0.0416667" />
+                            <point x="0.993151" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00684932" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida7.png">
+                        <collision-poly>
+                            <point x="0.00684932" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993151" y="0.0416667" />
+                            <point x="0.993151" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00684932" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida8.png">
+                        <collision-poly>
+                            <point x="0.00684932" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993151" y="0.0416667" />
+                            <point x="0.993151" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00684932" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida9.png">
+                        <collision-poly>
+                            <point x="0.00684932" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993151" y="0.0416667" />
+                            <point x="0.993151" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00684932" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida10.png">
+                        <collision-poly>
+                            <point x="0.00684932" y="0.0416667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.993151" y="0.0416667" />
+                            <point x="0.993151" y="0.958333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00684932" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">

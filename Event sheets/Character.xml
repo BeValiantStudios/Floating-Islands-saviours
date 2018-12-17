@@ -1429,5 +1429,204 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="612395060431558">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="567171982339053" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Player.MaxLife</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="554892912611674" type="VidaHUD">
+                    <param id="0" name="Frame number">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="537543679478688">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="673715647593360" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*8</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="332657292588722" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*9</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="419383597728036" type="VidaHUD">
+                    <param id="0" name="Frame number">9</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="609343337566062">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="133010962042770" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*7</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="170234391221811" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="192284423298294" type="VidaHUD">
+                    <param id="0" name="Frame number">8</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="586360084906675">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="896365042713738" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*6</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="611608204753028" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="196735016292078" type="VidaHUD">
+                    <param id="0" name="Frame number">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="214247673011744">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="324565711688500" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*5</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="159835219958954" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="454255108741690" type="VidaHUD">
+                    <param id="0" name="Frame number">6</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="375367431511301">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="117033634609056" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*4</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="689602219070434" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="623597884902648" type="VidaHUD">
+                    <param id="0" name="Frame number">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="685292220628847">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="903667070297158" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*3</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="710951507694161" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="979044813020752" type="VidaHUD">
+                    <param id="0" name="Frame number">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="923123227755668">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="691302535686672" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*2</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="215335747554008" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="917505183100428" type="VidaHUD">
+                    <param id="0" name="Frame number">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="458972455651234">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="390291280071432" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">Player.MaxLife/10</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="821131709825514" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">(Player.MaxLife/10)*2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="919583121608674" type="VidaHUD">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="173813124158179">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="668963399966250" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="353842540704897" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">Player.MaxLife/10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="601049697795128" type="VidaHUD">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="835481367256954">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="480996395606254" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="721166333162889" type="VidaHUD">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -201,9 +201,10 @@
                         <LifeSteal>0</LifeSteal>
                         <Armour>0</Armour>
                         <MovSpeed>0</MovSpeed>
-                        <MaxLife>0</MaxLife>
+                        <MaxLife>10</MaxLife>
                         <Dmg>0</Dmg>
                         <AtSpeed>0</AtSpeed>
+                        <VidaActual>10</VidaActual>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
