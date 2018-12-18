@@ -18,12 +18,6 @@
                     <param id="0" name="Variable">Number2</param>
                     <param id="1" name="Value">wallclocktime</param>
                 </action>
-                <action id="0" name="Set text" sid="427946222885809" type="Text">
-                    <param id="0" name="Text">&quot;&quot;</param>
-                </action>
-                <action id="0" name="Set text" sid="873157592262958" type="SeedText">
-                    <param id="0" name="Text">&quot;&quot;</param>
-                </action>
                 <action id="0" name="Clear" sid="594830314850278" type="Mother" />
                 <action id="0" name="Clear" sid="365420776708934" type="Seed" />
             </actions>

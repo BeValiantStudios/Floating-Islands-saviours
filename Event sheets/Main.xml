@@ -299,6 +299,12 @@
                             <param id="0" name="Pin to">Player</param>
                             <param id="1" name="Mode">1</param>
                         </action>
+                        <action id="4" name="Load" sid="541700168276309" type="DicItems">
+                            <param id="0" name="JSON">ITEMS</param>
+                        </action>
+                        <action id="4" name="Load" sid="352690057345644" type="DicCrafteos">
+                            <param id="0" name="JSON">CRAFTEOS</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="109611857012164">

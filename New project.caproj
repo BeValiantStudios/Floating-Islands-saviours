@@ -118,12 +118,6 @@
             <object-type name="SeedName" sid="502990701081895">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="SeedText" sid="149562057923982">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="Text" sid="705909393634356">
-                <plugin id="Text" />
-            </object-type>
             <object-type name="timetext" sid="717437748254044">
                 <plugin id="Text" />
             </object-type>
@@ -538,13 +532,22 @@
             </object-type>
         </object-folder>
         <object-folder name="Inventario">
-            <object-type global="1" name="Crafteos" sid="493092433328784">
+            <object-type global="1" name="DicCrafteos" sid="493092433328784">
                 <plugin id="Dictionary" />
             </object-type>
             <object-type global="1" name="Chest" sid="107018717189076">
                 <plugin id="Arr" />
             </object-type>
             <object-type global="1" name="Inv" sid="849521525795427">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="DicItems" sid="780498382097128">
+                <plugin id="Dictionary" />
+            </object-type>
+            <object-type global="1" name="Equipo" sid="620218394826639">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="Craft" sid="961194838145667">
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
@@ -1269,6 +1272,19 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="colisionespada" sid="459293736168143">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Bullet" sid="677949276869768">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="117589905967523" speed="5">
+                            <frame duration="1" hotspotX="0.136364" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\espada proyectil.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-type name="Arco" sid="847322508471690">
                 <plugin id="Sprite" />
@@ -1448,6 +1464,39 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="447899356526709" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="espada" sid="640880376596088">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="794177994708076" speed="0">
+                        <frame duration="1" hotspotX="0.266667" hotspotY="0.733333" original-source="C:\Users\Vermillion\Desktop\espada.png">
+                            <image-point name="Disparo" x="0.266667" y="0.733333" />
+                            <collision-poly>
+                                <point x="0.4" y="0.4" />
+                                <point x="0.466667" y="0.266667" />
+                                <point x="1" y="0" />
+                                <point x="0.733333" y="0.466667" />
+                                <point x="0.6" y="0.6" />
+                                <point x="0.466667" y="0.933333" />
+                                <point x="0" y="1" />
+                                <point x="0.0666667" y="0.466667" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.266667" hotspotY="0.266667">
+                            <image-point name="Disparo" x="0.266667" y="0.266667" />
+                            <collision-poly>
+                                <point x="0.0666667" y="0.533333" />
+                                <point x="0" y="0" />
+                                <point x="0.466667" y="0.0666667" />
+                                <point x="0.6" y="0.4" />
+                                <point x="0.733333" y="0.533333" />
+                                <point x="1" y="1" />
+                                <point x="0.466667" y="0.733333" />
+                                <point x="0.4" y="0.6" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1870,52 +1919,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="colisionespada" sid="459293736168143">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Bullet" sid="677949276869768">
-                    <behavior id="Bullet" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="117589905967523" speed="5">
-                    <frame duration="1" hotspotX="0.136364" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\espada proyectil.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="espada" sid="640880376596088">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="794177994708076" speed="0">
-                    <frame duration="1" hotspotX="0.266667" hotspotY="0.733333" original-source="C:\Users\Vermillion\Desktop\espada.png">
-                        <image-point name="Disparo" x="0.266667" y="0.733333" />
-                        <collision-poly>
-                            <point x="0.4" y="0.4" />
-                            <point x="0.466667" y="0.266667" />
-                            <point x="1" y="0" />
-                            <point x="0.733333" y="0.466667" />
-                            <point x="0.6" y="0.6" />
-                            <point x="0.466667" y="0.933333" />
-                            <point x="0" y="1" />
-                            <point x="0.0666667" y="0.466667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.266667" hotspotY="0.266667">
-                        <image-point name="Disparo" x="0.266667" y="0.266667" />
-                        <collision-poly>
-                            <point x="0.0666667" y="0.533333" />
-                            <point x="0" y="0" />
-                            <point x="0.466667" y="0.0666667" />
-                            <point x="0.6" y="0.4" />
-                            <point x="0.733333" y="0.533333" />
-                            <point x="1" y="1" />
-                            <point x="0.466667" y="0.733333" />
-                            <point x="0.4" y="0.6" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Items" sid="936156643942523">
             <plugin id="Sprite" />
             <animation-folder>
@@ -1935,17 +1938,17 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.518519" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\ak47.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Vermillion\Desktop\arco.png" />
-                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\Vermillion\Desktop\espada.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\la bazuuka.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\lanza granah.png" />
-                    <frame duration="1" hotspotX="0.517241" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\lanza llamas.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\pistola laser.png" />
                     <frame duration="1" hotspotX="0.533333" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\pistolaaaa.png" />
+                    <frame duration="1" hotspotX="0.518519" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\ak47.png" />
                     <frame duration="1" hotspotX="0.517241" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\rifle.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\lanza granah.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\la bazuuka.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\pistola laser.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\sniper.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Vermillion\Desktop\arco.png" />
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\lanza llamas.png" />
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\Vermillion\Desktop\espada.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

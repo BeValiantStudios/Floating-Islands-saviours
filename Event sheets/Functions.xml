@@ -3,7 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Functions</name>
     <events>
-        <comment>ID | Cantidad | Stats | (Tipo, Nombre, Descripcion)</comment>
+        <variable comment="|" constant="1" name="SEP" sid="524238932205379" static="0" type="text">|</variable>
+        <variable comment="|" constant="0" name="Variable123" sid="441281600761045" static="0" type="text"></variable>
+        <comment>ID | Tipo | Cantidad</comment>
         <event-group description="" sid="765484702388855" title="F_Inventario">
             <sub-events>
                 <comment>Parametro 0: Id de la casilla - Parametro 1: Cantidad de objetos a eliminar</comment>
@@ -48,11 +50,6 @@
                                 <action id="3" name="Set at XY" sid="271136698557912" type="Inv">
                                     <param id="0" name="X">f.Param(0)</param>
                                     <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="284900822561498" type="Inv">
-                                    <param id="0" name="X">f.Param(0)</param>
-                                    <param id="1" name="Y">3</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
                             </actions>
@@ -240,11 +237,6 @@
                                 <condition id="3" name="For each element" sid="507528432377853" type="Inv">
                                     <param id="0" name="Axes">2</param>
                                 </condition>
-                                <condition id="-8" name="Compare two values" sid="346362831907272" type="System">
-                                    <param id="0" name="First value">f.Param(0)</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">10000</param>
-                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -282,7 +274,118 @@
                             </conditions>
                             <actions>
                                 <action id="1" name="Set return value" sid="575640037322112" type="f">
-                                    <param id="0" name="Value">0</param>
+                                    <param id="0" name="Value">&quot;Empty&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Elimina objetos base, tras craftear. Param0: Recipe</comment>
+                <event-block sid="472626706977989">
+                    <conditions>
+                        <condition id="0" name="On function" sid="749412617646570" type="f">
+                            <param id="0" name="Name">&quot;BuscarEliminar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="893833992915572">
+                            <conditions>
+                                <condition id="-10" name="For" sid="198923009408868" type="System">
+                                    <param id="0" name="Name">&quot;Buscador&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">tokencount(f.Param(0),SEP)/2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="358989614824641">
+                                    <conditions>
+                                        <condition id="3" name="For each element" sid="924396999116662" type="Inv">
+                                            <param id="0" name="Axes">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="654528163968924">
+                                            <conditions>
+                                                <condition id="4" name="Compare current value" sid="533347635744963" type="Inv">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Value">int(tokenat(f.Param(0),((loopindex(&quot;Buscador&quot;)-1)*2),SEP))</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="168587423189588" type="f">
+                                                    <param id="0" name="Name">&quot;EliminarDeInventario&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Inv.CurX{###}int(tokenat(f.Param(0),((loopindex(&quot;Buscador&quot;)*2)-1),SEP))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="778278616634675" title="F_Equipo">
+            <sub-events>
+                <comment>Parametro 0: Id de la casilla - Parametro 1: Cantidad de objetos a eliminar</comment>
+                <variable constant="0" name="ItemsRemovidos" sid="933693530055892" static="0" type="number">0</variable>
+                <event-block sid="712645063050258">
+                    <conditions>
+                        <condition id="0" name="On function" sid="993726222896237" type="f">
+                            <param id="0" name="Name">&quot;EliminarDeInventario&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="497004150478595" type="System">
+                            <param id="0" name="Variable">ItemsRemovidos</param>
+                            <param id="1" name="Value">min(Inv.At(f.Param(0),1),f.Param(1))</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="690788832721501" type="Inv">
+                            <param id="0" name="X">f.Param(0)</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">Self.At(f.Param(0),1)  - ItemsRemovidos</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="231502606708554">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="869383594726982" type="Inv">
+                                    <param id="0" name="X">f.Param(0)</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set at X" sid="540896795420290" type="Inv">
+                                    <param id="0" name="X">f.Param(0)</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="467096467774063" type="Inv">
+                                    <param id="0" name="X">f.Param(0)</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="324577528206488" type="Inv">
+                                    <param id="0" name="X">f.Param(0)</param>
+                                    <param id="1" name="Y">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="466267894100274">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="384095871848988" type="f">
+                                    <param id="0" name="Name">&quot;ActualizarInventario&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="1" name="Set return value" sid="901277141155581" type="f">
+                                    <param id="0" name="Value">ItemsRemovidos</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -290,5 +393,142 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="180740496676081" title="F_Craft">
+            <sub-events>
+                <event-block sid="348571475130810">
+                    <conditions>
+                        <condition id="0" name="On function" sid="360656039926593" type="f">
+                            <param id="0" name="Name">&quot;ActualizarCrafteos&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Clear" sid="842521128578378" type="Craft" />
+                        <action id="-9" name="Set value" sid="797996094685540" type="System">
+                            <param id="0" name="Variable">Variable123</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="538105913913826">
+                            <conditions>
+                                <condition id="-10" name="For" sid="513774709031461" type="System">
+                                    <param id="0" name="Name">&quot;DeleteMatrix&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">Craft.Width</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Pop" sid="372279498995852" type="Craft">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="CantidadObjetos" sid="774253194149320" static="1" type="number">0</variable>
+                        <event-block sid="448058553976570">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="153159184963576" type="System">
+                                    <param id="0" name="Variable">CantidadObjetos</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="415937988465404">
+                            <conditions>
+                                <condition id="1" name="For each key" sid="187287307210231" type="DicCrafteos" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="854517351113697" type="System">
+                                    <param id="0" name="Variable">CantidadObjetos</param>
+                                    <param id="1" name="Value">tokencount(DicCrafteos.CurrentValue,SEP)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="916532960945757">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="544590365946389" type="System">
+                                            <param id="0" name="Name">&quot;RecorrerLista&quot;</param>
+                                            <param id="1" name="Start index">1</param>
+                                            <param id="2" name="End index">CantidadObjetos/2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="-10" name="Add to" sid="852873880811710" type="System">
+                                            <param id="0" name="Variable">Variable123</param>
+                                            <param id="1" name="Value">DicCrafteos.CurrentValue</param>
+                                        </action>
+                                        <action disabled="1" id="-10" name="Add to" sid="302182735800117" type="System">
+                                            <param id="0" name="Variable">Variable123</param>
+                                            <param id="1" name="Value">&quot;-&quot; &amp; int(tokenat(DicCrafteos.CurrentValue,(((loopindex(&quot;RecorrerLista&quot;)*2)-2)),SEP)) &amp; &quot;|&quot; &amp;int(tokenat(DicCrafteos.CurrentValue,(((loopindex(&quot;RecorrerLista&quot;)*2)-1)),SEP))  &amp; &quot;-&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="245446695348224" type="f">
+                                            <param id="0" name="Name">&quot;BuscarItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">int(tokenat(DicCrafteos.CurrentValue,(((loopindex(&quot;RecorrerLista&quot;)*2)-2)),SEP)){###}int(tokenat(DicCrafteos.CurrentValue,(((loopindex(&quot;RecorrerLista&quot;)*2)-1)),SEP))</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="272046970330652">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="741499695559564" type="System">
+                                                    <param id="0" name="First value">loopindex(&quot;RecorrerLista&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">CantidadObjetos/2</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="787917592783757" type="System">
+                                                    <param id="0" name="First value">f.ReturnValue</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">&quot;Empty&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Push" sid="739535729421731" type="Craft">
+                                                    <param id="0" name="Where">0</param>
+                                                    <param id="1" name="Value">int(tokenat(DicCrafteos.CurrentKey,0,SEP))</param>
+                                                    <param id="2" name="Axis">0</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="502996637465716" type="Craft">
+                                                    <param id="0" name="X">Self.Width -1</param>
+                                                    <param id="1" name="Y">1</param>
+                                                    <param id="2" name="Value">int(tokenat(DicCrafteos.CurrentKey,1,SEP))</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="361879996767626" type="Craft">
+                                                    <param id="0" name="X">Self.Width -1</param>
+                                                    <param id="1" name="Y">2</param>
+                                                    <param id="2" name="Value">int(tokenat(DicCrafteos.CurrentKey,2,SEP))</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="438112633168118" type="Craft">
+                                                    <param id="0" name="X">Self.Width -1</param>
+                                                    <param id="1" name="Y">3</param>
+                                                    <param id="2" name="Value">tokenat(DicCrafteos.CurrentKey,3,SEP)</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="280703234206256" type="Craft">
+                                                    <param id="0" name="X">Self.Width -1</param>
+                                                    <param id="1" name="Y">4</param>
+                                                    <param id="2" name="Value">DicCrafteos.CurrentValue</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="102047296857246">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="440945397037253" type="Keyboard">
+                    <param id="0" name="Key">90</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="897919572907293" type="f">
+                    <param id="0" name="Name">&quot;ActualizarCrafteos&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

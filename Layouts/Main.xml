@@ -333,33 +333,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="0">
-                    <properties>
-                        <text></text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Courier,-12,700,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-2</x>
-                        <y>490</y>
-                        <z>0</z>
-                        <width>509</width>
-                        <height>1021</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>-1.57079649</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="SpawnPrototipo" uid="42">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1113,33 +1086,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SeedText" uid="8">
-                    <properties>
-                        <text>Seed</text>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <font>Courier New,-37,700,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>340</x>
-                        <y>486</y>
-                        <z>0</z>
-                        <width>448</width>
-                        <height>373</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-1.570793152</angle>
-                        <opacity>0.5</opacity>
-                    </world>
-                </instance>
                 <instance type="timetext" uid="4">
                     <properties>
                         <text>Time</text>
@@ -1384,11 +1330,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>96.5</x>
-                        <y>177</y>
+                        <x>108</x>
+                        <y>205.5</y>
                         <z>0</z>
-                        <width>195</width>
-                        <height>142</height>
+                        <width>233</width>
+                        <height>177</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1406,11 +1352,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>341.5</x>
-                        <y>178.5</y>
+                        <x>403</x>
+                        <y>205.5</y>
                         <z>0</z>
-                        <width>191</width>
-                        <height>138</height>
+                        <width>219</width>
+                        <height>177</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1615,7 +1561,22 @@
                 <depth>1</depth>
             </properties>
         </instance>
-        <instance type="Crafteos" uid="46" />
+        <instance type="DicCrafteos" uid="46" />
+        <instance type="DicItems" uid="0" />
+        <instance type="Equipo" uid="8">
+            <properties>
+                <width>2</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Craft" uid="127">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>
