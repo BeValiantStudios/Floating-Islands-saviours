@@ -36,6 +36,13 @@
                                             <param id="0" name="Animation">&quot;East&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="5" name="Set frame" sid="255853106148335" type="Armas">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="-29" name="Move to object" sid="837642877803804" type="Armas">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Object">Player</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="568586650453944">
@@ -46,6 +53,13 @@
                                         <action id="4" name="Set animation" sid="255163915425314" type="Player">
                                             <param id="0" name="Animation">&quot;West&quot;</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="439794645082185" type="Armas">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="-29" name="Move to object" sid="750382426416087" type="Armas">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Object">Player</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -70,6 +84,13 @@
                                             <param id="0" name="Animation">&quot;South&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="5" name="Set frame" sid="322502456026310" type="Armas">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="-29" name="Move to object" sid="114054879330483" type="Armas">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Object">Player</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="384679795029365">
@@ -80,6 +101,13 @@
                                         <action id="4" name="Set animation" sid="905161727003359" type="Player">
                                             <param id="0" name="Animation">&quot;North&quot;</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="270667964685578" type="Armas">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="-29" name="Move to object" sid="637813685566376" type="Armas">
+                                            <param id="0" name="Where">1</param>
+                                            <param id="1" name="Object">Player</param>
                                         </action>
                                     </actions>
                                 </event-block>
