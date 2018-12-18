@@ -643,9 +643,15 @@
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                                     <param id="2" name="Image point">&quot;Disparo&quot;</param>
                                                 </action>
-                                                <action id="4" name="Set animation" sid="466320810045150" type="espada">
-                                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
-                                                    <param id="1" name="From">1</param>
+                                                <action id="-15" name="Set visible" sid="751721331642441" type="espada">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="215687844009869" type="System">
+                                                    <param id="0" name="Seconds">0.035</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="158888143310755" type="colisionespada" />
+                                                <action id="-15" name="Set visible" sid="513966107856126" type="espada">
+                                                    <param id="0" name="Visibility">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
