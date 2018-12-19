@@ -239,28 +239,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Items" uid="126">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>465</x>
-                        <y>-75</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
@@ -1547,14 +1525,14 @@
             </properties>
         </instance>
         <instance type="Chonks" uid="35" />
-        <instance type="Inv" uid="44">
+        <instance type="ArrInv" uid="44">
             <properties>
                 <width>10</width>
-                <height>1</height>
+                <height>3</height>
                 <depth>1</depth>
             </properties>
         </instance>
-        <instance type="Chest" uid="45">
+        <instance type="ArrChest" uid="45">
             <properties>
                 <width>10</width>
                 <height>1</height>
@@ -1563,20 +1541,29 @@
         </instance>
         <instance type="DicCrafteos" uid="46" />
         <instance type="DicItems" uid="0" />
-        <instance type="Equipo" uid="8">
+        <instance type="ArrEquipo" uid="8">
             <properties>
                 <width>2</width>
                 <height>1</height>
                 <depth>1</depth>
             </properties>
         </instance>
-        <instance type="Craft" uid="127">
+        <instance type="ArrCraft" uid="127">
             <properties>
                 <width>10</width>
                 <height>1</height>
                 <depth>1</depth>
             </properties>
         </instance>
+        <instance type="ArrShop" uid="134">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="DicShopMateriales" uid="145" />
+        <instance type="DicShopArmas" uid="148" />
     </nonworld-instances>
     <effects />
 </c2layout>

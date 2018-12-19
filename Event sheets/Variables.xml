@@ -4,6 +4,13 @@
     <name>Variables</name>
     <events>
         <comment>Solo Variables</comment>
+        <variable constant="0" name="CantidadEnemigosOleada" sid="634132803319489" static="0" type="number">20</variable>
+        <variable constant="0" name="EnemigosRestantes" sid="495727167676660" static="0" type="number">20</variable>
+        <variable constant="0" name="PuntajeGlobal" sid="943998821744270" static="0" type="number">20</variable>
+        <variable constant="0" name="PuntajeOleada" sid="589953596479189" static="0" type="number">20</variable>
+        <variable constant="0" name="Oleada" sid="476472014731244" static="0" type="number">1</variable>
+        <variable constant="0" name="Gold" sid="202913646442501" static="0" type="number">85000</variable>
+        <variable comment="|" constant="1" name="SEP" sid="524238932205379" static="0" type="text">|</variable>
         <comment>Diccionarios</comment>
         <variable constant="1" name="Chunks" sid="174177900689158" static="0" type="text">{&quot;c2dictionary&quot;:true,&quot;data&quot;:{&quot;0&quot;:10,&quot;11&quot;:17,&quot;12&quot;:2,&quot;13&quot;:16,&quot;14&quot;:15,&quot;21&quot;:11,&quot;22&quot;:18,&quot;23&quot;:19,&quot;24&quot;:20,&quot;31&quot;:12,&quot;32&quot;:21,&quot;33&quot;:22,&quot;34&quot;:23,&quot;40&quot;:13,&quot;51&quot;:14,&quot;52&quot;:24}}</variable>
         <comment>Tipos: 0: Material 1:Arma Melee 2:Arma Distancia 3:Armadura 4: Trampa</comment>

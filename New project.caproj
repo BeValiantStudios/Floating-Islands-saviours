@@ -26,6 +26,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
@@ -535,19 +536,22 @@
             <object-type global="1" name="DicCrafteos" sid="493092433328784">
                 <plugin id="Dictionary" />
             </object-type>
-            <object-type global="1" name="Chest" sid="107018717189076">
+            <object-type global="1" name="ArrChest" sid="107018717189076">
                 <plugin id="Arr" />
             </object-type>
-            <object-type global="1" name="Inv" sid="849521525795427">
+            <object-type global="1" name="ArrInv" sid="849521525795427">
                 <plugin id="Arr" />
             </object-type>
             <object-type global="1" name="DicItems" sid="780498382097128">
                 <plugin id="Dictionary" />
             </object-type>
-            <object-type global="1" name="Equipo" sid="620218394826639">
+            <object-type global="1" name="ArrEquipo" sid="620218394826639">
                 <plugin id="Arr" />
             </object-type>
-            <object-type global="1" name="Craft" sid="961194838145667">
+            <object-type global="1" name="ArrCraft" sid="961194838145667">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="ArrShop" sid="137271308070419">
                 <plugin id="Arr" />
             </object-type>
         </object-folder>
@@ -1802,6 +1806,266 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Shop">
+            <object-folder name="Shop">
+                <object-folder name="ShopItems">
+                    <object-type name="ShopHelper" sid="242788035756139">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="previousy" sid="726706080645997" type="number" />
+                            <instance-variable name="currenty" sid="270957657010808" type="number" />
+                            <instance-variable name="IniY" sid="743552844033961" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="CustomMovement" sid="671296494669691">
+                                <behavior id="custom" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="970673025835979" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="ShopItems" sid="936156643942523">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="basex" sid="801813461662357" type="number" />
+                            <instance-variable name="basey" sid="192880905504767" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="Pin" sid="430868732726524">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <container>
+                            <type>ShopItemFondo</type>
+                            <type>ShopBuy</type>
+                            <type>ShopItems</type>
+                            <type>ShopDescripcionItem</type>
+                            <type>ShopNombreItem</type>
+                            <type>ShopPrize</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="26" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839451999277366" speed="0">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.533333" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\pistolaaaa.png" />
+                                <frame duration="1" hotspotX="0.518519" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\ak47.png" />
+                                <frame duration="1" hotspotX="0.517241" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\rifle.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\lanza granah.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\la bazuuka.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\pistola laser.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\sniper.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Vermillion\Desktop\arco.png" />
+                                <frame duration="1" hotspotX="0.517241" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\lanza llamas.png" />
+                                <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\Vermillion\Desktop\espada.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="ShopPrize" sid="649033120245140">
+                        <plugin id="Text" />
+                        <instance-variables>
+                            <instance-variable name="IniX" sid="344636270235021" type="number" />
+                            <instance-variable name="IniY" sid="848984298125116" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="Pin" sid="277882281713538">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <container>
+                            <type>ShopItemFondo</type>
+                            <type>ShopBuy</type>
+                            <type>ShopItems</type>
+                            <type>ShopDescripcionItem</type>
+                            <type>ShopNombreItem</type>
+                            <type>ShopPrize</type>
+                        </container>
+                    </object-type>
+                    <object-type name="ShopDescripcionItem" sid="127187288699034">
+                        <plugin id="Text" />
+                        <instance-variables>
+                            <instance-variable name="basex" sid="461781371399184" type="number" />
+                            <instance-variable name="basey" sid="504366843394469" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="Pin" sid="295436997974810">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <container>
+                            <type>ShopItemFondo</type>
+                            <type>ShopBuy</type>
+                            <type>ShopItems</type>
+                            <type>ShopDescripcionItem</type>
+                            <type>ShopNombreItem</type>
+                            <type>ShopPrize</type>
+                        </container>
+                    </object-type>
+                    <object-type name="ShopNombreItem" sid="384618178404006">
+                        <plugin id="Text" />
+                        <instance-variables>
+                            <instance-variable name="basex" sid="252606841908103" type="number" />
+                            <instance-variable name="basey" sid="983492035797166" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="Pin" sid="307624161613651">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <container>
+                            <type>ShopItemFondo</type>
+                            <type>ShopBuy</type>
+                            <type>ShopItems</type>
+                            <type>ShopDescripcionItem</type>
+                            <type>ShopNombreItem</type>
+                            <type>ShopPrize</type>
+                        </container>
+                    </object-type>
+                    <object-type name="ShopItemFondo" sid="398499256668533">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="basex" sid="670253252616997" type="number" />
+                            <instance-variable name="basey" sid="980573041402062" type="number" />
+                            <instance-variable name="id" sid="395035795423976" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="Pin" sid="631286286527124">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <container>
+                            <type>ShopItemFondo</type>
+                            <type>ShopBuy</type>
+                            <type>ShopItems</type>
+                            <type>ShopDescripcionItem</type>
+                            <type>ShopNombreItem</type>
+                            <type>ShopPrize</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="807496407099216" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="ShopBuy" sid="179099825530161">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="basex" sid="517419599534937" type="number" />
+                            <instance-variable name="basey" sid="990887692670635" type="number" />
+                            <instance-variable name="id" sid="617892580688279" type="number" />
+                            <instance-variable name="price" sid="967315162145119" type="number" />
+                            <instance-variable name="tipo" sid="795135348136421" type="number" />
+                            <instance-variable name="cantidad" sid="936973501962952" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="Pin" sid="247108487543744">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <container>
+                            <type>ShopItemFondo</type>
+                            <type>ShopBuy</type>
+                            <type>ShopItems</type>
+                            <type>ShopDescripcionItem</type>
+                            <type>ShopNombreItem</type>
+                            <type>ShopPrize</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="608159761211153" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-type name="Shop" sid="923247143414758">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="ShopFondo" sid="310823040987599">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="875849246760207" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ShopMaterials" sid="958879500572276">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="ShopArmas" sid="315167491050925">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="ShopTrampas" sid="903750205887154">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type global="1" name="DicShopMateriales" sid="941729700291390">
+                    <plugin id="Dictionary" />
+                </object-type>
+                <object-type name="ShopCerrar" sid="671454584090888">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="833184657386028" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TouchHelper" sid="468568305622226">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="IniX" sid="602717382848758" type="number" />
+                        <instance-variable name="IniY" sid="330335477881764" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="DragDrop" sid="869342864399977">
+                            <behavior id="DragnDrop" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="424638838440857" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type global="1" name="DicShopArmas" sid="282455260347848">
+                    <plugin id="Dictionary" />
+                </object-type>
+            </object-folder>
+            <object-type name="CraftBut" sid="599321056020579">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GoBut" sid="159172771903614">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Inventory" sid="431931024413234">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Gold" sid="311464019799071">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Config" sid="268972423564551">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="293661731443034" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="VidaHUD" sid="801468058590550">
             <plugin id="Sprite" />
             <animation-folder>
@@ -1919,39 +2183,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Items" sid="936156643942523">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="26" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839451999277366" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.533333" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\pistolaaaa.png" />
-                    <frame duration="1" hotspotX="0.518519" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\ak47.png" />
-                    <frame duration="1" hotspotX="0.517241" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\rifle.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\lanza granah.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\la bazuuka.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\pistola laser.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\sniper.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Vermillion\Desktop\arco.png" />
-                    <frame duration="1" hotspotX="0.517241" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\lanza llamas.png" />
-                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\Vermillion\Desktop\espada.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">
@@ -2014,6 +2245,13 @@
                     <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
+        </family>
+        <family name="ShopText" plugin-id="Text" sid="478801939414205">
+            <members>
+                <member>ShopArmas</member>
+                <member>ShopMaterials</member>
+                <member>ShopTrampas</member>
+            </members>
         </family>
     </families>
     <layout-folder>

@@ -3,11 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Enemies</name>
     <events>
-        <variable constant="0" name="CantidadEnemigosOleada" sid="634132803319489" static="0" type="number">20</variable>
-        <variable constant="0" name="EnemigosRestantes" sid="495727167676660" static="0" type="number">20</variable>
-        <variable constant="0" name="PuntajeGlobal" sid="943998821744270" static="0" type="number">20</variable>
-        <variable constant="0" name="PuntajeOleada" sid="589953596479189" static="0" type="number">20</variable>
-        <variable constant="0" name="Oleada" sid="476472014731244" static="0" type="number">1</variable>
         <comment>Enemies: Todo lo relacionado con las MECANICAS de enemigos; y mecanicas del spawn de enemigos, el spawn se generara aleatoriamente en #Map</comment>
         <event-block sid="845774905625396">
             <conditions>
