@@ -32,6 +32,7 @@
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -218,7 +219,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="994455555457434" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\stick.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -233,7 +234,7 @@
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="887061430011771" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\boton stick of.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -251,7 +252,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="776265676131550" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\stick.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -266,7 +267,7 @@
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="330747645957558" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\boton stick of.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -816,17 +817,12 @@
                         <behavior-type name="Bullet" sid="800535174729459">
                             <behavior id="Bullet" />
                         </behavior-type>
+                        <behavior-type name="Flash" sid="119495748255283">
+                            <behavior id="Flash" />
+                        </behavior-type>
                     </behaviors>
                     <animation-folder>
-                        <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="367163026288447" speed="10">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="367163026288447" speed="10">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
@@ -840,15 +836,7 @@
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
-                        <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="290029022402288" speed="15">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="290029022402288" speed="15">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
@@ -988,18 +976,7 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="671250638149771" speed="5">
-                            <frame duration="1" hotspotX="0.533333" hotspotY="0.526316" original-source="C:\Users\Vermillion\Desktop\granada.png">
-                                <collision-poly>
-                                    <point x="0.2" y="0.157895" />
-                                    <point x="0.466667" y="0" />
-                                    <point x="0.866667" y="0.105263" />
-                                    <point x="0.866667" y="0.473684" />
-                                    <point x="0.733333" y="0.789474" />
-                                    <point x="0.466667" y="1" />
-                                    <point x="0.133333" y="0.894737" />
-                                    <point x="0" y="0.473684" />
-                                </collision-poly>
-                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\granada.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1146,7 +1123,7 @@
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
-                        <animation framecount="11" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="297144470108588" speed="10">
+                        <animation framecount="11" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="297144470108588" speed="15">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
                                     <point x="0.25" y="0.25" />
@@ -1307,7 +1284,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="776599108667760" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\boton 1.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1328,7 +1305,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="879803795833301" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\boton 2.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1354,16 +1331,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493687349370348" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Vermillion\Desktop\Bala Sniper.png">
-                            <collision-poly>
-                                <point x="0.5" y="0.428571" />
-                                <point x="0.859375" y="0.428571" />
-                                <point x="1" y="0.47619" />
-                                <point x="0.84375" y="0.52381" />
-                                <point x="0.5" y="0.52381" />
-                                <point x="0.3125" y="0.47619" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.0666667" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\BALA SNIPER.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1459,7 +1427,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="913060713934363" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\boton 1.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1467,7 +1435,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="447899356526709" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\boton 2.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1501,6 +1469,14 @@
                                 <point x="0.4" y="0.6" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Trampa" sid="936073492675967">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="569481932106127" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\trap.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2070,114 +2046,79 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="326996317925763" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida0.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida0.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida7.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida8.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida9.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida10.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="845112453675698">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="810690654949410" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FondoBarra" sid="628762875510180">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="577350752024878">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859417883545558" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\FondoBarra.png">
                         <collision-poly>
-                            <point x="0.00684932" y="0.0416667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.993151" y="0.0416667" />
-                            <point x="0.993151" y="0.958333" />
-                            <point x="0.5" y="1" />
-                            <point x="0.00684932" y="0.958333" />
+                            <point x="0.025974" y="0.142857" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.974026" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.974026" y="0.857143" />
+                            <point x="0.5" y="0.928571" />
+                            <point x="0.025974" y="0.857143" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida1.png">
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BALAMETRALLETA" sid="484207830414460">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="632825685262845">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="735496128911412" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.00684932" y="0.0416667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.993151" y="0.0416667" />
-                            <point x="0.993151" y="0.958333" />
-                            <point x="0.5" y="1" />
-                            <point x="0.00684932" y="0.958333" />
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida2.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.00684932" y="0.0416667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.993151" y="0.0416667" />
-                            <point x="0.993151" y="0.958333" />
-                            <point x="0.5" y="1" />
-                            <point x="0.00684932" y="0.958333" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida3.png">
-                        <collision-poly>
-                            <point x="0.00684932" y="0.0416667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.993151" y="0.0416667" />
-                            <point x="0.993151" y="0.958333" />
-                            <point x="0.5" y="1" />
-                            <point x="0.00684932" y="0.958333" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida4.png">
-                        <collision-poly>
-                            <point x="0.00684932" y="0.0416667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.993151" y="0.0416667" />
-                            <point x="0.993151" y="0.958333" />
-                            <point x="0.5" y="1" />
-                            <point x="0.00684932" y="0.958333" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida5.png">
-                        <collision-poly>
-                            <point x="0.00684932" y="0.0416667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.993151" y="0.0416667" />
-                            <point x="0.993151" y="0.958333" />
-                            <point x="0.5" y="1" />
-                            <point x="0.00684932" y="0.958333" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida6.png">
-                        <collision-poly>
-                            <point x="0.00684932" y="0.0416667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.993151" y="0.0416667" />
-                            <point x="0.993151" y="0.958333" />
-                            <point x="0.5" y="1" />
-                            <point x="0.00684932" y="0.958333" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida7.png">
-                        <collision-poly>
-                            <point x="0.00684932" y="0.0416667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.993151" y="0.0416667" />
-                            <point x="0.993151" y="0.958333" />
-                            <point x="0.5" y="1" />
-                            <point x="0.00684932" y="0.958333" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida8.png">
-                        <collision-poly>
-                            <point x="0.00684932" y="0.0416667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.993151" y="0.0416667" />
-                            <point x="0.993151" y="0.958333" />
-                            <point x="0.5" y="1" />
-                            <point x="0.00684932" y="0.958333" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida9.png">
-                        <collision-poly>
-                            <point x="0.00684932" y="0.0416667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.993151" y="0.0416667" />
-                            <point x="0.993151" y="0.958333" />
-                            <point x="0.5" y="1" />
-                            <point x="0.00684932" y="0.958333" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Aseprite\Vida10.png">
-                        <collision-poly>
-                            <point x="0.00684932" y="0.0416667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.993151" y="0.0416667" />
-                            <point x="0.993151" y="0.958333" />
-                            <point x="0.5" y="1" />
-                            <point x="0.00684932" y="0.958333" />
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>

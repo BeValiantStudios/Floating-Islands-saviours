@@ -133,7 +133,7 @@
                         <variable constant="0" name="touchID" sid="266049554091838" static="1" type="number">-1</variable>
                         <variable constant="0" name="dist" sid="480389966878137" static="0" type="number">0</variable>
                         <variable constant="0" name="cangle" sid="557968449447053" static="0" type="number">0</variable>
-                        <variable comment="distance the stick can move from center" constant="0" name="radius" sid="651869691076604" static="1" type="number">50</variable>
+                        <variable comment="distance the stick can move from center" constant="0" name="radius" sid="651869691076604" static="1" type="number">15</variable>
                         <event-block sid="590838719280749">
                             <conditions>
                                 <condition id="3" name="On touched object" sid="269348562556703" type="Touch">
@@ -296,7 +296,7 @@
                         <variable constant="0" name="touchID2" sid="826293763360464" static="1" type="number">-1</variable>
                         <variable constant="0" name="dist2" sid="201874611327897" static="0" type="number">0</variable>
                         <variable constant="0" name="cangle2" sid="892875718908227" static="0" type="number">0</variable>
-                        <variable comment="distance the stick can move from center" constant="0" name="radius2" sid="718013833871812" static="1" type="number">50</variable>
+                        <variable comment="distance the stick can move from center" constant="0" name="radius2" sid="718013833871812" static="1" type="number">15</variable>
                         <event-block sid="261839374062681">
                             <conditions>
                                 <condition id="2" inverted="1" name="Is in touch" sid="256442157812799" type="Touch" />
@@ -577,7 +577,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="799613083338835" type="AK47">
-                                                    <param id="0" name="Object">BalaPistola</param>
+                                                    <param id="0" name="Object">BALAMETRALLETA</param>
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                                     <param id="2" name="Image point">&quot;Disparo&quot;</param>
                                                 </action>
@@ -634,7 +634,7 @@
                                         <event-block bookmark="1" sid="134930450416012">
                                             <conditions>
                                                 <condition id="-6" name="Every X seconds" sid="511295757160363" type="System">
-                                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                                    <param id="0" name="Interval (seconds)">0.8</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -647,7 +647,7 @@
                                                     <param id="0" name="Visibility">0</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="215687844009869" type="System">
-                                                    <param id="0" name="Seconds">0.035</param>
+                                                    <param id="0" name="Seconds">0.045</param>
                                                 </action>
                                                 <action id="-9" name="Destroy" sid="158888143310755" type="colisionespada" />
                                                 <action id="-15" name="Set visible" sid="513966107856126" type="espada">
@@ -859,6 +859,16 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="961149229333277">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="561979542923527" type="BALAMETRALLETA" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="231989230260447" type="BALAMETRALLETA">
+                                            <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="279269016718358">
                                     <conditions>
                                         <condition id="-18" name="On created" sid="178000823951368" type="Fuego" />
@@ -1037,6 +1047,17 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="332019804295713" type="BalaPistola" />
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="880499370059334">
+                                    <conditions>
+                                        <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="758673279897298" type="BALAMETRALLETA">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Distance">500</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="695799878561520" type="BALAMETRALLETA" />
                                     </actions>
                                 </event-block>
                                 <event-block any="1" sid="329239189855004">
@@ -1992,7 +2013,7 @@
                     <actions>
                         <action id="-3" name="Set position" sid="518531708894934" type="Arma2">
                             <param id="0" name="X">483</param>
-                            <param id="1" name="Y">83</param>
+                            <param id="1" name="Y">103</param>
                         </action>
                     </actions>
                 </event-block>
