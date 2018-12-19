@@ -2058,6 +2058,7 @@
                             <instance-variable name="price" sid="536303011130891" type="number" />
                             <instance-variable name="tipo" sid="136590600683461" type="number" />
                             <instance-variable name="cantidad" sid="251146058501465" type="number" />
+                            <instance-variable name="idArray" sid="104372102229574" type="number" />
                         </instance-variables>
                         <behaviors>
                             <behavior-type name="Pin" sid="357123224253687">
@@ -2232,6 +2233,7 @@
                         <instance-variable name="basex" sid="144116620485357" type="number" />
                         <instance-variable name="idarray" sid="475656583073700" type="number" />
                         <instance-variable name="id" sid="219708338638520" type="number" />
+                        <instance-variable name="tipo" sid="595986015058469" type="number" />
                     </instance-variables>
                     <container>
                         <type>InvSlotEquipo</type>

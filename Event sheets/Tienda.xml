@@ -5,6 +5,7 @@
     <events>
         <include>Functions</include>
         <variable constant="0" name="a" sid="919971367242208" static="0" type="text"></variable>
+        <variable constant="0" name="a2" sid="445372199348154" static="0" type="text"></variable>
         <variable constant="0" name="PickedItem" sid="206578781829441" static="0" type="text"></variable>
         <variable constant="1" name="DicArmas" sid="974774594058334" static="0" type="text">{&quot;c2dictionary&quot;:true,&quot;data&quot;:{&quot;16&quot;:&quot;1|3000&quot;,&quot;19&quot;:&quot;1|4500&quot;,&quot;21&quot;:&quot;1|5000&quot;,&quot;23&quot;:&quot;1|2000&quot;}}</variable>
         <variable constant="1" name="DicMateriales" sid="714762938738338" static="0" type="text">{&quot;c2dictionary&quot;:true,&quot;data&quot;:{&quot;1&quot;:&quot;1|300&quot;,&quot;2&quot;:&quot;1|200&quot;,&quot;3&quot;:&quot;1|300&quot;,&quot;4&quot;:&quot;1|400&quot;,&quot;5&quot;:&quot;1|300&quot;,&quot;6&quot;:&quot;1|600&quot;,&quot;7&quot;:&quot;1|500&quot;,&quot;8&quot;:&quot;1|800&quot;}}</variable>
@@ -89,10 +90,10 @@
                         </action>
                         <action id="-10" name="Set value" sid="639325642585845" type="InvSlotSpirte">
                             <param id="0" name="Instance variable">id</param>
-                            <param id="1" name="Value">ArrEquipo.At(1,ArrEquipo.CurX)</param>
+                            <param id="1" name="Value">ArrEquipo.At(ArrEquipo.CurX,1)</param>
                         </action>
                         <action id="5" name="Set frame" sid="144871600107924" type="InvSlotSpirte">
-                            <param id="0" name="Frame number">ArrEquipo.At(1,ArrEquipo.CurX)</param>
+                            <param id="0" name="Frame number">ArrEquipo.At(ArrEquipo.CurX,1)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -274,10 +275,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="345146272405180" type="System">
-                            <param id="0" name="Variable">a</param>
-                            <param id="1" name="Value">&quot;&quot;</param>
-                        </action>
                         <action id="-10" name="Add to" sid="454992415835929" type="System">
                             <param id="0" name="Variable">a</param>
                             <param id="1" name="Value">ShopBuy.id &amp; &quot;-&quot; &amp; ShopBuy.tipo &amp; &quot;-&quot; &amp; ShopBuy.cantidad </param>
@@ -391,12 +388,101 @@
                             <param id="0" name="Object">InvPickUp</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="690049944075344" type="System">
-                            <param id="0" name="Variable">PickedItem</param>
-                            <param id="1" name="Value">InvPickUp.tipo  &amp;&quot;|&quot; &amp; InvPickUp.id</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="190885540682618">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="835873835943288" type="System">
+                                    <param id="0" name="Variable">PickedItem</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="511816573730371">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="877910547415064" type="InvPickUp">
+                                            <param id="0" name="Instance variable">cantidad</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="423867109852191" type="System">
+                                            <param id="0" name="Variable">PickedItem</param>
+                                            <param id="1" name="Value">InvPickUp.id  &amp;&quot;|&quot; &amp; InvPickUp.tipo</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="313876790821296" type="ArrInv">
+                                            <param id="0" name="X">InvPickUp.idArray</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">Self.At(InvPickUp.idArray,2) -1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="765269836241479">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="920719363840753" type="InvPickUp">
+                                            <param id="0" name="Instance variable">cantidad</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="690049944075344" type="System">
+                                            <param id="0" name="Variable">PickedItem</param>
+                                            <param id="1" name="Value">InvPickUp.id  &amp;&quot;|&quot; &amp; InvPickUp.tipo</param>
+                                        </action>
+                                        <action id="9" name="Delete" sid="255756465014168" type="ArrInv">
+                                            <param id="0" name="Index">invpickup.idArray</param>
+                                            <param id="1" name="Axis">0</param>
+                                        </action>
+                                        <action id="10" name="Insert" sid="727136428413928" type="ArrInv">
+                                            <param id="0" name="Value">0</param>
+                                            <param id="1" name="Index">InvPickUp.idArray</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="211670942398671">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="418009823536104" type="f">
+                                            <param id="0" name="Name">&quot;CleanInv&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="247991211621874" type="f">
+                                            <param id="0" name="Name">&quot;ActualizarInvArmas&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="750018186389082">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="113480391834254" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="134096032537432" type="f">
+                                    <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                    <param id="1" name="Parameter {n}">int(tokenat(PickedItem,0,&quot;|&quot;)){###}int(tokenat(PickedItem,1,&quot;|&quot;)){###}1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="136390578323425" type="System">
+                                    <param id="0" name="Variable">PickedItem</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="297860772017114" type="f">
+                                    <param id="0" name="Name">&quot;CleanInv&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="350975617088752" type="f">
+                                    <param id="0" name="Name">&quot;ActualizarInvArmas&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="464123960768791">
                     <conditions>
@@ -404,22 +490,235 @@
                             <param id="0" name="Object">InvSlotSpirte</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="3" name="Set at XY" sid="381480207866754" type="ArrEquipo">
-                            <param id="0" name="X">InvSlotSpirte.idarray</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">int(tokenat(PickedItem,0,&quot;|&quot;))</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="338892400553652" type="ArrEquipo">
-                            <param id="0" name="X">InvSlotSpirte.idarray</param>
-                            <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">int(tokenat(PickedItem,1,&quot;|&quot;))</param>
-                        </action>
-                        <action id="0" name="Call function" sid="740469526759458" type="f">
-                            <param id="0" name="Name">&quot;ActualizarEquipo&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <comment>Nada con Nada</comment>
+                        <event-block sid="912635901784124">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="438543383576728" type="System">
+                                    <param id="0" name="Variable">PickedItem</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="472857546802089" type="InvSlotSpirte">
+                                    <param id="0" name="Instance variable">tipo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="102199278305059">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="141327417436718" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Trampa con Slot Trampa</comment>
+                                <event-block sid="980650756672725">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="237724368787538" type="System">
+                                            <param id="0" name="First value">int(tokenat(PickedItem,1,&quot;|&quot;))</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">3</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="249591009182131" type="InvSlotSpirte">
+                                            <param id="0" name="Instance variable">idarray</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="785462622493328" type="f">
+                                            <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">ArrEquipo.At(InvSlotSpirte.idarray,0) {###}ArrEquipo.At(InvSlotSpirte.idarray,1) {###}1</param>
+                                        </action>
+                                        <action id="9" name="Delete" sid="281536805279844" type="ArrEquipo">
+                                            <param id="0" name="Index">InvSlotSpirte.idarray</param>
+                                            <param id="1" name="Axis">0</param>
+                                        </action>
+                                        <action id="10" name="Insert" sid="273906427275645" type="ArrEquipo">
+                                            <param id="0" name="Value">0</param>
+                                            <param id="1" name="Index">InvSlotSpirte.idarray</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="298639597921519" type="System">
+                                            <param id="0" name="Variable">a</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="151511586485598">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="548465081365563" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>Nada con Slot Arma lleno</comment>
+                                        <event-block sid="335061931539030">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="943679530480503" type="System">
+                                                    <param id="0" name="Variable">PickedItem</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="194256950207207" type="InvSlotSpirte">
+                                                    <param id="0" name="Instance variable">tipo</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="294262490944885" type="InvSlotSpirte">
+                                                    <param id="0" name="Instance variable">idarray</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="783051538399296" type="System">
+                                                    <param id="0" name="Variable">a</param>
+                                                    <param id="1" name="Value">int(tokenat(PickedItem,1,&quot;|&quot;))</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="222379404431506" type="f">
+                                                    <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                                    <param id="1" name="Parameter {n}">ArrEquipo.At(InvSlotSpirte.idarray,0) {###}ArrEquipo.At(InvSlotSpirte.idarray,1) {###}1</param>
+                                                </action>
+                                                <action id="9" name="Delete" sid="514099470494242" type="ArrEquipo">
+                                                    <param id="0" name="Index">InvSlotSpirte.idarray</param>
+                                                    <param id="1" name="Axis">0</param>
+                                                </action>
+                                                <action id="10" name="Insert" sid="717844962836650" type="ArrEquipo">
+                                                    <param id="0" name="Value">0</param>
+                                                    <param id="1" name="Index">InvSlotSpirte.idarray</param>
+                                                    <param id="2" name="Axis">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="461840442669805">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="915643999167764" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <comment>Algo con Slot Arma Vacio</comment>
+                                                <event-block sid="631561812077165">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="665511774493628" type="InvSlotSpirte">
+                                                            <param id="0" name="Instance variable">tipo</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="588120675382556" type="InvSlotSpirte">
+                                                            <param id="0" name="Instance variable">idarray</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                        <condition id="-14" name="Compare variable" sid="861203806887141" type="System">
+                                                            <param id="0" name="Variable">PickedItem</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">&quot;&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="3" name="Set at XY" sid="381480207866754" type="ArrEquipo">
+                                                            <param id="0" name="X">InvSlotSpirte.idarray</param>
+                                                            <param id="1" name="Y">0</param>
+                                                            <param id="2" name="Value">int(tokenat(PickedItem,0,&quot;|&quot;))</param>
+                                                        </action>
+                                                        <action id="3" name="Set at XY" sid="338892400553652" type="ArrEquipo">
+                                                            <param id="0" name="X">InvSlotSpirte.idarray</param>
+                                                            <param id="1" name="Y">1</param>
+                                                            <param id="2" name="Value">int(tokenat(PickedItem,1,&quot;|&quot;))</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="506748155615363" type="System">
+                                                            <param id="0" name="Variable">PickedItem</param>
+                                                            <param id="1" name="Value">&quot;&quot;</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="215074632217548" type="System">
+                                                            <param id="0" name="Variable">a</param>
+                                                            <param id="1" name="Value">3</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="579437203272986">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="569814041742609" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <comment>Algo con slot arma lleno</comment>
+                                                        <event-block sid="261239232837747">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="637864292703918" type="InvSlotSpirte">
+                                                                    <param id="0" name="Instance variable">idarray</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">2</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" sid="737570909941108" type="System">
+                                                                    <param id="0" name="Variable">PickedItem</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                                </condition>
+                                                                <condition id="-7" name="Compare instance variable" sid="312098456851548" type="InvSlotSpirte">
+                                                                    <param id="0" name="Instance variable">tipo</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="655816369471036" type="f">
+                                                                    <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">ArrEquipo.At(InvSlotSpirte.idarray,0) {###}ArrEquipo.At(InvSlotSpirte.idarray,1) {###}1</param>
+                                                                </action>
+                                                                <action id="3" name="Set at XY" sid="123125050024409" type="ArrEquipo">
+                                                                    <param id="0" name="X">InvSlotSpirte.idarray</param>
+                                                                    <param id="1" name="Y">0</param>
+                                                                    <param id="2" name="Value">int(tokenat(PickedItem,0,&quot;|&quot;))</param>
+                                                                </action>
+                                                                <action id="3" name="Set at XY" sid="172120775589986" type="ArrEquipo">
+                                                                    <param id="0" name="X">InvSlotSpirte.idarray</param>
+                                                                    <param id="1" name="Y">1</param>
+                                                                    <param id="2" name="Value">int(tokenat(PickedItem,1,&quot;|&quot;))</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="982880962663780" type="System">
+                                                                    <param id="0" name="Variable">PickedItem</param>
+                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="194033670473770" type="System">
+                                                                    <param id="0" name="Variable">a</param>
+                                                                    <param id="1" name="Value">ArrEquipo.At(InvSlotSpirte.idarray,0) &amp; &quot;|&quot; &amp; ArrEquipo.At(InvSlotSpirte.idarray,1) </param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="905960081164545" type="System">
+                                                                    <param id="0" name="Variable">a</param>
+                                                                    <param id="1" name="Value">4</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="588646315585876">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="740469526759458" type="f">
+                                            <param id="0" name="Name">&quot;ActualizarEquipo&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="459213442604179" type="f">
+                                            <param id="0" name="Name">&quot;CleanInv&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="100484759058178" type="f">
+                                            <param id="0" name="Name">&quot;ActualizarInvArmas&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="294060284912509">
                     <conditions>
@@ -467,10 +766,14 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="121745556162635" type="InvSlotSpirte">
                                     <param id="0" name="Instance variable">id</param>
-                                    <param id="1" name="Value">ArrEquipo.At(Self.idarray,1)</param>
+                                    <param id="1" name="Value">ArrEquipo.At(Self.idarray,0)</param>
                                 </action>
                                 <action id="5" name="Set frame" sid="671049526459258" type="InvSlotSpirte">
-                                    <param id="0" name="Frame number">ArrEquipo.At(Self.idarray,1)</param>
+                                    <param id="0" name="Frame number">ArrEquipo.At(Self.idarray,0)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="122682956650892" type="InvSlotSpirte">
+                                    <param id="0" name="Instance variable">tipo</param>
+                                    <param id="1" name="Value">ArrEquipo.At(Self.idarray,1)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -951,6 +1254,10 @@
                                         <action id="-10" name="Set value" sid="857101828994479" type="InvPickUp">
                                             <param id="0" name="Instance variable">cantidad</param>
                                             <param id="1" name="Value">int(ArrInv.At(ArrInv.CurX,2))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="957424309356943" type="InvPickUp">
+                                            <param id="0" name="Instance variable">idArray</param>
+                                            <param id="1" name="Value">ArrInv.CurX</param>
                                         </action>
                                         <action behavior="Pin" id="0" name="Pin to object" sid="817203401005845" type="InvItem">
                                             <param id="0" name="Pin to">InvHelper</param>

@@ -166,10 +166,6 @@
                                             <param id="1" name="Y">2</param>
                                             <param id="2" name="Value">Self.At(Self.CurX ,2) + Amount_to_add</param>
                                         </action>
-                                        <action disabled="1" id="0" name="Call function" sid="364577834041115" type="f">
-                                            <param id="0" name="Name">&quot;ActualizarInventario&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
                                     </actions>
                                 </event-block>
                                 <comment>Si no, lo guarda en la posicion obtenida anteriormente</comment>
@@ -205,10 +201,6 @@
                                             <param id="0" name="X">Empty_Slot</param>
                                             <param id="1" name="Y">2</param>
                                             <param id="2" name="Value">Amount_to_add</param>
-                                        </action>
-                                        <action disabled="1" id="0" name="Call function" sid="120459592137396" type="f">
-                                            <param id="0" name="Name">&quot;ActualizarInventario&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>

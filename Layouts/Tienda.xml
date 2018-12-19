@@ -840,6 +840,7 @@
                         <price>0</price>
                         <tipo>0</tipo>
                         <cantidad>0</cantidad>
+                        <idArray>0</idArray>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -992,6 +993,7 @@
                         <basex>186</basex>
                         <idarray>0</idarray>
                         <id>0</id>
+                        <tipo>0</tipo>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
