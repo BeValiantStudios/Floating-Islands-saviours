@@ -1823,7 +1823,8 @@
                             <type>ShopPrize</type>
                         </container>
                         <animation-folder>
-                            <animation framecount="26" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839451999277366" speed="0">
+                            <animation framecount="27" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839451999277366" speed="0">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -2000,7 +2001,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="TouchHelper" sid="468568305622226">
+                <object-type name="ShopTouchHelper" sid="468568305622226">
                     <plugin id="Sprite" />
                     <instance-variables>
                         <instance-variable name="IniX" sid="602717382848758" type="number" />
@@ -2019,6 +2020,254 @@
                 </object-type>
                 <object-type global="1" name="DicShopArmas" sid="282455260347848">
                     <plugin id="Dictionary" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Inventory">
+                <object-folder name="InvItems">
+                    <object-type name="InvItemFondo" sid="859812378878405">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="basex" sid="705931354970049" type="number" />
+                            <instance-variable name="basey" sid="210342399995213" type="number" />
+                            <instance-variable name="id" sid="814581662553149" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="Pin" sid="567088546158813">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <container>
+                            <type>InvItemFondo</type>
+                            <type>InvItem</type>
+                            <type>InvPickUp</type>
+                            <type>InvNombreItem</type>
+                            <type>InvCantidad</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="286949123721466" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="InvPickUp" sid="187224904684930">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="basex" sid="342693400600464" type="number" />
+                            <instance-variable name="basey" sid="167824579530348" type="number" />
+                            <instance-variable name="id" sid="175315952950879" type="number" />
+                            <instance-variable name="price" sid="536303011130891" type="number" />
+                            <instance-variable name="tipo" sid="136590600683461" type="number" />
+                            <instance-variable name="cantidad" sid="251146058501465" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="Pin" sid="357123224253687">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <container>
+                            <type>InvItemFondo</type>
+                            <type>InvItem</type>
+                            <type>InvPickUp</type>
+                            <type>InvNombreItem</type>
+                            <type>InvCantidad</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="347070938080495" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="InvItem" sid="755005142395716">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="basex" sid="330775606922302" type="number" />
+                            <instance-variable name="basey" sid="880413197820225" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="Pin" sid="298897469091745">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <container>
+                            <type>InvItemFondo</type>
+                            <type>InvItem</type>
+                            <type>InvPickUp</type>
+                            <type>InvNombreItem</type>
+                            <type>InvCantidad</type>
+                        </container>
+                        <animation-folder>
+                            <animation framecount="27" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="400724349483934" speed="0">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.533333" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\pistolaaaa.png" />
+                                <frame duration="1" hotspotX="0.518519" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\ak47.png" />
+                                <frame duration="1" hotspotX="0.517241" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\rifle.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\lanza granah.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\la bazuuka.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\pistola laser.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\sniper.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Vermillion\Desktop\arco.png" />
+                                <frame duration="1" hotspotX="0.517241" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\lanza llamas.png" />
+                                <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\Vermillion\Desktop\espada.png" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="InvNombreItem" sid="342752618541743">
+                        <plugin id="Text" />
+                        <instance-variables>
+                            <instance-variable name="basex" sid="290147547906021" type="number" />
+                            <instance-variable name="basey" sid="947223185370163" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="Pin" sid="135523334537492">
+                                <behavior id="Pin" />
+                            </behavior-type>
+                        </behaviors>
+                        <container>
+                            <type>InvItemFondo</type>
+                            <type>InvItem</type>
+                            <type>InvPickUp</type>
+                            <type>InvNombreItem</type>
+                            <type>InvCantidad</type>
+                        </container>
+                    </object-type>
+                    <object-type name="InvHelper" sid="270636622797380">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="previousy" sid="578393336271803" type="number" />
+                            <instance-variable name="currenty" sid="453598683758297" type="number" />
+                            <instance-variable name="IniY" sid="356405475876282" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="CustomMovement" sid="822459337090273">
+                                <behavior id="custom" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="546430690825984" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
+                <object-type name="InvFondo" sid="730741648764326">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="834071453113199" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="InvTouchHelper" sid="503337809300435">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="IniX" sid="921437622940730" type="number" />
+                        <instance-variable name="IniY" sid="381982197508314" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="DragDrop" sid="889908753440994">
+                            <behavior id="DragnDrop" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="387710482122182" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="InvSlotEquipo" sid="214835124666834">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="ID" sid="751014273902073" type="number" />
+                        <instance-variable name="Tipo" sid="233925320192818" type="number" />
+                        <instance-variable name="basey" sid="923033342045617" type="number" />
+                        <instance-variable name="basex" sid="409351382218762" type="number" />
+                    </instance-variables>
+                    <container>
+                        <type>InvSlotEquipo</type>
+                        <type>InvSlotSpirte</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="267234728306278" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="InvMateriales" sid="408695532766360">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="InvArmas" sid="393311795101271">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="InvTrampas" sid="169992336970935">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="InvCerrar" sid="916515815468169">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="588726900285423" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="InvSlotSpirte" sid="743456224578295">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="basey" sid="177922006709621" type="number" />
+                        <instance-variable name="basex" sid="144116620485357" type="number" />
+                        <instance-variable name="idarray" sid="475656583073700" type="number" />
+                        <instance-variable name="id" sid="219708338638520" type="number" />
+                    </instance-variables>
+                    <container>
+                        <type>InvSlotEquipo</type>
+                        <type>InvSlotSpirte</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="27" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="337548820752930" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\pistolaaaa.png" />
+                            <frame duration="1" hotspotX="0.518519" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\ak47.png" />
+                            <frame duration="1" hotspotX="0.517241" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\rifle.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\lanza granah.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\la bazuuka.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\pistola laser.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\sniper.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Vermillion\Desktop\arco.png" />
+                            <frame duration="1" hotspotX="0.517241" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\lanza llamas.png" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\Vermillion\Desktop\espada.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
                 </object-type>
             </object-folder>
             <object-type name="CraftBut" sid="599321056020579">
@@ -2123,6 +2372,25 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="InvCantidad" sid="239907977315234">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="basex" sid="892764837081342" type="number" />
+                <instance-variable name="basey" sid="113363926584400" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="342486904671984">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>InvItemFondo</type>
+                <type>InvItem</type>
+                <type>InvPickUp</type>
+                <type>InvNombreItem</type>
+                <type>InvCantidad</type>
+            </container>
         </object-type>
     </object-folder>
     <families>

@@ -5,6 +5,7 @@
     <events>
         <include>Functions</include>
         <variable constant="0" name="a" sid="919971367242208" static="0" type="text"></variable>
+        <variable constant="0" name="PickedItem" sid="206578781829441" static="0" type="text"></variable>
         <variable constant="1" name="DicArmas" sid="974774594058334" static="0" type="text">{&quot;c2dictionary&quot;:true,&quot;data&quot;:{&quot;16&quot;:&quot;1|3000&quot;,&quot;19&quot;:&quot;1|4500&quot;,&quot;21&quot;:&quot;1|5000&quot;,&quot;23&quot;:&quot;1|2000&quot;}}</variable>
         <variable constant="1" name="DicMateriales" sid="714762938738338" static="0" type="text">{&quot;c2dictionary&quot;:true,&quot;data&quot;:{&quot;1&quot;:&quot;1|300&quot;,&quot;2&quot;:&quot;1|200&quot;,&quot;3&quot;:&quot;1|300&quot;,&quot;4&quot;:&quot;1|400&quot;,&quot;5&quot;:&quot;1|300&quot;,&quot;6&quot;:&quot;1|600&quot;,&quot;7&quot;:&quot;1|500&quot;,&quot;8&quot;:&quot;1|800&quot;}}</variable>
         <event-block sid="861628899628191">
@@ -44,115 +45,56 @@
                     <param id="1" name="Value">20 + (Oleada/2)</param>
                 </action>
                 <action id="-9" name="Destroy" sid="820248790898523" type="ShopItemFondo" />
+                <action id="-9" name="Destroy" sid="665701048175287" type="InvItemFondo" />
                 <action id="-4" name="Set layer visible" sid="505020137794583" type="System">
+                    <param id="0" name="Layer">&quot;Inventory&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="725464186198963" type="System">
                     <param id="0" name="Layer">&quot;Shop&quot;</param>
                     <param id="1" name="Visibility">0</param>
                 </action>
-                <action behavior="DragDrop" id="0" name="Set enabled" sid="407904766606366" type="TouchHelper">
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="407904766606366" type="ShopTouchHelper">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="525739451278849" type="InvTouchHelper">
                     <param id="0" name="State">0</param>
                 </action>
                 <action id="0" name="Set text" sid="396000177910282" type="Gold">
                     <param id="0" name="Text">zeropad(Gold,6)</param>
                 </action>
+                <action id="-9" name="Destroy" sid="786764995339813" type="InvSlotEquipo" />
             </actions>
             <sub-events>
-                <event-block sid="375579280890465">
+                <event-block sid="897585772314333">
                     <conditions>
-                        <condition id="1" name="For each key" sid="641283326447109" type="DicShopMateriales" />
+                        <condition id="3" name="For each element" sid="525508519164283" type="ArrEquipo">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="615442618136977">
-                            <conditions />
-                            <actions>
-                                <action id="-2" name="Set Y" sid="361560113535230" type="ShopHelper">
-                                    <param id="0" name="Y">Self.Y + 55</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="809904142742972" type="System">
-                                    <param id="0" name="Object to create">ShopItemFondo</param>
-                                    <param id="1" name="Layer">&quot;Shop&quot;</param>
-                                    <param id="2" name="X">ShopItemFondo.basex</param>
-                                    <param id="3" name="Y">ShopItemFondo.basey</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="463359044455287" type="ShopItemFondo">
-                                    <param id="0" name="Instance variable">id</param>
-                                    <param id="1" name="Value">int(DicShopMateriales.CurrentKey)</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="307084819862580" type="ShopBuy">
-                                    <param id="0" name="X">ShopBuy.basex</param>
-                                    <param id="1" name="Y">ShopBuy.basey</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="263969270752778" type="ShopDescripcionItem">
-                                    <param id="0" name="X">Self.basex</param>
-                                    <param id="1" name="Y">Self.basey</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="292241457380245" type="ShopNombreItem">
-                                    <param id="0" name="X">Self.basex</param>
-                                    <param id="1" name="Y">Self.basey</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="489051952273006" type="ShopPrize">
-                                    <param id="0" name="X">Self.IniX</param>
-                                    <param id="1" name="Y">Self.IniY</param>
-                                </action>
-                                <action id="0" name="Set text" sid="825173998379939" type="ShopNombreItem">
-                                    <param id="0" name="Text">tokenat(DicItems.Get(DicShopMateriales.CurrentKey),1,&quot;|&quot;)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="360578368278518" type="ShopDescripcionItem">
-                                    <param id="0" name="Text">tokenat(DicItems.Get(DicShopMateriales.CurrentKey),2,&quot;|&quot;)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="670032782468186" type="ShopPrize">
-                                    <param id="0" name="Text">tokenat(DicShopMateriales.CurrentValue,1,&quot;|&quot;)</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="635065688920867" type="ShopItems">
-                                    <param id="0" name="X">ShopItems.basex</param>
-                                    <param id="1" name="Y">ShopItems.basey</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="500648589382990" type="ShopBuy">
-                                    <param id="0" name="Instance variable">id</param>
-                                    <param id="1" name="Value">int(DicShopMateriales.CurrentKey) </param>
-                                </action>
-                                <action id="-10" name="Set value" sid="583566673102631" type="ShopBuy">
-                                    <param id="0" name="Instance variable">price</param>
-                                    <param id="1" name="Value">int(tokenat(DicShopMateriales.CurrentValue,1,&quot;|&quot;))</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="159727410303294" type="ShopBuy">
-                                    <param id="0" name="Instance variable">tipo</param>
-                                    <param id="1" name="Value">int(tokenat(DicItems.Get(DicShopMateriales.CurrentKey),0,&quot;|&quot;))</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="715894054444398" type="ShopBuy">
-                                    <param id="0" name="Instance variable">cantidad</param>
-                                    <param id="1" name="Value">int(tokenat(DicShopMateriales.CurrentValue,0,&quot;|&quot;))</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="956789254271861" type="ShopItems">
-                                    <param id="0" name="Frame number">int(tokenat(str(DicShopMateriales.CurrentKey),0,&quot;|&quot;)) -1</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="911397914673530" type="ShopItems">
-                                    <param id="0" name="Pin to">ShopHelper</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="147492518652251" type="ShopItemFondo">
-                                    <param id="0" name="Pin to">ShopHelper</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="137451282095374" type="ShopBuy">
-                                    <param id="0" name="Pin to">ShopHelper</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="846383405579889" type="ShopDescripcionItem">
-                                    <param id="0" name="Pin to">ShopHelper</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="723406098314008" type="ShopNombreItem">
-                                    <param id="0" name="Pin to">ShopHelper</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="477180727075037" type="ShopPrize">
-                                    <param id="0" name="Pin to">ShopHelper</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-3" name="Create object" sid="247778449710273" type="System">
+                            <param id="0" name="Object to create">InvSlotEquipo</param>
+                            <param id="1" name="Layer">&quot;Inventory&quot;</param>
+                            <param id="2" name="X">InvSlotEquipo.basex</param>
+                            <param id="3" name="Y">ShopItemFondo.basey + ((ArrEquipo.CurX)*60)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="889360445564988" type="InvSlotSpirte">
+                            <param id="0" name="X">self.basex</param>
+                            <param id="1" name="Y">Self.basey+ ((ArrEquipo.CurX)*60)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="828807711287801" type="InvSlotSpirte">
+                            <param id="0" name="Instance variable">idarray</param>
+                            <param id="1" name="Value">ArrEquipo.CurX</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="639325642585845" type="InvSlotSpirte">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Value">ArrEquipo.At(1,ArrEquipo.CurX)</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="144871600107924" type="InvSlotSpirte">
+                            <param id="0" name="Frame number">ArrEquipo.At(1,ArrEquipo.CurX)</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>
@@ -184,7 +126,20 @@
                             <param id="0" name="Object">Inventory</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Call function" sid="270168421452454" type="f">
+                            <param id="0" name="Name">&quot;CleanInv&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="829992364577132" type="f">
+                            <param id="0" name="Name">&quot;ActualizarInvMateriales&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="943235487307978" type="System">
+                            <param id="0" name="Layer">&quot;Inventory&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="572002511654031">
                     <conditions>
@@ -193,6 +148,14 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="683772650092770" type="f">
+                            <param id="0" name="Name">&quot;CleanShop&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="998737137251328" type="f">
+                            <param id="0" name="Name">&quot;ActualizarShopMateriales&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="-4" name="Set layer visible" sid="784137963418459" type="System">
                             <param id="0" name="Layer">&quot;Shop&quot;</param>
                             <param id="1" name="Visibility">1</param>
@@ -216,7 +179,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="DragDrop" id="0" name="Set enabled" sid="726130890295086" type="TouchHelper">
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="726130890295086" type="ShopTouchHelper">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
@@ -227,162 +190,297 @@
                             <param id="0" name="Object">ShopMaterials</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="799087836116673">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="760442981684347" type="System">
-                                    <param id="0" name="Object">ShopDescripcionItem</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="722833516697980" type="ShopDescripcionItem" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="108993697928464">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="450675943376996" type="System">
-                                    <param id="0" name="Object">ShopPrize</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="727689662861591" type="ShopPrize" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="391462218651391">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="192270011674184" type="System">
-                                    <param id="0" name="Object">ShopNombreItem</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="702097696429122" type="ShopNombreItem" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="601252737011804">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="795159585454988" type="System">
-                                    <param id="0" name="Object">ShopItemFondo</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="662695017237358" type="ShopItemFondo" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="978764453347125">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="749049257845868" type="System">
-                                    <param id="0" name="Object">ShopBuy</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="957689873063891" type="ShopBuy" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="207213484589883">
-                            <conditions>
-                                <condition id="1" name="For each key" sid="625528996318041" type="DicShopMateriales" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="373165478754001">
-                                    <conditions />
-                                    <actions>
-                                        <action id="-2" name="Set Y" sid="980248894367017" type="ShopHelper">
-                                            <param id="0" name="Y">Self.Y + 55</param>
-                                        </action>
-                                        <action id="-3" name="Create object" sid="550702057428158" type="System">
-                                            <param id="0" name="Object to create">ShopItemFondo</param>
-                                            <param id="1" name="Layer">&quot;Shop&quot;</param>
-                                            <param id="2" name="X">ShopItemFondo.basex</param>
-                                            <param id="3" name="Y">ShopItemFondo.basey</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="214452893772046" type="ShopItemFondo">
-                                            <param id="0" name="Instance variable">id</param>
-                                            <param id="1" name="Value">int(DicShopMateriales.CurrentKey)</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="397062946090124" type="ShopBuy">
-                                            <param id="0" name="X">ShopBuy.basex</param>
-                                            <param id="1" name="Y">ShopBuy.basey</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="127094116482566" type="ShopDescripcionItem">
-                                            <param id="0" name="X">Self.basex</param>
-                                            <param id="1" name="Y">Self.basey</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="699781780112631" type="ShopNombreItem">
-                                            <param id="0" name="X">Self.basex</param>
-                                            <param id="1" name="Y">Self.basey</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="511736886579893" type="ShopPrize">
-                                            <param id="0" name="X">Self.IniX</param>
-                                            <param id="1" name="Y">Self.IniY</param>
-                                        </action>
-                                        <action id="0" name="Set text" sid="633518710339408" type="ShopNombreItem">
-                                            <param id="0" name="Text">tokenat(DicItems.Get(DicShopMateriales.CurrentKey),1,&quot;|&quot;)</param>
-                                        </action>
-                                        <action id="0" name="Set text" sid="292557074388402" type="ShopDescripcionItem">
-                                            <param id="0" name="Text">tokenat(DicItems.Get(DicShopMateriales.CurrentKey),2,&quot;|&quot;)</param>
-                                        </action>
-                                        <action id="0" name="Set text" sid="815526435982456" type="ShopPrize">
-                                            <param id="0" name="Text">tokenat(DicShopMateriales.CurrentValue,1,&quot;|&quot;)</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="678882941113178" type="ShopItems">
-                                            <param id="0" name="X">ShopItems.basex</param>
-                                            <param id="1" name="Y">ShopItems.basey</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="609739415846720" type="ShopBuy">
-                                            <param id="0" name="Instance variable">id</param>
-                                            <param id="1" name="Value">int(DicShopMateriales.CurrentKey) </param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="626554700955763" type="ShopBuy">
-                                            <param id="0" name="Instance variable">price</param>
-                                            <param id="1" name="Value">int(tokenat(DicShopMateriales.CurrentValue,1,&quot;|&quot;))</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="411918864569905" type="ShopBuy">
-                                            <param id="0" name="Instance variable">tipo</param>
-                                            <param id="1" name="Value">int(tokenat(DicItems.Get(DicShopMateriales.CurrentKey),0,&quot;|&quot;))</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="191851187927539" type="ShopBuy">
-                                            <param id="0" name="Instance variable">cantidad</param>
-                                            <param id="1" name="Value">int(tokenat(DicShopMateriales.CurrentValue,0,&quot;|&quot;))</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="400492674727354" type="ShopItems">
-                                            <param id="0" name="Frame number">int(tokenat(str(DicShopMateriales.CurrentKey),0,&quot;|&quot;)) -1</param>
-                                        </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="272926750840894" type="ShopItems">
-                                            <param id="0" name="Pin to">ShopHelper</param>
-                                            <param id="1" name="Mode">1</param>
-                                        </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="214303370388928" type="ShopItemFondo">
-                                            <param id="0" name="Pin to">ShopHelper</param>
-                                            <param id="1" name="Mode">1</param>
-                                        </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="248652744171123" type="ShopBuy">
-                                            <param id="0" name="Pin to">ShopHelper</param>
-                                            <param id="1" name="Mode">1</param>
-                                        </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="586150028567208" type="ShopDescripcionItem">
-                                            <param id="0" name="Pin to">ShopHelper</param>
-                                            <param id="1" name="Mode">1</param>
-                                        </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="878806502548304" type="ShopNombreItem">
-                                            <param id="0" name="Pin to">ShopHelper</param>
-                                            <param id="1" name="Mode">1</param>
-                                        </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="182957701037221" type="ShopPrize">
-                                            <param id="0" name="Pin to">ShopHelper</param>
-                                            <param id="1" name="Mode">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="0" name="Call function" sid="944983716916687" type="f">
+                            <param id="0" name="Name">&quot;CleanShop&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="278770782781757" type="f">
+                            <param id="0" name="Name">&quot;ActualizarShopMateriales&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="344921479393820">
                     <conditions>
                         <condition id="3" name="On touched object" sid="128214497318726" type="Touch">
                             <param id="0" name="Object">ShopArmas</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="383775995540110" type="f">
+                            <param id="0" name="Name">&quot;CleanShop&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="198923742316624" type="f">
+                            <param id="0" name="Name">&quot;ActualizarShopArmas&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="427324119720547">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="416082600237059" type="Touch">
+                            <param id="0" name="Object">ShopTrampas</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="930402694696615">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="398153794711672" type="ShopTouchHelper" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="353670889709317" type="ShopTouchHelper">
+                            <param id="0" name="X">Self.IniX</param>
+                            <param id="1" name="Y">Self.IniY</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="186785801869626" type="ShopHelper">
+                            <param id="0" name="Instance variable">IniY</param>
+                            <param id="1" name="Value">Self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="897171097509697">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="248885466373740" type="ShopTouchHelper" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="412868943389462" type="ShopHelper">
+                            <param id="0" name="Y">((ShopTouchHelper.IniY -ShopTouchHelper.Y)/-7) + ShopHelper.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="703321518902729">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="437445646982910" type="Touch">
+                            <param id="0" name="Object">ShopCerrar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="944121345882335" type="System">
+                            <param id="0" name="Layer">&quot;Shop&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="925453079566352" type="ShopTouchHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="184328536925291">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="249608536517436" type="Touch">
+                            <param id="0" name="Object">ShopBuy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="345146272405180" type="System">
+                            <param id="0" name="Variable">a</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="454992415835929" type="System">
+                            <param id="0" name="Variable">a</param>
+                            <param id="1" name="Value">ShopBuy.id &amp; &quot;-&quot; &amp; ShopBuy.tipo &amp; &quot;-&quot; &amp; ShopBuy.cantidad </param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="855284957946148">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="590302106892076" type="System">
+                                    <param id="0" name="Variable">Gold</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">ShopBuy.price</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="552804978082272" type="f">
+                                    <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                    <param id="1" name="Parameter {n}">ShopBuy.id{###}ShopBuy.tipo{###}ShopBuy.cantidad</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="633413083685627" type="System">
+                                    <param id="0" name="Variable">Gold</param>
+                                    <param id="1" name="Value">ShopBuy.price</param>
+                                </action>
+                                <action id="0" name="Set text" sid="743350196786250" type="Gold">
+                                    <param id="0" name="Text">zeropad(Gold,6)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="445145076892577">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="506263033260201" type="System">
+                    <param id="0" name="Layer">&quot;Inventory&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="415638374533700" type="InvTouchHelper">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="944109447198386">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="180401041066514" type="Touch">
+                            <param id="0" name="Object">InvMateriales</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="502093660025370" type="f">
+                            <param id="0" name="Name">&quot;CleanInv&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="761401904832445" type="f">
+                            <param id="0" name="Name">&quot;ActualizarInvMateriales&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="226178727226326">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="460971238353514" type="Touch">
+                            <param id="0" name="Object">InvArmas</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="750358240890159" type="f">
+                            <param id="0" name="Name">&quot;CleanInv&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="418451096628060" type="f">
+                            <param id="0" name="Name">&quot;ActualizarInvArmas&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="741202192906004">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="385320100607005" type="Touch">
+                            <param id="0" name="Object">InvTrampas</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="986142627912466" type="f">
+                            <param id="0" name="Name">&quot;CleanInv&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="150434582866102">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="161324324402441" type="Touch">
+                            <param id="0" name="Object">InvCerrar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="522613037984430" type="System">
+                            <param id="0" name="Layer">&quot;Inventory&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="914280647809743" type="InvTouchHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="991516854922518">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="456691842758521" type="Touch">
+                            <param id="0" name="Object">InvPickUp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="690049944075344" type="System">
+                            <param id="0" name="Variable">PickedItem</param>
+                            <param id="1" name="Value">InvPickUp.tipo  &amp;&quot;|&quot; &amp; InvPickUp.id</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="464123960768791">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="180248671017395" type="Touch">
+                            <param id="0" name="Object">InvSlotSpirte</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="381480207866754" type="ArrEquipo">
+                            <param id="0" name="X">InvSlotSpirte.idarray</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">int(tokenat(PickedItem,0,&quot;|&quot;))</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="338892400553652" type="ArrEquipo">
+                            <param id="0" name="X">InvSlotSpirte.idarray</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">int(tokenat(PickedItem,1,&quot;|&quot;))</param>
+                        </action>
+                        <action id="0" name="Call function" sid="740469526759458" type="f">
+                            <param id="0" name="Name">&quot;ActualizarEquipo&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="294060284912509">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="923018596827047" type="InvTouchHelper" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="426846006119085" type="InvTouchHelper">
+                            <param id="0" name="X">Self.IniX</param>
+                            <param id="1" name="Y">Self.IniY</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="333425459666228" type="InvHelper">
+                            <param id="0" name="Instance variable">IniY</param>
+                            <param id="1" name="Value">Self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="316668407640946">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="517677857276172" type="InvTouchHelper" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="739136012161800" type="InvHelper">
+                            <param id="0" name="Y">((InvTouchHelper.IniY -InvTouchHelper.Y)/-7) + InvHelper.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="437691061244963" title="ShopFunctions">
+            <sub-events>
+                <event-block sid="613726857780523">
+                    <conditions>
+                        <condition id="0" name="On function" sid="389947224107466" type="f">
+                            <param id="0" name="Name">&quot;ActualizarEquipo&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="300941883859253">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="432496089543221" type="System">
+                                    <param id="0" name="Object">InvSlotSpirte</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="121745556162635" type="InvSlotSpirte">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Value">ArrEquipo.At(Self.idarray,1)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="671049526459258" type="InvSlotSpirte">
+                                    <param id="0" name="Frame number">ArrEquipo.At(Self.idarray,1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Shop</comment>
+                <event-block sid="656304242060247">
+                    <conditions>
+                        <condition id="0" name="On function" sid="735431360533231" type="f">
+                            <param id="0" name="Name">&quot;CleanShop&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -437,98 +535,335 @@
                                 <action id="-9" name="Destroy" sid="201645296135476" type="ShopBuy" />
                             </actions>
                         </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="143693812968118">
+                    <conditions>
+                        <condition id="0" name="On function" sid="318919161487380" type="f">
+                            <param id="0" name="Name">&quot;ActualizarShopMateriales&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="207213484589883">
+                            <conditions>
+                                <condition id="1" name="For each key" sid="625528996318041" type="DicShopMateriales" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="980248894367017" type="ShopHelper">
+                                    <param id="0" name="Y">Self.Y + 55</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="550702057428158" type="System">
+                                    <param id="0" name="Object to create">ShopItemFondo</param>
+                                    <param id="1" name="Layer">&quot;Shop&quot;</param>
+                                    <param id="2" name="X">332</param>
+                                    <param id="3" name="Y">71</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="214452893772046" type="ShopItemFondo">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Value">int(DicShopMateriales.CurrentKey)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="397062946090124" type="ShopBuy">
+                                    <param id="0" name="X">ShopBuy.basex</param>
+                                    <param id="1" name="Y">ShopBuy.basey</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="127094116482566" type="ShopDescripcionItem">
+                                    <param id="0" name="X">Self.basex</param>
+                                    <param id="1" name="Y">Self.basey</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="699781780112631" type="ShopNombreItem">
+                                    <param id="0" name="X">Self.basex</param>
+                                    <param id="1" name="Y">Self.basey</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="511736886579893" type="ShopPrize">
+                                    <param id="0" name="X">Self.IniX</param>
+                                    <param id="1" name="Y">Self.IniY</param>
+                                </action>
+                                <action id="0" name="Set text" sid="633518710339408" type="ShopNombreItem">
+                                    <param id="0" name="Text">tokenat(DicItems.Get(DicShopMateriales.CurrentKey),1,&quot;|&quot;)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="292557074388402" type="ShopDescripcionItem">
+                                    <param id="0" name="Text">tokenat(DicItems.Get(DicShopMateriales.CurrentKey),2,&quot;|&quot;)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="815526435982456" type="ShopPrize">
+                                    <param id="0" name="Text">tokenat(DicShopMateriales.CurrentValue,1,&quot;|&quot;)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="678882941113178" type="ShopItems">
+                                    <param id="0" name="X">ShopItems.basex</param>
+                                    <param id="1" name="Y">ShopItems.basey</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="609739415846720" type="ShopBuy">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Value">int(DicShopMateriales.CurrentKey) </param>
+                                </action>
+                                <action id="-10" name="Set value" sid="626554700955763" type="ShopBuy">
+                                    <param id="0" name="Instance variable">price</param>
+                                    <param id="1" name="Value">int(tokenat(DicShopMateriales.CurrentValue,1,&quot;|&quot;))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="411918864569905" type="ShopBuy">
+                                    <param id="0" name="Instance variable">tipo</param>
+                                    <param id="1" name="Value">int(tokenat(DicItems.Get(DicShopMateriales.CurrentKey),0,&quot;|&quot;))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="191851187927539" type="ShopBuy">
+                                    <param id="0" name="Instance variable">cantidad</param>
+                                    <param id="1" name="Value">int(tokenat(DicShopMateriales.CurrentValue,0,&quot;|&quot;))</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="400492674727354" type="ShopItems">
+                                    <param id="0" name="Frame number">int(tokenat(str(DicShopMateriales.CurrentKey),0,&quot;|&quot;))</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="272926750840894" type="ShopItems">
+                                    <param id="0" name="Pin to">ShopHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="214303370388928" type="ShopItemFondo">
+                                    <param id="0" name="Pin to">ShopHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="248652744171123" type="ShopBuy">
+                                    <param id="0" name="Pin to">ShopHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="586150028567208" type="ShopDescripcionItem">
+                                    <param id="0" name="Pin to">ShopHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="878806502548304" type="ShopNombreItem">
+                                    <param id="0" name="Pin to">ShopHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="182957701037221" type="ShopPrize">
+                                    <param id="0" name="Pin to">ShopHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="557042007626950">
+                    <conditions>
+                        <condition id="0" name="On function" sid="397970294570350" type="f">
+                            <param id="0" name="Name">&quot;ActualizarShopArmas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
                         <event-block sid="137446818081458">
                             <conditions>
                                 <condition id="1" name="For each key" sid="389581100896625" type="DicShopArmas" />
                             </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="898543920649448" type="ShopHelper">
+                                    <param id="0" name="Y">Self.Y + 55</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="881623259268705" type="System">
+                                    <param id="0" name="Object to create">ShopItemFondo</param>
+                                    <param id="1" name="Layer">&quot;Shop&quot;</param>
+                                    <param id="2" name="X">332</param>
+                                    <param id="3" name="Y">71</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="516685853144725" type="ShopItemFondo">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Value">int(DicShopArmas.CurrentKey)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="656882547544945" type="ShopBuy">
+                                    <param id="0" name="X">ShopBuy.basex</param>
+                                    <param id="1" name="Y">ShopBuy.basey</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="191070545299656" type="ShopDescripcionItem">
+                                    <param id="0" name="X">Self.basex</param>
+                                    <param id="1" name="Y">Self.basey</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="235944448436687" type="ShopNombreItem">
+                                    <param id="0" name="X">Self.basex</param>
+                                    <param id="1" name="Y">Self.basey</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="257657934311822" type="ShopPrize">
+                                    <param id="0" name="X">Self.IniX</param>
+                                    <param id="1" name="Y">Self.IniY</param>
+                                </action>
+                                <action id="0" name="Set text" sid="889899483513803" type="ShopNombreItem">
+                                    <param id="0" name="Text">tokenat(DicItems.Get(DicShopArmas.CurrentKey),1,&quot;|&quot;)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="701820922787866" type="ShopDescripcionItem">
+                                    <param id="0" name="Text">tokenat(DicItems.Get(DicShopArmas.CurrentKey),2,&quot;|&quot;)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="426046892532167" type="ShopPrize">
+                                    <param id="0" name="Text">tokenat(DicShopArmas.CurrentValue,1,&quot;|&quot;)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="472162317073052" type="ShopItems">
+                                    <param id="0" name="X">ShopItems.basex</param>
+                                    <param id="1" name="Y">ShopItems.basey</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="302458444455616" type="ShopItems">
+                                    <param id="0" name="Frame number">int(tokenat(str(DicShopArmas.CurrentKey),0,&quot;|&quot;)) </param>
+                                </action>
+                                <action id="-10" name="Set value" sid="451930251727452" type="ShopBuy">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Value">int(DicShopArmas.CurrentKey)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="353160126001881" type="ShopBuy">
+                                    <param id="0" name="Instance variable">price</param>
+                                    <param id="1" name="Value">int(tokenat(DicShopArmas.CurrentValue,1,&quot;|&quot;))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="846643907469931" type="ShopBuy">
+                                    <param id="0" name="Instance variable">tipo</param>
+                                    <param id="1" name="Value">int(tokenat(DicItems.Get(DicShopArmas.CurrentKey),0,&quot;|&quot;))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="944954842186656" type="ShopBuy">
+                                    <param id="0" name="Instance variable">cantidad</param>
+                                    <param id="1" name="Value">int(tokenat(DicShopArmas.CurrentValue,0,&quot;|&quot;))</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="586061993999595" type="ShopItems">
+                                    <param id="0" name="Pin to">ShopHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="131521816646217" type="ShopItemFondo">
+                                    <param id="0" name="Pin to">ShopHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="360088622743046" type="ShopBuy">
+                                    <param id="0" name="Pin to">ShopHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="738347964641661" type="ShopDescripcionItem">
+                                    <param id="0" name="Pin to">ShopHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="904979127861189" type="ShopNombreItem">
+                                    <param id="0" name="Pin to">ShopHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="372031968903397" type="ShopPrize">
+                                    <param id="0" name="Pin to">ShopHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Inv</comment>
+                <event-block sid="257106551128038">
+                    <conditions>
+                        <condition id="0" name="On function" sid="737251295749175" type="f">
+                            <param id="0" name="Name">&quot;CleanInv&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="717977212585260">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="853704002652774" type="System">
+                                    <param id="0" name="Object">InvNombreItem</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="804169786139135" type="InvNombreItem" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="502064962998755">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="927433112209815" type="System">
+                                    <param id="0" name="Object">InvItemFondo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="604928477764463" type="InvItemFondo" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="511939734608186">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="571212737529126" type="System">
+                                    <param id="0" name="Object">InvPickUp</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="525788290251000" type="InvPickUp" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="292231139658674">
+                    <conditions>
+                        <condition id="0" name="On function" sid="158678883470878" type="f">
+                            <param id="0" name="Name">&quot;ActualizarInvMateriales&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="699114613696617">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="867351741261843" type="ArrInv">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                            </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="117248214874333">
-                                    <conditions />
+                                <event-block sid="297653542090909">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="951297505669853" type="System">
+                                            <param id="0" name="First value">ArrInv.At(ArrInv.CurX,1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="704478770142228" type="System">
+                                            <param id="0" name="First value">ArrInv.At(ArrInv.CurX,0)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
                                     <actions>
-                                        <action id="-2" name="Set Y" sid="898543920649448" type="ShopHelper">
+                                        <action id="-2" name="Set Y" sid="185245888528268" type="InvHelper">
                                             <param id="0" name="Y">Self.Y + 55</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="881623259268705" type="System">
-                                            <param id="0" name="Object to create">ShopItemFondo</param>
-                                            <param id="1" name="Layer">&quot;Shop&quot;</param>
-                                            <param id="2" name="X">ShopItemFondo.basex</param>
-                                            <param id="3" name="Y">ShopItemFondo.basey</param>
+                                        <action id="-3" name="Create object" sid="897045733437965" type="System">
+                                            <param id="0" name="Object to create">InvItemFondo</param>
+                                            <param id="1" name="Layer">&quot;Inventory&quot;</param>
+                                            <param id="2" name="X">351</param>
+                                            <param id="3" name="Y">71</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="516685853144725" type="ShopItemFondo">
+                                        <action id="-10" name="Set value" sid="889067111891349" type="InvItemFondo">
                                             <param id="0" name="Instance variable">id</param>
-                                            <param id="1" name="Value">int(DicShopArmas.CurrentKey)</param>
+                                            <param id="1" name="Value">int(ArrInv.CurValue)</param>
                                         </action>
-                                        <action id="-3" name="Set position" sid="656882547544945" type="ShopBuy">
-                                            <param id="0" name="X">ShopBuy.basex</param>
-                                            <param id="1" name="Y">ShopBuy.basey</param>
+                                        <action id="-3" name="Set position" sid="178272762545756" type="InvPickUp">
+                                            <param id="0" name="X">-50</param>
+                                            <param id="1" name="Y">-50</param>
                                         </action>
-                                        <action id="-3" name="Set position" sid="191070545299656" type="ShopDescripcionItem">
+                                        <action id="-3" name="Set position" sid="903881844322637" type="InvNombreItem">
                                             <param id="0" name="X">Self.basex</param>
                                             <param id="1" name="Y">Self.basey</param>
                                         </action>
-                                        <action id="-3" name="Set position" sid="235944448436687" type="ShopNombreItem">
+                                        <action id="0" name="Set text" sid="489461202000719" type="InvNombreItem">
+                                            <param id="0" name="Text">tokenat(DicItems.Get((ArrInv.CurValue)),1,&quot;|&quot;)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="119544274057286" type="InvCantidad">
                                             <param id="0" name="X">Self.basex</param>
                                             <param id="1" name="Y">Self.basey</param>
                                         </action>
-                                        <action id="-3" name="Set position" sid="257657934311822" type="ShopPrize">
-                                            <param id="0" name="X">Self.IniX</param>
-                                            <param id="1" name="Y">Self.IniY</param>
+                                        <action id="0" name="Set text" sid="897767135024113" type="InvCantidad">
+                                            <param id="0" name="Text">&quot;x&quot; &amp; ArrInv.At(ArrInv.CurX,2)</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="889899483513803" type="ShopNombreItem">
-                                            <param id="0" name="Text">tokenat(DicItems.Get(DicShopArmas.CurrentKey),1,&quot;|&quot;)</param>
+                                        <action id="-3" name="Set position" sid="698234865488767" type="InvItem">
+                                            <param id="0" name="X">InvItem.basex</param>
+                                            <param id="1" name="Y">InvItem.basey</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="701820922787866" type="ShopDescripcionItem">
-                                            <param id="0" name="Text">tokenat(DicItems.Get(DicShopArmas.CurrentKey),2,&quot;|&quot;)</param>
+                                        <action id="5" name="Set frame" sid="857374434581742" type="InvItem">
+                                            <param id="0" name="Frame number">int(ArrInv.CurValue)</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="426046892532167" type="ShopPrize">
-                                            <param id="0" name="Text">tokenat(DicShopArmas.CurrentValue,1,&quot;|&quot;)</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="472162317073052" type="ShopItems">
-                                            <param id="0" name="X">ShopItems.basex</param>
-                                            <param id="1" name="Y">ShopItems.basey</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="302458444455616" type="ShopItems">
-                                            <param id="0" name="Frame number">int(tokenat(str(DicShopArmas.CurrentKey),0,&quot;|&quot;)) -1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="451930251727452" type="ShopBuy">
-                                            <param id="0" name="Instance variable">id</param>
-                                            <param id="1" name="Value">int(DicShopArmas.CurrentKey)</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="353160126001881" type="ShopBuy">
-                                            <param id="0" name="Instance variable">price</param>
-                                            <param id="1" name="Value">int(tokenat(DicShopArmas.CurrentValue,1,&quot;|&quot;))</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="846643907469931" type="ShopBuy">
-                                            <param id="0" name="Instance variable">tipo</param>
-                                            <param id="1" name="Value">int(tokenat(DicItems.Get(DicShopArmas.CurrentKey),0,&quot;|&quot;))</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="944954842186656" type="ShopBuy">
-                                            <param id="0" name="Instance variable">cantidad</param>
-                                            <param id="1" name="Value">int(tokenat(DicShopArmas.CurrentValue,0,&quot;|&quot;))</param>
-                                        </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="586061993999595" type="ShopItems">
-                                            <param id="0" name="Pin to">ShopHelper</param>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="665389178283975" type="InvItem">
+                                            <param id="0" name="Pin to">InvHelper</param>
                                             <param id="1" name="Mode">1</param>
                                         </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="131521816646217" type="ShopItemFondo">
-                                            <param id="0" name="Pin to">ShopHelper</param>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="934871255237075" type="InvItemFondo">
+                                            <param id="0" name="Pin to">InvHelper</param>
                                             <param id="1" name="Mode">1</param>
                                         </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="360088622743046" type="ShopBuy">
-                                            <param id="0" name="Pin to">ShopHelper</param>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="608275045802780" type="InvNombreItem">
+                                            <param id="0" name="Pin to">InvHelper</param>
                                             <param id="1" name="Mode">1</param>
                                         </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="738347964641661" type="ShopDescripcionItem">
-                                            <param id="0" name="Pin to">ShopHelper</param>
-                                            <param id="1" name="Mode">1</param>
-                                        </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="904979127861189" type="ShopNombreItem">
-                                            <param id="0" name="Pin to">ShopHelper</param>
-                                            <param id="1" name="Mode">1</param>
-                                        </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="372031968903397" type="ShopPrize">
-                                            <param id="0" name="Pin to">ShopHelper</param>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="970426822505477" type="InvCantidad">
+                                            <param id="0" name="Pin to">InvHelper</param>
                                             <param id="1" name="Mode">1</param>
                                         </action>
                                     </actions>
@@ -537,97 +872,203 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="427324119720547">
+                <event-block sid="282759517669111">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="416082600237059" type="Touch">
-                            <param id="0" name="Object">ShopTrampas</param>
+                        <condition id="0" name="On function" sid="869997645039245" type="f">
+                            <param id="0" name="Name">&quot;ActualizarInvArmas&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
-                </event-block>
-                <event-block sid="930402694696615">
-                    <conditions>
-                        <condition behavior="DragDrop" id="2" name="On drop" sid="398153794711672" type="TouchHelper" />
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="353670889709317" type="TouchHelper">
-                            <param id="0" name="X">Self.IniX</param>
-                            <param id="1" name="Y">Self.IniY</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="186785801869626" type="ShopHelper">
-                            <param id="0" name="Instance variable">IniY</param>
-                            <param id="1" name="Value">Self.Y</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="897171097509697">
-                    <conditions>
-                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="248885466373740" type="TouchHelper" />
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Set Y" sid="412868943389462" type="ShopHelper">
-                            <param id="0" name="Y">((TouchHelper.IniY -TouchHelper.Y)/-7) + ShopHelper.Y</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="703321518902729">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="437445646982910" type="Touch">
-                            <param id="0" name="Object">ShopCerrar</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set layer visible" sid="944121345882335" type="System">
-                            <param id="0" name="Layer">&quot;Shop&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action behavior="DragDrop" id="0" name="Set enabled" sid="925453079566352" type="TouchHelper">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="184328536925291">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="249608536517436" type="Touch">
-                            <param id="0" name="Object">ShopBuy</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="345146272405180" type="System">
-                            <param id="0" name="Variable">a</param>
-                            <param id="1" name="Value">&quot;&quot;</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="454992415835929" type="System">
-                            <param id="0" name="Variable">a</param>
-                            <param id="1" name="Value">ShopBuy.id &amp; &quot;-&quot; &amp; ShopBuy.tipo &amp; &quot;-&quot; &amp; ShopBuy.cantidad </param>
-                        </action>
-                    </actions>
                     <sub-events>
-                        <event-block sid="855284957946148">
+                        <event-block sid="226013457131184">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="590302106892076" type="System">
-                                    <param id="0" name="Variable">Gold</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">ShopBuy.price</param>
+                                <condition id="3" name="For each element" sid="699579438108178" type="ArrInv">
+                                    <param id="0" name="Axes">2</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="552804978082272" type="f">
-                                    <param id="0" name="Name">&quot;PickearItem&quot;</param>
-                                    <param id="1" name="Parameter {n}">ShopBuy.id{###}ShopBuy.tipo{###}ShopBuy.cantidad</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="633413083685627" type="System">
-                                    <param id="0" name="Variable">Gold</param>
-                                    <param id="1" name="Value">ShopBuy.price</param>
-                                </action>
-                                <action id="0" name="Set text" sid="743350196786250" type="Gold">
-                                    <param id="0" name="Text">zeropad(Gold,6)</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="784401689133332">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="482133688261441" type="System">
+                                            <param id="0" name="First value">ArrInv.At(ArrInv.CurX,1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="836451412947530" type="System">
+                                            <param id="0" name="First value">ArrInv.At(ArrInv.CurX,1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="650689659047255" type="InvHelper">
+                                            <param id="0" name="Y">Self.Y + 55</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="872124419733012" type="System">
+                                            <param id="0" name="Object to create">InvItemFondo</param>
+                                            <param id="1" name="Layer">&quot;Inventory&quot;</param>
+                                            <param id="2" name="X">351</param>
+                                            <param id="3" name="Y">71</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="595525075762043" type="InvItemFondo">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Value">int(ArrInv.CurValue)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="317702616278395" type="InvPickUp">
+                                            <param id="0" name="X">InvPickUp.basex</param>
+                                            <param id="1" name="Y">InvPickUp.basey</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="755820654450802" type="InvNombreItem">
+                                            <param id="0" name="X">Self.basex</param>
+                                            <param id="1" name="Y">Self.basey</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="666308451113002" type="InvNombreItem">
+                                            <param id="0" name="Text">tokenat(DicItems.Get((ArrInv.CurValue)),1,&quot;|&quot;)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="471927325306052" type="InvCantidad">
+                                            <param id="0" name="X">Self.basex</param>
+                                            <param id="1" name="Y">Self.basey</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="886865107251374" type="InvCantidad">
+                                            <param id="0" name="Text">&quot;x&quot; &amp; ArrInv.At(ArrInv.CurX,2)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="679571561334873" type="InvItem">
+                                            <param id="0" name="X">InvItem.basex</param>
+                                            <param id="1" name="Y">InvItem.basey</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="779749629572755" type="InvItem">
+                                            <param id="0" name="Frame number">int(ArrInv.CurValue)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="738749597052729" type="InvPickUp">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Value">int(ArrInv.CurValue)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="694372042455647" type="InvPickUp">
+                                            <param id="0" name="Instance variable">tipo</param>
+                                            <param id="1" name="Value">int(ArrInv.At(ArrInv.CurX,1))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="857101828994479" type="InvPickUp">
+                                            <param id="0" name="Instance variable">cantidad</param>
+                                            <param id="1" name="Value">int(ArrInv.At(ArrInv.CurX,2))</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="817203401005845" type="InvItem">
+                                            <param id="0" name="Pin to">InvHelper</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="216911734680486" type="InvItemFondo">
+                                            <param id="0" name="Pin to">InvHelper</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="721335751679299" type="InvPickUp">
+                                            <param id="0" name="Pin to">InvHelper</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="915665700113977" type="InvNombreItem">
+                                            <param id="0" name="Pin to">InvHelper</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="594213086444293" type="InvCantidad">
+                                            <param id="0" name="Pin to">InvHelper</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="851495004965558">
+                    <conditions>
+                        <condition id="0" name="On function" sid="957969979977568" type="f">
+                            <param id="0" name="Name">&quot;ActualizarInvTrampas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="118209459041608">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="117759830080152" type="ArrInv">
+                                    <param id="0" name="Axes">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="258973430344845">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="244074853997304" type="System">
+                                            <param id="0" name="First value">ArrInv.At(ArrInv.CurX,1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="366871695091313" type="InvHelper">
+                                            <param id="0" name="Y">Self.Y + 55</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="526910703728263" type="System">
+                                            <param id="0" name="Object to create">InvItemFondo</param>
+                                            <param id="1" name="Layer">&quot;Inventory&quot;</param>
+                                            <param id="2" name="X">351</param>
+                                            <param id="3" name="Y">71</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="374729978814633" type="InvItemFondo">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Value">int(ArrInv.CurValue)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="909679512559670" type="InvPickUp">
+                                            <param id="0" name="X">InvPickUp.basex</param>
+                                            <param id="1" name="Y">InvPickUp.basey</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="146983073360178" type="InvNombreItem">
+                                            <param id="0" name="X">Self.basex</param>
+                                            <param id="1" name="Y">Self.basey</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="605150409189102" type="InvNombreItem">
+                                            <param id="0" name="Text">tokenat(DicItems.Get((ArrInv.CurValue)),1,&quot;|&quot;)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="117051413580573" type="InvItem">
+                                            <param id="0" name="X">InvItem.basex</param>
+                                            <param id="1" name="Y">InvItem.basey</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="940371137705768" type="InvItem">
+                                            <param id="0" name="Frame number">int(ArrInv.CurValue)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="967981067922572" type="InvPickUp">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Value">int(ArrInv.CurValue)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="615405062129886" type="InvPickUp">
+                                            <param id="0" name="Instance variable">tipo</param>
+                                            <param id="1" name="Value">int(ArrInv.At(ArrInv.CurX,1))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="176859422779628" type="InvPickUp">
+                                            <param id="0" name="Instance variable">cantidad</param>
+                                            <param id="1" name="Value">int(ArrInv.At(ArrInv.CurX,2))</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="439765401579117" type="InvItem">
+                                            <param id="0" name="Pin to">InvHelper</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="201147491320610" type="InvItemFondo">
+                                            <param id="0" name="Pin to">InvHelper</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="238838767020226" type="InvPickUp">
+                                            <param id="0" name="Pin to">InvHelper</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="886029144981673" type="InvNombreItem">
+                                            <param id="0" name="Pin to">InvHelper</param>
+                                            <param id="1" name="Mode">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>

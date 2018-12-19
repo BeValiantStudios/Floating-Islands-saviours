@@ -736,7 +736,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TouchHelper" uid="156">
+                <instance type="ShopTouchHelper" uid="156">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>

@@ -1637,8 +1637,8 @@
         <instance type="DicItems" uid="0" />
         <instance type="ArrEquipo" uid="8">
             <properties>
-                <width>2</width>
-                <height>1</height>
+                <width>3</width>
+                <height>3</height>
                 <depth>1</depth>
             </properties>
         </instance>
