@@ -5,6 +5,357 @@
     <events>
         <variable constant="0" name="PlayerAngle" sid="448046092520706" static="0" type="number">0</variable>
         <comment>Character: Ira todo lo referente a mecanicas y animaciones de nuestro personaje principal</comment>
+        <event-group description="" sid="921708094023027" title="Inicio Arma">
+            <sub-events>
+                <event-block sid="485223439607093">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="623709580223891" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="646028115970149">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="222533845041428" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="361759694315342" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;Pistola&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="924762510371230">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="324509679331320" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">17</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="918362065406770" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;AK47&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="455278244575675">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="351619468341182" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">18</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="648641412335750" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;Escopeta&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="518521171127660">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="347680577561961" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">19</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="323177972649219" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;LanzaGranadas&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="437846339279780">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="405477931845119" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="233401297445602" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;LanzaCohetes&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="516820352217445">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="573248181851102" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">21</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="752972253313585" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;Laser&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="317032783793473">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="297905179061787" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">22</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="292013510825652" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;Sniper&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="454556392848048">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="410102417913943" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">23</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="142518025770356" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;Arco&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="406846421906477">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="361621636371361" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">24</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="505524152616234" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;LanzaLlamas&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="696674640088490">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="153262624327443" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">25</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="653830277136076" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;Espada&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="321522567660128">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="310395413131934" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="842096604704795" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;Pistola&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="451411053822770">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="623438015854256" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">17</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="473854425245754" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;AK47&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="965086473942037">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="490011138004342" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">18</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="408271170314908" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;Escopeta&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="749672508245397">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="796816814024383" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">19</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="540885326060159" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;LanzaGranadas&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="692339302914019">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="353484135691555" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="768699078025676" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;LanzaCohetes&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="905520700330374">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="686137926341446" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">21</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="294172577124852" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;Laser&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="172964602266103">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="544447215430006" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">22</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="905002980865413" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;Sniper&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="853537484515823">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="755117907904031" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">23</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="696575527949311" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;Arco&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="542464514487572">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="956294260667446" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">24</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="147942878275661" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;LanzaLlamas&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="441382024376154">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="617672808937745" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">25</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="178859244664660" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;Espada&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="480930603140915">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="329151780691479" type="ArrEquipo">
+                                    <param id="0" name="X">3</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">28</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="300256790214539" type="Player">
+                                    <param id="0" name="Instance variable">TrampaActual</param>
+                                    <param id="1" name="Value">&quot;MinaExplosiva&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="217162943260200">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="314662363808255" type="ArrEquipo">
+                                    <param id="0" name="X">3</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">29</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="720698537527466" type="Player">
+                                    <param id="0" name="Instance variable">TrampaActual</param>
+                                    <param id="1" name="Value">&quot;MinaElectrica&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="912608420243648">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="750954211298669" type="Player">
+                                    <param id="0" name="Instance variable">ArmaActual</param>
+                                    <param id="1" name="Value">Player.Arma1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="693525521275843" title="Animation">
             <sub-events>
                 <event-block sid="264955172274416">
@@ -133,7 +484,7 @@
                         <variable constant="0" name="touchID" sid="266049554091838" static="1" type="number">-1</variable>
                         <variable constant="0" name="dist" sid="480389966878137" static="0" type="number">0</variable>
                         <variable constant="0" name="cangle" sid="557968449447053" static="0" type="number">0</variable>
-                        <variable comment="distance the stick can move from center" constant="0" name="radius" sid="651869691076604" static="1" type="number">15</variable>
+                        <variable comment="distance the stick can move from center" constant="0" name="radius" sid="651869691076604" static="1" type="number">22</variable>
                         <event-block sid="590838719280749">
                             <conditions>
                                 <condition id="3" name="On touched object" sid="269348562556703" type="Touch">
@@ -296,7 +647,7 @@
                         <variable constant="0" name="touchID2" sid="826293763360464" static="1" type="number">-1</variable>
                         <variable constant="0" name="dist2" sid="201874611327897" static="0" type="number">0</variable>
                         <variable constant="0" name="cangle2" sid="892875718908227" static="0" type="number">0</variable>
-                        <variable comment="distance the stick can move from center" constant="0" name="radius2" sid="718013833871812" static="1" type="number">15</variable>
+                        <variable comment="distance the stick can move from center" constant="0" name="radius2" sid="718013833871812" static="1" type="number">22</variable>
                         <event-block sid="261839374062681">
                             <conditions>
                                 <condition id="2" inverted="1" name="Is in touch" sid="256442157812799" type="Touch" />
@@ -634,7 +985,7 @@
                                         <event-block bookmark="1" sid="134930450416012">
                                             <conditions>
                                                 <condition id="-6" name="Every X seconds" sid="511295757160363" type="System">
-                                                    <param id="0" name="Interval (seconds)">0.8</param>
+                                                    <param id="0" name="Interval (seconds)">0.45</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -670,7 +1021,7 @@
                                         <event-block bookmark="1" sid="388763581495758">
                                             <conditions>
                                                 <condition id="-6" name="Every X seconds" sid="511613257521127" type="System">
-                                                    <param id="0" name="Interval (seconds)">1.2</param>
+                                                    <param id="0" name="Interval (seconds)">0.85</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -1148,6 +1499,16 @@
                                         <action id="-9" name="Destroy" sid="997037776546067" type="Explosion" />
                                     </actions>
                                 </event-block>
+                                <event-block sid="136111488083834">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="193988398588205" type="ExplosionRayo">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="143032276482401" type="ExplosionRayo" />
+                                    </actions>
+                                </event-block>
                                 <event-block sid="561764746746387">
                                     <conditions>
                                         <condition id="1" name="Is overlapping another object" sid="944796775915753" type="Fuego">
@@ -1238,6 +1599,27 @@
                                         <action id="-12" name="Subtract from" sid="990762980342023" type="Enemigos">
                                             <param id="0" name="Instance variable">Vida</param>
                                             <param id="1" name="Value">LanzaCohetes.Dano</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="481847734483580">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="663783036107353" type="ExplosionRayo">
+                                            <param id="0" name="Object">Enemigos</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pathfinding" id="2" name="Stop" sid="710954851577531" type="Enemigos" />
+                                        <action behavior="Timer" id="1" name="Stop timer" sid="104961406895645" type="Enemigos">
+                                            <param id="0" name="Tag">&quot;Search&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="499204400551657" type="System">
+                                            <param id="0" name="Seconds">3.0</param>
+                                        </action>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="582504791059373" type="Enemigos">
+                                            <param id="0" name="Duration">Self.SearchTime</param>
+                                            <param id="1" name="Type">1</param>
+                                            <param id="2" name="Tag">&quot;Search&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2019,5 +2401,95 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="934768839115605">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="609024563849519" type="MinaExplosiva">
+                    <param id="0" name="Object">Enemigos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="923022379364819" type="MinaExplosiva">
+                    <param id="0" name="Object">Explosion</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="626236372805476" type="MinaExplosiva" />
+            </actions>
+        </event-block>
+        <event-block sid="476443659930966">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="561392900509446" type="MinaElectrica">
+                    <param id="0" name="Object">Enemigos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="795367776624036" type="MinaElectrica">
+                    <param id="0" name="Object">ExplosionRayo</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="949182590766732" type="MinaElectrica" />
+            </actions>
+        </event-block>
+        <event-block sid="481015871645443">
+            <conditions>
+                <condition id="17" name="On tap object" sid="185064412094325" type="Touch">
+                    <param id="0" name="Object">Trampa</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="795710654027289" type="Player">
+                    <param id="0" name="Instance variable">TrampaActual</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;MinaExplosiva&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="255339365152372" type="Player">
+                    <param id="0" name="Object">MinaExplosiva</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="522484670897631" type="Trampa">
+                    <param id="0" name="X">-271</param>
+                    <param id="1" name="Y">679</param>
+                </action>
+                <action id="-16" name="Wait" sid="458725823018955" type="System">
+                    <param id="0" name="Seconds">15</param>
+                </action>
+                <action id="-3" name="Set position" sid="825102187590274" type="Trampa">
+                    <param id="0" name="X">483</param>
+                    <param id="1" name="Y">63</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="738709500340771">
+            <conditions>
+                <condition id="17" name="On tap object" sid="266388968076703" type="Touch">
+                    <param id="0" name="Object">Trampa</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="834097820153120" type="Player">
+                    <param id="0" name="Instance variable">TrampaActual</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;MinaElectrica&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="241554977786950" type="Player">
+                    <param id="0" name="Object">MinaElectrica</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="380977443994350" type="Trampa">
+                    <param id="0" name="X">-271</param>
+                    <param id="1" name="Y">679</param>
+                </action>
+                <action id="-16" name="Wait" sid="237472474012331" type="System">
+                    <param id="0" name="Seconds">15</param>
+                </action>
+                <action id="-3" name="Set position" sid="220837634379354" type="Trampa">
+                    <param id="0" name="X">483</param>
+                    <param id="1" name="Y">63</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

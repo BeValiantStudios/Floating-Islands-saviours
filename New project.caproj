@@ -296,6 +296,7 @@
                     <instance-variable name="Arma1" sid="701170010603947" type="string" />
                     <instance-variable name="Arma2" sid="955045564750282" type="string" />
                     <instance-variable name="ArmaPrevia" sid="981107657618882" type="string" />
+                    <instance-variable name="TrampaActual" sid="150396175001343" type="string" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="ScrollTo" sid="150732981857979">
@@ -936,7 +937,7 @@
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
-                        <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="793498091201357" speed="60">
+                        <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="793498091201357" speed="10">
                             <frame duration="1" hotspotX="0.975" hotspotY="0.5625">
                                 <collision-poly>
                                     <point x="1" y="1" />
@@ -983,133 +984,77 @@
                 <object-type name="Explosion" sid="740654597139184">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="16" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="739864156545181" speed="12">
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\0.png">
+                        <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="739864156545181" speed="12">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
+                                    <point x="0.234375" y="0.242857" />
+                                    <point x="0.78125" y="0.242857" />
+                                    <point x="0.78125" y="0.757143" />
+                                    <point x="0.234375" y="0.757143" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\1.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
+                                    <point x="0.234375" y="0.242857" />
+                                    <point x="0.78125" y="0.242857" />
+                                    <point x="0.78125" y="0.757143" />
+                                    <point x="0.234375" y="0.757143" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\2.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
+                                    <point x="0.234375" y="0.242857" />
+                                    <point x="0.78125" y="0.242857" />
+                                    <point x="0.78125" y="0.757143" />
+                                    <point x="0.234375" y="0.757143" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\3.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
+                                    <point x="0.234375" y="0.242857" />
+                                    <point x="0.78125" y="0.242857" />
+                                    <point x="0.78125" y="0.757143" />
+                                    <point x="0.234375" y="0.757143" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\4.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
+                                    <point x="0.234375" y="0.242857" />
+                                    <point x="0.78125" y="0.242857" />
+                                    <point x="0.78125" y="0.757143" />
+                                    <point x="0.234375" y="0.757143" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\5.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
+                                    <point x="0.234375" y="0.242857" />
+                                    <point x="0.78125" y="0.242857" />
+                                    <point x="0.78125" y="0.757143" />
+                                    <point x="0.234375" y="0.757143" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\6.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
+                                    <point x="0.234375" y="0.242857" />
+                                    <point x="0.78125" y="0.242857" />
+                                    <point x="0.78125" y="0.757143" />
+                                    <point x="0.234375" y="0.757143" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\7.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
+                                    <point x="0.234375" y="0.242857" />
+                                    <point x="0.78125" y="0.242857" />
+                                    <point x="0.78125" y="0.757143" />
+                                    <point x="0.234375" y="0.757143" />
                                 </collision-poly>
                             </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\8.png">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\9.png">
-                                <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\10.png">
-                                <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\11.png">
-                                <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\12.png">
-                                <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\13.png">
-                                <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\14.png">
-                                <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.53125" hotspotY="0.569444" original-source="C:\Users\Vermillion\Desktop\Explosion\15.png">
-                                <collision-poly>
-                                    <point x="0.28125" y="0.375" />
-                                    <point x="0.796875" y="0.375" />
-                                    <point x="0.796875" y="0.763889" />
-                                    <point x="0.28125" y="0.763889" />
+                                    <point x="0.234375" y="0.242857" />
+                                    <point x="0.78125" y="0.242857" />
+                                    <point x="0.78125" y="0.757143" />
+                                    <point x="0.234375" y="0.757143" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -1476,6 +1421,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="569481932106127" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\trap.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TrampaFake" sid="293895413447067">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703325410083535" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\trap.png" />
                     </animation>
                 </animation-folder>
@@ -2794,6 +2747,69 @@
                 <type>InvNombreItem</type>
                 <type>InvCantidad</type>
             </container>
+        </object-type>
+        <object-type name="MinaExplosiva" sid="573264514876454">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="332159171941420" speed="5">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="0.571429" original-source="C:\Users\Vermillion\Desktop\mina explosiva.png">
+                        <collision-poly>
+                            <point x="0.0769231" y="0.142857" />
+                            <point x="0.461538" y="0" />
+                            <point x="0.923077" y="0.142857" />
+                            <point x="1" y="0.428571" />
+                            <point x="0.923077" y="0.857143" />
+                            <point x="0.461538" y="1" />
+                            <point x="0.0769231" y="0.857143" />
+                            <point x="0" y="0.428571" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MinaElectrica" sid="904040534204397">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="994866321293725" speed="5">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="0.571429" original-source="C:\Users\Vermillion\Desktop\mina electrica.png">
+                        <collision-poly>
+                            <point x="0.0769231" y="0.142857" />
+                            <point x="0.461538" y="0" />
+                            <point x="0.923077" y="0.142857" />
+                            <point x="1" y="0.428571" />
+                            <point x="0.923077" y="0.857143" />
+                            <point x="0.461538" y="1" />
+                            <point x="0.0769231" y="0.857143" />
+                            <point x="0" y="0.428571" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ExplosionRayo" sid="222841115566996">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="18" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="138888179237888" speed="20">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\7.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\8.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\9.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\7.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\8.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\9.png" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
