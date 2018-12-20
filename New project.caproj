@@ -707,7 +707,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232927597250565" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.501023" hotspotY="0.503817" original-source="C:\Users\Vermillion\Desktop\LOGOO.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1439,101 +1439,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927855619317995" speed="10">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.3125" y="0.3125" />
-                                <point x="0.5" y="0.09375" />
-                                <point x="0.65625" y="0.34375" />
-                                <point x="0.59375" y="0.5" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.5" y="0.9375" />
-                                <point x="0.4375" y="0.5625" />
-                                <point x="0.34375" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.4375" y="0.4375" />
-                                <point x="0.5" y="0.09375" />
-                                <point x="0.59375" y="0.40625" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.5" y="0.65625" />
-                                <point x="0.46875" y="0.53125" />
-                                <point x="0.34375" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.34375" y="0.34375" />
-                                <point x="0.5" y="0.09375" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.5" y="0.65625" />
-                                <point x="0.46875" y="0.53125" />
-                                <point x="0.3125" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.375" y="0.375" />
-                                <point x="0.5" y="0.09375" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.6875" y="0.5" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.5" y="0.65625" />
-                                <point x="0.21875" y="0.78125" />
-                                <point x="0.375" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.34375" y="0.34375" />
-                                <point x="0.5" y="0.09375" />
-                                <point x="0.625" y="0.375" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.5" y="0.84375" />
-                                <point x="0.46875" y="0.53125" />
-                                <point x="0.28125" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.3125" y="0.3125" />
-                                <point x="0.5" y="0.09375" />
-                                <point x="0.625" y="0.375" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.5" y="0.90625" />
-                                <point x="0.46875" y="0.53125" />
-                                <point x="0.25" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.3125" y="0.3125" />
-                                <point x="0.5" y="0.09375" />
-                                <point x="0.625" y="0.375" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.5" y="0.6875" />
-                                <point x="0.46875" y="0.53125" />
-                                <point x="0.21875" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.34375" y="0.34375" />
-                                <point x="0.5" y="0.09375" />
-                                <point x="0.625" y="0.375" />
-                                <point x="0.8125" y="0.5" />
-                                <point x="0.5" y="0.5" />
-                                <point x="0.5" y="0.6875" />
-                                <point x="0.46875" y="0.53125" />
-                                <point x="0.28125" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1541,26 +1454,20 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="368551449579901" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\conejo\iddle_1.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.911765" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\conejo\iddle_1.png">
                             <collision-poly>
-                                <point x="0.5" y="0.147059" />
-                                <point x="0.9" y="0.5" />
-                                <point x="0.8" y="0.882353" />
-                                <point x="0.5" y="0.941176" />
-                                <point x="0.2" y="0.882353" />
-                                <point x="0.1" y="0.5" />
+                                <point x="0.1" y="0.441176" />
+                                <point x="0.9" y="0.441176" />
+                                <point x="0.9" y="1" />
+                                <point x="0.1" y="1" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\conejo\iddle_2.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.911765" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\conejo\iddle_2.png">
                             <collision-poly>
-                                <point x="0.35" y="0.205882" />
-                                <point x="0.5" y="0.235294" />
-                                <point x="0.5" y="0.294118" />
-                                <point x="0.9" y="0.5" />
-                                <point x="0.85" y="0.911765" />
-                                <point x="0.5" y="0.941176" />
-                                <point x="0.15" y="0.911765" />
-                                <point x="0.15" y="0.5" />
+                                <point x="0.1" y="0.441176" />
+                                <point x="0.9" y="0.441176" />
+                                <point x="0.9" y="1" />
+                                <point x="0.1" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1889,7 +1796,7 @@
                         </container>
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="807496407099216" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\marco.png" />
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -1918,7 +1825,7 @@
                         </container>
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="608159761211153" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="C:\Users\Vermillion\Desktop\buy.png" />
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -1930,7 +1837,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="875849246760207" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.501031" hotspotY="0.502242" original-source="C:\Users\Vermillion\Desktop\Shop.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1950,7 +1857,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="833184657386028" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="C:\Users\Vermillion\Desktop\exiit.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1998,7 +1905,7 @@
                         </container>
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="286949123721466" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.50211" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\marco2.png" />
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -2123,7 +2030,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="834071453113199" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.501031" hotspotY="0.502242" original-source="C:\Users\Vermillion\Desktop\Inventario.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -2157,8 +2064,10 @@
                         <type>InvSlotSpirte</type>
                     </container>
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="267234728306278" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="267234728306278" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\SlotArma1.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\SlotArma2.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\slotTrampa.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -2175,7 +2084,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="588726900285423" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="C:\Users\Vermillion\Desktop\exiit.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -2230,7 +2139,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="829561469665138" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.501031" hotspotY="0.502242" original-source="C:\Users\Vermillion\Desktop\Crafting.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -2255,7 +2164,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="237813264079337" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" original-source="C:\Users\Vermillion\Desktop\exiit.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -2354,7 +2263,7 @@
                     </container>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="619900549776290" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\UltimoFondo.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -2387,7 +2296,7 @@
                     </container>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="611963576451071" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\craft.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -2808,6 +2717,22 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\7.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\8.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\Rayo\9.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TIENDA" sid="578563950497464">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="997905148660512" speed="5">
+                    <frame duration="1" hotspotX="0.501031" hotspotY="0.502242" original-source="C:\Users\Vermillion\Desktop\TIENDA.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fondooo" sid="267547461481278">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="451282239387940" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Vermillion\Desktop\fondooo.png" />
                 </animation>
             </animation-folder>
         </object-type>

@@ -18,6 +18,9 @@
                     <param id="0" name="Variable">CantidadEnemigosOleada</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="737152812806408" type="EnemigoPrototipo">
+                    <param id="0" name="Obstacle">TilemapSolid</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="499167455411233">
@@ -31,6 +34,7 @@
                     <param id="0" name="X">Player.X</param>
                     <param id="1" name="Y">Player.Y</param>
                 </action>
+                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="246446258169418" type="Enemigos" />
             </actions>
         </event-block>
         <event-block sid="188437758324480">

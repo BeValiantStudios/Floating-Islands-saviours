@@ -392,12 +392,12 @@
                                 <cell-size>16</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>160</max-speed>
-                                <acceleration>500</acceleration>
-                                <deceleration>2000</deceleration>
-                                <rotate-speed>135</rotate-speed>
+                                <max-speed>100</max-speed>
+                                <acceleration>300</acceleration>
+                                <deceleration>100</deceleration>
+                                <rotate-speed>360</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -413,7 +413,7 @@
                         <height>34</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.911764681</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -629,11 +629,11 @@
                         <x>-84</x>
                         <y>67</y>
                         <z>0</z>
-                        <width>35.781463623</width>
-                        <height>33.298553467</height>
+                        <width>35</width>
+                        <height>35</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.514285743</hotspotX>
+                        <hotspotY>0.514285743</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -651,11 +651,11 @@
                         <x>-153</x>
                         <y>382</y>
                         <z>0</z>
-                        <width>35.480987549</width>
-                        <height>35.480987549</height>
+                        <width>35</width>
+                        <height>35</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.514285743</hotspotX>
+                        <hotspotY>0.514285743</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -673,11 +673,11 @@
                         <x>-253</x>
                         <y>251</y>
                         <z>0</z>
-                        <width>485.329864502</width>
-                        <height>223.920928955</height>
+                        <width>941.539916992</width>
+                        <height>199.737472534</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.501030922</hotspotX>
+                        <hotspotY>0.502242148</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -861,8 +861,8 @@
                         <x>-120</x>
                         <y>115</y>
                         <z>0</z>
-                        <width>276.699310303</width>
-                        <height>50.68460083</height>
+                        <width>276</width>
+                        <height>50</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1436,6 +1436,228 @@
                         <z>0</z>
                         <width>12</width>
                         <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="InvItemFondo" uid="107">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <basex>351</basex>
+                        <basey>71</basey>
+                        <id>0</id>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-177</x>
+                        <y>457</y>
+                        <z>0</z>
+                        <width>237</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502109706</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CrfItemFondo" uid="113">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <basex>255</basex>
+                        <basey>71</basey>
+                        <id>0</id>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-658</x>
+                        <y>35</y>
+                        <z>0</z>
+                        <width>430</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CrfCerrar" uid="116">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-277</x>
+                        <y>396</y>
+                        <z>0</z>
+                        <width>35</width>
+                        <height>35</height>
+                        <depth>0</depth>
+                        <hotspotX>0.514285743</hotspotX>
+                        <hotspotY>0.514285743</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="InvCerrar" uid="117">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-374</x>
+                        <y>389</y>
+                        <z>0</z>
+                        <width>35</width>
+                        <height>35</height>
+                        <depth>0</depth>
+                        <hotspotX>0.514285743</hotspotX>
+                        <hotspotY>0.514285743</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ShopCerrar" uid="119">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-220</x>
+                        <y>410</y>
+                        <z>0</z>
+                        <width>35</width>
+                        <height>35</height>
+                        <depth>0</depth>
+                        <hotspotX>0.514285743</hotspotX>
+                        <hotspotY>0.514285743</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ShopBuy" uid="165">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <basex>443</basex>
+                        <basey>71</basey>
+                        <id>0</id>
+                        <price>0</price>
+                        <tipo>0</tipo>
+                        <cantidad>0</cantidad>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-250</x>
+                        <y>37</y>
+                        <z>0</z>
+                        <width>35</width>
+                        <height>35</height>
+                        <depth>0</depth>
+                        <hotspotX>0.514285743</hotspotX>
+                        <hotspotY>0.514285743</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="InvSlotEquipo" uid="206">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ID>0</ID>
+                        <Tipo>0</Tipo>
+                        <basey>71</basey>
+                        <basex>186</basex>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-314</x>
+                        <y>-43</y>
+                        <z>0</z>
+                        <width>52</width>
+                        <height>52</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CrfCraft" uid="207">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <basex>427</basex>
+                        <basey>67</basey>
+                        <id>0</id>
+                        <price>0</price>
+                        <tipo>0</tipo>
+                        <cantidad>0</cantidad>
+                        <idArray>0</idArray>
+                        <craft></craft>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-258</x>
+                        <y>-59</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

@@ -602,12 +602,12 @@
                                 <cell-size>16</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>160</max-speed>
-                                <acceleration>500</acceleration>
-                                <deceleration>2000</deceleration>
-                                <rotate-speed>135</rotate-speed>
+                                <max-speed>100</max-speed>
+                                <acceleration>300</acceleration>
+                                <deceleration>100</deceleration>
+                                <rotate-speed>360</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
