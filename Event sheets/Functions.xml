@@ -16,14 +16,22 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-10" name="Add to" sid="844253208018023" type="System">
+                            <param id="0" name="Variable">a4</param>
+                            <param id="1" name="Value">f.Param(0)  &amp; &quot;-&quot; &amp; f.Param(1) &amp; &quot;__&quot;</param>
+                        </action>
                         <action id="-9" name="Set value" sid="143681390696044" type="System">
                             <param id="0" name="Variable">ItemsRemovidos</param>
-                            <param id="1" name="Value">min(ArrInv.At(f.Param(0),1),f.Param(1))</param>
+                            <param id="1" name="Value">min(ArrInv.At(f.Param(0),2),f.Param(1))</param>
                         </action>
                         <action id="3" name="Set at XY" sid="522829568738136" type="ArrInv">
                             <param id="0" name="X">f.Param(0)</param>
-                            <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">Self.At(f.Param(0),1)  - ItemsRemovidos</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">Self.At(f.Param(0),2)  - ItemsRemovidos</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="698028272467703" type="System">
+                            <param id="0" name="Variable">a3</param>
+                            <param id="1" name="Value">ArrInv.At(f.Param(0),2)  - ItemsRemovidos</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -31,7 +39,7 @@
                             <conditions>
                                 <condition id="1" name="Compare at XY" sid="659241387816660" type="ArrInv">
                                     <param id="0" name="X">f.Param(0)</param>
-                                    <param id="1" name="Y">1</param>
+                                    <param id="1" name="Y">2</param>
                                     <param id="2" name="Comparison">0</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
@@ -53,15 +61,12 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="779889748868032">
+                        <event-block sid="367664637622981">
                             <conditions />
                             <actions>
-                                <action id="0" name="Call function" sid="922887920173734" type="f">
-                                    <param id="0" name="Name">&quot;ActualizarInventario&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="1" name="Set return value" sid="588507414451505" type="f">
-                                    <param id="0" name="Value">ItemsRemovidos</param>
+                                <action id="-9" name="Set value" sid="459673034157140" type="System">
+                                    <param id="0" name="Variable">a6</param>
+                                    <param id="1" name="Value">ArrInv.At(0,0) &amp;&quot;|&quot;&amp; ArrInv.At(0,1) &amp;&quot;|&quot;&amp; ArrInv.At(0,2) &amp;&quot;|&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -230,7 +235,7 @@
                                     <conditions>
                                         <condition id="4" name="Compare current value" sid="834473205370536" type="ArrInv">
                                             <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Value">f.Param(0)</param>
+                                            <param id="1" name="Value">int(f.Param(0))</param>
                                         </condition>
                                         <condition id="-8" name="Compare two values" sid="337461219563091" type="System">
                                             <param id="0" name="First value">ArrInv.At(ArrInv.CurX ,2)</param>
@@ -297,13 +302,17 @@
                                             <conditions>
                                                 <condition id="4" name="Compare current value" sid="533347635744963" type="ArrInv">
                                                     <param id="0" name="Comparison">0</param>
-                                                    <param id="1" name="Value">int(tokenat(f.Param(0),((loopindex(&quot;Buscador&quot;)-1)*2),SEP))</param>
+                                                    <param id="1" name="Value">int(tokenat(f.Param(0),((loopindex(&quot;Buscador&quot;)-1)*2),&quot;|&quot;))</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
+                                                <action id="-10" name="Add to" sid="586854667901498" type="System">
+                                                    <param id="0" name="Variable">a5</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
                                                 <action id="0" name="Call function" sid="168587423189588" type="f">
                                                     <param id="0" name="Name">&quot;EliminarDeInventario&quot;</param>
-                                                    <param id="1" name="Parameter {n}">ArrInv.CurX{###}int(tokenat(f.Param(0),((loopindex(&quot;Buscador&quot;)*2)-1),SEP))</param>
+                                                    <param id="1" name="Parameter {n}">ArrInv.CurX{###}int(tokenat(f.Param(0),((loopindex(&quot;Buscador&quot;)*2)-1),&quot;|&quot;))</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -415,7 +424,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="242503781117423" type="f">
                                     <param id="0" name="Name">&quot;BuscarItem&quot;</param>
-                                    <param id="1" name="Parameter {n}">tokenat(f.Param(0),(loopindex(&quot;RecorrerLista&quot;)*2)-1,&quot;|&quot;){###}tokenat(f.Param(0),(loopindex(&quot;RecorrerLista&quot;)*2)-2,&quot;|&quot;)</param>
+                                    <param id="1" name="Parameter {n}">tokenat(f.Param(0),(loopindex(&quot;RecorrerLista&quot;)*2)-2,&quot;|&quot;){###}tokenat(f.Param(0),(loopindex(&quot;RecorrerLista&quot;)*2)-1,&quot;|&quot;)</param>
                                 </action>
                             </actions>
                             <sub-events>

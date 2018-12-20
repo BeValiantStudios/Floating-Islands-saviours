@@ -1621,7 +1621,7 @@
         <instance type="Chonks" uid="35" />
         <instance type="ArrInv" uid="44">
             <properties>
-                <width>10</width>
+                <width>30</width>
                 <height>3</height>
                 <depth>1</depth>
             </properties>

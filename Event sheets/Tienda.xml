@@ -6,6 +6,10 @@
         <include>Functions</include>
         <variable constant="0" name="a" sid="919971367242208" static="0" type="text"></variable>
         <variable constant="0" name="a2" sid="445372199348154" static="0" type="text"></variable>
+        <variable constant="0" name="a3" sid="214315263436108" static="0" type="text"></variable>
+        <variable constant="0" name="a4" sid="537633296053818" static="0" type="text"></variable>
+        <variable constant="0" name="a5" sid="155464338698961" static="0" type="text"></variable>
+        <variable constant="0" name="a6" sid="793458502662520" static="0" type="text"></variable>
         <variable constant="0" name="PickedItem" sid="206578781829441" static="0" type="text"></variable>
         <variable constant="1" name="DicArmas" sid="974774594058334" static="0" type="text">{&quot;c2dictionary&quot;:true,&quot;data&quot;:{&quot;16&quot;:&quot;1|3000&quot;,&quot;19&quot;:&quot;1|4500&quot;,&quot;21&quot;:&quot;1|5000&quot;,&quot;23&quot;:&quot;1|2000&quot;}}</variable>
         <variable constant="1" name="DicMateriales" sid="714762938738338" static="0" type="text">{&quot;c2dictionary&quot;:true,&quot;data&quot;:{&quot;1&quot;:&quot;1|300&quot;,&quot;2&quot;:&quot;1|200&quot;,&quot;3&quot;:&quot;1|300&quot;,&quot;4&quot;:&quot;1|400&quot;,&quot;5&quot;:&quot;1|300&quot;,&quot;6&quot;:&quot;1|600&quot;,&quot;7&quot;:&quot;1|500&quot;,&quot;8&quot;:&quot;1|800&quot;}}</variable>
@@ -814,6 +818,14 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="678477210520296" type="f">
+                                    <param id="0" name="Name">&quot;BuscarEliminar&quot;</param>
+                                    <param id="1" name="Parameter {n}">CrfCraft.craft</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="777263083688450" type="System">
+                                    <param id="0" name="Variable">a6</param>
+                                    <param id="1" name="Value">ArrInv.At(0,0) &amp;&quot;|&quot;&amp; ArrInv.At(0,1) &amp;&quot;|&quot;&amp; ArrInv.At(0,2) &amp;&quot;|&quot;</param>
+                                </action>
                                 <action id="0" name="Call function" sid="466134860928448" type="f">
                                     <param id="0" name="Name">&quot;PickearItem&quot;</param>
                                     <param id="1" name="Parameter {n}">CrfCraft.id{###}CrfCraft.tipo{###}CrfCraft.cantidad</param>
@@ -1477,7 +1489,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment></comment>
+                <comment>Craft</comment>
                 <event-block sid="361208108110281">
                     <conditions>
                         <condition id="0" name="On function" sid="439826357694830" type="f">
