@@ -2272,6 +2272,407 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
+            <object-folder name="Crafting">
+                <object-type name="CrfFondo" sid="197365064437466">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="829561469665138" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CrfTouchHelper" sid="355706594089916">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="IniX" sid="371598420882821" type="number" />
+                        <instance-variable name="IniY" sid="354475007479037" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="DragDrop" sid="770398957267125">
+                            <behavior id="DragnDrop" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726747394228549" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CrfCerrar" sid="701140985180703">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="237813264079337" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CrfHelper" sid="521248302718538">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="previousy" sid="612522371162544" type="number" />
+                        <instance-variable name="currenty" sid="761298017618747" type="number" />
+                        <instance-variable name="IniY" sid="615474622289427" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="CustomMovement" sid="135129243917891">
+                            <behavior id="custom" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="618297651683503" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CrfItem" sid="975590859084882">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="basex" sid="921778319099550" type="number" />
+                        <instance-variable name="basey" sid="264741230405459" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="371950826581202">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>CrfItemFondo</type>
+                        <type>CrfCraft1</type>
+                        <type>CrfCraft2</type>
+                        <type>CrfCraft3</type>
+                        <type>CrfCraft4</type>
+                        <type>CrfItem</type>
+                        <type>CrfCraft</type>
+                        <type>CrfNombre</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="27" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="507412764545533" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\pistolaaaa.png" />
+                            <frame duration="1" hotspotX="0.518519" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\ak47.png" />
+                            <frame duration="1" hotspotX="0.517241" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\rifle.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\lanza granah.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\la bazuuka.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\pistola laser.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\sniper.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Vermillion\Desktop\arco.png" />
+                            <frame duration="1" hotspotX="0.517241" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\lanza llamas.png" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\Vermillion\Desktop\espada.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CrfItemFondo" sid="949677453235621">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="basex" sid="772695052894520" type="number" />
+                        <instance-variable name="basey" sid="509069593448301" type="number" />
+                        <instance-variable name="id" sid="704783578862493" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="723202846182112">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>CrfItemFondo</type>
+                        <type>CrfCraft1</type>
+                        <type>CrfCraft2</type>
+                        <type>CrfCraft3</type>
+                        <type>CrfCraft4</type>
+                        <type>CrfItem</type>
+                        <type>CrfCraft</type>
+                        <type>CrfNombre</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="619900549776290" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CrfCraft" sid="238832109407993">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="basex" sid="333338459648635" type="number" />
+                        <instance-variable name="basey" sid="870294294499730" type="number" />
+                        <instance-variable name="id" sid="757988225322810" type="number" />
+                        <instance-variable name="price" sid="792591783003613" type="number" />
+                        <instance-variable name="tipo" sid="573386864469790" type="number" />
+                        <instance-variable name="cantidad" sid="137012483017574" type="number" />
+                        <instance-variable name="idArray" sid="672722125304751" type="number" />
+                        <instance-variable name="craft" sid="676478783024167" type="string" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="431579802408005">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>CrfItemFondo</type>
+                        <type>CrfCraft1</type>
+                        <type>CrfCraft2</type>
+                        <type>CrfCraft3</type>
+                        <type>CrfCraft4</type>
+                        <type>CrfItem</type>
+                        <type>CrfCraft</type>
+                        <type>CrfNombre</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="611963576451071" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CrfCraft1" sid="583115575304537">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="basex" sid="128136626831446" type="number" />
+                        <instance-variable name="basey" sid="729727229766913" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="564709611633971">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>CrfItemFondo</type>
+                        <type>CrfCraft1</type>
+                        <type>CrfCraft2</type>
+                        <type>CrfCraft3</type>
+                        <type>CrfCraft4</type>
+                        <type>CrfItem</type>
+                        <type>CrfCraft</type>
+                        <type>CrfNombre</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="27" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903429334291750" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\pistolaaaa.png" />
+                            <frame duration="1" hotspotX="0.518519" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\ak47.png" />
+                            <frame duration="1" hotspotX="0.517241" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\rifle.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\lanza granah.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\la bazuuka.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\pistola laser.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\sniper.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Vermillion\Desktop\arco.png" />
+                            <frame duration="1" hotspotX="0.517241" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\lanza llamas.png" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\Vermillion\Desktop\espada.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CrfCraft2" sid="313323425456712">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="basex" sid="189467073466139" type="number" />
+                        <instance-variable name="basey" sid="706105989483006" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="510071082575413">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>CrfItemFondo</type>
+                        <type>CrfCraft1</type>
+                        <type>CrfCraft2</type>
+                        <type>CrfCraft3</type>
+                        <type>CrfCraft4</type>
+                        <type>CrfItem</type>
+                        <type>CrfCraft</type>
+                        <type>CrfNombre</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="27" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="204676647543599" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\pistolaaaa.png" />
+                            <frame duration="1" hotspotX="0.518519" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\ak47.png" />
+                            <frame duration="1" hotspotX="0.517241" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\rifle.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\lanza granah.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\la bazuuka.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\pistola laser.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\sniper.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Vermillion\Desktop\arco.png" />
+                            <frame duration="1" hotspotX="0.517241" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\lanza llamas.png" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\Vermillion\Desktop\espada.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CrfCraft3" sid="187480404886851">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="basex" sid="720103566289769" type="number" />
+                        <instance-variable name="basey" sid="444894133490784" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="985016527377592">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>CrfItemFondo</type>
+                        <type>CrfCraft1</type>
+                        <type>CrfCraft2</type>
+                        <type>CrfCraft3</type>
+                        <type>CrfCraft4</type>
+                        <type>CrfItem</type>
+                        <type>CrfCraft</type>
+                        <type>CrfNombre</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="27" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="258810905297201" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\pistolaaaa.png" />
+                            <frame duration="1" hotspotX="0.518519" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\ak47.png" />
+                            <frame duration="1" hotspotX="0.517241" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\rifle.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\lanza granah.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\la bazuuka.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\pistola laser.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\sniper.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Vermillion\Desktop\arco.png" />
+                            <frame duration="1" hotspotX="0.517241" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\lanza llamas.png" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\Vermillion\Desktop\espada.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CrfCraft4" sid="902311166310044">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="basex" sid="872317481951595" type="number" />
+                        <instance-variable name="basey" sid="779978279777310" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="611832814182633">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>CrfItemFondo</type>
+                        <type>CrfCraft1</type>
+                        <type>CrfCraft2</type>
+                        <type>CrfCraft3</type>
+                        <type>CrfCraft4</type>
+                        <type>CrfItem</type>
+                        <type>CrfCraft</type>
+                        <type>CrfNombre</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="27" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="807784339702089" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\pistolaaaa.png" />
+                            <frame duration="1" hotspotX="0.518519" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\ak47.png" />
+                            <frame duration="1" hotspotX="0.517241" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\rifle.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\lanza granah.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\la bazuuka.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\pistola laser.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\sniper.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\Vermillion\Desktop\arco.png" />
+                            <frame duration="1" hotspotX="0.517241" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\lanza llamas.png" />
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\Vermillion\Desktop\espada.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CrfNombre" sid="736162508989129">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="basex" sid="371314085874554" type="number" />
+                        <instance-variable name="basey" sid="399450657840748" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="415776583053866">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <container>
+                        <type>CrfItemFondo</type>
+                        <type>CrfCraft1</type>
+                        <type>CrfCraft2</type>
+                        <type>CrfCraft3</type>
+                        <type>CrfCraft4</type>
+                        <type>CrfItem</type>
+                        <type>CrfCraft</type>
+                        <type>CrfNombre</type>
+                    </container>
+                </object-type>
+            </object-folder>
             <object-type name="CraftBut" sid="599321056020579">
                 <plugin id="Text" />
             </object-type>

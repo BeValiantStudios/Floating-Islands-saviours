@@ -55,6 +55,10 @@
                     <param id="0" name="Layer">&quot;Shop&quot;</param>
                     <param id="1" name="Visibility">0</param>
                 </action>
+                <action id="-4" name="Set layer visible" sid="475842610345559" type="System">
+                    <param id="0" name="Layer">&quot;Craft&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
                 <action behavior="DragDrop" id="0" name="Set enabled" sid="407904766606366" type="ShopTouchHelper">
                     <param id="0" name="State">0</param>
                 </action>
@@ -119,7 +123,20 @@
                             <param id="0" name="Object">CraftBut</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Call function" sid="871142371351606" type="f">
+                            <param id="0" name="Name">&quot;CleanCrf&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="236411241461200" type="f">
+                            <param id="0" name="Name">&quot;ActualizarCrf&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="634529643828767" type="System">
+                            <param id="0" name="Layer">&quot;Craft&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="165417114576882">
                     <conditions>
@@ -742,6 +759,91 @@
                     <actions>
                         <action id="-2" name="Set Y" sid="739136012161800" type="InvHelper">
                             <param id="0" name="Y">((InvTouchHelper.IniY -InvTouchHelper.Y)/-7) + InvHelper.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="866124592965558">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="460897849595644" type="System">
+                    <param id="0" name="Layer">&quot;Craft&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="307838755060191" type="CrfTouchHelper">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="145166241422485">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="987981846038403" type="Touch">
+                            <param id="0" name="Object">InvCerrar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="776286202990649" type="System">
+                            <param id="0" name="Layer">&quot;Craft&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="618438865047280" type="CrfTouchHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="947610473917893">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="650262771756719" type="Touch">
+                            <param id="0" name="Object">CrfCraft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="473008838057869" type="f">
+                            <param id="0" name="Name">&quot;SearchCraft&quot;</param>
+                            <param id="1" name="Parameter {n}">CrfCraft.craft</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="811796818387398">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="767502834371533" type="System">
+                                    <param id="0" name="First value">f.ReturnValue</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;True&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="466134860928448" type="f">
+                                    <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                    <param id="1" name="Parameter {n}">CrfCraft.id{###}CrfCraft.tipo{###}CrfCraft.cantidad</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="882839460034477">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="572677167706243" type="CrfTouchHelper" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="862648595218605" type="CrfTouchHelper">
+                            <param id="0" name="X">Self.IniX</param>
+                            <param id="1" name="Y">Self.IniY</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="832821323389976" type="CrfHelper">
+                            <param id="0" name="Instance variable">IniY</param>
+                            <param id="1" name="Value">Self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="334960449226434">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="889794242025277" type="CrfTouchHelper" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="549804146583121" type="CrfHelper">
+                            <param id="0" name="Y">((CrfTouchHelper.IniY -CrfTouchHelper.Y)/-7) + CrfHelper.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1372,6 +1474,175 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment></comment>
+                <event-block sid="361208108110281">
+                    <conditions>
+                        <condition id="0" name="On function" sid="439826357694830" type="f">
+                            <param id="0" name="Name">&quot;CleanCrf&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="116947989184045">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="603893381180367" type="System">
+                                    <param id="0" name="Object">CrfNombre</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="338446987653704" type="CrfNombre" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="735032160907560">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="523467481845041" type="System">
+                                    <param id="0" name="Object">CrfItemFondo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="780064702671915" type="CrfItemFondo" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="101892797178921">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="175127495140608" type="System">
+                                    <param id="0" name="Object">CrfCraft</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="953495907495141" type="CrfCraft" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="782716161860364">
+                    <conditions>
+                        <condition id="0" name="On function" sid="612954270422726" type="f">
+                            <param id="0" name="Name">&quot;ActualizarCrf&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="607390566870469">
+                            <conditions>
+                                <condition id="1" name="For each key" sid="143796227165046" type="DicCrafteos" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="709902171307006" type="CrfHelper">
+                                    <param id="0" name="Y">Self.Y + 55</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="335360989345728" type="System">
+                                    <param id="0" name="Object to create">CrfItemFondo</param>
+                                    <param id="1" name="Layer">&quot;Craft&quot;</param>
+                                    <param id="2" name="X">255</param>
+                                    <param id="3" name="Y">71</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="699796923009302" type="CrfItemFondo">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Value">int(tokenat(DicCrafteos.CurrentKey,0,&quot;|&quot;))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="220387752817398" type="CrfCraft">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Value">int(tokenat(DicCrafteos.CurrentKey,0,&quot;|&quot;))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="489532646687554" type="CrfCraft">
+                                    <param id="0" name="Instance variable">tipo</param>
+                                    <param id="1" name="Value">int(tokenat(DicItems.Get(tokenat(DicCrafteos.CurrentKey,0,&quot;|&quot;)),0,&quot;|&quot;))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="611786594584856" type="CrfCraft">
+                                    <param id="0" name="Instance variable">cantidad</param>
+                                    <param id="1" name="Value">int(tokenat(DicCrafteos.CurrentKey,1,&quot;|&quot;))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="941305317658376" type="CrfCraft">
+                                    <param id="0" name="Instance variable">craft</param>
+                                    <param id="1" name="Value">DicCrafteos.CurrentValue</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="880002944919635" type="CrfCraft">
+                                    <param id="0" name="X">CrfCraft.basex</param>
+                                    <param id="1" name="Y">CrfCraft.basey</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="552439867716018" type="CrfNombre">
+                                    <param id="0" name="X">Self.basex</param>
+                                    <param id="1" name="Y">Self.basey</param>
+                                </action>
+                                <action id="0" name="Set text" sid="752033759392613" type="CrfNombre">
+                                    <param id="0" name="Text">   tokenat(DicItems.Get(tokenat(DicCrafteos.CurrentKey,0,&quot;|&quot;)),1,&quot;|&quot;)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="386839413675375" type="CrfItem">
+                                    <param id="0" name="X">CrfItem.basex</param>
+                                    <param id="1" name="Y">CrfItem.basey</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="982550179518512" type="CrfItem">
+                                    <param id="0" name="Frame number">int(tokenat(DicCrafteos.CurrentKey,0,&quot;|&quot;))</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="411244686131675" type="CrfCraft1">
+                                    <param id="0" name="X">Self.basex</param>
+                                    <param id="1" name="Y">Self.basey</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="970429366677939" type="CrfCraft2">
+                                    <param id="0" name="X">Self.basex</param>
+                                    <param id="1" name="Y">Self.basey</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="534338842659572" type="CrfCraft3">
+                                    <param id="0" name="X">Self.basex</param>
+                                    <param id="1" name="Y">Self.basey</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="164117486400380" type="CrfCraft4">
+                                    <param id="0" name="X">Self.basex</param>
+                                    <param id="1" name="Y">Self.basey</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="431077922889996" type="CrfCraft1">
+                                    <param id="0" name="Frame number">int(tokenat(DicCrafteos.CurrentValue,0,&quot;|&quot;))</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="853502452319203" type="CrfCraft2">
+                                    <param id="0" name="Frame number">int(tokenat(DicCrafteos.CurrentValue,2,&quot;|&quot;))</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="621661409801172" type="CrfCraft3">
+                                    <param id="0" name="Frame number">int(tokenat(DicCrafteos.CurrentValue,4,&quot;|&quot;))</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="433034417931557" type="CrfCraft4">
+                                    <param id="0" name="Frame number">int(tokenat(DicCrafteos.CurrentValue,6,&quot;|&quot;))</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="746401817209317" type="CrfItem">
+                                    <param id="0" name="Pin to">CrfHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="121463610037701" type="CrfItemFondo">
+                                    <param id="0" name="Pin to">CrfHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="657826515581803" type="CrfCraft">
+                                    <param id="0" name="Pin to">CrfHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="738107439259239" type="CrfNombre">
+                                    <param id="0" name="Pin to">CrfHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="514658917645651" type="CrfCraft1">
+                                    <param id="0" name="Pin to">CrfHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="523286069933309" type="CrfCraft2">
+                                    <param id="0" name="Pin to">CrfHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="591211126732076" type="CrfCraft3">
+                                    <param id="0" name="Pin to">CrfHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="800135272142431" type="CrfCraft4">
+                                    <param id="0" name="Pin to">CrfHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="231214665672353" type="System">
+                                    <param id="0" name="Variable">a</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
