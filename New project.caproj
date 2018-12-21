@@ -5107,6 +5107,39 @@
                 <member>ShopTrampas</member>
             </members>
         </family>
+        <family name="Nivel1a3" plugin-id="Sprite" sid="958902957042439">
+            <members>
+                <member>EnemigoPrototipo</member>
+            </members>
+        </family>
+        <family name="Nivel4a6" plugin-id="Sprite" sid="958900693066369">
+            <members>
+                <member>EnemigoPrototipo</member>
+                <member>Esqueleto</member>
+            </members>
+        </family>
+        <family name="Nivel7a9" plugin-id="Sprite" sid="104202320288125">
+            <members>
+                <member>EnemigoPrototipo</member>
+                <member>Esqueleto</member>
+                <member>Magoldo</member>
+            </members>
+        </family>
+        <family name="Nivel10a12" plugin-id="Sprite" sid="322409304986664">
+            <members>
+                <member>EnemigoPrototipo</member>
+                <member>Esqueleto</member>
+                <member>Magoldo</member>
+                <member>toportuga</member>
+            </members>
+        </family>
+        <family name="Nivel13a15" plugin-id="Sprite" sid="695939738410603">
+            <members>
+                <member>Esqueleto</member>
+                <member>Magoldo</member>
+                <member>toportuga</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout>Main.xml</layout>

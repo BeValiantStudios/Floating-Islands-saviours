@@ -4,6 +4,474 @@
     <name>Enemies</name>
     <events>
         <comment>Enemies: Todo lo relacionado con las MECANICAS de enemigos; y mecanicas del spawn de enemigos, el spawn se generara aleatoriamente en #Map</comment>
+        <event-block sid="813178153904932">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="345186915280256" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="413713296574138">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="975185869594536" type="System">
+                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="348032349503403" type="System">
+                            <param id="0" name="Variable">EnemigosRestantes</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="772096875012834" type="System">
+                            <param id="0" name="Variable">Oleada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="399452510365210" type="SpawnPrototipo">
+                            <param id="0" name="Object">Nivel1a3</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="606556259351479">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="246423662044301" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="299588995899034">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="456213548851265" type="System">
+                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="301662975383860" type="System">
+                            <param id="0" name="Variable">EnemigosRestantes</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="542800077375978" type="System">
+                            <param id="0" name="Variable">Oleada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="598035317888309" type="SpawnPrototipo">
+                            <param id="0" name="Object">Nivel1a3</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="254537265751549">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="159701609713598" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="303520303331560">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="144180026247636" type="System">
+                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="833290800481877" type="System">
+                            <param id="0" name="Variable">EnemigosRestantes</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="343293528680305" type="System">
+                            <param id="0" name="Variable">Oleada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="432953821286731" type="SpawnPrototipo">
+                            <param id="0" name="Object">Nivel1a3</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="913354904769932">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="972432499979385" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="915085497379539">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="783976139618176" type="System">
+                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="889879777805916" type="System">
+                            <param id="0" name="Variable">EnemigosRestantes</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="343646006754459" type="System">
+                            <param id="0" name="Variable">Oleada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="587463378639831" type="SpawnPrototipo">
+                            <param id="0" name="Object">Nivel4a6</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="109917132741208">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="778984452675536" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="629360516727697">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="846955477548834" type="System">
+                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="333490569075521" type="System">
+                            <param id="0" name="Variable">EnemigosRestantes</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="116497964966285" type="System">
+                            <param id="0" name="Variable">Oleada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="171487820990620" type="SpawnPrototipo">
+                            <param id="0" name="Object">Nivel4a6</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="226526563323809">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="592859275726283" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="776858714813019">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="445964092804886" type="System">
+                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="335642943567602" type="System">
+                            <param id="0" name="Variable">EnemigosRestantes</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="812394118008175" type="System">
+                            <param id="0" name="Variable">Oleada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="204252422167300" type="SpawnPrototipo">
+                            <param id="0" name="Object">Nivel4a6</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="569099378065304">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="948637598234998" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="196866191698486">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="814597623370461" type="System">
+                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="761336984114541" type="System">
+                            <param id="0" name="Variable">EnemigosRestantes</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="964320010671583" type="System">
+                            <param id="0" name="Variable">Oleada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="217540496939104" type="SpawnPrototipo">
+                            <param id="0" name="Object">Nivel7a9</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="763453312662938">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="491432193293706" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="196928565247273">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="534708479349212" type="System">
+                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="606658475174616" type="System">
+                            <param id="0" name="Variable">EnemigosRestantes</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="947697945610784" type="System">
+                            <param id="0" name="Variable">Oleada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="940650009558423" type="SpawnPrototipo">
+                            <param id="0" name="Object">Nivel7a9</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="222408302685197">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="194595639611331" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="286790793560156">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="522631749739365" type="System">
+                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="706423090815535" type="System">
+                            <param id="0" name="Variable">EnemigosRestantes</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="314129707275793" type="System">
+                            <param id="0" name="Variable">Oleada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="423651693026491" type="SpawnPrototipo">
+                            <param id="0" name="Object">Nivel7a9</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="915895448556307">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="713728777641374" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="367413657376830">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="419322133537403" type="System">
+                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="906293814800538" type="System">
+                            <param id="0" name="Variable">EnemigosRestantes</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="804655944171070" type="System">
+                            <param id="0" name="Variable">Oleada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="159243416724612" type="SpawnPrototipo">
+                            <param id="0" name="Object">Nivel10a12</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="528477358915640">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="265065111239565" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="984942463032479">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="829619936390725" type="System">
+                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="990143111315584" type="System">
+                            <param id="0" name="Variable">EnemigosRestantes</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="244899955651793" type="System">
+                            <param id="0" name="Variable">Oleada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="637186842877042" type="SpawnPrototipo">
+                            <param id="0" name="Object">Nivel10a12</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="568329289758512">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="821170948328072" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="578200240251545">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="822084664153405" type="System">
+                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="320705966137351" type="System">
+                            <param id="0" name="Variable">EnemigosRestantes</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="807348905026335" type="System">
+                            <param id="0" name="Variable">Oleada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="247713933051457" type="SpawnPrototipo">
+                            <param id="0" name="Object">Nivel10a12</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="306141872106769">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="127791509603056" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="493775270440560">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="494571378323267" type="System">
+                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="227611523441025" type="System">
+                            <param id="0" name="Variable">EnemigosRestantes</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="455897821632178" type="System">
+                            <param id="0" name="Variable">Oleada</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="518192552188731" type="SpawnPrototipo">
+                            <param id="0" name="Object">Nivel13a15</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="845774905625396">
             <conditions>
                 <condition id="-18" name="On created" sid="608804773393949" type="Enemigos" />
@@ -65,37 +533,6 @@
                 <action id="-9" name="Destroy" sid="119297464512853" type="Enemigos" />
             </actions>
         </event-block>
-        <event-block sid="813178153904932">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="345186915280256" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="413713296574138">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="975185869594536" type="System">
-                            <param id="0" name="Variable">CantidadEnemigosOleada</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="348032349503403" type="System">
-                            <param id="0" name="Variable">EnemigosRestantes</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="399452510365210" type="SpawnPrototipo">
-                            <param id="0" name="Object">Enemigos</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="605353209800243">
             <conditions>
                 <condition id="-19" name="On destroyed" sid="951147524010853" type="Enemigos" />
@@ -124,12 +561,12 @@
             <conditions>
                 <condition id="-14" name="Compare variable" sid="899235781346749" type="System">
                     <param id="0" name="Variable">CantidadEnemigosOleada</param>
-                    <param id="1" name="Comparison">0</param>
+                    <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="332647344104819" type="System">
                     <param id="0" name="Variable">EnemigosRestantes</param>
-                    <param id="1" name="Comparison">0</param>
+                    <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
