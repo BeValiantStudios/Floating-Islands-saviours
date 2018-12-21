@@ -3295,6 +3295,93 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="InvBG" sid="656822945025008">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="basex" sid="611244535965975" type="number" />
+                        <instance-variable name="basey" sid="668336800039611" type="number" />
+                        <instance-variable name="id" sid="570752848556249" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="566680144008089">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128192153871402" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\UltimoFondo.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="bgbg" sid="754084271303858">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="144981794229409" speed="5">
+                            <frame duration="1" hotspotX="0.501408" hotspotY="0.501493" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Rounded Rectangle 1 copy.png">
+                                <collision-poly>
+                                    <point x="0.0084507" y="0.00895522" />
+                                    <point x="0.991549" y="0.00895522" />
+                                    <point x="0.991549" y="0.991045" />
+                                    <point x="0.0084507" y="0.991045" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="letramaterial" sid="384389116759036">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="695871505377050" speed="5">
+                            <frame duration="1" hotspotX="0.502564" hotspotY="0.5" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Materiales .png">
+                                <collision-poly>
+                                    <point x="0.0358974" y="0.194444" />
+                                    <point x="0.497436" y="0.333333" />
+                                    <point x="0.94359" y="0.305556" />
+                                    <point x="0.969231" y="0.833333" />
+                                    <point x="0.497436" y="0.861111" />
+                                    <point x="0.025641" y="0.861111" />
+                                    <point x="0.0205128" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="LetraArmas" sid="353562630495595">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="438922115540838" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.515152" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Armas .png">
+                                <collision-poly>
+                                    <point x="0.0358974" y="0.194444" />
+                                    <point x="0.497436" y="0.333333" />
+                                    <point x="0.94359" y="0.305556" />
+                                    <point x="0.969231" y="0.833333" />
+                                    <point x="0.497436" y="0.861111" />
+                                    <point x="0.025641" y="0.861111" />
+                                    <point x="0.0205128" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="LetraTrampa" sid="558110292057848">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="678299948395524" speed="5">
+                            <frame duration="1" hotspotX="0.503597" hotspotY="0.525" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Trampas .png">
+                                <collision-poly>
+                                    <point x="0.0358974" y="0.194444" />
+                                    <point x="0.497436" y="0.333333" />
+                                    <point x="0.94359" y="0.305556" />
+                                    <point x="0.969231" y="0.833333" />
+                                    <point x="0.497436" y="0.861111" />
+                                    <point x="0.025641" y="0.861111" />
+                                    <point x="0.0205128" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Crafting">
                 <object-type name="CrfFondo" sid="197365064437466">
@@ -3714,6 +3801,101 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="293661731443034" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CraftVisual" sid="882188099136098">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="479202217912023" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.515152" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Craft .png">
+                            <collision-poly>
+                                <point x="0.0588235" y="0.181818" />
+                                <point x="0.5" y="0.242424" />
+                                <point x="0.921569" y="0.242424" />
+                                <point x="0.892157" y="0.484848" />
+                                <point x="0.95098" y="0.848485" />
+                                <point x="0.5" y="0.878788" />
+                                <point x="0.0588235" y="0.818182" />
+                                <point x="0.0392157" y="0.484848" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="inventoryVisual" sid="160270026080466">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361443746235358" speed="5">
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.525" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Inventory .png">
+                            <collision-poly>
+                                <point x="0.0588235" y="0.181818" />
+                                <point x="0.5" y="0.242424" />
+                                <point x="0.921569" y="0.242424" />
+                                <point x="0.892157" y="0.484848" />
+                                <point x="0.95098" y="0.848485" />
+                                <point x="0.5" y="0.878788" />
+                                <point x="0.0588235" y="0.818182" />
+                                <point x="0.0392157" y="0.484848" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ShopVisual" sid="509391133219422">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="982112899638914" speed="5">
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.525" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Shop .png">
+                            <collision-poly>
+                                <point x="0.0588235" y="0.181818" />
+                                <point x="0.5" y="0.242424" />
+                                <point x="0.921569" y="0.242424" />
+                                <point x="0.892157" y="0.484848" />
+                                <point x="0.95098" y="0.848485" />
+                                <point x="0.5" y="0.878788" />
+                                <point x="0.0588235" y="0.818182" />
+                                <point x="0.0392157" y="0.484848" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GoVisual" sid="998184380572318">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="669089252552269" speed="5">
+                        <frame duration="1" hotspotX="0.511111" hotspotY="0.515152" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Go .png">
+                            <collision-poly>
+                                <point x="0.0588235" y="0.181818" />
+                                <point x="0.5" y="0.242424" />
+                                <point x="0.921569" y="0.242424" />
+                                <point x="0.892157" y="0.484848" />
+                                <point x="0.95098" y="0.848485" />
+                                <point x="0.5" y="0.878788" />
+                                <point x="0.0588235" y="0.818182" />
+                                <point x="0.0392157" y="0.484848" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GoldVisual" sid="323266369897561">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="944854500329594" speed="5">
+                        <frame duration="1" hotspotX="0.506024" hotspotY="0.515152" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Gold  .png">
+                            <collision-poly>
+                                <point x="0.0588235" y="0.181818" />
+                                <point x="0.5" y="0.242424" />
+                                <point x="0.921569" y="0.242424" />
+                                <point x="0.892157" y="0.484848" />
+                                <point x="0.95098" y="0.848485" />
+                                <point x="0.5" y="0.878788" />
+                                <point x="0.0588235" y="0.818182" />
+                                <point x="0.0392157" y="0.484848" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
