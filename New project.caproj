@@ -3565,6 +3565,16 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TilemapSolid2" sid="645794285631483">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="358916492204012">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Multimedia5_20\Documents\GitHub\Floating-Islands-saviours\Assets\Tilemap\Tile map Fis 1.png" />
+            <tiles />
+        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">
