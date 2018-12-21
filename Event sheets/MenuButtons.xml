@@ -9,430 +9,945 @@
         <variable constant="0" name="UIDText" sid="408457789434303" static="0" type="number">1</variable>
         <variable constant="0" name="AuxSave" sid="269871374205523" static="0" type="number">0</variable>
         <variable constant="0" name="AuxActualizar" sid="315108551727285" static="0" type="number">0</variable>
-        <event-group description="" sid="132100113858622" title="LogoPressScreen &amp; On Start">
+        <event-group description="" disabled="1" sid="838071284722627" title="MenuDeGuardado">
             <sub-events>
-                <event-block sid="272078534774378">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="330390244592496" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Flash" id="0" name="Flash" sid="440428826835843" type="Enter">
-                            <param id="0" name="&apos;On&apos; time">0.5</param>
-                            <param id="1" name="&apos;Off&apos; time">0.5</param>
-                            <param id="2" name="Duration">10</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="738749461330244" type="File1">
-                            <param id="0" name="Opacity">0</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="955418927679143" type="File2">
-                            <param id="0" name="Opacity">0</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="428736687433133" type="File3">
-                            <param id="0" name="Opacity">0</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="616316008329371" type="Options">
-                            <param id="0" name="Opacity">0</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="255067965969633" type="Select">
-                            <param id="0" name="Opacity">0</param>
-                        </action>
-                    </actions>
+                <event-group description="" disabled="1" sid="132100113858622" title="LogoPressScreen &amp; On Start">
                     <sub-events>
-                        <event-block sid="541628222877863">
-                            <conditions />
-                            <actions>
-                                <action id="5" name="Check item exists" sid="453227940969061" type="LocalStorage">
-                                    <param id="0" name="Key">&quot;save1&quot;</param>
-                                </action>
-                                <action id="5" name="Check item exists" sid="260542345807711" type="LocalStorage">
-                                    <param id="0" name="Key">&quot;save2&quot;</param>
-                                </action>
-                                <action id="5" name="Check item exists" sid="709378919532269" type="LocalStorage">
-                                    <param id="0" name="Key">&quot;save3&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="197831091058253">
+                        <event-block disabled="1" sid="272078534774378">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="811216157376747" type="9patch">
-                                    <param id="0" name="Unique ID">71</param>
-                                </condition>
+                                <condition id="-2" name="On start of layout" sid="330390244592496" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-16" name="Set opacity" sid="452730246853370" type="9patch">
+                                <action behavior="Flash" id="0" name="Flash" sid="440428826835843" type="Enter">
+                                    <param id="0" name="&apos;On&apos; time">0.5</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.5</param>
+                                    <param id="2" name="Duration">10</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="738749461330244" type="File1">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="955418927679143" type="File2">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="428736687433133" type="File3">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="616316008329371" type="Options">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="255067965969633" type="Select">
                                     <param id="0" name="Opacity">0</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="627772535433640">
-                            <conditions>
-                                <condition id="-10" name="For" sid="995447785760660" type="System">
-                                    <param id="0" name="Name">&quot;FadeP2&quot;</param>
-                                    <param id="1" name="Start index">65</param>
-                                    <param id="2" name="End index">69</param>
-                                </condition>
-                            </conditions>
-                            <actions />
                             <sub-events>
-                                <event-block sid="400386901073392">
+                                <event-block disabled="1" sid="541628222877863">
+                                    <conditions />
+                                    <actions>
+                                        <action id="5" name="Check item exists" sid="453227940969061" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;save1&quot;</param>
+                                        </action>
+                                        <action id="5" name="Check item exists" sid="260542345807711" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;save2&quot;</param>
+                                        </action>
+                                        <action id="5" name="Check item exists" sid="709378919532269" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;save3&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="197831091058253">
                                     <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="437607400282532" type="9patch">
-                                            <param id="0" name="Unique ID">loopindex(&quot;FadeP2&quot;)</param>
+                                        <condition id="-14" name="Pick by unique ID" sid="811216157376747" type="9patch">
+                                            <param id="0" name="Unique ID">71</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-16" name="Set opacity" sid="884438325198288" type="9patch">
+                                        <action id="-16" name="Set opacity" sid="452730246853370" type="9patch">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="627772535433640">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="995447785760660" type="System">
+                                            <param id="0" name="Name">&quot;FadeP2&quot;</param>
+                                            <param id="1" name="Start index">65</param>
+                                            <param id="2" name="End index">69</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block disabled="1" sid="400386901073392">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="437607400282532" type="9patch">
+                                                    <param id="0" name="Unique ID">loopindex(&quot;FadeP2&quot;)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Set opacity" sid="884438325198288" type="9patch">
+                                                    <param id="0" name="Opacity">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block disabled="1" sid="452172321164452">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="278800888669189" type="System">
+                                            <param id="0" name="Object">Delete</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="522263718208050" type="Delete">
                                             <param id="0" name="Opacity">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="452172321164452">
+                        <event-block disabled="1" sid="115881351011496">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="278800888669189" type="System">
-                                    <param id="0" name="Object">Delete</param>
+                                <condition id="9" name="On item exists" sid="654452673814014" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save1&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Set opacity" sid="522263718208050" type="Delete">
-                                    <param id="0" name="Opacity">0</param>
+                                <action id="0" name="Set text" sid="442562285478588" type="File1">
+                                    <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="115881351011496">
-                    <conditions>
-                        <condition id="9" name="On item exists" sid="654452673814014" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save1&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="442562285478588" type="File1">
-                            <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="184336445764721">
-                    <conditions>
-                        <condition id="9" name="On item exists" sid="459608416622531" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save2&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="534349781510034" type="File2">
-                            <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="107049859983916">
-                    <conditions>
-                        <condition id="9" name="On item exists" sid="165848080492809" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save3&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="617720744340036" type="File3">
-                            <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="885182272291010">
-                    <conditions>
-                        <condition behavior="Flash" id="1" name="On flash ended" sid="794352656415597" type="Enter" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Flash" id="0" name="Flash" sid="104174335268942" type="Enter">
-                            <param id="0" name="&apos;On&apos; time">0.5</param>
-                            <param id="1" name="&apos;Off&apos; time">0.5</param>
-                            <param id="2" name="Duration">10</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="485612524434595">
-                    <conditions>
-                        <condition id="1" name="On any touch end" sid="976721183754753" type="Touch" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="897727566885799" type="Logo">
-                            <param id="0" name="Fade-out time">0.5</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="956212610465439" type="Logo" />
-                        <action behavior="Fade" id="1" name="Start fade" sid="507687027741387" type="Enter" />
-                    </actions>
-                    <sub-events>
-                        <event-block sid="608915239115626">
+                        <event-block disabled="1" sid="184336445764721">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="184324065345794" type="System">
-                                    <param id="0" name="Object">Delete</param>
+                                <condition id="9" name="On item exists" sid="459608416622531" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save2&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Fade" id="1" name="Start fade" sid="376938435227131" type="Delete" />
+                                <action id="0" name="Set text" sid="534349781510034" type="File2">
+                                    <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
+                                </action>
                             </actions>
                         </event-block>
-                        <event-block sid="295840934271764">
+                        <event-block disabled="1" sid="107049859983916">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="453104633750858" type="9patch">
-                                    <param id="0" name="Unique ID">62</param>
+                                <condition id="9" name="On item exists" sid="165848080492809" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save3&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="358925205295306" type="9patch">
+                                <action id="0" name="Set text" sid="617720744340036" type="File3">
+                                    <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="885182272291010">
+                            <conditions>
+                                <condition behavior="Flash" id="1" name="On flash ended" sid="794352656415597" type="Enter" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="104174335268942" type="Enter">
+                                    <param id="0" name="&apos;On&apos; time">0.5</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.5</param>
+                                    <param id="2" name="Duration">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="485612524434595">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="976721183754753" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="897727566885799" type="Logo">
                                     <param id="0" name="Fade-out time">0.5</param>
                                 </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="480869941736875" type="9patch" />
-                                <action id="-9" name="Set value" sid="733275005950059" type="System">
-                                    <param id="0" name="Variable">Pantalla</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="509358058247804" type="System">
-                                    <param id="0" name="Group name">&quot;Pantalla de seleccion&quot;</param>
-                                    <param id="1" name="State">1</param>
-                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="956212610465439" type="Logo" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="507687027741387" type="Enter" />
                             </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" inactive="1" sid="145548325274412" title="Pantalla de seleccion">
-            <sub-events>
-                <event-block sid="956882260036814">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="890141707245683" type="System">
-                            <param id="0" name="Variable">Pantalla</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="961538057635658" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Fade" id="1" name="Start fade" sid="360362744065394" type="File1" />
-                        <action behavior="Fade" id="1" name="Start fade" sid="498171576538482" type="File2" />
-                        <action behavior="Fade" id="1" name="Start fade" sid="430736270580771" type="File3" />
-                        <action behavior="Fade" id="1" name="Start fade" sid="511762782958909" type="Options" />
-                        <action behavior="Fade" id="1" name="Start fade" sid="813939190419880" type="Select" />
-                        <action id="-12" name="Set group active" sid="374210425934831" type="System">
-                            <param id="0" name="Group name">&quot;LogoPressScreen &amp; On Start&quot;</param>
-                            <param id="1" name="State">2</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="163512827499804">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="885593637548288" type="9patch">
-                                    <param id="0" name="Unique ID">71</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Fade" id="1" name="Start fade" sid="201012448698063" type="9patch" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="938404290586104">
-                            <conditions>
-                                <condition id="-10" name="For" sid="456654347255294" type="System">
-                                    <param id="0" name="Name">&quot;FadeP2&quot;</param>
-                                    <param id="1" name="Start index">65</param>
-                                    <param id="2" name="End index">69</param>
-                                </condition>
-                            </conditions>
-                            <actions />
                             <sub-events>
-                                <event-block sid="652166526795171">
+                                <event-block disabled="1" sid="608915239115626">
                                     <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="695709665452047" type="9patch">
-                                            <param id="0" name="Unique ID">loopindex(&quot;FadeP2&quot;)</param>
+                                        <condition id="-11" name="For Each" sid="184324065345794" type="System">
+                                            <param id="0" name="Object">Delete</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Fade" id="1" name="Start fade" sid="862464052960260" type="9patch" />
+                                        <action behavior="Fade" id="1" name="Start fade" sid="376938435227131" type="Delete" />
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="295840934271764">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="453104633750858" type="9patch">
+                                            <param id="0" name="Unique ID">62</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="358925205295306" type="9patch">
+                                            <param id="0" name="Fade-out time">0.5</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="480869941736875" type="9patch" />
+                                        <action id="-9" name="Set value" sid="733275005950059" type="System">
+                                            <param id="0" name="Variable">Pantalla</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="509358058247804" type="System">
+                                            <param id="0" name="Group name">&quot;Pantalla de seleccion&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="298341886697092">
+                </event-group>
+                <event-group description="" disabled="1" inactive="1" sid="145548325274412" title="Pantalla de seleccion">
+                    <sub-events>
+                        <event-block disabled="1" sid="956882260036814">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="890141707245683" type="System">
+                                    <param id="0" name="Variable">Pantalla</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="961538057635658" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Fade" id="1" name="Start fade" sid="360362744065394" type="File1" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="498171576538482" type="File2" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="430736270580771" type="File3" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="511762782958909" type="Options" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="813939190419880" type="Select" />
+                                <action id="-12" name="Set group active" sid="374210425934831" type="System">
+                                    <param id="0" name="Group name">&quot;LogoPressScreen &amp; On Start&quot;</param>
+                                    <param id="1" name="State">2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="163512827499804">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="885593637548288" type="9patch">
+                                            <param id="0" name="Unique ID">71</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="201012448698063" type="9patch" />
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="938404290586104">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="456654347255294" type="System">
+                                            <param id="0" name="Name">&quot;FadeP2&quot;</param>
+                                            <param id="1" name="Start index">65</param>
+                                            <param id="2" name="End index">69</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block disabled="1" sid="652166526795171">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="695709665452047" type="9patch">
+                                                    <param id="0" name="Unique ID">loopindex(&quot;FadeP2&quot;)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Fade" id="1" name="Start fade" sid="862464052960260" type="9patch" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block disabled="1" sid="298341886697092">
+                            <conditions>
+                                <condition id="10" name="On item missing" sid="666310650659284" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save1&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="554072575167638" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="537533246107222" type="System">
+                                    <param id="0" name="Variable">AuxSave</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="419935690445322" type="f">
+                                    <param id="0" name="Name">&quot;NewSavestate&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="116365790045484">
+                            <conditions>
+                                <condition id="10" name="On item missing" sid="668806901928553" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save2&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="725010698907099" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="909167395436679" type="System">
+                                    <param id="0" name="Variable">AuxSave</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="639913258272216" type="f">
+                                    <param id="0" name="Name">&quot;NewSavestate&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="532880413600350">
+                            <conditions>
+                                <condition id="10" name="On item missing" sid="444001172132467" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save3&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="984905491517961" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="365534159836099" type="System">
+                                    <param id="0" name="Variable">AuxSave</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="0" name="Call function" sid="610399741015142" type="f">
+                                    <param id="0" name="Name">&quot;NewSavestate&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="529512001189136">
+                            <conditions>
+                                <condition id="9" name="On item exists" sid="417014565955749" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save1&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="529395359477635" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="482600390204698" type="System">
+                                    <param id="0" name="Variable">AuxSave</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="413773988145449" type="f">
+                                    <param id="0" name="Name">&quot;SpawnItems&quot;</param>
+                                    <param id="1" name="Parameter {n}">LocalStorage.ItemValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="878316181662996">
+                            <conditions>
+                                <condition id="9" name="On item exists" sid="564658696701172" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save2&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="961785296836688" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="889064615203368" type="System">
+                                    <param id="0" name="Variable">AuxSave</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="889764631138550" type="f">
+                                    <param id="0" name="Name">&quot;SpawnItems&quot;</param>
+                                    <param id="1" name="Parameter {n}">LocalStorage.ItemValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="930722795023654">
+                            <conditions>
+                                <condition id="9" name="On item exists" sid="646716404561780" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save3&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="347432071694110" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="654009914589332" type="System">
+                                    <param id="0" name="Variable">AuxSave</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="0" name="Call function" sid="941094814589118" type="f">
+                                    <param id="0" name="Name">&quot;SpawnItems&quot;</param>
+                                    <param id="1" name="Parameter {n}">LocalStorage.ItemValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="579502295213833">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="118968388832378" type="Touch">
+                                    <param id="0" name="Object">File1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Check item exists" sid="321992286037584" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="769433640246765">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="721298510413203" type="Touch">
+                                    <param id="0" name="Object">File2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Check item exists" sid="500094453053993" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="213184464280721">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="924730215201236" type="Touch">
+                                    <param id="0" name="Object">File3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Check item exists" sid="997863448765918" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save3&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="551436468682659">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="839007575915061" type="Touch">
+                                    <param id="0" name="Object">Delete</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Remove item" sid="884316688781665" type="LocalStorage">
+                                    <param id="0" name="Key">Delete.Target</param>
+                                </action>
+                                <action id="0" name="Call function" sid="381755906565395" type="f">
+                                    <param id="0" name="Name">&quot;Actualizar&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" disabled="1" sid="551313836373933" title="Buttons">
+                    <sub-events>
+                        <event-block disabled="1" sid="477493322355680">
+                            <conditions>
+                                <condition id="-30" name="On load failed" sid="866375490680152" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="638029981376351" type="System">
+                                    <param id="0" name="Layout">Tutorial</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="382748784207136">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="224254365872793" type="Touch">
+                                    <param id="0" name="Object">Go</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-37" name="Load" sid="165444432602787" type="System">
+                                    <param id="0" name="Slot">&quot;Slot&quot; &amp;AuxSave</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="652674608077457">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="423868687232347" type="Touch">
+                                    <param id="0" name="Object">Options</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="184499684747257" type="System">
+                                    <param id="0" name="Layout">Tutorial</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="586924920461832">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="763607775850628" type="Touch">
+                                    <param id="0" name="Object">Go2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="643932786877497" type="f">
+                                    <param id="0" name="Name">&quot;CreateSavestate&quot;</param>
+                                    <param id="1" name="Parameter {n}">InputName.Text</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="131253217969759">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="288237797977182" type="Touch">
+                                    <param id="0" name="Object">Back</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="834886130712511" type="System">
+                                    <param id="0" name="Group name">&quot;Pantalla de seleccion&quot;</param>
+                                    <param id="1" name="State">2</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="880687973889348" type="Back">
+                                    <param id="0" name="Fade-out time">0.5</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="131824552085448" type="Back" />
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="474378081134277" type="Go">
+                                    <param id="0" name="Fade-out time">0.5</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="417384802679869" type="Go" />
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="512309146545082">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="256271101731561" type="9patch">
+                                            <param id="0" name="Unique ID">UID9patch</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="434870580978451" type="9patch">
+                                            <param id="0" name="Fade-out time">0.5</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="770723436058809" type="9patch" />
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="901327794423253">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="906007516607525" type="Load">
+                                            <param id="0" name="Unique ID">UIDText</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="171234141026428" type="Load">
+                                            <param id="0" name="Fade-out time">0.5</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="834184971389020" type="Load" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block disabled="1" sid="618542592557942">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="339876446719879" type="Touch">
+                                    <param id="0" name="Object">Back2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="868669061138568" type="System">
+                                    <param id="0" name="Group name">&quot;Pantalla de seleccion&quot;</param>
+                                    <param id="1" name="State">2</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="589656679573093" type="Back2">
+                                    <param id="0" name="Fade-out time">0.5</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="880401007279774" type="Back2" />
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="875372506514715" type="Go2">
+                                    <param id="0" name="Fade-out time">0.5</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="107433834205029" type="Go2" />
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="304698692351062">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="554683515998585" type="InputName">
+                                            <param id="0" name="Unique ID">UIDinput</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="312216096551487" type="InputName">
+                                            <param id="0" name="Fade-out time">0.5</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="359675015520566" type="InputName" />
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="888408690434236">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="800551007056921" type="9patch">
+                                            <param id="0" name="Unique ID">UID9patch</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="945811404682960" type="9patch">
+                                            <param id="0" name="Fade-out time">0.5</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="495362199565396" type="9patch" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" disabled="1" sid="940856278608457" title="Functions">
+                    <sub-events>
+                        <event-block disabled="1" sid="997170511660606">
+                            <conditions>
+                                <condition id="0" name="On function" sid="126036950119485" type="f">
+                                    <param id="0" name="Name">&quot;NewSavestate&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="148458318241380" type="System">
+                                    <param id="0" name="Group name">&quot;Pantalla de seleccion&quot;</param>
+                                    <param id="1" name="State">2</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="996155832742506" type="System">
+                                    <param id="0" name="Object to create">9patch</param>
+                                    <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="361327637337245" type="System">
+                                    <param id="0" name="Variable">UID9patch</param>
+                                    <param id="1" name="Value">9patch.UID</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="957602224217569" type="9patch">
+                                    <param id="0" name="Width">300</param>
+                                    <param id="1" name="Height">100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="666808655125226" type="9patch">
+                                    <param id="0" name="X">(LayoutWidth/2) - (9patch.Width/2)</param>
+                                    <param id="1" name="Y">(LayoutHeight/2) -(9patch.Height/2)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="891459176715362" type="System">
+                                    <param id="0" name="Object to create">InputName</param>
+                                    <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="793148416467254" type="System">
+                                    <param id="0" name="Variable">UIDinput</param>
+                                    <param id="1" name="Value">InputName.UID</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="909550156343308" type="InputName">
+                                    <param id="0" name="X">(LayoutWidth/2 )- (InputName.Width/2)</param>
+                                    <param id="1" name="Y">(LayoutHeight/2) - (InputName.Height/2) -15</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="620366782156051" type="System">
+                                    <param id="0" name="Object to create">Go2</param>
+                                    <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
+                                    <param id="2" name="X">(LayoutWidth/2) -50</param>
+                                    <param id="3" name="Y">(LayoutHeight/2) + 50</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="921900366874572" type="System">
+                                    <param id="0" name="Object to create">Back2</param>
+                                    <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
+                                    <param id="2" name="X">(LayoutWidth/2) +50</param>
+                                    <param id="3" name="Y">(LayoutHeight/2) +50</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="926426479015016" type="Go2">
+                                    <param id="0" name="Width">32</param>
+                                    <param id="1" name="Height">32</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="422151408696556" type="Back2">
+                                    <param id="0" name="Width">32</param>
+                                    <param id="1" name="Height">32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="649613320220597">
+                            <conditions>
+                                <condition id="0" name="On function" sid="416795547588483" type="f">
+                                    <param id="0" name="Name">&quot;CreateSavestate&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="766355831676827" type="System">
+                                    <param id="0" name="Group name">&quot;Pantalla de seleccion&quot;</param>
+                                    <param id="1" name="State">2</param>
+                                </action>
+                                <action id="0" name="Set item" sid="453702100837796" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save&quot; &amp;AuxSave</param>
+                                    <param id="1" name="Value">f.Param(0)</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="270665151948775" type="Back2">
+                                    <param id="0" name="Fade-out time">0.5</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="273656443740781" type="Back2" />
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="948126935950006" type="Go2">
+                                    <param id="0" name="Fade-out time">0.5</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="559921547165225" type="Go2" />
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="309275689665681">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="887089312415220" type="9patch">
+                                            <param id="0" name="Unique ID">UID9patch</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="238057430437498" type="9patch">
+                                            <param id="0" name="Fade-out time">0.5</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="951769280843185" type="9patch" />
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="255372998275054">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="972693818927583" type="InputName">
+                                            <param id="0" name="Unique ID">UIDinput</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="286274521620298" type="InputName">
+                                            <param id="0" name="Fade-out time">0.5</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="560328155437308" type="InputName" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block disabled="1" sid="737040642195426">
+                            <conditions>
+                                <condition id="0" name="On function" sid="901747519297259" type="f">
+                                    <param id="0" name="Name">&quot;SpawnItems&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="345396166610486" type="System">
+                                    <param id="0" name="Group name">&quot;Pantalla de seleccion&quot;</param>
+                                    <param id="1" name="State">2</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="431992442568969" type="System">
+                                    <param id="0" name="Object to create">9patch</param>
+                                    <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="169645281456619" type="System">
+                                    <param id="0" name="Variable">UID9patch</param>
+                                    <param id="1" name="Value">9patch.UID</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="368033423007928" type="9patch">
+                                    <param id="0" name="X">(LayoutWidth/2) - (9patch.Width/2)</param>
+                                    <param id="1" name="Y">(LayoutHeight/2) -(9patch.Height/2)</param>
+                                </action>
+                                <action behavior="Fade" id="2" name="Set fade-in time" sid="543536007574862" type="9patch">
+                                    <param id="0" name="Fade-in time">0.5</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="959398366736694" type="9patch" />
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="244957904372828" type="9patch">
+                                    <param id="0" name="Fade-out time">0</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="247746647820953" type="9patch" />
+                                <action id="-3" name="Create object" sid="651531250616124" type="System">
+                                    <param id="0" name="Object to create">Load</param>
+                                    <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="859490348927867" type="System">
+                                    <param id="0" name="Variable">UIDText</param>
+                                    <param id="1" name="Value">Load.UID</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="230576054909619" type="Load">
+                                    <param id="0" name="Width">94</param>
+                                    <param id="1" name="Height">75</param>
+                                </action>
+                                <action id="0" name="Set text" sid="188070119376545" type="Load">
+                                    <param id="0" name="Text">&quot;Do you want to load &quot; &amp;f.Param(0) &amp; &quot; state?&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="389484761843787" type="Load">
+                                    <param id="0" name="X">(LayoutWidth/2)</param>
+                                    <param id="1" name="Y">(LayoutHeight/2)</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="420376873980152" type="Load" />
+                                <action id="-3" name="Create object" sid="873177615421849" type="System">
+                                    <param id="0" name="Object to create">Go</param>
+                                    <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
+                                    <param id="2" name="X">(LayoutWidth/2) -25</param>
+                                    <param id="3" name="Y">(LayoutHeight/2) + 50</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="825771812111983" type="System">
+                                    <param id="0" name="Object to create">Back</param>
+                                    <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
+                                    <param id="2" name="X">(LayoutWidth/2) +25</param>
+                                    <param id="3" name="Y">(LayoutHeight/2) +50</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="561784882958589" type="Go">
+                                    <param id="0" name="Width">32</param>
+                                    <param id="1" name="Height">32</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="150092964498229" type="Back">
+                                    <param id="0" name="Width">32</param>
+                                    <param id="1" name="Height">32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="373362459955724">
+                            <conditions>
+                                <condition id="0" name="On function" sid="177725622114311" type="f">
+                                    <param id="0" name="Name">&quot;Actualizar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="439818963489049" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="5" name="Check item exists" sid="702359422250276" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save1&quot;</param>
+                                </action>
+                                <action id="5" name="Check item exists" sid="111221418968261" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save2&quot;</param>
+                                </action>
+                                <action id="5" name="Check item exists" sid="289784989637238" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save3&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" disabled="1" sid="288854922680731" title="Actualizar">
+                    <sub-events>
+                        <event-block disabled="1" sid="319774710175028">
+                            <conditions>
+                                <condition id="9" name="On item exists" sid="898104131353297" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save1&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="158167419581086" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="176652038422494" type="File1">
+                                    <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="897667745541220" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="943940900775070">
+                            <conditions>
+                                <condition id="9" name="On item exists" sid="966440199470973" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save2&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="827417308641969" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="465320803146641" type="File2">
+                                    <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="745332954410800" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="836645123067758">
+                            <conditions>
+                                <condition id="9" name="On item exists" sid="466899471351829" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save3&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="875905368048206" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="444597022955354" type="File3">
+                                    <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="137088693134469" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="711575226815388">
+                            <conditions>
+                                <condition id="10" name="On item missing" sid="410610755477879" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save1&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="348916707313948" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="456229423647653" type="File1">
+                                    <param id="0" name="Text">&quot;File 1&quot;</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="482175841055265" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="422534283664110">
+                            <conditions>
+                                <condition id="10" name="On item missing" sid="555150023888722" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save2&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="340511507934927" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="231256552766900" type="File2">
+                                    <param id="0" name="Text">&quot;File 2&quot;</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="443225040338791" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="130004293039984">
+                            <conditions>
+                                <condition id="10" name="On item missing" sid="756742211415768" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;save3&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="312851381585433" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="189098864469486" type="File3">
+                                    <param id="0" name="Text">&quot;File 3&quot;</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="389869346515647" type="System">
+                                    <param id="0" name="Variable">AuxActualizar</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block disabled="1" sid="921337434261222">
                     <conditions>
-                        <condition id="10" name="On item missing" sid="666310650659284" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save1&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="554072575167638" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
+                        <condition id="-19" name="On destroyed" sid="812234489655019" type="Go2" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="537533246107222" type="System">
-                            <param id="0" name="Variable">AuxSave</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="419935690445322" type="f">
-                            <param id="0" name="Name">&quot;NewSavestate&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="116365790045484">
-                    <conditions>
-                        <condition id="10" name="On item missing" sid="668806901928553" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save2&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="725010698907099" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="909167395436679" type="System">
-                            <param id="0" name="Variable">AuxSave</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                        <action id="0" name="Call function" sid="639913258272216" type="f">
-                            <param id="0" name="Name">&quot;NewSavestate&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="532880413600350">
-                    <conditions>
-                        <condition id="10" name="On item missing" sid="444001172132467" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save3&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="984905491517961" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="365534159836099" type="System">
-                            <param id="0" name="Variable">AuxSave</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                        <action id="0" name="Call function" sid="610399741015142" type="f">
-                            <param id="0" name="Name">&quot;NewSavestate&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="529512001189136">
-                    <conditions>
-                        <condition id="9" name="On item exists" sid="417014565955749" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save1&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="529395359477635" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="482600390204698" type="System">
-                            <param id="0" name="Variable">AuxSave</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="413773988145449" type="f">
-                            <param id="0" name="Name">&quot;SpawnItems&quot;</param>
-                            <param id="1" name="Parameter {n}">LocalStorage.ItemValue</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="878316181662996">
-                    <conditions>
-                        <condition id="9" name="On item exists" sid="564658696701172" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save2&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="961785296836688" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="889064615203368" type="System">
-                            <param id="0" name="Variable">AuxSave</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                        <action id="0" name="Call function" sid="889764631138550" type="f">
-                            <param id="0" name="Name">&quot;SpawnItems&quot;</param>
-                            <param id="1" name="Parameter {n}">LocalStorage.ItemValue</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="930722795023654">
-                    <conditions>
-                        <condition id="9" name="On item exists" sid="646716404561780" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save3&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="347432071694110" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="654009914589332" type="System">
-                            <param id="0" name="Variable">AuxSave</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                        <action id="0" name="Call function" sid="941094814589118" type="f">
-                            <param id="0" name="Name">&quot;SpawnItems&quot;</param>
-                            <param id="1" name="Parameter {n}">LocalStorage.ItemValue</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="579502295213833">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="118968388832378" type="Touch">
-                            <param id="0" name="Object">File1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Check item exists" sid="321992286037584" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save1&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="769433640246765">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="721298510413203" type="Touch">
-                            <param id="0" name="Object">File2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Check item exists" sid="500094453053993" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save2&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="213184464280721">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="924730215201236" type="Touch">
-                            <param id="0" name="Object">File3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Check item exists" sid="997863448765918" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save3&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="551436468682659">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="839007575915061" type="Touch">
-                            <param id="0" name="Object">Delete</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="2" name="Remove item" sid="884316688781665" type="LocalStorage">
-                            <param id="0" name="Key">Delete.Target</param>
-                        </action>
-                        <action id="0" name="Call function" sid="381755906565395" type="f">
+                        <action id="0" name="Call function" sid="996002668682882" type="f">
                             <param id="0" name="Name">&quot;Actualizar&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
@@ -440,516 +955,59 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="551313836373933" title="Buttons">
+        <event-group description="" sid="947889195875129" title="Menu Rapido">
             <sub-events>
-                <event-block sid="477493322355680">
+                <event-block sid="896151415004330">
                     <conditions>
-                        <condition id="-30" name="On load failed" sid="866375490680152" type="System" />
+                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="477176825974711" type="ngr" />
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="638029981376351" type="System">
-                            <param id="0" name="Layout">Tutorial</param>
+                        <action id="-10" name="Set value" sid="627713823752741" type="TapToBegin">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="382748784207136">
+                <event-block sid="986511331433223">
                     <conditions>
-                        <condition id="17" name="On tap object" sid="224254365872793" type="Touch">
-                            <param id="0" name="Object">Go</param>
+                        <condition id="3" name="On touched object" sid="887948443653999" type="Touch">
+                            <param id="0" name="Object">TapToBegin</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="969995130248257" type="TapToBegin">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-37" name="Load" sid="165444432602787" type="System">
-                            <param id="0" name="Slot">&quot;Slot&quot; &amp;AuxSave</param>
-                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="876356088014690" type="TapToBegin" />
                     </actions>
                 </event-block>
-                <event-block sid="652674608077457">
+                <event-block sid="878735499418892">
                     <conditions>
-                        <condition id="17" name="On tap object" sid="423868687232347" type="Touch">
-                            <param id="0" name="Object">Options</param>
-                        </condition>
+                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="494268861003954" type="TapToBegin" />
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="184499684747257" type="System">
-                            <param id="0" name="Layout">Tutorial</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="586924920461832">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="763607775850628" type="Touch">
-                            <param id="0" name="Object">Go2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="643932786877497" type="f">
-                            <param id="0" name="Name">&quot;CreateSavestate&quot;</param>
-                            <param id="1" name="Parameter {n}">InputName.Text</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="131253217969759">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="288237797977182" type="Touch">
-                            <param id="0" name="Object">Back</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Set group active" sid="834886130712511" type="System">
-                            <param id="0" name="Group name">&quot;Pantalla de seleccion&quot;</param>
-                            <param id="1" name="State">2</param>
-                        </action>
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="880687973889348" type="Back">
-                            <param id="0" name="Fade-out time">0.5</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="131824552085448" type="Back" />
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="474378081134277" type="Go">
-                            <param id="0" name="Fade-out time">0.5</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="417384802679869" type="Go" />
-                    </actions>
-                    <sub-events>
-                        <event-block sid="512309146545082">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="256271101731561" type="9patch">
-                                    <param id="0" name="Unique ID">UID9patch</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="434870580978451" type="9patch">
-                                    <param id="0" name="Fade-out time">0.5</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="770723436058809" type="9patch" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="901327794423253">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="906007516607525" type="Load">
-                                    <param id="0" name="Unique ID">UIDText</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="171234141026428" type="Load">
-                                    <param id="0" name="Fade-out time">0.5</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="834184971389020" type="Load" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="618542592557942">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="339876446719879" type="Touch">
-                            <param id="0" name="Object">Back2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Set group active" sid="868669061138568" type="System">
-                            <param id="0" name="Group name">&quot;Pantalla de seleccion&quot;</param>
-                            <param id="1" name="State">2</param>
-                        </action>
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="589656679573093" type="Back2">
-                            <param id="0" name="Fade-out time">0.5</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="880401007279774" type="Back2" />
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="875372506514715" type="Go2">
-                            <param id="0" name="Fade-out time">0.5</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="107433834205029" type="Go2" />
-                    </actions>
-                    <sub-events>
-                        <event-block sid="304698692351062">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="554683515998585" type="InputName">
-                                    <param id="0" name="Unique ID">UIDinput</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="312216096551487" type="InputName">
-                                    <param id="0" name="Fade-out time">0.5</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="359675015520566" type="InputName" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="888408690434236">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="800551007056921" type="9patch">
-                                    <param id="0" name="Unique ID">UID9patch</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="945811404682960" type="9patch">
-                                    <param id="0" name="Fade-out time">0.5</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="495362199565396" type="9patch" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="940856278608457" title="Functions">
-            <sub-events>
-                <event-block sid="997170511660606">
-                    <conditions>
-                        <condition id="0" name="On function" sid="126036950119485" type="f">
-                            <param id="0" name="Name">&quot;NewSavestate&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Set group active" sid="148458318241380" type="System">
-                            <param id="0" name="Group name">&quot;Pantalla de seleccion&quot;</param>
-                            <param id="1" name="State">2</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="996155832742506" type="System">
-                            <param id="0" name="Object to create">9patch</param>
-                            <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
-                            <param id="2" name="X">0</param>
-                            <param id="3" name="Y">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="361327637337245" type="System">
-                            <param id="0" name="Variable">UID9patch</param>
-                            <param id="1" name="Value">9patch.UID</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="957602224217569" type="9patch">
-                            <param id="0" name="Width">300</param>
-                            <param id="1" name="Height">100</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="666808655125226" type="9patch">
-                            <param id="0" name="X">(LayoutWidth/2) - (9patch.Width/2)</param>
-                            <param id="1" name="Y">(LayoutHeight/2) -(9patch.Height/2)</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="891459176715362" type="System">
-                            <param id="0" name="Object to create">InputName</param>
-                            <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
-                            <param id="2" name="X">0</param>
-                            <param id="3" name="Y">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="793148416467254" type="System">
-                            <param id="0" name="Variable">UIDinput</param>
-                            <param id="1" name="Value">InputName.UID</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="909550156343308" type="InputName">
-                            <param id="0" name="X">(LayoutWidth/2 )- (InputName.Width/2)</param>
-                            <param id="1" name="Y">(LayoutHeight/2) - (InputName.Height/2) -15</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="620366782156051" type="System">
-                            <param id="0" name="Object to create">Go2</param>
-                            <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
-                            <param id="2" name="X">(LayoutWidth/2) -50</param>
-                            <param id="3" name="Y">(LayoutHeight/2) + 50</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="921900366874572" type="System">
-                            <param id="0" name="Object to create">Back2</param>
-                            <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
-                            <param id="2" name="X">(LayoutWidth/2) +50</param>
-                            <param id="3" name="Y">(LayoutHeight/2) +50</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="926426479015016" type="Go2">
-                            <param id="0" name="Width">32</param>
-                            <param id="1" name="Height">32</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="422151408696556" type="Back2">
-                            <param id="0" name="Width">32</param>
-                            <param id="1" name="Height">32</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="649613320220597">
-                    <conditions>
-                        <condition id="0" name="On function" sid="416795547588483" type="f">
-                            <param id="0" name="Name">&quot;CreateSavestate&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Set group active" sid="766355831676827" type="System">
-                            <param id="0" name="Group name">&quot;Pantalla de seleccion&quot;</param>
-                            <param id="1" name="State">2</param>
-                        </action>
-                        <action id="0" name="Set item" sid="453702100837796" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save&quot; &amp;AuxSave</param>
-                            <param id="1" name="Value">f.Param(0)</param>
-                        </action>
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="270665151948775" type="Back2">
-                            <param id="0" name="Fade-out time">0.5</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="273656443740781" type="Back2" />
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="948126935950006" type="Go2">
-                            <param id="0" name="Fade-out time">0.5</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="559921547165225" type="Go2" />
-                    </actions>
-                    <sub-events>
-                        <event-block sid="309275689665681">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="887089312415220" type="9patch">
-                                    <param id="0" name="Unique ID">UID9patch</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="238057430437498" type="9patch">
-                                    <param id="0" name="Fade-out time">0.5</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="951769280843185" type="9patch" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="255372998275054">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="972693818927583" type="InputName">
-                                    <param id="0" name="Unique ID">UIDinput</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="286274521620298" type="InputName">
-                                    <param id="0" name="Fade-out time">0.5</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="560328155437308" type="InputName" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="737040642195426">
-                    <conditions>
-                        <condition id="0" name="On function" sid="901747519297259" type="f">
-                            <param id="0" name="Name">&quot;SpawnItems&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Set group active" sid="345396166610486" type="System">
-                            <param id="0" name="Group name">&quot;Pantalla de seleccion&quot;</param>
-                            <param id="1" name="State">2</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="431992442568969" type="System">
-                            <param id="0" name="Object to create">9patch</param>
-                            <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
-                            <param id="2" name="X">0</param>
-                            <param id="3" name="Y">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="169645281456619" type="System">
-                            <param id="0" name="Variable">UID9patch</param>
-                            <param id="1" name="Value">9patch.UID</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="368033423007928" type="9patch">
-                            <param id="0" name="X">(LayoutWidth/2) - (9patch.Width/2)</param>
-                            <param id="1" name="Y">(LayoutHeight/2) -(9patch.Height/2)</param>
-                        </action>
-                        <action behavior="Fade" id="2" name="Set fade-in time" sid="543536007574862" type="9patch">
-                            <param id="0" name="Fade-in time">0.5</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="959398366736694" type="9patch" />
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="244957904372828" type="9patch">
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="748129172960326" type="ngr">
                             <param id="0" name="Fade-out time">0</param>
                         </action>
-                        <action id="-24" name="Move to top" sid="247746647820953" type="9patch" />
-                        <action id="-3" name="Create object" sid="651531250616124" type="System">
-                            <param id="0" name="Object to create">Load</param>
-                            <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
-                            <param id="2" name="X">0</param>
-                            <param id="3" name="Y">0</param>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="598126023689940" type="ngr">
+                            <param id="0" name="Fade-in time">2</param>
                         </action>
-                        <action id="-9" name="Set value" sid="859490348927867" type="System">
-                            <param id="0" name="Variable">UIDText</param>
-                            <param id="1" name="Value">Load.UID</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="230576054909619" type="Load">
-                            <param id="0" name="Width">94</param>
-                            <param id="1" name="Height">75</param>
-                        </action>
-                        <action id="0" name="Set text" sid="188070119376545" type="Load">
-                            <param id="0" name="Text">&quot;Do you want to load &quot; &amp;f.Param(0) &amp; &quot; state?&quot;</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="389484761843787" type="Load">
-                            <param id="0" name="X">(LayoutWidth/2)</param>
-                            <param id="1" name="Y">(LayoutHeight/2)</param>
-                        </action>
-                        <action id="-24" name="Move to top" sid="420376873980152" type="Load" />
-                        <action id="-3" name="Create object" sid="873177615421849" type="System">
-                            <param id="0" name="Object to create">Go</param>
-                            <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
-                            <param id="2" name="X">(LayoutWidth/2) -25</param>
-                            <param id="3" name="Y">(LayoutHeight/2) + 50</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="825771812111983" type="System">
-                            <param id="0" name="Object to create">Back</param>
-                            <param id="1" name="Layer">&quot;Pantalla2&quot;</param>
-                            <param id="2" name="X">(LayoutWidth/2) +25</param>
-                            <param id="3" name="Y">(LayoutHeight/2) +50</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="561784882958589" type="Go">
-                            <param id="0" name="Width">32</param>
-                            <param id="1" name="Height">32</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="150092964498229" type="Back">
-                            <param id="0" name="Width">32</param>
-                            <param id="1" name="Height">32</param>
-                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="416725794742620" type="ngr" />
                     </actions>
                 </event-block>
-                <event-block sid="373362459955724">
+                <event-block sid="260401581457802">
                     <conditions>
-                        <condition id="0" name="On function" sid="177725622114311" type="f">
-                            <param id="0" name="Name">&quot;Actualizar&quot;</param>
-                        </condition>
+                        <condition behavior="Fade" id="1" name="On fade-in finished" sid="123137497455466" type="ngr" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="439818963489049" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                        <action id="5" name="Check item exists" sid="702359422250276" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save1&quot;</param>
-                        </action>
-                        <action id="5" name="Check item exists" sid="111221418968261" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save2&quot;</param>
-                        </action>
-                        <action id="5" name="Check item exists" sid="289784989637238" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save3&quot;</param>
+                        <action id="-2" name="Go to layout" sid="994731396564801" type="System">
+                            <param id="0" name="Layout">Tutorial</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="288854922680731" title="Actualizar">
-            <sub-events>
-                <event-block sid="319774710175028">
-                    <conditions>
-                        <condition id="9" name="On item exists" sid="898104131353297" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save1&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="158167419581086" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="176652038422494" type="File1">
-                            <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
-                        </action>
-                        <action id="-11" name="Subtract from" sid="897667745541220" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="943940900775070">
-                    <conditions>
-                        <condition id="9" name="On item exists" sid="966440199470973" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save2&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="827417308641969" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="465320803146641" type="File2">
-                            <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
-                        </action>
-                        <action id="-11" name="Subtract from" sid="745332954410800" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="836645123067758">
-                    <conditions>
-                        <condition id="9" name="On item exists" sid="466899471351829" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save3&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="875905368048206" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="444597022955354" type="File3">
-                            <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
-                        </action>
-                        <action id="-11" name="Subtract from" sid="137088693134469" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="711575226815388">
-                    <conditions>
-                        <condition id="10" name="On item missing" sid="410610755477879" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save1&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="348916707313948" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="456229423647653" type="File1">
-                            <param id="0" name="Text">&quot;File 1&quot;</param>
-                        </action>
-                        <action id="-11" name="Subtract from" sid="482175841055265" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="422534283664110">
-                    <conditions>
-                        <condition id="10" name="On item missing" sid="555150023888722" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save2&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="340511507934927" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="231256552766900" type="File2">
-                            <param id="0" name="Text">&quot;File 2&quot;</param>
-                        </action>
-                        <action id="-11" name="Subtract from" sid="443225040338791" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="130004293039984">
-                    <conditions>
-                        <condition id="10" name="On item missing" sid="756742211415768" type="LocalStorage">
-                            <param id="0" name="Key">&quot;save3&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="312851381585433" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="189098864469486" type="File3">
-                            <param id="0" name="Text">&quot;File 3&quot;</param>
-                        </action>
-                        <action id="-11" name="Subtract from" sid="389869346515647" type="System">
-                            <param id="0" name="Variable">AuxActualizar</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-block sid="921337434261222">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="812234489655019" type="Go2" />
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="996002668682882" type="f">
-                    <param id="0" name="Name">&quot;Actualizar&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
