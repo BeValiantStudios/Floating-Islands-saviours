@@ -3474,6 +3474,97 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Parallax1" sid="375266087252762">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="599887312737226" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Fondo Fis nubes 1.png">
+                        <collision-poly>
+                            <point x="0.00124688" y="0.0199005" />
+                            <point x="0.5" y="0.00248756" />
+                            <point x="0.998753" y="0.0199005" />
+                            <point x="0.998753" y="0.980099" />
+                            <point x="0.5" y="0.997512" />
+                            <point x="0.00124688" y="0.980099" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Parallax2" sid="687917786701344">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="596799903157259" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Fondo Fis nubes 2.png">
+                        <collision-poly>
+                            <point x="0.116927" y="0.216942" />
+                            <point x="0.5" y="0.0619835" />
+                            <point x="0.91314" y="0.161157" />
+                            <point x="0.981069" y="0.5" />
+                            <point x="0.955457" y="0.917355" />
+                            <point x="0.5" y="0.938017" />
+                            <point x="0.0746102" y="0.86157" />
+                            <point x="0.120267" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Parallax3" sid="598969980737007">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="396742617440993" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Fondo Fis nubes 3.png">
+                        <collision-poly>
+                            <point x="0.0512249" y="0.0950413" />
+                            <point x="0.5" y="0.0123967" />
+                            <point x="0.951002" y="0.0909091" />
+                            <point x="0.155902" y="0.5" />
+                            <point x="0.906459" y="0.826446" />
+                            <point x="0.5" y="0.890496" />
+                            <point x="0.0902004" y="0.832645" />
+                            <point x="0.0846325" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Parallax4" sid="103935774705414">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="113351705937904" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Fondo Fis nubes 4.png">
+                        <collision-poly>
+                            <point x="0.0423163" y="0.0785124" />
+                            <point x="0.5" y="0.0289256" />
+                            <point x="0.962138" y="0.0702479" />
+                            <point x="0.965479" y="0.93595" />
+                            <point x="0.5" y="0.954545" />
+                            <point x="0.0501114" y="0.907025" />
+                            <point x="0.0144766" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Parallax5" sid="240663348250924">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="204312451164873" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\EdgardDeveloper\shotopof\exportados\FIS\Fondo Fis nubes 5.png">
+                        <collision-poly>
+                            <point x="0.126949" y="0.235537" />
+                            <point x="0.5" y="0.630165" />
+                            <point x="0.898664" y="0.188017" />
+                            <point x="0.729399" y="0.5" />
+                            <point x="0.820713" y="0.667355" />
+                            <point x="0.5" y="0.688017" />
+                            <point x="0.0523385" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">

@@ -89,7 +89,7 @@
                     <actions>
                         <action id="0" name="Spawn another object" sid="399452510365210" type="SpawnPrototipo">
                             <param id="0" name="Object">Enemigos</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
