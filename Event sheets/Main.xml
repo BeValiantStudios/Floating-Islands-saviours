@@ -306,6 +306,27 @@
                             <param id="0" name="JSON">CRAFTEOS</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="492242151152401">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="866341441637358" type="System">
+                                    <param id="0" name="Variable">Oleada</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="903749505336273" type="System">
+                                    <param id="0" name="Variable">CantidadEnemigosOleada</param>
+                                    <param id="1" name="Value">20</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="168108415880768" type="System">
+                                    <param id="0" name="Variable">EnemigosRestantes</param>
+                                    <param id="1" name="Value">20</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="109611857012164">
                     <conditions>
