@@ -1865,13 +1865,35 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-208</x>
-                        <y>590</y>
+                        <x>-188</x>
+                        <y>524</y>
                         <z>0</z>
                         <width>45</width>
                         <height>38</height>
                         <depth>0</depth>
                         <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ColisionGordo" uid="218">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-349</x>
+                        <y>515</y>
+                        <z>0</z>
+                        <width>24</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
