@@ -1438,9 +1438,23 @@
             <object-type name="Esqueleto" sid="650909976629941">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927855619317995" speed="10">
+                    <animation framecount="6" loop="1" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="927855619317995" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="6" loop="1" name="Up" pingpong="0" repeatcount="1" repeatto="0" sid="636932427972201" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="6" loop="1" name="Down" pingpong="0" repeatcount="1" repeatto="0" sid="394935304955389" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -1452,22 +1466,439 @@
             </object-type>
             <object-type name="EnemigoPrototipo" sid="394609587602310">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Atacando" sid="475142524016410" type="number" />
+                </instance-variables>
                 <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="368551449579901" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.911765" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\conejo\iddle_1.png">
+                    <animation framecount="6" loop="1" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="368551449579901" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
                             <collision-poly>
-                                <point x="0.1" y="0.441176" />
-                                <point x="0.9" y="0.441176" />
-                                <point x="0.9" y="1" />
-                                <point x="0.1" y="1" />
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.911765" original-source="C:\Users\Multimedia5_20\Documents\GitHub\Tarea1-Pathfinding\Assets\Sprites\Personajes\conejo\iddle_2.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
                             <collision-poly>
-                                <point x="0.1" y="0.441176" />
-                                <point x="0.9" y="0.441176" />
-                                <point x="0.9" y="1" />
-                                <point x="0.1" y="1" />
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="6" loop="1" name="Up" pingpong="0" repeatcount="1" repeatto="0" sid="856534554782673" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="6" loop="1" name="Down" pingpong="0" repeatcount="1" repeatto="0" sid="489189434128206" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="RightIdle" pingpong="0" repeatcount="1" repeatto="0" sid="525498062049447" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="UpIdle" pingpong="0" repeatcount="1" repeatto="0" sid="757900836468651" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="DownIdle" pingpong="0" repeatcount="1" repeatto="0" sid="745630034801226" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="5" loop="1" name="AttackRight" pingpong="0" repeatcount="1" repeatto="0" sid="836703227727863" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="5" loop="0" name="AttackUp" pingpong="0" repeatcount="1" repeatto="0" sid="285093237086692" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="6" loop="0" name="AttackDown" pingpong="0" repeatcount="1" repeatto="0" sid="405799398360002" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.592" y="0.156" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Disparo" x="0.59375" y="0.15625" />
+                            <collision-poly>
+                                <point x="0.15625" y="0.1875" />
+                                <point x="0.8125" y="0.1875" />
+                                <point x="0.8125" y="0.90625" />
+                                <point x="0.15625" y="0.90625" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -2102,7 +2533,7 @@
                         <type>InvSlotSpirte</type>
                     </container>
                     <animation-folder>
-                        <animation framecount="27" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="337548820752930" speed="0">
+                        <animation framecount="30" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="337548820752930" speed="0">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -2130,6 +2561,9 @@
                             <frame duration="1" hotspotX="0.517241" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\lanza llamas.png" />
                             <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" original-source="C:\Users\Vermillion\Desktop\espada.png" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.538462" hotspotY="0.571429" />
+                            <frame duration="1" hotspotX="0.538462" hotspotY="0.571429" original-source="C:\Users\Vermillion\Desktop\mina explosiva.png" />
+                            <frame duration="1" hotspotX="0.692308" hotspotY="0.428571" original-source="C:\Users\Vermillion\Desktop\mina electrica.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -2736,6 +3170,310 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="CORTE" sid="933018619347511">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="451058489794967">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="502217702691883">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170283217905076" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\CORTE.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0.0769231" />
+                            <point x="0.714286" y="0.153846" />
+                            <point x="1" y="0.5" />
+                            <point x="0.714286" y="0.846154" />
+                            <point x="0.5" y="0.923077" />
+                            <point x="0" y="1" />
+                            <point x="0.714286" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Magoldo" sid="970657190878998">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Atacando" sid="833183583685933" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="10" loop="1" name="DownIdle" pingpong="0" repeatcount="1" repeatto="0" sid="302406164134992" speed="12">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.538462" y="0.615385" />
+                        <collision-poly>
+                            <point x="0.269231" y="0.269231" />
+                            <point x="0.5" y="0.0769231" />
+                            <point x="0.730769" y="0.269231" />
+                            <point x="0.884615" y="0.5" />
+                            <point x="0.769231" y="0.769231" />
+                            <point x="0.5" y="0.807692" />
+                            <point x="0.230769" y="0.769231" />
+                            <point x="0.115385" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.538462" y="0.615385" />
+                        <collision-poly>
+                            <point x="0.384615" y="0.384615" />
+                            <point x="0.5" y="0.307692" />
+                            <point x="0.615385" y="0.384615" />
+                            <point x="0.846154" y="0.5" />
+                            <point x="0.923077" y="0.923077" />
+                            <point x="0.5" y="0.961538" />
+                            <point x="0.0769231" y="0.923077" />
+                            <point x="0.153846" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.538462" y="0.615385" />
+                        <collision-poly>
+                            <point x="0.5" y="0.230769" />
+                            <point x="0.846154" y="0.5" />
+                            <point x="0.807692" y="0.807692" />
+                            <point x="0.5" y="0.884615" />
+                            <point x="0.192308" y="0.807692" />
+                            <point x="0.153846" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.538462" y="0.615385" />
+                        <collision-poly>
+                            <point x="0.5" y="0.115385" />
+                            <point x="0.884615" y="0.5" />
+                            <point x="0.769231" y="0.769231" />
+                            <point x="0.5" y="0.846154" />
+                            <point x="0.230769" y="0.769231" />
+                            <point x="0.115385" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.538462" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.538462" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.538462" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.538462" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.538462" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.538462" y="0.615385" />
+                    </frame>
+                </animation>
+                <animation framecount="10" loop="1" name="UpIdle" pingpong="0" repeatcount="1" repeatto="0" sid="234946213940147" speed="12">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.538462" y="0.615385" />
+                    </frame>
+                </animation>
+                <animation framecount="10" loop="1" name="RightIdle" pingpong="0" repeatcount="1" repeatto="0" sid="659018791177108" speed="12">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.653846" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.653846" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.653846" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.653846" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.653846" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.653846" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.653846" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.653846" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.653846" y="0.615385" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Disparo" x="0.653846" y="0.615385" />
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="DownRun" pingpong="0" repeatcount="1" repeatto="0" sid="784078171709482" speed="12">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="4" loop="1" name="UpRun" pingpong="0" repeatcount="1" repeatto="0" sid="685108459347704" speed="12">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="4" loop="1" name="RightRun" pingpong="0" repeatcount="1" repeatto="0" sid="901392710019348" speed="12">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="magoldobullet" sid="819643963400001">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="860109369300509">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="430187852297392" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Documents\GitHub\Floating-Islands-saviours\Assets\Enemies\Magoldo GIFs\magoldo-bullet.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.1875" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.8125" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="toportuga" sid="199999565501567">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Atacando" sid="261318344768065" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="IdleDown" pingpong="0" repeatcount="1" repeatto="0" sid="785640633550278" speed="10">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.222222" y="0.263158" />
+                            <point x="0.488889" y="0.157895" />
+                            <point x="0.777778" y="0.263158" />
+                            <point x="0.933333" y="0.5" />
+                            <point x="0.777778" y="0.736842" />
+                            <point x="0.488889" y="0.921053" />
+                            <point x="0.222222" y="0.736842" />
+                            <point x="0.0666667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.222222" y="0.263158" />
+                            <point x="0.488889" y="0.131579" />
+                            <point x="0.777778" y="0.263158" />
+                            <point x="0.888889" y="0.5" />
+                            <point x="0.777778" y="0.736842" />
+                            <point x="0.488889" y="0.894737" />
+                            <point x="0.222222" y="0.736842" />
+                            <point x="0.111111" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.244444" y="0.289474" />
+                            <point x="0.488889" y="0.184211" />
+                            <point x="0.755556" y="0.289474" />
+                            <point x="0.977778" y="0.5" />
+                            <point x="0.8" y="0.763158" />
+                            <point x="0.488889" y="0.947368" />
+                            <point x="0.2" y="0.763158" />
+                            <point x="0.0222222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.222222" y="0.263158" />
+                            <point x="0.488889" y="0.157895" />
+                            <point x="0.777778" y="0.263158" />
+                            <point x="0.933333" y="0.5" />
+                            <point x="0.777778" y="0.736842" />
+                            <point x="0.488889" y="0.921053" />
+                            <point x="0.222222" y="0.736842" />
+                            <point x="0.0666667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="IdleUp" pingpong="0" repeatcount="1" repeatto="0" sid="200299479385908" speed="10">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                </animation>
+                <animation framecount="4" loop="1" name="IdleRight" pingpong="0" repeatcount="1" repeatto="0" sid="135688109054663" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" />
+                </animation>
+                <animation framecount="4" loop="1" name="RunDown" pingpong="0" repeatcount="1" repeatto="0" sid="508826696718134" speed="10">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                </animation>
+                <animation framecount="6" loop="1" name="RunUp" pingpong="0" repeatcount="1" repeatto="0" sid="859729583533641" speed="10">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                </animation>
+                <animation framecount="6" loop="1" name="RunRight" pingpong="0" repeatcount="1" repeatto="0" sid="124892692252287" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" />
+                </animation>
+                <animation framecount="5" loop="1" name="AttackDown" pingpong="0" repeatcount="1" repeatto="0" sid="920716066047668" speed="10">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                </animation>
+                <animation framecount="5" loop="1" name="AttackUp" pingpong="0" repeatcount="1" repeatto="0" sid="982324639592367" speed="10">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.508197" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.508197" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.508197" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.508197" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.508197" />
+                </animation>
+                <animation framecount="5" loop="1" name="AttackRight" pingpong="0" repeatcount="1" repeatto="0" sid="902123623169857" speed="10">
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.512195" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.512195" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.512195" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.512195" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.512195" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">
@@ -2784,6 +3522,8 @@
             <members>
                 <member>EnemigoPrototipo</member>
                 <member>Esqueleto</member>
+                <member>Magoldo</member>
+                <member>toportuga</member>
             </members>
             <instance-variables>
                 <instance-variable name="SearchTime" sid="350932733868387" type="number" />

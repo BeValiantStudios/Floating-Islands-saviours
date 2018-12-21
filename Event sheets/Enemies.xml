@@ -18,7 +18,7 @@
                     <param id="0" name="Variable">CantidadEnemigosOleada</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="737152812806408" type="EnemigoPrototipo">
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="737152812806408" type="Enemigos">
                     <param id="0" name="Obstacle">TilemapSolid</param>
                 </action>
             </actions>
@@ -230,5 +230,924 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="911783111220946" title="Animaciones">
+            <sub-events>
+                <event-group description="" sid="475736419261085" title="AnimacionEsqueleto">
+                    <sub-events>
+                        <event-block sid="677150198851260">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="413729034717111" type="Esqueleto">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+40</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="196139664263638" type="Esqueleto">
+                                    <param id="0" name="Animation">&quot;Up&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="914412534420253">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="971164065145562" type="Esqueleto">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+-40</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="144351114904019" type="Esqueleto">
+                                    <param id="0" name="Animation">&quot;Down&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="160999940214985">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="450525173931148" type="Esqueleto">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+40</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="692763433868681" type="Esqueleto">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+-40</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="278423789594863" type="Esqueleto">
+                                    <param id="0" name="Animation">&quot;Right&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="569695483038570" title="Conejo">
+                    <sub-events>
+                        <event-block sid="922527708273351">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="967585986033287" type="EnemigoPrototipo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+40</param>
+                                </condition>
+                                <condition behavior="Pathfinding" id="6" name="Compare speed" sid="970185034666344" type="EnemigoPrototipo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Speed">20</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="126881953809083" type="EnemigoPrototipo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="359705383182087" type="EnemigoPrototipo">
+                                    <param id="0" name="Animation">&quot;Up&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="496543053185297">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="661675461318412" type="EnemigoPrototipo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+40</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="255221575712855" type="EnemigoPrototipo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="880285978776311" type="System">
+                                    <param id="0" name="First value">distance(Player.X,Player.Y,EnemigoPrototipo.X,EnemigoPrototipo.Y)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">15</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="996249765744994" type="EnemigoPrototipo">
+                                    <param id="0" name="Animation">&quot;UpIdle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Pathfinding" id="2" name="Stop" sid="746686678565978" type="EnemigoPrototipo" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="498269095455558">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="825621609930487" type="EnemigoPrototipo">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+-40</param>
+                                </condition>
+                                <condition behavior="Pathfinding" id="6" name="Compare speed" sid="688180787418206" type="EnemigoPrototipo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Speed">20</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="302035808305081" type="EnemigoPrototipo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="837663928412956" type="EnemigoPrototipo">
+                                    <param id="0" name="Animation">&quot;Down&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="160334160327607">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="727494524680912" type="EnemigoPrototipo">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+-40</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="419728686638288" type="System">
+                                    <param id="0" name="First value">distance(Player.X,Player.Y,EnemigoPrototipo.X,EnemigoPrototipo.Y)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">15</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="423046264599486" type="EnemigoPrototipo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="561724903046367" type="EnemigoPrototipo">
+                                    <param id="0" name="Animation">&quot;DownIdle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Pathfinding" id="2" name="Stop" sid="276623057691048" type="EnemigoPrototipo" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="170612223715462">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="388752914149336" type="EnemigoPrototipo">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+40</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="690250994117500" type="EnemigoPrototipo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+-40</param>
+                                </condition>
+                                <condition behavior="Pathfinding" id="6" name="Compare speed" sid="954284632068716" type="EnemigoPrototipo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Speed">20</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="433332728164604" type="EnemigoPrototipo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="886767923092513" type="EnemigoPrototipo">
+                                    <param id="0" name="Animation">&quot;Right&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="301038842845937">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="418448273745862" type="EnemigoPrototipo">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+40</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="681971158759072" type="EnemigoPrototipo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+-40</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="619599191091130" type="System">
+                                    <param id="0" name="First value">distance(Player.X,Player.Y,EnemigoPrototipo.X,EnemigoPrototipo.Y)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">15</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="644057886044177" type="EnemigoPrototipo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="278127167462650" type="EnemigoPrototipo">
+                                    <param id="0" name="Animation">&quot;RightIdle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Pathfinding" id="2" name="Stop" sid="974136174112708" type="EnemigoPrototipo" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="334310172819518">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="114318881639447" type="EnemigoPrototipo">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="627552056476546" type="EnemigoPrototipo">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="538552187478607">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="603570649186911" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="238837915870606" type="EnemigoPrototipo">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="302510442580480">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="398464814529875" type="EnemigoPrototipo">
+                                    <param id="0" name="Animation">&quot;RightIdle&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="845323000787831" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="505264835669140" type="EnemigoPrototipo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="489713504968264">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="668234246491827" type="EnemigoPrototipo">
+                                            <param id="0" name="Instance variable">Atacando</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition behavior="Pathfinding" id="6" name="Compare speed" sid="360800875558638" type="EnemigoPrototipo">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Speed">20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="280485938218138" type="EnemigoPrototipo">
+                                            <param id="0" name="Animation">&quot;AttackRight&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="233052431784643" type="EnemigoPrototipo">
+                                            <param id="0" name="Set">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="989080511351361">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="574507095343304" type="System">
+                                                    <param id="0" name="Interval (seconds)">random(0.9,1.1)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="274233917459004" type="EnemigoPrototipo">
+                                                    <param id="0" name="Object">CORTE</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                                <action id="-22" name="Set angle toward position" sid="575274989753646" type="CORTE">
+                                                    <param id="0" name="X">Player.X</param>
+                                                    <param id="1" name="Y">Player.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="265889878914925">
+                            <conditions>
+                                <condition behavior="Pathfinding" id="6" name="Compare speed" sid="272414140747452" type="EnemigoPrototipo">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Speed">15</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="394965824716425" type="EnemigoPrototipo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="217402719757013">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="105488933529193" type="System">
+                                    <param id="0" name="First value">abs(EnemigoPrototipo.X)+abs(5)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">abs(Player.X)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="3" name="Set enabled" sid="833848462631719" type="EnemigoPrototipo">
+                                    <param id="0" name="Set">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="594420538252531">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="952504848188129" type="System">
+                                    <param id="0" name="First value">abs(EnemigoPrototipo.X)+abs(5)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">abs(Player.X)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="3" name="Set enabled" sid="485722302184682" type="EnemigoPrototipo">
+                                    <param id="0" name="Set">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="579819069057835">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="351390477059851" type="System">
+                                    <param id="0" name="First value">abs(EnemigoPrototipo.Y)+abs(5)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">abs(Player.Y)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="3" name="Set enabled" sid="441021832680534" type="EnemigoPrototipo">
+                                    <param id="0" name="Set">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="988396197056550">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="395921323682862" type="System">
+                                    <param id="0" name="First value">abs(EnemigoPrototipo.Y)+abs(5)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">abs(Player.Y)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="3" name="Set enabled" sid="354745757792410" type="EnemigoPrototipo">
+                                    <param id="0" name="Set">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="466327263232742" title="Magoldo">
+                    <sub-events>
+                        <event-block sid="291877275160305">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="468523457377449" type="Magoldo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+40</param>
+                                </condition>
+                                <condition behavior="Pathfinding" id="6" name="Compare speed" sid="879996939283754" type="Magoldo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Speed">20</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="871745143110996" type="Magoldo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="852067641009601" type="Magoldo">
+                                    <param id="0" name="Animation">&quot;UpRun&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="730189379571860">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="276688558138282" type="Magoldo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+40</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="784534871968682" type="Magoldo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="892674555814733" type="System">
+                                    <param id="0" name="First value">distance(Player.X,Player.Y,Magoldo.X,Magoldo.Y)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">160</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="400264137801354" type="Magoldo">
+                                    <param id="0" name="Animation">&quot;UpIdle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Pathfinding" id="2" name="Stop" sid="507890869804371" type="Magoldo" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="657131995979407">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="525984280825211" type="Magoldo">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+-60</param>
+                                </condition>
+                                <condition behavior="Pathfinding" id="6" name="Compare speed" sid="563422677502102" type="Magoldo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Speed">20</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="876869335754482" type="Magoldo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="356208275306056" type="Magoldo">
+                                    <param id="0" name="Animation">&quot;DownRun&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="179796470114113">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="836469425871765" type="Magoldo">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+-60</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="246370065517358" type="System">
+                                    <param id="0" name="First value">distance(Player.X,Player.Y,Magoldo.X,Magoldo.Y)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">160</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="766867100011121" type="Magoldo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="383030693875811" type="Magoldo">
+                                    <param id="0" name="Animation">&quot;DownIdle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Pathfinding" id="2" name="Stop" sid="198056294757251" type="Magoldo" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="423404809830259">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="954231737667064" type="Magoldo">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+40</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="497574904760362" type="Magoldo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+-40</param>
+                                </condition>
+                                <condition behavior="Pathfinding" id="6" name="Compare speed" sid="656336147741234" type="Magoldo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Speed">20</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="553793587756962" type="Magoldo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="344447160829673" type="Magoldo">
+                                    <param id="0" name="Animation">&quot;RightRun&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="872749578891839">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="966235060137412" type="Magoldo">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+60</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="735737246333848" type="Magoldo">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y+-60</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="274306507652096" type="System">
+                                    <param id="0" name="First value">distance(Player.X,Player.Y,Magoldo.X,Magoldo.Y)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">160</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="800062668592233" type="Magoldo">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="370776195514430" type="Magoldo">
+                                    <param id="0" name="Animation">&quot;RightIdle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Pathfinding" id="2" name="Stop" sid="594617348279876" type="Magoldo" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="866734563618761">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="373963379668552" type="Magoldo">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="709569867996408" type="Magoldo">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="626232547988751">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="817457417723399" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="796987935535595" type="Magoldo">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="720763768877778">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="685681087570026" type="Magoldo">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">9</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="468907145030861">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="450050815394396" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="148965707796420" type="Magoldo">
+                                            <param id="0" name="Object">magoldobullet</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="660361181112713">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="934150274572818" type="Magoldo">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">9</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="147995279195575">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="585774830381907" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="991870412284939" type="Magoldo">
+                                            <param id="0" name="Object">magoldobullet</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="422816899605814">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="917808909223005" type="Magoldo">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">9</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="212413005151592">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="189839344061887" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="421586718010849" type="Magoldo">
+                                            <param id="0" name="Object">magoldobullet</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="850860924180179">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="842763196858081" type="magoldobullet" />
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="740238040599121" type="magoldobullet">
+                                    <param id="0" name="X">Player.X</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="459697722979632">
+                            <conditions>
+                                <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="405596030569191" type="magoldobullet">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Distance">500</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="124893842304661" type="magoldobullet" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="866807809838913" title="Toportuga" />
+                <event-block sid="919307179410871">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="876099770692601" type="toportuga">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">Player.Y+40</param>
+                        </condition>
+                        <condition behavior="Pathfinding" id="6" name="Compare speed" sid="107907812190512" type="toportuga">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">20</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="963543647738550" type="toportuga">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="705349928636235" type="toportuga">
+                            <param id="0" name="Animation">&quot;RunUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="647752082371949">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="285278910196346" type="toportuga">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">Player.Y+40</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="987527996898485" type="toportuga">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="646639625415096" type="System">
+                            <param id="0" name="First value">distance(Player.X,Player.Y,toportuga.X,toportuga.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="346527170960993" type="toportuga">
+                            <param id="0" name="Animation">&quot;IdleUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="998084232746389" type="toportuga" />
+                    </actions>
+                </event-block>
+                <event-block sid="197378592625216">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="315437182046566" type="toportuga">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Player.Y+-40</param>
+                        </condition>
+                        <condition behavior="Pathfinding" id="6" name="Compare speed" sid="510597568499644" type="toportuga">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">20</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="392664257382694" type="toportuga">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="793486192766558" type="toportuga">
+                            <param id="0" name="Animation">&quot;RunDown&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="186579843732368">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="357804976763910" type="toportuga">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Player.Y+-40</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="819147801958003" type="System">
+                            <param id="0" name="First value">distance(Player.X,Player.Y,toportuga.X,toportuga.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">15</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="874632040081091" type="toportuga">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="919048645057296" type="toportuga">
+                            <param id="0" name="Animation">&quot;IdleDown&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="549885843726513" type="toportuga" />
+                    </actions>
+                </event-block>
+                <event-block sid="538981436635386">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="915166546358165" type="toportuga">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Player.Y+40</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="459614646543343" type="toportuga">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">Player.Y+-40</param>
+                        </condition>
+                        <condition behavior="Pathfinding" id="6" name="Compare speed" sid="392955800107362" type="toportuga">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">20</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="147804939294645" type="toportuga">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="447279074930440" type="toportuga">
+                            <param id="0" name="Animation">&quot;RunRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="831636595342587">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="727677080221946" type="toportuga">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Player.Y+40</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="460087255614745" type="toportuga">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">Player.Y+-40</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="558001237495940" type="System">
+                            <param id="0" name="First value">distance(Player.X,Player.Y,toportuga.X,toportuga.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">15</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="376505615399818" type="toportuga">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="903361481291124" type="toportuga">
+                            <param id="0" name="Animation">&quot;IdleRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="974499229767044" type="toportuga" />
+                    </actions>
+                </event-block>
+                <event-block sid="487996133547721">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="686021336583932" type="toportuga">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">Player.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="738575447916459" type="toportuga">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="791569345367091">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="668564889923747" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="720412241550928" type="toportuga">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="503058391653586">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="670769336160578" type="toportuga">
+                            <param id="0" name="Animation">&quot;IdleRight&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="510045514763213" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="692482952362830" type="toportuga">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="641223051025473">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="669944987889079" type="toportuga">
+                                    <param id="0" name="Instance variable">Atacando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition behavior="Pathfinding" id="6" name="Compare speed" sid="828750609618957" type="toportuga">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Speed">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="385969454923057" type="toportuga">
+                                    <param id="0" name="Animation">&quot;AttackRight&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Pathfinding" id="3" name="Set enabled" sid="485145796687583" type="toportuga">
+                                    <param id="0" name="Set">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="779998255871235">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="6" name="Compare speed" sid="821027212732246" type="toportuga">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Speed">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="550965771022155" type="toportuga">
+                            <param id="0" name="Instance variable">Atacando</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="301550777093600">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="679466694375099" type="System">
+                            <param id="0" name="First value">abs(toportuga.X)+abs(5)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">abs(Player.X)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="810858703258606" type="toportuga">
+                            <param id="0" name="Set">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="778386177862543">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="321535914465838" type="System">
+                            <param id="0" name="First value">abs(toportuga.X)+abs(5)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">abs(Player.X)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="907983016351587" type="toportuga">
+                            <param id="0" name="Set">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="449398469492208">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="767612342666784" type="System">
+                            <param id="0" name="First value">abs(toportuga.Y)+abs(5)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">abs(Player.Y)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="855218486947975" type="toportuga">
+                            <param id="0" name="Set">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="352065585030564">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="616700470178640" type="System">
+                            <param id="0" name="First value">abs(toportuga.Y)+abs(5)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">abs(Player.Y)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="241000814663994" type="toportuga">
+                            <param id="0" name="Set">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
