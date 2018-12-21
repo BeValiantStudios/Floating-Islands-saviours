@@ -3871,6 +3871,40 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="PantallaNegraApertura" sid="873919828597120">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="657492223994224">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="943131102341378" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PantallaNegraCierre" sid="133000024521168">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="674678119054920">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="987494005756918" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="YouLose" sid="656789596576679">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="798411716145511">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">
