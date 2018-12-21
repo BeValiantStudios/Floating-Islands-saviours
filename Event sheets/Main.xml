@@ -305,6 +305,13 @@
                         <action id="4" name="Load" sid="352690057345644" type="DicCrafteos">
                             <param id="0" name="JSON">CRAFTEOS</param>
                         </action>
+                        <action id="33" name="Stop all" sid="854025495833096" type="Audio" />
+                        <action id="0" name="Play" sid="507437344052481" type="Audio">
+                            <param id="0" name="Audio file">main</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;OST&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="492242151152401">

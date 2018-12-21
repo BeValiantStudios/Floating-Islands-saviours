@@ -29,6 +29,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
+                        <condition id="-16" name="Pick random instance" sid="964068901559670" type="System">
+                            <param id="0" name="Object">SpawnPrototipo</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="399452510365210" type="SpawnPrototipo">
@@ -38,16 +41,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="606556259351479">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="246423662044301" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="299588995899034">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="456213548851265" type="System">
@@ -65,6 +58,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
+                        <condition id="-16" name="Pick random instance" sid="140988980594172" type="System">
+                            <param id="0" name="Object">SpawnPrototipo</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="598035317888309" type="SpawnPrototipo">
@@ -74,16 +70,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="254537265751549">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="159701609713598" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="303520303331560">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="144180026247636" type="System">
@@ -101,6 +87,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
+                        <condition id="-16" name="Pick random instance" sid="495056127128390" type="System">
+                            <param id="0" name="Object">SpawnPrototipo</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="432953821286731" type="SpawnPrototipo">
@@ -110,16 +99,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="913354904769932">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="972432499979385" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="915085497379539">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="783976139618176" type="System">
@@ -137,6 +116,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
+                        <condition id="-16" name="Pick random instance" sid="125032312620426" type="System">
+                            <param id="0" name="Object">SpawnPrototipo</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="587463378639831" type="SpawnPrototipo">
@@ -146,16 +128,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="109917132741208">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="778984452675536" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="629360516727697">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="846955477548834" type="System">
@@ -173,6 +145,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
+                        <condition id="-16" name="Pick random instance" sid="677313106940941" type="System">
+                            <param id="0" name="Object">SpawnPrototipo</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="171487820990620" type="SpawnPrototipo">
@@ -182,16 +157,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="226526563323809">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="592859275726283" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="776858714813019">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="445964092804886" type="System">
@@ -209,6 +174,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">6</param>
                         </condition>
+                        <condition id="-16" name="Pick random instance" sid="117257735353201" type="System">
+                            <param id="0" name="Object">SpawnPrototipo</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="204252422167300" type="SpawnPrototipo">
@@ -218,16 +186,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="569099378065304">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="948637598234998" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="196866191698486">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="814597623370461" type="System">
@@ -245,6 +203,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">7</param>
                         </condition>
+                        <condition id="-16" name="Pick random instance" sid="941778083095565" type="System">
+                            <param id="0" name="Object">SpawnPrototipo</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="217540496939104" type="SpawnPrototipo">
@@ -254,16 +215,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="763453312662938">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="491432193293706" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="196928565247273">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="534708479349212" type="System">
@@ -281,6 +232,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">8</param>
                         </condition>
+                        <condition id="-16" name="Pick random instance" sid="878050362178285" type="System">
+                            <param id="0" name="Object">SpawnPrototipo</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="940650009558423" type="SpawnPrototipo">
@@ -290,16 +244,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="222408302685197">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="194595639611331" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="286790793560156">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="522631749739365" type="System">
@@ -317,6 +261,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">9</param>
                         </condition>
+                        <condition id="-16" name="Pick random instance" sid="479651953195009" type="System">
+                            <param id="0" name="Object">SpawnPrototipo</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="423651693026491" type="SpawnPrototipo">
@@ -326,16 +273,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="915895448556307">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="713728777641374" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="367413657376830">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="419322133537403" type="System">
@@ -353,6 +290,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">10</param>
                         </condition>
+                        <condition id="-16" name="Pick random instance" sid="293302187867742" type="System">
+                            <param id="0" name="Object">SpawnPrototipo</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="159243416724612" type="SpawnPrototipo">
@@ -362,16 +302,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="528477358915640">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="265065111239565" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="984942463032479">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="829619936390725" type="System">
@@ -389,6 +319,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">11</param>
                         </condition>
+                        <condition id="-16" name="Pick random instance" sid="864396961361629" type="System">
+                            <param id="0" name="Object">SpawnPrototipo</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="637186842877042" type="SpawnPrototipo">
@@ -398,16 +331,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="568329289758512">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="821170948328072" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="578200240251545">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="822084664153405" type="System">
@@ -425,6 +348,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">12</param>
                         </condition>
+                        <condition id="-16" name="Pick random instance" sid="238973983753431" type="System">
+                            <param id="0" name="Object">SpawnPrototipo</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="247713933051457" type="SpawnPrototipo">
@@ -434,16 +360,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="306141872106769">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="127791509603056" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="493775270440560">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="494571378323267" type="System">
@@ -460,6 +376,9 @@
                             <param id="0" name="Variable">Oleada</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">13</param>
+                        </condition>
+                        <condition id="-16" name="Pick random instance" sid="796720422538807" type="System">
+                            <param id="0" name="Object">SpawnPrototipo</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -520,6 +439,18 @@
             <actions>
                 <action id="-9" name="Destroy" sid="413221057615881" type="Enemigos" />
             </actions>
+            <sub-events>
+                <event-block sid="385038431536958">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="416040194743920" type="Enemigos">
+                            <param id="0" name="Object">SpawnPrototipo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="269098333108693" type="SpawnPrototipo" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="270259917936482">
             <conditions>

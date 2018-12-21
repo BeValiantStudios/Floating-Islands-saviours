@@ -1009,5 +1009,22 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="627799930712018">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="825676935621146" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Load" sid="155427680985717" type="Chonks">
+                    <param id="0" name="JSON">CHUNKS</param>
+                </action>
+                <action id="33" name="Stop all" sid="315669367247430" type="Audio" />
+                <action id="0" name="Play" sid="140434240403143" type="Audio">
+                    <param id="0" name="Audio file">title</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;OST&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
