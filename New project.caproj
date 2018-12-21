@@ -23,6 +23,7 @@
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -5033,6 +5034,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Gamepad" sid="168791474527178">
+            <plugin id="gamepad" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">
@@ -5137,6 +5141,11 @@
         <global-instance type="f" uid="39" />
         <global-instance type="LocalStorage" uid="76" />
         <global-instance type="AJAX" uid="77" />
+        <global-instance type="Gamepad" uid="240">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder />
     <music-folder />
