@@ -2473,7 +2473,7 @@
         </event-block>
         <event-block any="1" sid="951534316037384">
             <conditions>
-                <condition id="0" name="On key pressed" sid="978722397482708" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="978722397482708" type="kb">
                     <param id="0" name="Key">82</param>
                 </condition>
                 <condition id="3" name="On touched object" sid="254672403257253" type="Touch">

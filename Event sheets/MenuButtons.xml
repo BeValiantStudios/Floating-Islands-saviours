@@ -43,13 +43,13 @@
                                 <event-block disabled="1" sid="541628222877863">
                                     <conditions />
                                     <actions>
-                                        <action id="5" name="Check item exists" sid="453227940969061" type="LocalStorage">
+                                        <action id="5" name="Check item exists" sid="453227940969061" type="ls">
                                             <param id="0" name="Key">&quot;save1&quot;</param>
                                         </action>
-                                        <action id="5" name="Check item exists" sid="260542345807711" type="LocalStorage">
+                                        <action id="5" name="Check item exists" sid="260542345807711" type="ls">
                                             <param id="0" name="Key">&quot;save2&quot;</param>
                                         </action>
-                                        <action id="5" name="Check item exists" sid="709378919532269" type="LocalStorage">
+                                        <action id="5" name="Check item exists" sid="709378919532269" type="ls">
                                             <param id="0" name="Key">&quot;save3&quot;</param>
                                         </action>
                                     </actions>
@@ -106,37 +106,37 @@
                         </event-block>
                         <event-block disabled="1" sid="115881351011496">
                             <conditions>
-                                <condition id="9" name="On item exists" sid="654452673814014" type="LocalStorage">
+                                <condition id="9" name="On item exists" sid="654452673814014" type="ls">
                                     <param id="0" name="Key">&quot;save1&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="442562285478588" type="File1">
-                                    <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
+                                    <param id="0" name="Text">str(ls.ItemValue)</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block disabled="1" sid="184336445764721">
                             <conditions>
-                                <condition id="9" name="On item exists" sid="459608416622531" type="LocalStorage">
+                                <condition id="9" name="On item exists" sid="459608416622531" type="ls">
                                     <param id="0" name="Key">&quot;save2&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="534349781510034" type="File2">
-                                    <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
+                                    <param id="0" name="Text">str(ls.ItemValue)</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block disabled="1" sid="107049859983916">
                             <conditions>
-                                <condition id="9" name="On item exists" sid="165848080492809" type="LocalStorage">
+                                <condition id="9" name="On item exists" sid="165848080492809" type="ls">
                                     <param id="0" name="Key">&quot;save3&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="617720744340036" type="File3">
-                                    <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
+                                    <param id="0" name="Text">str(ls.ItemValue)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -258,7 +258,7 @@
                         </event-block>
                         <event-block disabled="1" sid="298341886697092">
                             <conditions>
-                                <condition id="10" name="On item missing" sid="666310650659284" type="LocalStorage">
+                                <condition id="10" name="On item missing" sid="666310650659284" type="ls">
                                     <param id="0" name="Key">&quot;save1&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="554072575167638" type="System">
@@ -280,7 +280,7 @@
                         </event-block>
                         <event-block disabled="1" sid="116365790045484">
                             <conditions>
-                                <condition id="10" name="On item missing" sid="668806901928553" type="LocalStorage">
+                                <condition id="10" name="On item missing" sid="668806901928553" type="ls">
                                     <param id="0" name="Key">&quot;save2&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="725010698907099" type="System">
@@ -302,7 +302,7 @@
                         </event-block>
                         <event-block disabled="1" sid="532880413600350">
                             <conditions>
-                                <condition id="10" name="On item missing" sid="444001172132467" type="LocalStorage">
+                                <condition id="10" name="On item missing" sid="444001172132467" type="ls">
                                     <param id="0" name="Key">&quot;save3&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="984905491517961" type="System">
@@ -324,7 +324,7 @@
                         </event-block>
                         <event-block disabled="1" sid="529512001189136">
                             <conditions>
-                                <condition id="9" name="On item exists" sid="417014565955749" type="LocalStorage">
+                                <condition id="9" name="On item exists" sid="417014565955749" type="ls">
                                     <param id="0" name="Key">&quot;save1&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="529395359477635" type="System">
@@ -340,13 +340,13 @@
                                 </action>
                                 <action id="0" name="Call function" sid="413773988145449" type="f">
                                     <param id="0" name="Name">&quot;SpawnItems&quot;</param>
-                                    <param id="1" name="Parameter {n}">LocalStorage.ItemValue</param>
+                                    <param id="1" name="Parameter {n}">ls.ItemValue</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block disabled="1" sid="878316181662996">
                             <conditions>
-                                <condition id="9" name="On item exists" sid="564658696701172" type="LocalStorage">
+                                <condition id="9" name="On item exists" sid="564658696701172" type="ls">
                                     <param id="0" name="Key">&quot;save2&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="961785296836688" type="System">
@@ -362,13 +362,13 @@
                                 </action>
                                 <action id="0" name="Call function" sid="889764631138550" type="f">
                                     <param id="0" name="Name">&quot;SpawnItems&quot;</param>
-                                    <param id="1" name="Parameter {n}">LocalStorage.ItemValue</param>
+                                    <param id="1" name="Parameter {n}">ls.ItemValue</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block disabled="1" sid="930722795023654">
                             <conditions>
-                                <condition id="9" name="On item exists" sid="646716404561780" type="LocalStorage">
+                                <condition id="9" name="On item exists" sid="646716404561780" type="ls">
                                     <param id="0" name="Key">&quot;save3&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="347432071694110" type="System">
@@ -384,7 +384,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="941094814589118" type="f">
                                     <param id="0" name="Name">&quot;SpawnItems&quot;</param>
-                                    <param id="1" name="Parameter {n}">LocalStorage.ItemValue</param>
+                                    <param id="1" name="Parameter {n}">ls.ItemValue</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -395,7 +395,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Check item exists" sid="321992286037584" type="LocalStorage">
+                                <action id="5" name="Check item exists" sid="321992286037584" type="ls">
                                     <param id="0" name="Key">&quot;save1&quot;</param>
                                 </action>
                             </actions>
@@ -407,7 +407,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Check item exists" sid="500094453053993" type="LocalStorage">
+                                <action id="5" name="Check item exists" sid="500094453053993" type="ls">
                                     <param id="0" name="Key">&quot;save2&quot;</param>
                                 </action>
                             </actions>
@@ -419,7 +419,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Check item exists" sid="997863448765918" type="LocalStorage">
+                                <action id="5" name="Check item exists" sid="997863448765918" type="ls">
                                     <param id="0" name="Key">&quot;save3&quot;</param>
                                 </action>
                             </actions>
@@ -431,7 +431,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="2" name="Remove item" sid="884316688781665" type="LocalStorage">
+                                <action id="2" name="Remove item" sid="884316688781665" type="ls">
                                     <param id="0" name="Key">Delete.Target</param>
                                 </action>
                                 <action id="0" name="Call function" sid="381755906565395" type="f">
@@ -669,7 +669,7 @@
                                     <param id="0" name="Group name">&quot;Pantalla de seleccion&quot;</param>
                                     <param id="1" name="State">2</param>
                                 </action>
-                                <action id="0" name="Set item" sid="453702100837796" type="LocalStorage">
+                                <action id="0" name="Set item" sid="453702100837796" type="ls">
                                     <param id="0" name="Key">&quot;save&quot; &amp;AuxSave</param>
                                     <param id="1" name="Value">f.Param(0)</param>
                                 </action>
@@ -799,13 +799,13 @@
                                     <param id="0" name="Variable">AuxActualizar</param>
                                     <param id="1" name="Value">3</param>
                                 </action>
-                                <action id="5" name="Check item exists" sid="702359422250276" type="LocalStorage">
+                                <action id="5" name="Check item exists" sid="702359422250276" type="ls">
                                     <param id="0" name="Key">&quot;save1&quot;</param>
                                 </action>
-                                <action id="5" name="Check item exists" sid="111221418968261" type="LocalStorage">
+                                <action id="5" name="Check item exists" sid="111221418968261" type="ls">
                                     <param id="0" name="Key">&quot;save2&quot;</param>
                                 </action>
-                                <action id="5" name="Check item exists" sid="289784989637238" type="LocalStorage">
+                                <action id="5" name="Check item exists" sid="289784989637238" type="ls">
                                     <param id="0" name="Key">&quot;save3&quot;</param>
                                 </action>
                             </actions>
@@ -816,7 +816,7 @@
                     <sub-events>
                         <event-block disabled="1" sid="319774710175028">
                             <conditions>
-                                <condition id="9" name="On item exists" sid="898104131353297" type="LocalStorage">
+                                <condition id="9" name="On item exists" sid="898104131353297" type="ls">
                                     <param id="0" name="Key">&quot;save1&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="158167419581086" type="System">
@@ -827,7 +827,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="176652038422494" type="File1">
-                                    <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
+                                    <param id="0" name="Text">str(ls.ItemValue)</param>
                                 </action>
                                 <action id="-11" name="Subtract from" sid="897667745541220" type="System">
                                     <param id="0" name="Variable">AuxActualizar</param>
@@ -837,7 +837,7 @@
                         </event-block>
                         <event-block disabled="1" sid="943940900775070">
                             <conditions>
-                                <condition id="9" name="On item exists" sid="966440199470973" type="LocalStorage">
+                                <condition id="9" name="On item exists" sid="966440199470973" type="ls">
                                     <param id="0" name="Key">&quot;save2&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="827417308641969" type="System">
@@ -848,7 +848,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="465320803146641" type="File2">
-                                    <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
+                                    <param id="0" name="Text">str(ls.ItemValue)</param>
                                 </action>
                                 <action id="-11" name="Subtract from" sid="745332954410800" type="System">
                                     <param id="0" name="Variable">AuxActualizar</param>
@@ -858,7 +858,7 @@
                         </event-block>
                         <event-block disabled="1" sid="836645123067758">
                             <conditions>
-                                <condition id="9" name="On item exists" sid="466899471351829" type="LocalStorage">
+                                <condition id="9" name="On item exists" sid="466899471351829" type="ls">
                                     <param id="0" name="Key">&quot;save3&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="875905368048206" type="System">
@@ -869,7 +869,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="444597022955354" type="File3">
-                                    <param id="0" name="Text">str(LocalStorage.ItemValue)</param>
+                                    <param id="0" name="Text">str(ls.ItemValue)</param>
                                 </action>
                                 <action id="-11" name="Subtract from" sid="137088693134469" type="System">
                                     <param id="0" name="Variable">AuxActualizar</param>
@@ -879,7 +879,7 @@
                         </event-block>
                         <event-block disabled="1" sid="711575226815388">
                             <conditions>
-                                <condition id="10" name="On item missing" sid="410610755477879" type="LocalStorage">
+                                <condition id="10" name="On item missing" sid="410610755477879" type="ls">
                                     <param id="0" name="Key">&quot;save1&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="348916707313948" type="System">
@@ -900,7 +900,7 @@
                         </event-block>
                         <event-block disabled="1" sid="422534283664110">
                             <conditions>
-                                <condition id="10" name="On item missing" sid="555150023888722" type="LocalStorage">
+                                <condition id="10" name="On item missing" sid="555150023888722" type="ls">
                                     <param id="0" name="Key">&quot;save2&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="340511507934927" type="System">
@@ -921,7 +921,7 @@
                         </event-block>
                         <event-block disabled="1" sid="130004293039984">
                             <conditions>
-                                <condition id="10" name="On item missing" sid="756742211415768" type="LocalStorage">
+                                <condition id="10" name="On item missing" sid="756742211415768" type="ls">
                                     <param id="0" name="Key">&quot;save3&quot;</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="312851381585433" type="System">

@@ -483,7 +483,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="605353209800243">
+        <event-block bookmark="1" sid="605353209800243">
             <conditions>
                 <condition id="-19" name="On destroyed" sid="951147524010853" type="Enemigos" />
             </conditions>
@@ -504,6 +504,11 @@
                 <action id="-11" name="Subtract from" sid="523032573290051" type="System">
                     <param id="0" name="Variable">EnemigosRestantes</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="259679967003810" type="Enemigos">
+                    <param id="0" name="Object">ExplosionEsqueleto</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">0</param>
                 </action>
             </actions>
         </event-block>
@@ -582,17 +587,11 @@
                 <action id="-9" name="Destroy" sid="874830655731719" type="Esqueleto" />
             </actions>
         </event-block>
-        <event-block sid="584838272146383">
+        <event-block bookmark="1" sid="584838272146383">
             <conditions>
                 <condition id="-19" name="On destroyed" sid="455063669542548" type="Esqueleto" />
             </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="259679967003810" type="Esqueleto">
-                    <param id="0" name="Object">ExplosionEsqueleto</param>
-                    <param id="1" name="Layer">&quot;Game&quot;</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
         <event-block sid="524908078994014">
             <conditions>

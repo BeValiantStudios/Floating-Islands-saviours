@@ -411,10 +411,12 @@
                         <Dmg>0</Dmg>
                         <AtSpeed>0</AtSpeed>
                         <VidaActual>10</VidaActual>
-                        <Arma1>Espada</Arma1>
+                        <Arma1>AK47</Arma1>
                         <Arma2>Arco</Arma2>
                         <ArmaPrevia></ArmaPrevia>
                         <TrampaActual>MinaElectrica</TrampaActual>
+                        <CDTrap>15</CDTrap>
+                        <TrapActive>true</TrapActive>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
@@ -433,6 +435,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
