@@ -981,6 +981,12 @@
                     </conditions>
                     <actions>
                         <action behavior="Fade" id="1" name="Start fade" sid="876356088014690" type="TapToBegin" />
+                        <action id="0" name="Play" sid="227081408563906" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="878735499418892">

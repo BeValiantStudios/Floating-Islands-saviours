@@ -112,6 +112,23 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="959644081731383">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="820689043531350" type="f">
+                            <param id="0" name="Name">&quot;ActualizarEquipo&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="863332146713949" type="f">
+                            <param id="0" name="Name">&quot;CleanInv&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="760571648802953" type="f">
+                            <param id="0" name="Name">&quot;ActualizarInvArmas&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-group description="" sid="180291194501902" title="ButtonsShop">
@@ -126,6 +143,12 @@
                         <action id="-36" name="Save" sid="693754322536275" type="System">
                             <param id="0" name="Slot">&quot;mysave&quot;</param>
                         </action>
+                        <action id="0" name="Play" sid="758396475670226" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="168221335159338">
@@ -133,6 +156,12 @@
                         <condition id="-28" name="On save complete" sid="606284426124305" type="System" />
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="644701816885736" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
                         <action behavior="Fade" id="1" name="Start fade" sid="495600811988446" type="PantallaNegraCierre" />
                         <action id="-16" name="Wait" sid="783978399766695" type="System">
                             <param id="0" name="Seconds">1.0</param>
@@ -161,6 +190,12 @@
                             <param id="0" name="Layer">&quot;Craft&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="0" name="Play" sid="496944353083833" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="165417114576882">
@@ -181,6 +216,12 @@
                         <action id="-4" name="Set layer visible" sid="943235487307978" type="System">
                             <param id="0" name="Layer">&quot;Inventory&quot;</param>
                             <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="848221299075788" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -203,15 +244,13 @@
                             <param id="0" name="Layer">&quot;Shop&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="0" name="Play" sid="875363117700408" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
                     </actions>
-                </event-block>
-                <event-block sid="642526230934956">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="252603169140090" type="Touch">
-                            <param id="0" name="Object">Config</param>
-                        </condition>
-                    </conditions>
-                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -242,6 +281,12 @@
                             <param id="0" name="Name">&quot;ActualizarShopMateriales&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Play" sid="673333743102562" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="344921479393820">
@@ -258,6 +303,12 @@
                         <action id="0" name="Call function" sid="198923742316624" type="f">
                             <param id="0" name="Name">&quot;ActualizarShopArmas&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Play" sid="233855871837258" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -308,6 +359,12 @@
                         <action behavior="DragDrop" id="0" name="Set enabled" sid="925453079566352" type="ShopTouchHelper">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="0" name="Play" sid="684395923865100" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="184328536925291">
@@ -320,6 +377,12 @@
                         <action id="-10" name="Add to" sid="454992415835929" type="System">
                             <param id="0" name="Variable">a</param>
                             <param id="1" name="Value">ShopBuy.id &amp; &quot;-&quot; &amp; ShopBuy.tipo &amp; &quot;-&quot; &amp; ShopBuy.cantidad </param>
+                        </action>
+                        <action id="0" name="Play" sid="854063354646570" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -376,6 +439,12 @@
                             <param id="0" name="Name">&quot;ActualizarInvMateriales&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Play" sid="294344661939568" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="226178727226326">
@@ -393,6 +462,12 @@
                             <param id="0" name="Name">&quot;ActualizarInvArmas&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Play" sid="620385786982308" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="741202192906004">
@@ -405,6 +480,12 @@
                         <action id="0" name="Call function" sid="986142627912466" type="f">
                             <param id="0" name="Name">&quot;CleanInv&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Play" sid="324564274609778" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -422,6 +503,12 @@
                         <action behavior="DragDrop" id="0" name="Set enabled" sid="914280647809743" type="InvTouchHelper">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="0" name="Play" sid="524320900392547" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="991516854922518">
@@ -430,7 +517,14 @@
                             <param id="0" name="Object">InvPickUp</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Play" sid="778754190105213" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="190885540682618">
                             <conditions>
@@ -532,7 +626,14 @@
                             <param id="0" name="Object">InvSlotSpirte</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Play" sid="136763550820262" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <comment>Nada con Nada</comment>
                         <event-block sid="912635901784124">
@@ -815,6 +916,12 @@
                         <action behavior="DragDrop" id="0" name="Set enabled" sid="618438865047280" type="CrfTouchHelper">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="0" name="Play" sid="951184500691656" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="947610473917893">
@@ -827,6 +934,12 @@
                         <action id="0" name="Call function" sid="473008838057869" type="f">
                             <param id="0" name="Name">&quot;SearchCraft&quot;</param>
                             <param id="1" name="Parameter {n}">CrfCraft.craft</param>
+                        </action>
+                        <action id="0" name="Play" sid="463649426539867" type="Audio">
+                            <param id="0" name="Audio file">Menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                         </action>
                     </actions>
                     <sub-events>

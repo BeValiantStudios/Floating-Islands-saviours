@@ -882,6 +882,12 @@
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                                     <param id="2" name="Image point">&quot;Disparo&quot;</param>
                                                 </action>
+                                                <action id="0" name="Play" sid="223680173405141" type="Audio">
+                                                    <param id="0" name="Audio file">Pistola</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">-5</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -905,6 +911,12 @@
                                                     <param id="0" name="Object">laser</param>
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                                     <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="443497335285515" type="Audio">
+                                                    <param id="0" name="Audio file">Laser</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">-5</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -937,6 +949,12 @@
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                                     <param id="2" name="Image point">&quot;Disparo&quot;</param>
                                                 </action>
+                                                <action id="0" name="Play" sid="726221043840074" type="Audio">
+                                                    <param id="0" name="Audio file">Pistola</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">-5</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -967,6 +985,12 @@
                                                     <param id="0" name="Object">flash</param>
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                                     <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="849055685393860" type="Audio">
+                                                    <param id="0" name="Audio file">Sniper</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">-5</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1003,6 +1027,12 @@
                                                 <action id="-9" name="Destroy" sid="158888143310755" type="colisionespada" />
                                                 <action id="-15" name="Set visible" sid="513966107856126" type="espada">
                                                     <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="335170036799099" type="Audio">
+                                                    <param id="0" name="Audio file">Sword</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">-5</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1055,6 +1085,12 @@
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                                     <param id="2" name="Image point">&quot;Disparo&quot;</param>
                                                 </action>
+                                                <action id="0" name="Play" sid="653032488204237" type="Audio">
+                                                    <param id="0" name="Audio file">Shotgun</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">-5</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -1086,6 +1122,12 @@
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                                     <param id="2" name="Image point">&quot;Disparo&quot;</param>
                                                 </action>
+                                                <action id="0" name="Play" sid="391891830998252" type="Audio">
+                                                    <param id="0" name="Audio file">Cannon</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">-5</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -1111,6 +1153,12 @@
                                                     <param id="0" name="Object">Fuego</param>
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                                     <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="148235263734772" type="Audio">
+                                                    <param id="0" name="Audio file">LanzaLlamas</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">-10</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1142,6 +1190,12 @@
                                                     <param id="0" name="Object">granada</param>
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                                     <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="896922081905961" type="Audio">
+                                                    <param id="0" name="Audio file">Cannon</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">-5</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1628,6 +1682,20 @@
                                             <param id="0" name="Instance variable">Vida</param>
                                             <param id="1" name="Value">LanzaCohetes.Dano</param>
                                         </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="566272927243928">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="317912812170492" type="Bullets">
+                                            <param id="0" name="Object">Enemigos</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="864782854525452" type="Enemigos">
+                                            <param id="0" name="Instance variable">Vida</param>
+                                            <param id="1" name="Value">LanzaCohetes.Dano</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="386459866341832" type="Bullets" />
                                     </actions>
                                 </event-block>
                                 <event-block sid="481847734483580">
@@ -2193,6 +2261,12 @@
                             <param id="0" name="Instance variable">ArmaActual</param>
                             <param id="1" name="Value">Player.Arma1</param>
                         </action>
+                        <action id="0" name="Play" sid="361595996104250" type="Audio">
+                            <param id="0" name="Audio file">CambioArma</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="905229851290175">
@@ -2212,6 +2286,12 @@
                         <action id="-10" name="Set value" sid="490334097555208" type="Player">
                             <param id="0" name="Instance variable">ArmaActual</param>
                             <param id="1" name="Value">Player.Arma2</param>
+                        </action>
+                        <action id="0" name="Play" sid="151502027043095" type="Audio">
+                            <param id="0" name="Audio file">CambioArma</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2442,6 +2522,12 @@
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-9" name="Destroy" sid="626236372805476" type="MinaExplosiva" />
+                <action id="0" name="Play" sid="748762302395787" type="Audio">
+                    <param id="0" name="Audio file">EXplosiom</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="476443659930966">
@@ -2457,6 +2543,12 @@
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-9" name="Destroy" sid="949182590766732" type="MinaElectrica" />
+                <action id="0" name="Play" sid="319795182040037" type="Audio">
+                    <param id="0" name="Audio file">EXplosiom</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="481015871645443">
@@ -2487,6 +2579,12 @@
                     <param id="0" name="X">483</param>
                     <param id="1" name="Y">63</param>
                 </action>
+                <action id="0" name="Play" sid="573496476409819" type="Audio">
+                    <param id="0" name="Audio file">CambioArma</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="738709500340771">
@@ -2516,6 +2614,12 @@
                 <action id="-3" name="Set position" sid="220837634379354" type="Trampa">
                     <param id="0" name="X">483</param>
                     <param id="1" name="Y">63</param>
+                </action>
+                <action id="0" name="Play" sid="297647915368288" type="Audio">
+                    <param id="0" name="Audio file">CambioArma</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                 </action>
             </actions>
         </event-block>

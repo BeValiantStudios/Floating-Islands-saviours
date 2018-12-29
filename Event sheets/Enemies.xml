@@ -464,6 +464,25 @@
                 <action id="-9" name="Destroy" sid="119297464512853" type="Enemigos" />
             </actions>
         </event-block>
+        <event-block sid="408164651256085">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="911168785173841" type="Enemigos">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="947448623153573" type="Player">
+                    <param id="0" name="Instance variable">VidaActual</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="187740005201552" type="Audio">
+                    <param id="0" name="Audio file">sfx_damage</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="605353209800243">
             <conditions>
                 <condition id="-19" name="On destroyed" sid="951147524010853" type="Enemigos" />
@@ -595,6 +614,12 @@
                 <action id="-12" name="Subtract from" sid="110475067004500" type="Player">
                     <param id="0" name="Instance variable">VidaActual</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="204423955382098" type="Audio">
+                    <param id="0" name="Audio file">sfx_damage</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -1501,6 +1526,12 @@
                     <param id="0" name="Instance variable">VidaActual</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="0" name="Play" sid="649867470216708" type="Audio">
+                    <param id="0" name="Audio file">sfx_damage</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="652681879724376">
@@ -1514,6 +1545,12 @@
                     <param id="0" name="Instance variable">VidaActual</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="0" name="Play" sid="609841645979192" type="Audio">
+                    <param id="0" name="Audio file">sfx_damage</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="224887602104566">
@@ -1526,6 +1563,12 @@
                 <action id="-12" name="Subtract from" sid="975156313851168" type="Player">
                     <param id="0" name="Instance variable">VidaActual</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="466231796448642" type="Audio">
+                    <param id="0" name="Audio file">sfx_damage</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                 </action>
             </actions>
         </event-block>

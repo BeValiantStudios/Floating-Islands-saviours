@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>New project</name>
+    <name>Floating Island Saviours</name>
     <description>zvx</description>
-    <version>1.0.0.0</version>
-    <author>zxvz</author>
+    <version>0.5.1</version>
+    <author>Chronosphere Studios</author>
     <author-email>zxv</author-email>
     <author-website>http://</author-website>
-    <app-id>com.mycompany.lawea</app-id>
+    <app-id>fis.chronosphere.studios</app-id>
     <unique-id>3jh3bpbz82u7b</unique-id>
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
@@ -3094,7 +3094,18 @@
                         </container>
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="347070938080495" speed="5">
-                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jhü\Documents\GitHub\Floating-Islands-saviours\Animations\CrfCraft\Default\000.png">
+                                    <collision-poly>
+                                        <point x="0.03125" y="0.0666667" />
+                                        <point x="0.5" y="0" />
+                                        <point x="0.96875" y="0.0666667" />
+                                        <point x="1" y="0.5" />
+                                        <point x="0.96875" y="0.933333" />
+                                        <point x="0.5" y="1" />
+                                        <point x="0.03125" y="0.933333" />
+                                        <point x="0" y="0.5" />
+                                    </collision-poly>
+                                </frame>
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -5330,6 +5341,16 @@
                 <member>toportuga</member>
             </members>
         </family>
+        <family name="Bullets" plugin-id="Sprite" sid="638399426155611">
+            <members>
+                <member>BalaEscopeta</member>
+                <member>BALAMETRALLETA</member>
+                <member>BalaPistola</member>
+                <member>BalaSniper</member>
+                <member>FlechaPrototipo</member>
+                <member>laser</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout>Main.xml</layout>
@@ -5385,6 +5406,17 @@
         <file name="shop.ogg" />
         <file name="tutorial.ogg" />
         <file name="title.ogg" />
+        <file name="CambioArma.ogg" />
+        <file name="sfx_damage.ogg" />
+        <file name="Pistola.ogg" />
+        <file name="Shotgun.ogg" />
+        <file name="Cannon.ogg" />
+        <file name="Sword.ogg" />
+        <file name="Sniper.ogg" />
+        <file name="LanzaLlamas.ogg" />
+        <file name="Laser.ogg" />
+        <file name="EXplosiom.ogg" />
+        <file name="Menu.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
