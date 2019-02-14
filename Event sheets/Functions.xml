@@ -4,6 +4,7 @@
     <name>Functions</name>
     <events>
         <variable comment="|" constant="0" name="Variable123" sid="441281600761045" static="0" type="text"></variable>
+        <variable comment="|" constant="0" name="NotifyUsed" sid="965050418152964" static="0" type="number">0</variable>
         <comment>ID | Tipo | Cantidad</comment>
         <event-group description="" sid="765484702388855" title="F_Inventario">
             <sub-events>
@@ -383,6 +384,21 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="535617933442940">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="661745433081937" type="System">
+                                            <param id="0" name="First value">f.ReturnValue</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Empty&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-24" name="Stop loop" sid="658269129607123" type="System" />
+                                        <action id="1" name="Set return value" sid="483976800247969" type="f">
+                                            <param id="0" name="Value">&quot;False&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
@@ -444,6 +460,124 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="730940334533138">
+            <conditions>
+                <condition id="0" name="On function" sid="305199995821105" type="f">
+                    <param id="0" name="Name">&quot;Ganar&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="191354767943787">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="687926215108375" type="9patch">
+                            <param id="0" name="Unique ID">57</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="891619298119951" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="779760765805084" type="9patch">
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="550568144848741" type="9patch" />
+                        <action id="-3" name="Set position" sid="263206001181667" type="YouSurvived">
+                            <param id="0" name="X">Player.X</param>
+                            <param id="1" name="Y">Player.Y</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="881142048281805" type="YouSurvived" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="535997608544959">
+                            <conditions />
+                            <actions>
+                                <action id="-16" name="Wait" sid="845606422762227" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="391262990584146" type="System">
+                                    <param id="0" name="Layout">Tienda</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>param(0) = Text</comment>
+        <event-block sid="542506008994036">
+            <conditions>
+                <condition id="0" name="On function" sid="862932209193685" type="f">
+                    <param id="0" name="Name">&quot;Notify&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="610791214130957">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="833398474892601" type="9patch">
+                            <param id="0" name="Unique ID">283</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="400206670809573" type="System">
+                            <param id="0" name="Variable">NotifyUsed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="287768329621263" type="System">
+                            <param id="0" name="Variable">NotifyUsed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="952572249033814" type="NotifyText">
+                            <param id="0" name="Text">f.param(0)</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="435745582166684" type="9patch">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="359475801174397" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="279029889851085" type="9patch">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="734387778057123" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="139876251487284" type="9patch">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="528514120038681" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action behavior="Sine" id="5" name="Set cycle position" sid="134472728960151" type="9patch">
+                            <param id="0" name="Cycle position">0.5</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="248787627176024" type="9patch">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="262912076617171" type="System">
+                            <param id="0" name="Variable">NotifyUsed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="811339372568124">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="967004457994930" type="kb">
+                    <param id="0" name="Key">90</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="641369420046897" type="f">
+                    <param id="0" name="Name">&quot;Notify&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

@@ -5,6 +5,7 @@
     <events>
         <variable constant="0" name="Correccion1" sid="250538372332384" static="0" type="text"></variable>
         <variable constant="0" name="Correccion2" sid="409038325102459" static="0" type="text"></variable>
+        <variable constant="1" name="INIMAP" sid="469918471397519" static="0" type="number">352</variable>
         <comment>Map: Event sheet donde se encuentra toda la generacion procedural. Incluidos objetos y spawn de enemigos.</comment>
         <comment>Creacion MOTHER</comment>
         <event-block any="1" sid="334183430745572">
@@ -2449,6 +2450,91 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="854062662912404">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="675494290414281" type="System">
+                                            <param id="0" name="First value">Mother.CurZ</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">3</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="482480041984792" type="System">
+                                            <param id="0" name="First value">Mother.CurValue</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="155714607609277">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="239204973771508" type="System">
+                                                    <param id="0" name="First value">Mother.CurValue</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">125</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="404475286018143" type="System">
+                                                    <param id="0" name="Object to create">Tree1</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="X">( Mother.CurY * 16 ) + INIMAP</param>
+                                                    <param id="3" name="Y">( Mother.CurX * 16 ) + INIMAP</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="749685749272685">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="535960728992011" type="System">
+                                                    <param id="0" name="First value">Mother.CurValue</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">143</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="876246649951842" type="System">
+                                                    <param id="0" name="Object to create">Tree2</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="X">( Mother.CurY * 16 ) + INIMAP</param>
+                                                    <param id="3" name="Y">( Mother.CurX * 16 ) + INIMAP</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="951229750088851">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="201295376723426" type="System">
+                                                    <param id="0" name="First value">Mother.CurValue</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">161</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="374636604887602" type="System">
+                                                    <param id="0" name="Object to create">Cofre</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="X">( Mother.CurY * 16 ) + INIMAP</param>
+                                                    <param id="3" name="Y">( Mother.CurX * 16 ) + INIMAP</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="111752664350829">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="209106094016605" type="System">
+                                                    <param id="0" name="First value">Mother.CurValue</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">179</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="756747108080381" type="System">
+                                                    <param id="0" name="Object to create">Pots</param>
+                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                    <param id="2" name="X">( Mother.CurY * 16 ) + INIMAP</param>
+                                                    <param id="3" name="Y">( Mother.CurX * 16 ) + INIMAP</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
@@ -2471,21 +2557,510 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block any="1" sid="951534316037384">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="978722397482708" type="kb">
-                    <param id="0" name="Key">82</param>
-                </condition>
-                <condition id="3" name="On touched object" sid="254672403257253" type="Touch">
-                    <param id="0" name="Object">R</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="780979389257313" type="f">
-                    <param id="0" name="Name">&quot;ActualizarMapa&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="869145568580902" title="Objetos">
+            <sub-events>
+                <event-block sid="316364934191207">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="531611070671239" type="Cofre" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="107486566740386" type="ColiderCofre">
+                            <param id="0" name="Object">Cofre</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="216178567979301" type="Cofre">
+                            <param id="0" name="Instance variable">Type</param>
+                            <param id="1" name="Value">round(random(0,10)) &gt; 7 ? 1 : 0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="994856853875612" type="Cofre">
+                            <param id="0" name="Frame number">Self.Type * 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="199952510383104">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="122119867338505" type="Pots" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="972007512134720" type="Pots">
+                            <param id="0" name="Frame number">choose(0,1,2)</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="745822406144784" type="ParticlesPot">
+                            <param id="0" name="Object">Pots</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="859854314677116">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="695484621276098" type="Tree2" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="699504738342730" type="ParticlesTree">
+                            <param id="0" name="Object">Tree2</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="153159758067487">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="839838443052568" type="Player">
+                            <param id="0" name="Object">ColiderCofre</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="467353792249014">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="334030301867233" type="Cofre">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="Number">Self.Type*2 +1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="292439600404408">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="640798060663530" type="System">
+                                            <param id="0" name="Variable">ControlType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Joy&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="818235416465834" type="ButonX">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="270485017971626">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="537476605566198" type="System">
+                                            <param id="0" name="Variable">ControlType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Mouse&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="962096106516482" type="ButonE">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="102580715019788">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="151337225103938" type="kb">
+                                    <param id="0" name="Key">69</param>
+                                </condition>
+                                <condition id="6" name="On button pressed" sid="438296915262399" type="gp">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="728631292698693">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="632083620906863" type="Cofre">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">Self.Type*2 +1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="534569824627801" type="Audio">
+                                            <param id="0" name="Audio file">fanfare</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="432774366603689" type="Cofre">
+                                            <param id="0" name="Frame number">Self.AnimationFrame +1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="872429847905802" type="Cofre">
+                                            <param id="0" name="Object">Chest1</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="942646478243067" type="Chest1">
+                                            <param id="0" name="Angle">270</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="140916833637289">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="958151944987002" type="System">
+                                                    <param id="0" name="Variable">ControlType</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Joy&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="961290548237108" type="ButonX">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="753424134572375">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="526526442694511" type="System">
+                                                    <param id="0" name="Variable">ControlType</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Mouse&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="538947377678187" type="ButonE">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="353797113666125">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="411637104099729" type="Cofre">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="754124006958769" type="Cofre">
+                                                    <param id="0" name="Instance variable">Content</param>
+                                                    <param id="1" name="Value">choose(1,2,3)</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="401673805916953">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="409583391639830" type="Cofre">
+                                                            <param id="0" name="Instance variable">Content</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="530259946548969" type="f">
+                                                            <param id="0" name="Name">&quot;Notify&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;You have found 500 pieces of gold!&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Add to" sid="331087853404510" type="System">
+                                                            <param id="0" name="Variable">Gold</param>
+                                                            <param id="1" name="Value">500</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="439683543828240">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="885039389952516" type="Cofre">
+                                                            <param id="0" name="Instance variable">Content</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="714780419777243" type="f">
+                                                            <param id="0" name="Name">&quot;Notify&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;You have found 2 pieces of Gears!&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="430109024444423" type="f">
+                                                            <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                                            <param id="1" name="Parameter {n}">10{###}0{###}2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="313900812229823">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="738924858833468" type="Cofre">
+                                                            <param id="0" name="Instance variable">Content</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">3</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="278850761656445" type="f">
+                                                            <param id="0" name="Name">&quot;Notify&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;You have found 300 pieces of gold!&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Add to" sid="352457467835399" type="System">
+                                                            <param id="0" name="Variable">Gold</param>
+                                                            <param id="1" name="Value">300</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="195442376172943">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="500803984469291" type="Cofre">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="297275284665617" type="Cofre">
+                                                    <param id="0" name="Instance variable">Content</param>
+                                                    <param id="1" name="Value">choose(1,2,5,6,7,8,9)</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block any="1" sid="997878698784394">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="778233399465957" type="Cofre">
+                                                            <param id="0" name="Instance variable">Content</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="900506469797456" type="Cofre">
+                                                            <param id="0" name="Instance variable">Content</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="687181104478697" type="f">
+                                                            <param id="0" name="Name">&quot;Notify&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;You have found 2 pieces of crystal!&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="218875264429265" type="f">
+                                                            <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                                            <param id="1" name="Parameter {n}">7{###}0{###}2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block any="1" sid="494038056836252">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="457718664537823" type="Cofre">
+                                                            <param id="0" name="Instance variable">Content</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">5</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="741581925336624" type="Cofre">
+                                                            <param id="0" name="Instance variable">Content</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">6</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="529947378280283" type="f">
+                                                            <param id="0" name="Name">&quot;Notify&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;You have found 3 baterys!&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="951381747980511" type="f">
+                                                            <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                                            <param id="1" name="Parameter {n}">13{###}0{###}3</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block any="1" sid="824175360469051">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="407541995023461" type="Cofre">
+                                                            <param id="0" name="Instance variable">Content</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">7</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="106820565970978" type="Cofre">
+                                                            <param id="0" name="Instance variable">Content</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">8</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="788764646432522" type="f">
+                                                            <param id="0" name="Name">&quot;Notify&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;You have found 3 explosive charge!&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="438099350412198" type="f">
+                                                            <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                                            <param id="1" name="Parameter {n}">14{###}0{###}3</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block any="1" sid="730979758486195">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="676210741161713" type="Cofre">
+                                                            <param id="0" name="Instance variable">Content</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">9</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="426977131702780" type="Cofre">
+                                                            <param id="0" name="Instance variable">weapon</param>
+                                                            <param id="1" name="Value">choose(1,2,3,4,5,6)</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="883591000100622">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="761861991575844" type="Cofre">
+                                                                    <param id="0" name="Instance variable">weapon</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="310321323527212" type="f">
+                                                                    <param id="0" name="Name">&quot;Notify&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">&quot;You have found an Ak-47!&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="871258737612117" type="f">
+                                                                    <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">17{###}2{###}1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="304006801711020">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="574774149838838" type="Cofre">
+                                                                    <param id="0" name="Instance variable">weapon</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="763852864700824" type="f">
+                                                                    <param id="0" name="Name">&quot;Notify&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">&quot;You have found an Flamethrower!&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="832291588757895" type="f">
+                                                                    <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">24{###}2{###}1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="763643230671607">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="862821453597039" type="Cofre">
+                                                                    <param id="0" name="Instance variable">weapon</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">3</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="599074584786127" type="f">
+                                                                    <param id="0" name="Name">&quot;Notify&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">&quot;You have found an 9mm Pistol!&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="145120136833625" type="f">
+                                                                    <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">16{###}2{###}1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="580904886783222">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="761420101850851" type="Cofre">
+                                                                    <param id="0" name="Instance variable">weapon</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">4</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="509341948574613" type="f">
+                                                                    <param id="0" name="Name">&quot;Notify&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">&quot;You have found an Rocket Launcher!&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="138843313369455" type="f">
+                                                                    <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">20{###}2{###}1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="495804401407222">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="218217718226044" type="Cofre">
+                                                                    <param id="0" name="Instance variable">weapon</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">5</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="756662620705088" type="f">
+                                                                    <param id="0" name="Name">&quot;Notify&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">&quot;You have found an Shotgun!&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="625984068653247" type="f">
+                                                                    <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">18{###}2{###}1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="593057972067525">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="277820451559301" type="Cofre">
+                                                                    <param id="0" name="Instance variable">weapon</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">6</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="817549933845453" type="f">
+                                                                    <param id="0" name="Name">&quot;Notify&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">&quot;You have found an Sniper!&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="999311827815576" type="f">
+                                                                    <param id="0" name="Name">&quot;PickearItem&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">22{###}2{###}1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="700807832974626">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="529546821350520" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="586147142675198">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="187541302821021" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="855505356964387">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="816455792954012" type="System">
+                                            <param id="0" name="Variable">ControlType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Joy&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="682045502936576" type="ButonX">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="946118429979152">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="970173481478538" type="System">
+                                            <param id="0" name="Variable">ControlType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Mouse&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="241701240469786" type="ButonE">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

@@ -9,6 +9,7 @@
         <variable constant="0" name="UIDText" sid="408457789434303" static="0" type="number">1</variable>
         <variable constant="0" name="AuxSave" sid="269871374205523" static="0" type="number">0</variable>
         <variable constant="0" name="AuxActualizar" sid="315108551727285" static="0" type="number">0</variable>
+        <variable constant="0" name="C" sid="508991495539000" static="0" type="number">0</variable>
         <event-group description="" disabled="1" sid="838071284722627" title="MenuDeGuardado">
             <sub-events>
                 <event-group description="" disabled="1" sid="132100113858622" title="LogoPressScreen &amp; On Start">
@@ -1009,7 +1010,7 @@
                     </conditions>
                     <actions>
                         <action id="-2" name="Go to layout" sid="994731396564801" type="System">
-                            <param id="0" name="Layout">Tutorial</param>
+                            <param id="0" name="Layout">Main</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1026,11 +1027,420 @@
                 <action id="33" name="Stop all" sid="315669367247430" type="Audio" />
                 <action id="0" name="Play" sid="140434240403143" type="Audio">
                     <param id="0" name="Audio file">title</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-15</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;OST&quot;</param>
                 </action>
             </actions>
+            <sub-events>
+                <comment>Agregar arma principal y secundaria</comment>
+                <event-block sid="495780485236258">
+                    <conditions />
+                    <actions>
+                        <action id="3" name="Set at XY" sid="161262180242083" type="ArrEquipo">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">25</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="381849995494366" type="ArrEquipo">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="389065444047036" type="ArrEquipo">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="263547351211681" type="ArrEquipo">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">23</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="548385665008302" type="ArrEquipo">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="113356086761947" type="ArrEquipo">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="361161071360821" type="ArrEquipo">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">29</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="470375288036294" type="ArrEquipo">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">4</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="364643949397629" type="ArrEquipo">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
+        <event-block sid="432514004708262">
+            <conditions>
+                <condition id="-18" name="On created" sid="694638476320075" type="Enemigos" />
+            </conditions>
+            <actions>
+                <action id="-27" name="Set effect enabled" sid="124986390517381" type="Enemigos">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="178707790463346" title="Cargar Chunks">
+            <sub-events>
+                <comment>11 es 14 y 14 es 11</comment>
+                <event-block sid="727924124530902">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="785772795320987" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Request project file" sid="279676519838311" type="AJAX">
+                            <param id="0" name="Tag">&quot;c14&quot;</param>
+                            <param id="1" name="File">Chunk_11.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="562614204106080" type="AJAX">
+                            <param id="0" name="Tag">&quot;c12&quot;</param>
+                            <param id="1" name="File">Chunk_12.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="353251952678106" type="AJAX">
+                            <param id="0" name="Tag">&quot;c13&quot;</param>
+                            <param id="1" name="File">Chunk_13.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="232187711573201" type="AJAX">
+                            <param id="0" name="Tag">&quot;c11&quot;</param>
+                            <param id="1" name="File">Chunk_14.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="292550926724151" type="AJAX">
+                            <param id="0" name="Tag">&quot;c21&quot;</param>
+                            <param id="1" name="File">Chunk_21.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="597950326895351" type="AJAX">
+                            <param id="0" name="Tag">&quot;c22&quot;</param>
+                            <param id="1" name="File">Chunk_22.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="810364261242294" type="AJAX">
+                            <param id="0" name="Tag">&quot;c23&quot;</param>
+                            <param id="1" name="File">Chunk_23.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="619234284336266" type="AJAX">
+                            <param id="0" name="Tag">&quot;c24&quot;</param>
+                            <param id="1" name="File">Chunk_24.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="677236328682220" type="AJAX">
+                            <param id="0" name="Tag">&quot;c31&quot;</param>
+                            <param id="1" name="File">Chunk_31.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="540426355608169" type="AJAX">
+                            <param id="0" name="Tag">&quot;c32&quot;</param>
+                            <param id="1" name="File">Chunk_32.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="827366469585967" type="AJAX">
+                            <param id="0" name="Tag">&quot;c33&quot;</param>
+                            <param id="1" name="File">Chunk_33.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="302678591532013" type="AJAX">
+                            <param id="0" name="Tag">&quot;c34&quot;</param>
+                            <param id="1" name="File">Chunk_34.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="244959773997557" type="AJAX">
+                            <param id="0" name="Tag">&quot;c41&quot;</param>
+                            <param id="1" name="File">Chunk_41.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="573066180178927" type="AJAX">
+                            <param id="0" name="Tag">&quot;c0&quot;</param>
+                            <param id="1" name="File">Chunk_0.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="895404331479488" type="AJAX">
+                            <param id="0" name="Tag">&quot;c51&quot;</param>
+                            <param id="1" name="File">Chunk_51.json</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="415080979717810" type="AJAX">
+                            <param id="0" name="Tag">&quot;c52&quot;</param>
+                            <param id="1" name="File">Chunk_52.json</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="153851846900320">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="932490477814441" type="AJAX">
+                            <param id="0" name="Tag">&quot;c11&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="704265094012137" type="Tipo11">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="706895045399973">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="894336032993456" type="AJAX">
+                            <param id="0" name="Tag">&quot;c12&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="278520177803793" type="Tipo12">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="984794317866755">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="587841711607985" type="AJAX">
+                            <param id="0" name="Tag">&quot;c13&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="477185519535297" type="Tipo13">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="307125277174061">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="502087966446730" type="AJAX">
+                            <param id="0" name="Tag">&quot;c14&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="659395904165652" type="Tipo14">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="188403717979033">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="563849674404156" type="AJAX">
+                            <param id="0" name="Tag">&quot;c21&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="614363753726445" type="Tipo21">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="854287153893121">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="678868517368056" type="AJAX">
+                            <param id="0" name="Tag">&quot;c22&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="729810954792760" type="Tipo22">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="166764782344828">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="990915944393829" type="AJAX">
+                            <param id="0" name="Tag">&quot;c23&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="711146934526401" type="Tipo23">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="275854039470518">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="435140667845099" type="AJAX">
+                            <param id="0" name="Tag">&quot;c24&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="633108848522325" type="Tipo24">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="957602783848492">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="672199828217058" type="AJAX">
+                            <param id="0" name="Tag">&quot;c31&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="311279721891776" type="Tipo31">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="535846838763880">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="345596963010666" type="AJAX">
+                            <param id="0" name="Tag">&quot;c32&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="218482578156564" type="Tipo32">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="809997551961530">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="466427999784218" type="AJAX">
+                            <param id="0" name="Tag">&quot;c33&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="613434074904276" type="Tipo33">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="848906708468874">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="166487942356444" type="AJAX">
+                            <param id="0" name="Tag">&quot;c34&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="780308325304619" type="Tipo34">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="310995436021422">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="598644689114799" type="AJAX">
+                            <param id="0" name="Tag">&quot;c41&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="853099612716638" type="Tipo4">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="230350873825670">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="702026164318459" type="AJAX">
+                            <param id="0" name="Tag">&quot;c0&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="350074373052612" type="Tipo0">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="583561655953427">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="966614021229467" type="AJAX">
+                            <param id="0" name="Tag">&quot;c51&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="300036470601151" type="Tipo51">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="101041035059882">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="862446713569451" type="AJAX">
+                            <param id="0" name="Tag">&quot;c52&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="801238388054397" type="Tipo52">
+                            <param id="0" name="JSON">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="411160841045797" title="Easter Egg">
+            <sub-events>
+                <event-block sid="701335617916595">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="691363253322978" type="kb">
+                            <param id="0" name="Key">67</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="129612628882276" type="System">
+                            <param id="0" name="Variable">C</param>
+                            <param id="1" name="Value">1-C</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="828908248517026">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="737542775601461" type="System">
+                            <param id="0" name="Variable">C</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="100880463441155">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="589188568708084" type="kb">
+                                    <param id="0" name="Key">68</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="164679806638398" type="Playermenu">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="392226280731892">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="654709075736797" type="kb">
+                                    <param id="0" name="Key">65</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="279172474798130" type="Playermenu">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="313826069777831">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="377906961914553" type="kb">
+                                    <param id="0" name="Key">83</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="629269208706920" type="Playermenu">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="117116823444720">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="683393963443325" type="kb">
+                                    <param id="0" name="Key">87</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="232757709456721" type="Playermenu">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

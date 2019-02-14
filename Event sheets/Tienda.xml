@@ -10,9 +10,12 @@
         <variable constant="0" name="a4" sid="537633296053818" static="0" type="text"></variable>
         <variable constant="0" name="a5" sid="155464338698961" static="0" type="text"></variable>
         <variable constant="0" name="a6" sid="793458502662520" static="0" type="text"></variable>
+        <variable constant="0" name="Sensibility" sid="125101031983413" static="0" type="number">30</variable>
         <variable constant="0" name="PickedItem" sid="206578781829441" static="0" type="text"></variable>
         <variable constant="1" name="DicArmas" sid="974774594058334" static="0" type="text">{&quot;c2dictionary&quot;:true,&quot;data&quot;:{&quot;16&quot;:&quot;1|3000&quot;,&quot;19&quot;:&quot;1|4500&quot;,&quot;21&quot;:&quot;1|5000&quot;,&quot;23&quot;:&quot;1|2000&quot;}}</variable>
         <variable constant="1" name="DicMateriales" sid="714762938738338" static="0" type="text">{&quot;c2dictionary&quot;:true,&quot;data&quot;:{&quot;1&quot;:&quot;1|300&quot;,&quot;2&quot;:&quot;1|200&quot;,&quot;3&quot;:&quot;1|300&quot;,&quot;4&quot;:&quot;1|400&quot;,&quot;5&quot;:&quot;1|300&quot;,&quot;6&quot;:&quot;1|600&quot;,&quot;7&quot;:&quot;1|500&quot;,&quot;8&quot;:&quot;1|800&quot;}}</variable>
+        <variable constant="0" name="CraftPos" sid="726951117142175" static="0" type="number">0</variable>
+        <variable constant="1" name="SAT" sid="137714744239151" static="0" type="number">80</variable>
         <event-block sid="861628899628191">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="100268083980620" type="System" />
@@ -115,7 +118,7 @@
                 <event-block sid="959644081731383">
                     <conditions />
                     <actions>
-                        <action id="0" name="Call function" sid="820689043531350" type="f">
+                        <action id="0" name="Call function" sid="434736652507613" type="f">
                             <param id="0" name="Name">&quot;ActualizarEquipo&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
@@ -125,6 +128,13 @@
                         </action>
                         <action id="0" name="Call function" sid="760571648802953" type="f">
                             <param id="0" name="Name">&quot;ActualizarInvArmas&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="550555302414619" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="325185747362105" type="f">
+                            <param id="0" name="Name">&quot;ActualizarEquipo&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
@@ -196,6 +206,20 @@
                             <param id="3" name="Volume">-5</param>
                             <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="118968413462101" type="System">
+                            <param id="0" name="Layer">&quot;Inventory&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="413289789763820" type="System">
+                            <param id="0" name="Layer">&quot;Shop&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="804399735884751" type="ShopTouchHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="671095244540784" type="InvTouchHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="165417114576882">
@@ -222,6 +246,20 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-5</param>
                             <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="868134345915818" type="System">
+                            <param id="0" name="Layer">&quot;Craft&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="446235913946316" type="System">
+                            <param id="0" name="Layer">&quot;Shop&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="915356438459708" type="ShopTouchHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="105932381024421" type="CrfTouchHelper">
+                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -250,6 +288,20 @@
                             <param id="3" name="Volume">-5</param>
                             <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="546750779422219" type="System">
+                            <param id="0" name="Layer">&quot;Craft&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="719947879140480" type="System">
+                            <param id="0" name="Layer">&quot;Inventory&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="918010722918542" type="InvTouchHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="511898263062328" type="CrfTouchHelper">
+                            <param id="0" name="State">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -263,6 +315,15 @@
             <actions>
                 <action behavior="DragDrop" id="0" name="Set enabled" sid="726130890295086" type="ShopTouchHelper">
                     <param id="0" name="State">1</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="412327800530820" type="ShopCerrar">
+                    <param id="0" name="Layer">&quot;Marco&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="853837391471180" type="CrfCerrar">
+                    <param id="0" name="Layer">&quot;Craft&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="669272843255171" type="InvCerrar">
+                    <param id="0" name="Layer">&quot;Inventory&quot;</param>
                 </action>
             </actions>
             <sub-events>
@@ -365,6 +426,15 @@
                             <param id="3" name="Volume">-5</param>
                             <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                         </action>
+                        <action id="-26" name="Move to layer" sid="312321553058324" type="ShopCerrar">
+                            <param id="0" name="Layer">&quot;Shop&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="637168330614892" type="CrfCerrar">
+                            <param id="0" name="Layer">&quot;Craft&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="614976199483813" type="InvCerrar">
+                            <param id="0" name="Layer">&quot;Inventory&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="184328536925291">
@@ -378,12 +448,6 @@
                             <param id="0" name="Variable">a</param>
                             <param id="1" name="Value">ShopBuy.id &amp; &quot;-&quot; &amp; ShopBuy.tipo &amp; &quot;-&quot; &amp; ShopBuy.cantidad </param>
                         </action>
-                        <action id="0" name="Play" sid="854063354646570" type="Audio">
-                            <param id="0" name="Audio file">Menu</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-5</param>
-                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="855284957946148">
@@ -395,6 +459,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="854063354646570" type="Audio">
+                                    <param id="0" name="Audio file">Menu</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                </action>
                                 <action id="0" name="Call function" sid="552804978082272" type="f">
                                     <param id="0" name="Name">&quot;PickearItem&quot;</param>
                                     <param id="1" name="Parameter {n}">ShopBuy.id{###}ShopBuy.tipo{###}ShopBuy.cantidad</param>
@@ -410,6 +480,30 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="615136012476286">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="398384171636965" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="683163403538491" type="ShopHelper">
+                            <param id="0" name="Y">Self.Y + Sensibility</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="865427411369728">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="412296686023759" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="956997755850090" type="ShopHelper">
+                            <param id="0" name="Y">Self.Y - Sensibility</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="445145076892577">
@@ -421,6 +515,15 @@
             <actions>
                 <action behavior="DragDrop" id="0" name="Set enabled" sid="415638374533700" type="InvTouchHelper">
                     <param id="0" name="State">1</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="227423539267351" type="ShopCerrar">
+                    <param id="0" name="Layer">&quot;Shop&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="126529545556368" type="CrfCerrar">
+                    <param id="0" name="Layer">&quot;Craft&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="798773062900290" type="InvCerrar">
+                    <param id="0" name="Layer">&quot;Marco&quot;</param>
                 </action>
             </actions>
             <sub-events>
@@ -508,6 +611,15 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-5</param>
                             <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="939331926078300" type="ShopCerrar">
+                            <param id="0" name="Layer">&quot;Shop&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="687902930220361" type="CrfCerrar">
+                            <param id="0" name="Layer">&quot;Craft&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="392512194551600" type="InvCerrar">
+                            <param id="0" name="Layer">&quot;Inventory&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -888,6 +1000,30 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="524994107814802">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="258044861145704" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="942391516437774" type="InvHelper">
+                            <param id="0" name="Y">Self.Y + Sensibility</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="195526467564295">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="845309848680979" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="162500425614483" type="InvHelper">
+                            <param id="0" name="Y">Self.Y - Sensibility</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="866124592965558">
@@ -899,6 +1035,15 @@
             <actions>
                 <action behavior="DragDrop" id="0" name="Set enabled" sid="307838755060191" type="CrfTouchHelper">
                     <param id="0" name="State">1</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="360548204529160" type="ShopCerrar">
+                    <param id="0" name="Layer">&quot;Shop&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="973211074948161" type="CrfCerrar">
+                    <param id="0" name="Layer">&quot;Craft&quot;</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="539447815374580" type="InvCerrar">
+                    <param id="0" name="Layer">&quot;Marco&quot;</param>
                 </action>
             </actions>
             <sub-events>
@@ -922,6 +1067,15 @@
                             <param id="3" name="Volume">-5</param>
                             <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                         </action>
+                        <action id="-26" name="Move to layer" sid="532887760441621" type="ShopCerrar">
+                            <param id="0" name="Layer">&quot;Shop&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="537411198362036" type="CrfCerrar">
+                            <param id="0" name="Layer">&quot;Craft&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="159087150872464" type="InvCerrar">
+                            <param id="0" name="Layer">&quot;Inventory&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="947610473917893">
@@ -935,12 +1089,6 @@
                             <param id="0" name="Name">&quot;SearchCraft&quot;</param>
                             <param id="1" name="Parameter {n}">CrfCraft.craft</param>
                         </action>
-                        <action id="0" name="Play" sid="463649426539867" type="Audio">
-                            <param id="0" name="Audio file">Menu</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-5</param>
-                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="811796818387398">
@@ -952,6 +1100,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="463649426539867" type="Audio">
+                                    <param id="0" name="Audio file">Menu</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                </action>
                                 <action id="0" name="Call function" sid="678477210520296" type="f">
                                     <param id="0" name="Name">&quot;BuscarEliminar&quot;</param>
                                     <param id="1" name="Parameter {n}">CrfCraft.craft</param>
@@ -963,6 +1117,27 @@
                                 <action id="0" name="Call function" sid="466134860928448" type="f">
                                     <param id="0" name="Name">&quot;PickearItem&quot;</param>
                                     <param id="1" name="Parameter {n}">CrfCraft.id{###}CrfCraft.tipo{###}CrfCraft.cantidad</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="479008419953803" type="System">
+                                    <param id="0" name="Variable">CraftPos</param>
+                                    <param id="1" name="Value">CrfHelper.Y</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="437764304129991" type="CrfHelper">
+                                    <param id="0" name="Y">71</param>
+                                </action>
+                                <action id="0" name="Call function" sid="905607612489988" type="f">
+                                    <param id="0" name="Name">&quot;CleanCrf&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="574632436082199" type="f">
+                                    <param id="0" name="Name">&quot;ActualizarCrf&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="804417433983889" type="System">
+                                    <param id="0" name="Seconds">2 * dt</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="149482786603088" type="CrfHelper">
+                                    <param id="0" name="Y">CraftPos</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -990,6 +1165,30 @@
                     <actions>
                         <action id="-2" name="Set Y" sid="549804146583121" type="CrfHelper">
                             <param id="0" name="Y">((CrfTouchHelper.IniY -CrfTouchHelper.Y)/-7) + CrfHelper.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="700679038744060">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="294876190974450" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="653562776743641" type="CrfHelper">
+                            <param id="0" name="Y">Self.Y + Sensibility</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="556482545317916">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="418666165261396" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="559604543213874" type="CrfHelper">
+                            <param id="0" name="Y">Self.Y - Sensibility</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1752,6 +1951,22 @@
                                 <action id="5" name="Set frame" sid="433034417931557" type="CrfCraft4">
                                     <param id="0" name="Frame number">int(tokenat(DicCrafteos.CurrentValue,6,&quot;|&quot;))</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="831858763209878" type="CtfIC1">
+                                    <param id="0" name="X">Self.basex</param>
+                                    <param id="1" name="Y">Self.basey</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="243508951570421" type="CtfIC2">
+                                    <param id="0" name="X">Self.basex</param>
+                                    <param id="1" name="Y">Self.basey</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="540548247970753" type="CtfIC3">
+                                    <param id="0" name="X">Self.basex</param>
+                                    <param id="1" name="Y">Self.basey</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="135568856064693" type="CtfIC4">
+                                    <param id="0" name="X">Self.basex</param>
+                                    <param id="1" name="Y">Self.basey</param>
+                                </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="746401817209317" type="CrfItem">
                                     <param id="0" name="Pin to">CrfHelper</param>
                                     <param id="1" name="Mode">1</param>
@@ -1784,11 +1999,243 @@
                                     <param id="0" name="Pin to">CrfHelper</param>
                                     <param id="1" name="Mode">1</param>
                                 </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="280034731616269" type="CtfIC1">
+                                    <param id="0" name="Pin to">CrfHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="565599028913888" type="CtfIC2">
+                                    <param id="0" name="Pin to">CrfHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="151014950582131" type="CtfIC3">
+                                    <param id="0" name="Pin to">CrfHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="180198383824964" type="CtfIC4">
+                                    <param id="0" name="Pin to">CrfHelper</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="557876830179450" type="CtfIC1">
+                                    <param id="0" name="Text">&quot;x&quot; &amp; int(tokenat(DicCrafteos.CurrentValue,1,&quot;|&quot;))</param>
+                                </action>
+                                <action id="0" name="Set text" sid="883614361889336" type="CtfIC2">
+                                    <param id="0" name="Text">int(tokenat(DicCrafteos.CurrentValue,3,&quot;|&quot;)) &gt; 0 ? &quot;x&quot; &amp; int(tokenat(DicCrafteos.CurrentValue,3,&quot;|&quot;)) : &quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="875123936558677" type="CtfIC3">
+                                    <param id="0" name="Text">int(tokenat(DicCrafteos.CurrentValue,5,&quot;|&quot;)) &gt; 0 ? (&quot;x&quot;  &amp; int(tokenat(DicCrafteos.CurrentValue,5,&quot;|&quot;))) : &quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="875121412469486" type="CtfIC4">
+                                    <param id="0" name="Text">int(tokenat(DicCrafteos.CurrentValue,7,&quot;|&quot;)) &gt; 0 ?  (&quot;x&quot;  &amp; int(tokenat(DicCrafteos.CurrentValue,7,&quot;|&quot;))) : &quot;&quot;</param>
+                                </action>
                                 <action id="-10" name="Add to" sid="231214665672353" type="System">
                                     <param id="0" name="Variable">a</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="505373675346307">
+                                    <conditions />
+                                    <actions />
+                                    <sub-events>
+                                        <comment>1</comment>
+                                        <event-block sid="167929506443417">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="635490803881476" type="System">
+                                                    <param id="0" name="First value">f.Call(&quot;BuscarItem&quot;, CrfCraft1.AnimationFrame , int(tokenat(DicCrafteos.CurrentValue,1,&quot;|&quot;)) )</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">&quot;Empty&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-28" name="Set effect parameter" sid="315680367568856" type="CtfIC1">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="894864173184315" type="CtfIC1">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">1</param>
+                                                    <param id="2" name="Value">SAT</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="453200053134964" type="CtfIC1">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">2</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="689896876411006">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="209062680137127" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-28" name="Set effect parameter" sid="947223437613013" type="CtfIC1">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">SAT</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="815376380590879" type="CtfIC1">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">1</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="600688624317318" type="CtfIC1">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">2</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>2</comment>
+                                        <event-block sid="270834030894290">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="144937462614435" type="System">
+                                                    <param id="0" name="First value">f.Call(&quot;BuscarItem&quot;, CrfCraft2.AnimationFrame , int(tokenat(DicCrafteos.CurrentValue,3,&quot;|&quot;)) )</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">&quot;Empty&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-28" name="Set effect parameter" sid="215993700226967" type="CtfIC2">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="219393853021515" type="CtfIC2">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">1</param>
+                                                    <param id="2" name="Value">SAT</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="989080525711005" type="CtfIC2">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">2</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="379192877456636">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="614366597983513" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-28" name="Set effect parameter" sid="683290688965519" type="CtfIC2">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">SAT</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="464110199563516" type="CtfIC2">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">1</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="731808698545167" type="CtfIC2">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">2</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>3</comment>
+                                        <event-block sid="924429855748248">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="787824723457931" type="System">
+                                                    <param id="0" name="First value">f.Call(&quot;BuscarItem&quot;, CrfCraft3.AnimationFrame , int(tokenat(DicCrafteos.CurrentValue,5,&quot;|&quot;)) )</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">&quot;Empty&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-28" name="Set effect parameter" sid="540542778784712" type="CtfIC3">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="308004003917786" type="CtfIC3">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">1</param>
+                                                    <param id="2" name="Value">SAT</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="252240544129722" type="CtfIC3">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">2</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="326318839708681">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="425353776468584" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-28" name="Set effect parameter" sid="527049056270034" type="CtfIC3">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">SAT</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="818757976846656" type="CtfIC3">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">1</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="956397432440892" type="CtfIC3">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">2</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <comment>4</comment>
+                                        <event-block sid="968600306139310">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="518134022027018" type="System">
+                                                    <param id="0" name="First value">f.Call(&quot;BuscarItem&quot;, CrfCraft4.AnimationFrame , int(tokenat(DicCrafteos.CurrentValue,7,&quot;|&quot;)) )</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">&quot;Empty&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-28" name="Set effect parameter" sid="439896332245745" type="CtfIC4">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="946238345648337" type="CtfIC4">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">1</param>
+                                                    <param id="2" name="Value">SAT</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="931610713562236" type="CtfIC4">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">2</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="164497314308822">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="486639405231779" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-28" name="Set effect parameter" sid="271163822995503" type="CtfIC4">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">SAT</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="866111441150295" type="CtfIC4">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">1</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="855105618780212" type="CtfIC4">
+                                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                    <param id="1" name="Parameter index">2</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1833,6 +2280,19 @@
             <actions>
                 <action id="5" name="Set frame" sid="276366121422805" type="InvSlotEquipo">
                     <param id="0" name="Frame number">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="985516558168076">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="708569033966480" type="kb">
+                    <param id="0" name="Key">74</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="585756362803798" type="f">
+                    <param id="0" name="Name">&quot;ActualizarEquipo&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>

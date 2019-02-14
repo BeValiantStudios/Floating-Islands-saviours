@@ -225,7 +225,7 @@
                                 <deceleration>500</deceleration>
                                 <directions>8 directions</directions>
                                 <set-angle>No</set-angle>
-                                <default-controls>Yes</default-controls>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -490,7 +490,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Dano>10</Dano>
+                        <Dano>9</Dano>
+                        <AtSpeed>0.6</AtSpeed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -519,6 +520,7 @@
                     </properties>
                     <instance-variables>
                         <Dano>30</Dano>
+                        <AtSpeed>0.45</AtSpeed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
