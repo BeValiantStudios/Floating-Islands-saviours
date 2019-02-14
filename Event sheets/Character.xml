@@ -1019,6 +1019,16 @@
                                                                     <param id="3" name="Volume">-5</param>
                                                                     <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                                                                 </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="470623723985682" type="Player">
+                                                                    <param id="0" name="Magnitude">2</param>
+                                                                    <param id="1" name="Duration">0.1</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="219241556403913" type="Pistola">
+                                                                    <param id="0" name="Object">CasquilloPistola</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
@@ -1086,6 +1096,16 @@
                                                                     <param id="3" name="Volume">-5</param>
                                                                     <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                                                                 </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="744219395309518" type="Player">
+                                                                    <param id="0" name="Magnitude">3</param>
+                                                                    <param id="1" name="Duration">0.1</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="524262167720975" type="AK47">
+                                                                    <param id="0" name="Object">CasquilloMetralleta</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
@@ -1122,6 +1142,16 @@
                                                                     <param id="2" name="Loop">0</param>
                                                                     <param id="3" name="Volume">-5</param>
                                                                     <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="475261852781212" type="Player">
+                                                                    <param id="0" name="Magnitude">5</param>
+                                                                    <param id="1" name="Duration">0.2</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="316148467897298" type="Sniper">
+                                                                    <param id="0" name="Object">CasquilloSniper</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Casquillo&quot;</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -1222,6 +1252,16 @@
                                                                     <param id="3" name="Volume">-5</param>
                                                                     <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                                                                 </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="942439316246369" type="Player">
+                                                                    <param id="0" name="Magnitude">4</param>
+                                                                    <param id="1" name="Duration">0.2</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="524313287213503" type="escopeta">
+                                                                    <param id="0" name="Object">CasquilloEscopeta</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
@@ -1258,6 +1298,11 @@
                                                                     <param id="2" name="Loop">0</param>
                                                                     <param id="3" name="Volume">-5</param>
                                                                     <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="923325575337372" type="Player">
+                                                                    <param id="0" name="Magnitude">4</param>
+                                                                    <param id="1" name="Duration">0.2</param>
+                                                                    <param id="2" name="Mode">0</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -1327,6 +1372,11 @@
                                                                     <param id="2" name="Loop">0</param>
                                                                     <param id="3" name="Volume">-5</param>
                                                                     <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="802365166394091" type="Player">
+                                                                    <param id="0" name="Magnitude">1</param>
+                                                                    <param id="1" name="Duration">0.1</param>
+                                                                    <param id="2" name="Mode">0</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -1595,6 +1645,16 @@
                                                             <param id="3" name="Volume">-5</param>
                                                             <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                                                         </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="400468940766649" type="Player">
+                                                            <param id="0" name="Magnitude">2</param>
+                                                            <param id="1" name="Duration">0.1</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="121131561286591" type="Pistola">
+                                                            <param id="0" name="Object">CasquilloPistola</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                        </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
@@ -1662,6 +1722,16 @@
                                                             <param id="3" name="Volume">-5</param>
                                                             <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                                                         </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="690814878474593" type="Player">
+                                                            <param id="0" name="Magnitude">3</param>
+                                                            <param id="1" name="Duration">0.1</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="672245514900748" type="AK47">
+                                                            <param id="0" name="Object">CasquilloMetralleta</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                        </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
@@ -1698,6 +1768,16 @@
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">-5</param>
                                                             <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="868149682506335" type="Player">
+                                                            <param id="0" name="Magnitude">5</param>
+                                                            <param id="1" name="Duration">0.2</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="941376522132056" type="Sniper">
+                                                            <param id="0" name="Object">CasquilloSniper</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Casquillo&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -1798,6 +1878,16 @@
                                                             <param id="3" name="Volume">-5</param>
                                                             <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                                                         </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="492604556416030" type="Player">
+                                                            <param id="0" name="Magnitude">4</param>
+                                                            <param id="1" name="Duration">0.2</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="362456903091661" type="escopeta">
+                                                            <param id="0" name="Object">CasquilloEscopeta</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                        </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
@@ -1834,6 +1924,11 @@
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">-5</param>
                                                             <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="928966152674220" type="Player">
+                                                            <param id="0" name="Magnitude">4</param>
+                                                            <param id="1" name="Duration">0.2</param>
+                                                            <param id="2" name="Mode">0</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -1903,6 +1998,11 @@
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">-5</param>
                                                             <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="192104532524190" type="Player">
+                                                            <param id="0" name="Magnitude">1</param>
+                                                            <param id="1" name="Duration">0.1</param>
+                                                            <param id="2" name="Mode">0</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -3598,6 +3698,51 @@
                         <action behavior="Pin" id="0" name="Pin to object" sid="399410751206862" type="NotifyText">
                             <param id="0" name="Pin to">9patch</param>
                             <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="988148848867011">
+            <conditions>
+                <condition id="-18" name="On created" sid="493297903612671" type="Casquillos" />
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="316245760329549" type="Casquillos">
+                    <param id="0" name="Vector Y">random(-115,-135)</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="343611741560970" type="Casquillos">
+                    <param id="0" name="Speed">random(-270,270)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block any="1" sid="567637712490561">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="260678212842765" type="Player">
+                            <param id="0" name="Animation">&quot;West&quot;</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="694694252073379" type="Player">
+                            <param id="0" name="Animation">&quot;Tope&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="9" name="Set vector X" sid="305049879188346" type="Casquillos">
+                            <param id="0" name="Vector X">random(100,115)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="804461810264024">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="174189952679731" type="Player">
+                            <param id="0" name="Animation">&quot;East&quot;</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="638414117317665" type="Player">
+                            <param id="0" name="Animation">&quot;Topw&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="9" name="Set vector X" sid="671599935257692" type="Casquillos">
+                            <param id="0" name="Vector X">random(-100,-115)</param>
                         </action>
                     </actions>
                 </event-block>

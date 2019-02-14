@@ -35,7 +35,9 @@
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
@@ -1694,9 +1696,11 @@
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="695170474554981" speed="0">
                         <frame duration="1" hotspotX="0.296296" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\ak47.png">
                             <image-point name="Disparo" x="1" y="0.333333" />
+                            <image-point name="Casquillo" x="0.222222" y="0.222222" />
                         </frame>
                         <frame duration="1" hotspotX="0.296296" hotspotY="0.444444">
                             <image-point name="Disparo" x="1" y="0.666667" />
+                            <image-point name="Casquillo" x="0.222222" y="0.777778" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -1715,9 +1719,11 @@
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820443354750038" speed="0">
                         <frame duration="1" hotspotX="0.344828" hotspotY="0.555556" original-source="C:\Users\Vermillion\Desktop\rifle.png">
                             <image-point name="Disparo" x="1" y="0.333333" />
+                            <image-point name="Casquillo" x="0.241379" y="0.222222" />
                         </frame>
                         <frame duration="1" hotspotX="0.344828" hotspotY="0.444444">
                             <image-point name="Disparo" x="1" y="0.666667" />
+                            <image-point name="Casquillo" x="0.241379" y="0.777778" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -1742,10 +1748,12 @@
                         <frame duration="1" hotspotX="0.4" hotspotY="0.8" original-source="C:\Users\Vermillion\Desktop\sniper.png">
                             <image-point name="Disparo" x="1" y="0.5" />
                             <image-point name="Bala" x="0.366667" y="0.5" />
+                            <image-point name="Casquillo" x="0.3" y="0.4" />
                         </frame>
                         <frame duration="1" hotspotX="0.4" hotspotY="0.2">
                             <image-point name="Disparo" x="1" y="0.5" />
                             <image-point name="Bala" x="0.366667" y="0.5" />
+                            <image-point name="Casquillo" x="0.3" y="0.6" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -1756,9 +1764,11 @@
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="760119154627158" speed="0">
                         <frame duration="1" hotspotX="0.2" hotspotY="0.666667" original-source="C:\Users\Vermillion\Desktop\pistolaaaa.png">
                             <image-point name="Disparo" x="1" y="0.333333" />
+                            <image-point name="Casquillo" x="0.0666667" y="0.222222" />
                         </frame>
                         <frame duration="1" hotspotX="0.2" hotspotY="0.333333">
                             <image-point name="Disparo" x="1" y="0.666667" />
+                            <image-point name="Casquillo" x="0.133333" y="0.888889" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -5858,6 +5868,38 @@
             <plugin id="Particles" />
             <texture />
         </object-type>
+        <object-type name="CasquilloPistola" sid="593183608412079">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="409769497827214" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\CasquilloPistola.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CasquilloEscopeta" sid="784493863995495">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="375643178929786" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\CasquilloEscopeta.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CasquilloMetralleta" sid="163890077220486">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="110112470062913" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Vermillion\Desktop\CasquilloMetralleta.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CasquilloSniper" sid="752769431061796">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="388413123560601" speed="5">
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\CasquilloSniper.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Chunks" plugin-id="Arr" sid="616409896347598">
@@ -6012,6 +6054,28 @@
                     <effect id="setcolor" />
                 </effect-type>
             </effects>
+        </family>
+        <family name="Casquillos" plugin-id="Sprite" sid="847023284848827">
+            <members>
+                <member>CasquilloEscopeta</member>
+                <member>CasquilloMetralleta</member>
+                <member>CasquilloPistola</member>
+                <member>CasquilloSniper</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Rotate" sid="791951264200166">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="531892432619542">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="109270751856818">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="235866212057767">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>
