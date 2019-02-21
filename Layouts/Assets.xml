@@ -482,6 +482,13 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Tint">
@@ -981,8 +988,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>42</x>
-                        <y>256</y>
+                        <x>40.740989685</x>
+                        <y>254.920898438</y>
                         <z>0</z>
                         <width>64</width>
                         <height>70</height>
@@ -1589,7 +1596,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <SearchTime>1</SearchTime>
+                        <SearchTime>0.5</SearchTime>
                         <Quemado>0</Quemado>
                         <Vida>50</Vida>
                     </instance-variables>
@@ -1599,16 +1606,23 @@
                                 <cell-size>16</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>200</max-speed>
+                                <max-speed>300</max-speed>
                                 <acceleration>300</acceleration>
-                                <deceleration>150</deceleration>
-                                <rotate-speed>360</rotate-speed>
+                                <deceleration>300</deceleration>
+                                <rotate-speed>1000</rotate-speed>
                                 <rotate-object>No</rotate-object>
                                 <diagonals>Enabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Tint">
@@ -1644,7 +1658,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>80</speed>
+                                <speed>130</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -1657,7 +1671,7 @@
                                 <active-at-start>Yes</active-at-start>
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>0</wait-time>
-                                <fade-out-time>1</fade-out-time>
+                                <fade-out-time>0.2</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -1680,7 +1694,7 @@
                 <instance type="Magoldo" uid="209">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>RightRun</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -1707,6 +1721,13 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Tint">
@@ -1721,7 +1742,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-80</x>
-                        <y>256</y>
+                        <y>261.527923584</y>
                         <z>0</z>
                         <width>26</width>
                         <height>26</height>
@@ -1776,7 +1797,7 @@
                     <instance-variables>
                         <SearchTime>1</SearchTime>
                         <Quemado>0</Quemado>
-                        <Vida>350</Vida>
+                        <Vida>320</Vida>
                         <Atacando>0</Atacando>
                     </instance-variables>
                     <behavior-instances>
@@ -1795,6 +1816,13 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Tint">
@@ -1960,8 +1988,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>54.058036804</x>
-                        <y>91.944694519</y>
+                        <x>-170.602630615</x>
+                        <y>246.610748291</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -2124,6 +2152,13 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Tint">
@@ -2265,6 +2300,124 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DmgDeal" uid="295">
+                    <properties>
+                        <character-width>12</character-width>
+                        <character-height>12</character-height>
+                        <character-set>!----------0123456789:;&lt;=&gt;?ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]_abcdefghijklmnopqrstuvwxyz</character-set>
+                        <text>15</text>
+                        <scale>0.8</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>-3</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0.3</wait-time>
+                                <fade-out-time>0.2</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Tint">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="ReplaceColor">
+                            <parameters>
+                                <b-replace>0</b-replace>
+                                <b-source>0</b-source>
+                                <g-replace>30</g-replace>
+                                <g-source>0</g-source>
+                                <r-replace>100</r-replace>
+                                <r-source>0</r-source>
+                                <tolerance>0.01</tolerance>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-60.802978516</x>
+                        <y>182.320648193</y>
+                        <z>0</z>
+                        <width>31.330444336</width>
+                        <height>18.478034973</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerShadow" uid="296">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-179.393218994</x>
+                        <y>259.921722412</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.90625</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="KronejoShadow" uid="297">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-169.166000366</x>
+                        <y>258.384002686</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.875</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

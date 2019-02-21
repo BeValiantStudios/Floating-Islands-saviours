@@ -211,6 +211,8 @@
                         <TrampaActual>MinaExplosiva</TrampaActual>
                         <CDTrap>15</CDTrap>
                         <TrapActive>true</TrapActive>
+                        <Grazie>false</Grazie>
+                        <GrazieTime>2</GrazieTime>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
@@ -230,6 +232,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

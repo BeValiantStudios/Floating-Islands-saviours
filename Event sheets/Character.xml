@@ -1097,7 +1097,7 @@
                                                                     <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                                                                 </action>
                                                                 <action behavior="ScrollTo" id="0" name="Shake" sid="744219395309518" type="Player">
-                                                                    <param id="0" name="Magnitude">3</param>
+                                                                    <param id="0" name="Magnitude">2</param>
                                                                     <param id="1" name="Duration">0.1</param>
                                                                     <param id="2" name="Mode">0</param>
                                                                 </action>
@@ -1723,7 +1723,7 @@
                                                             <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
                                                         </action>
                                                         <action behavior="ScrollTo" id="0" name="Shake" sid="690814878474593" type="Player">
-                                                            <param id="0" name="Magnitude">3</param>
+                                                            <param id="0" name="Magnitude">2</param>
                                                             <param id="1" name="Duration">0.1</param>
                                                             <param id="2" name="Mode">0</param>
                                                         </action>
@@ -2541,11 +2541,19 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="938453616031665" type="BalaPistola" />
                         <action id="-12" name="Subtract from" sid="810695742503774" type="Enemigos">
                             <param id="0" name="Instance variable">Vida</param>
                             <param id="1" name="Value">Pistola.Dano</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="938453616031665" type="BalaPistola" />
+                        <action id="0" name="Spawn another object" sid="709514175500570" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="288875177168827" type="DmgDeal">
+                            <param id="0" name="Text">Pistola.Dano</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="373614195760465">
@@ -2555,11 +2563,19 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="886549305678151" type="BALAMETRALLETA" />
                         <action id="-12" name="Subtract from" sid="530279322635137" type="Enemigos">
                             <param id="0" name="Instance variable">Vida</param>
                             <param id="1" name="Value">AK47.Dano</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="886549305678151" type="BALAMETRALLETA" />
+                        <action id="0" name="Spawn another object" sid="192068424536385" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="658857261916861" type="DmgDeal">
+                            <param id="0" name="Text">AK47.Dano</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="901604911573775">
@@ -2569,11 +2585,19 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="194288693149787" type="FlechaPrototipo" />
                         <action id="-12" name="Subtract from" sid="581145102859752" type="Enemigos">
                             <param id="0" name="Instance variable">Vida</param>
                             <param id="1" name="Value">Arco.Dano</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="194288693149787" type="FlechaPrototipo" />
+                        <action id="0" name="Spawn another object" sid="378669858571774" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="991409323114589" type="DmgDeal">
+                            <param id="0" name="Text">Arco.Dano</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="510372597352584">
@@ -2583,11 +2607,19 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="285802726797593" type="BalaSniper" />
                         <action id="-12" name="Subtract from" sid="629774214077810" type="Enemigos">
                             <param id="0" name="Instance variable">Vida</param>
                             <param id="1" name="Value">Sniper.Dano</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="285802726797593" type="BalaSniper" />
+                        <action id="0" name="Spawn another object" sid="257951195422741" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="305104055544847" type="DmgDeal">
+                            <param id="0" name="Text">Sniper.Dano</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="299728065671249">
@@ -2597,11 +2629,19 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Destroy" sid="522656486376747" type="BalaEscopeta" />
                         <action id="-12" name="Subtract from" sid="953653670399837" type="Enemigos">
                             <param id="0" name="Instance variable">Vida</param>
                             <param id="1" name="Value">escopeta.Dano</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="522656486376747" type="BalaEscopeta" />
+                        <action id="0" name="Spawn another object" sid="250287734848586" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="206312523774043" type="DmgDeal">
+                            <param id="0" name="Text">escopeta.Dano</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="729554439356343">
@@ -2614,6 +2654,14 @@
                         <action id="-12" name="Subtract from" sid="565083505973640" type="Enemigos">
                             <param id="0" name="Instance variable">Vida</param>
                             <param id="1" name="Value">LanzaCohetes.Dano</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="779464022502586" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="958114315826558" type="DmgDeal">
+                            <param id="0" name="Text">LanzaCohetes.Dano</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2649,6 +2697,14 @@
                             <param id="0" name="Instance variable">Vida</param>
                             <param id="1" name="Value">Espada.Dano</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="291420873171727" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="911681996973624" type="DmgDeal">
+                            <param id="0" name="Text">espada.Dano</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="101717864027205">
@@ -2661,6 +2717,14 @@
                         <action id="-12" name="Subtract from" sid="215852521070885" type="Enemigos">
                             <param id="0" name="Instance variable">Vida</param>
                             <param id="1" name="Value">LanzaLlamas.Dano</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="690564027882931" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="437540194275639" type="DmgDeal">
+                            <param id="0" name="Text">LanzaLlamas.Dano</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2675,13 +2739,21 @@
                         <event-block sid="601468168577819">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="419534428385416" type="System">
-                                    <param id="0" name="Interval (seconds)">0.05</param>
+                                    <param id="0" name="Interval (seconds)">PistolaLaser.AtSpeed</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-12" name="Subtract from" sid="224929828509134" type="Enemigos">
                                     <param id="0" name="Instance variable">Vida</param>
                                     <param id="1" name="Value">PistolaLaser.Dano</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="412026170149323" type="Enemigos">
+                                    <param id="0" name="Object">DmgDeal</param>
+                                    <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="863537621699790" type="DmgDeal">
+                                    <param id="0" name="Text">PistolaLaser.Dano</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2705,6 +2777,14 @@
                                 <action id="-12" name="Subtract from" sid="371189946926262" type="Enemigos">
                                     <param id="0" name="Instance variable">Vida</param>
                                     <param id="1" name="Value">PistolaLaser.Dano</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="669703567982997" type="Enemigos">
+                                    <param id="0" name="Object">DmgDeal</param>
+                                    <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="359540588890098" type="DmgDeal">
+                                    <param id="0" name="Text">PistolaLaser.Dano</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3588,21 +3668,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="409500411905907">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="751458237430059" type="Player">
-                    <param id="0" name="Instance variable">VidaActual</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="480537782962871" type="f">
-                    <param id="0" name="Name">&quot;Muerte&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="649825288141213">
             <conditions>
                 <condition behavior="Timer" id="0" name="On timer" sid="875902216647075" type="Player">
@@ -3703,6 +3768,17 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="700868855901439">
+            <conditions>
+                <condition id="-18" name="On created" sid="641455482583432" type="DmgDeal" />
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="145133839545069" type="DmgDeal">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Speed">-20</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="988148848867011">
             <conditions>
                 <condition id="-18" name="On created" sid="493297903612671" type="Casquillos" />
@@ -3747,6 +3823,22 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="884827312425072">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="916858693599592" type="Player">
+                    <param id="0" name="Tag">&quot;GrazieTimer&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="131235772094522" type="Player">
+                    <param id="0" name="Instance variable">Grazie</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="417284785163156" type="Player">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

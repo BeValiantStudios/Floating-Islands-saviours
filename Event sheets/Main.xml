@@ -35,6 +35,7 @@
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="715165878922824" type="Enemigos" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -101,9 +102,45 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="714405576625159" type="CPUFPS">
-                    <param id="0" name="Text">&quot;FPS: &quot;&amp;fps</param>
+                    <param id="0" name="Text">&quot;FPS: &quot;&amp;fps &amp;newline&#x0D;&#x0A;&amp; &quot;GPU: &quot;&amp;cpuutilisation*100 &amp;newline&#x0D;&#x0A;&amp; &quot;delta: &quot;&amp;dt</param>
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="597753554966666" title="Shadows">
+            <sub-events>
+                <event-block sid="303820148672517">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="101451309942969" type="PlayerShadow" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="668920225026185" type="PlayerShadow">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="597171189246128" type="PlayerShadow" />
+                        <action behavior="Pin" id="0" name="Pin to object" sid="786627218571348" type="PlayerShadow">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="981708306306179">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="329272383608000" type="KronejoShadow" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="537691321969266" type="KronejoShadow">
+                            <param id="0" name="Object">Kronejo</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="948752928123657" type="KronejoShadow" />
+                        <action behavior="Pin" id="0" name="Pin to object" sid="913079775677418" type="KronejoShadow">
+                            <param id="0" name="Pin to">Kronejo</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
