@@ -205,8 +205,8 @@
                         <Dmg>0</Dmg>
                         <AtSpeed>0</AtSpeed>
                         <VidaActual>10</VidaActual>
-                        <Arma1>Pistola</Arma1>
-                        <Arma2>Sniper</Arma2>
+                        <Arma1>PistolaDoble</Arma1>
+                        <Arma2>LanzaCuchillo</Arma2>
                         <ArmaPrevia></ArmaPrevia>
                         <TrampaActual>MinaExplosiva</TrampaActual>
                         <CDTrap>15</CDTrap>

@@ -1382,6 +1382,376 @@
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
+                                                <event-block sid="719412785494756">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="739394933218409" type="Player">
+                                                            <param id="0" name="Instance variable">ArmaActual</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Railgun&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block bookmark="1" sid="768714031480549">
+                                                            <conditions>
+                                                                <condition id="-6" name="Every X seconds" sid="764498706878197" type="System">
+                                                                    <param id="0" name="Interval (seconds)">Railgun.AtSpeed</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="229841014286867" type="Railgun">
+                                                                    <param id="0" name="Object">RailgunBala</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="297480469142543" type="Audio">
+                                                                    <param id="0" name="Audio file">Cannon</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">-5</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="510321181865531" type="Player">
+                                                                    <param id="0" name="Magnitude">6</param>
+                                                                    <param id="1" name="Duration">0.2</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="349626463860745" type="Railgun">
+                                                                    <param id="0" name="Object">FlashRailgun</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Flash&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="126619762309215">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="631215748803701" type="Player">
+                                                            <param id="0" name="Instance variable">ArmaActual</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Uzi&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block bookmark="1" sid="660118549733699">
+                                                            <conditions>
+                                                                <condition id="-6" name="Every X seconds" sid="311881536464646" type="System">
+                                                                    <param id="0" name="Interval (seconds)">Uzi.AtSpeed</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="804392864761292" type="Uzi">
+                                                                    <param id="0" name="Object">flash</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="738965693609041" type="Uzi">
+                                                                    <param id="0" name="Object">UziBala</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="898242170307309" type="Uzi">
+                                                                    <param id="0" name="Object">CasquilloUzi</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="887493971247192" type="Audio">
+                                                                    <param id="0" name="Audio file">Cannon</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">-5</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="123808502882542" type="Player">
+                                                                    <param id="0" name="Magnitude">6</param>
+                                                                    <param id="1" name="Duration">0.2</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="341022121145685" type="System">
+                                                                    <param id="0" name="Seconds">0.1</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="749797700392463" type="Uzi">
+                                                                    <param id="0" name="Object">flash</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="805056175896964" type="Uzi">
+                                                                    <param id="0" name="Object">UziBala</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="303355396089737" type="Uzi">
+                                                                    <param id="0" name="Object">CasquilloUzi</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="527567735373617" type="Audio">
+                                                                    <param id="0" name="Audio file">Cannon</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">-5</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="896364899307632" type="Player">
+                                                                    <param id="0" name="Magnitude">6</param>
+                                                                    <param id="1" name="Duration">0.2</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="416767052746411" type="System">
+                                                                    <param id="0" name="Seconds">0.1</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="591562388338431" type="Uzi">
+                                                                    <param id="0" name="Object">flash</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="116127731892990" type="Uzi">
+                                                                    <param id="0" name="Object">UziBala</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="102881682834329" type="Uzi">
+                                                                    <param id="0" name="Object">CasquilloUzi</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="115522068786516" type="Audio">
+                                                                    <param id="0" name="Audio file">Cannon</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">-5</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="360424665455275" type="Player">
+                                                                    <param id="0" name="Magnitude">6</param>
+                                                                    <param id="1" name="Duration">0.2</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="275411217594238">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="500364770631287" type="Player">
+                                                            <param id="0" name="Instance variable">ArmaActual</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;LanzaCuchillo&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block bookmark="1" sid="291746237005751">
+                                                            <conditions>
+                                                                <condition id="-6" name="Every X seconds" sid="933106428389347" type="System">
+                                                                    <param id="0" name="Interval (seconds)">LanzaCuchillo.AtSpeed</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="970679904504068" type="LanzaCuchillo">
+                                                                    <param id="0" name="Object">Cuchillo</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="359776078709909" type="Audio">
+                                                                    <param id="0" name="Audio file">Cannon</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">-5</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="543522103966842" type="Player">
+                                                                    <param id="0" name="Magnitude">6</param>
+                                                                    <param id="1" name="Duration">0.2</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="972549790149543" type="LanzaCuchillo">
+                                                                    <param id="0" name="Animation">&quot;SinCuchillo&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="325536963906603" type="System">
+                                                                    <param id="0" name="Seconds">0.7</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="641077400893488" type="LanzaCuchillo">
+                                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="211306421804067">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="512467215716229" type="Player">
+                                                            <param id="0" name="Instance variable">ArmaActual</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;PistolaDoble&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block bookmark="1" sid="774319992637174">
+                                                            <conditions>
+                                                                <condition id="-6" name="Every X seconds" sid="347773135212308" type="System">
+                                                                    <param id="0" name="Interval (seconds)">PistolaDoble.AtSpeed</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="779206113534000" type="PistolaDoble">
+                                                                    <param id="0" name="Object">BalaPistolaDoble1</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="327405233894026" type="PistolaDoble">
+                                                                    <param id="0" name="Object">BalaPistolaDoble2</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo2&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="416390199003858" type="PistolaDoble">
+                                                                    <param id="0" name="Object">flash</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="980032318438934" type="PistolaDoble">
+                                                                    <param id="0" name="Object">flash</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo2&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="664268717136246" type="PistolaDoble">
+                                                                    <param id="0" name="Object">CasquilloPistolaDoble</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="370434794492030" type="PistolaDoble">
+                                                                    <param id="0" name="Object">CasquilloPistolaDoble</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Casquillo2&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="966443409322574" type="Audio">
+                                                                    <param id="0" name="Audio file">Cannon</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">-5</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="755858434393713" type="Player">
+                                                                    <param id="0" name="Magnitude">6</param>
+                                                                    <param id="1" name="Duration">0.2</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="317019109714394">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="482510172621193" type="Player">
+                                                            <param id="0" name="Instance variable">ArmaActual</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;PistolaBurbuja&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block bookmark="1" sid="567325807893704">
+                                                            <conditions>
+                                                                <condition id="-6" name="Every X seconds" sid="928761421850415" type="System">
+                                                                    <param id="0" name="Interval (seconds)">PistolaBurbuja.AtSpeed</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="261954297702230" type="PistolaBurbuja">
+                                                                    <param id="0" name="Object">Burbuja</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="325504976523030" type="Audio">
+                                                                    <param id="0" name="Audio file">Cannon</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">-5</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="953224311190627" type="Player">
+                                                                    <param id="0" name="Magnitude">3</param>
+                                                                    <param id="1" name="Duration">0.1</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="563249461487663" type="System">
+                                                                    <param id="0" name="Seconds">0.12</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="398394404402517" type="PistolaBurbuja">
+                                                                    <param id="0" name="Object">Burbuja</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="386160981906768" type="Audio">
+                                                                    <param id="0" name="Audio file">Cannon</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">-5</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="780493722674209" type="Player">
+                                                                    <param id="0" name="Magnitude">3</param>
+                                                                    <param id="1" name="Duration">0.1</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="187210943811554" type="System">
+                                                                    <param id="0" name="Seconds">0.12</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="387577984939594" type="PistolaBurbuja">
+                                                                    <param id="0" name="Object">Burbuja</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="739004653909810" type="Audio">
+                                                                    <param id="0" name="Audio file">Cannon</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">-5</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="616503645954454" type="Player">
+                                                                    <param id="0" name="Magnitude">3</param>
+                                                                    <param id="1" name="Duration">0.1</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="806733566529388" type="System">
+                                                                    <param id="0" name="Seconds">0.12</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="894826722072478" type="PistolaBurbuja">
+                                                                    <param id="0" name="Object">Burbuja</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="367819081425828" type="Audio">
+                                                                    <param id="0" name="Audio file">Cannon</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">-5</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="672099413417060" type="Player">
+                                                                    <param id="0" name="Magnitude">3</param>
+                                                                    <param id="1" name="Duration">0.1</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="922572436260167" type="System">
+                                                                    <param id="0" name="Seconds">0.12</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="869191444514122" type="PistolaBurbuja">
+                                                                    <param id="0" name="Object">Burbuja</param>
+                                                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                                    <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="748139113783227" type="Audio">
+                                                                    <param id="0" name="Audio file">Cannon</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">-5</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                                </action>
+                                                                <action behavior="ScrollTo" id="0" name="Shake" sid="334140399377000" type="Player">
+                                                                    <param id="0" name="Magnitude">3</param>
+                                                                    <param id="1" name="Duration">0.1</param>
+                                                                    <param id="2" name="Mode">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
                                             </sub-events>
                                         </event-block>
                                     </sub-events>
@@ -2008,6 +2378,376 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
+                                        <event-block sid="300423654371119">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="554444600346088" type="Player">
+                                                    <param id="0" name="Instance variable">ArmaActual</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Railgun&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block bookmark="1" sid="509962419635695">
+                                                    <conditions>
+                                                        <condition id="-6" name="Every X seconds" sid="784590466499437" type="System">
+                                                            <param id="0" name="Interval (seconds)">Railgun.AtSpeed</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Spawn another object" sid="559010034367160" type="Railgun">
+                                                            <param id="0" name="Object">RailgunBala</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="249547210436023" type="Audio">
+                                                            <param id="0" name="Audio file">Cannon</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-5</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="555529021273842" type="Player">
+                                                            <param id="0" name="Magnitude">6</param>
+                                                            <param id="1" name="Duration">0.2</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="162754895186652" type="Railgun">
+                                                            <param id="0" name="Object">FlashRailgun</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Flash&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="442620379365091">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="545882381778838" type="Player">
+                                                    <param id="0" name="Instance variable">ArmaActual</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Uzi&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block bookmark="1" sid="337079862974207">
+                                                    <conditions>
+                                                        <condition id="-6" name="Every X seconds" sid="681112023575723" type="System">
+                                                            <param id="0" name="Interval (seconds)">Uzi.AtSpeed</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Spawn another object" sid="867862720652850" type="Uzi">
+                                                            <param id="0" name="Object">flash</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="748981221316825" type="Uzi">
+                                                            <param id="0" name="Object">UziBala</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="282822299654789" type="Uzi">
+                                                            <param id="0" name="Object">CasquilloUzi</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="941602431618657" type="Audio">
+                                                            <param id="0" name="Audio file">Cannon</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-5</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="459732316868912" type="Player">
+                                                            <param id="0" name="Magnitude">6</param>
+                                                            <param id="1" name="Duration">0.2</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="928982085642623" type="System">
+                                                            <param id="0" name="Seconds">0.1</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="121242409881940" type="Uzi">
+                                                            <param id="0" name="Object">flash</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="582934654749873" type="Uzi">
+                                                            <param id="0" name="Object">UziBala</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="590775529717629" type="Uzi">
+                                                            <param id="0" name="Object">CasquilloUzi</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="490688241744839" type="Audio">
+                                                            <param id="0" name="Audio file">Cannon</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-5</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="562881754813169" type="Player">
+                                                            <param id="0" name="Magnitude">6</param>
+                                                            <param id="1" name="Duration">0.2</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="684613307159164" type="System">
+                                                            <param id="0" name="Seconds">0.1</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="503344438222256" type="Uzi">
+                                                            <param id="0" name="Object">flash</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="758184774485325" type="Uzi">
+                                                            <param id="0" name="Object">UziBala</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="165254227387450" type="Uzi">
+                                                            <param id="0" name="Object">CasquilloUzi</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="768448669305793" type="Audio">
+                                                            <param id="0" name="Audio file">Cannon</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-5</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="403967050118544" type="Player">
+                                                            <param id="0" name="Magnitude">6</param>
+                                                            <param id="1" name="Duration">0.2</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="299745861656123">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="195206572699871" type="Player">
+                                                    <param id="0" name="Instance variable">ArmaActual</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;LanzaCuchillo&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block bookmark="1" sid="307592424500379">
+                                                    <conditions>
+                                                        <condition id="-6" name="Every X seconds" sid="531084908152639" type="System">
+                                                            <param id="0" name="Interval (seconds)">LanzaCuchillo.AtSpeed</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Spawn another object" sid="756045934298435" type="LanzaCuchillo">
+                                                            <param id="0" name="Object">Cuchillo</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="463097750439482" type="Audio">
+                                                            <param id="0" name="Audio file">Cannon</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-5</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="953843351143797" type="Player">
+                                                            <param id="0" name="Magnitude">6</param>
+                                                            <param id="1" name="Duration">0.2</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="780574400260335" type="LanzaCuchillo">
+                                                            <param id="0" name="Animation">&quot;SinCuchillo&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="568041792399510" type="System">
+                                                            <param id="0" name="Seconds">0.7</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="586995249433050" type="LanzaCuchillo">
+                                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="142032653985049">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="308309821190896" type="Player">
+                                                    <param id="0" name="Instance variable">ArmaActual</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;PistolaDoble&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block bookmark="1" sid="453763226006335">
+                                                    <conditions>
+                                                        <condition id="-6" name="Every X seconds" sid="411232735170892" type="System">
+                                                            <param id="0" name="Interval (seconds)">PistolaDoble.AtSpeed</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Spawn another object" sid="682112263967935" type="PistolaDoble">
+                                                            <param id="0" name="Object">BalaPistolaDoble1</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="953674451030864" type="PistolaDoble">
+                                                            <param id="0" name="Object">BalaPistolaDoble2</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo2&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="844789621774192" type="PistolaDoble">
+                                                            <param id="0" name="Object">flash</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="372619486991613" type="PistolaDoble">
+                                                            <param id="0" name="Object">flash</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo2&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="587513309178759" type="PistolaDoble">
+                                                            <param id="0" name="Object">CasquilloPistolaDoble</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Casquillo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="619924114152397" type="PistolaDoble">
+                                                            <param id="0" name="Object">CasquilloPistolaDoble</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Casquillo2&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="713911005994831" type="Audio">
+                                                            <param id="0" name="Audio file">Cannon</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-5</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="352029679278168" type="Player">
+                                                            <param id="0" name="Magnitude">6</param>
+                                                            <param id="1" name="Duration">0.2</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="558465872787194">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="162843756729223" type="Player">
+                                                    <param id="0" name="Instance variable">ArmaActual</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;PistolaBurbuja&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block bookmark="1" sid="841874061392957">
+                                                    <conditions>
+                                                        <condition id="-6" name="Every X seconds" sid="870162865346567" type="System">
+                                                            <param id="0" name="Interval (seconds)">PistolaBurbuja.AtSpeed</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Spawn another object" sid="315893075965967" type="PistolaBurbuja">
+                                                            <param id="0" name="Object">Burbuja</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="626717671955636" type="Audio">
+                                                            <param id="0" name="Audio file">Cannon</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-5</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="693018211611910" type="Player">
+                                                            <param id="0" name="Magnitude">3</param>
+                                                            <param id="1" name="Duration">0.1</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="106660510599385" type="System">
+                                                            <param id="0" name="Seconds">0.12</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="273776583741516" type="PistolaBurbuja">
+                                                            <param id="0" name="Object">Burbuja</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="747411514463819" type="Audio">
+                                                            <param id="0" name="Audio file">Cannon</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-5</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="617168618921007" type="Player">
+                                                            <param id="0" name="Magnitude">3</param>
+                                                            <param id="1" name="Duration">0.1</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="629022195289684" type="System">
+                                                            <param id="0" name="Seconds">0.12</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="432544589707415" type="PistolaBurbuja">
+                                                            <param id="0" name="Object">Burbuja</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="905266188075518" type="Audio">
+                                                            <param id="0" name="Audio file">Cannon</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-5</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="485835558106245" type="Player">
+                                                            <param id="0" name="Magnitude">3</param>
+                                                            <param id="1" name="Duration">0.1</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="424918515948263" type="System">
+                                                            <param id="0" name="Seconds">0.12</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="791174449104921" type="PistolaBurbuja">
+                                                            <param id="0" name="Object">Burbuja</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="467598376354770" type="Audio">
+                                                            <param id="0" name="Audio file">Cannon</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-5</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="851784821449741" type="Player">
+                                                            <param id="0" name="Magnitude">3</param>
+                                                            <param id="1" name="Duration">0.1</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="501141138933312" type="System">
+                                                            <param id="0" name="Seconds">0.12</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="246627879508789" type="PistolaBurbuja">
+                                                            <param id="0" name="Object">Burbuja</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="Image point">&quot;Disparo&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="381619165823947" type="Audio">
+                                                            <param id="0" name="Audio file">Cannon</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">-5</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFC&quot;</param>
+                                                        </action>
+                                                        <action behavior="ScrollTo" id="0" name="Shake" sid="429358660993613" type="Player">
+                                                            <param id="0" name="Magnitude">3</param>
+                                                            <param id="1" name="Duration">0.1</param>
+                                                            <param id="2" name="Mode">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
@@ -2239,6 +2979,104 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="159631596288795">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="825294780345901" type="RailgunBala" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="829478166387196" type="RailgunBala">
+                                            <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="164706555811492" type="System">
+                                            <param id="0" name="Seconds">0.05</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="461585326023288" type="RailgunBala">
+                                            <param id="0" name="Collisions">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="167860936971691">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="219964409062042" type="FlashRailgun" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="811501284561713" type="FlashRailgun">
+                                            <param id="0" name="Pin to">Railgun</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="556964736604718">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="426527106863531" type="FlashRailgun">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="220980561405746" type="FlashRailgun" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="154372344092104">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="620601534674798" type="UziBala" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="726225342215260" type="UziBala">
+                                            <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="337983027540700">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="366669009913002" type="Burbuja" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="606683553315220" type="Burbuja">
+                                            <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="431133808618741">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="202566131495017" type="Burbuja" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="434429302659254" type="Burbuja">
+                                            <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="208445316120126">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="993255147368576" type="BalaPistolaDoble1" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="106567375150228" type="BalaPistolaDoble1">
+                                            <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="265932876855410">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="315137180791058" type="BalaPistolaDoble2" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-18" name="Rotate clockwise" sid="517069015585106" type="BalaPistolaDoble2">
+                                            <param id="0" name="Degrees">180</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="840876475812730">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="571390794716864" type="Cuchillo" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="919748591047324" type="Cuchillo">
+                                            <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                        <action id="2" name="Stop" sid="371368377616897" type="Cuchillo" />
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-group>
                     </sub-events>
@@ -2310,6 +3148,28 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="536726681367167">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="427360255493516" type="Cuchillo">
+                            <param id="0" name="Object">Enemigos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="0" name="Set active" sid="810235374652429" type="Cuchillo">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="683346857992969" type="Cuchillo">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="3" name="Start" sid="469624547705002" type="Cuchillo">
+                            <param id="0" name="From">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="566591704269396" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="823013900248837" type="Cuchillo" />
+                    </actions>
                 </event-block>
                 <event-group description="" sid="292117657184770" title="Travelled">
                     <sub-events>
@@ -2397,6 +3257,101 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="382627480275056" type="ExplosionRayo" />
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="600904204601052">
+                            <conditions>
+                                <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="499434289807326" type="RailgunBala">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Distance">500</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="402197308708615" type="RailgunBala" />
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="740348330763857">
+                            <conditions>
+                                <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="960252220426786" type="UziBala">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Distance">500</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="955078432167197" type="UziBala" />
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="627467701764662">
+                            <conditions>
+                                <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="435382233019557" type="Cuchillo">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Distance">500</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="485289168769292" type="Cuchillo" />
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="202394822628643">
+                            <conditions>
+                                <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="202357407690338" type="BalaPistolaDoble1">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Distance">500</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="933748036191938" type="BalaPistolaDoble1" />
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="657371448028034">
+                            <conditions>
+                                <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="957803038367668" type="BalaPistolaDoble2">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Distance">500</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="912564371588703" type="BalaPistolaDoble2" />
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="291353712335039">
+                            <conditions>
+                                <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="276130887998654" type="Burbuja">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Distance">600</param>
+                                </condition>
+                                <condition behavior="Bullet" id="0" name="Compare speed" sid="167211690388253" type="Burbuja">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="974088391721120" type="Burbuja">
+                                    <param id="0" name="Animation">&quot;Destruir&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="444904980931622">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="846147747524478" type="Burbuja">
+                                    <param id="0" name="Animation">&quot;Destruir&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Set collisions enabled" sid="924824084523637" type="Burbuja">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="854302751876672">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="970512646868660" type="Burbuja">
+                                    <param id="0" name="Animation">&quot;Destruir&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="142664557873296" type="Burbuja" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -2728,6 +3683,139 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="916929667991382">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="258021266060577" type="RailgunBala">
+                            <param id="0" name="Object">Enemigos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="167245465452834" type="Enemigos">
+                            <param id="0" name="Instance variable">Vida</param>
+                            <param id="1" name="Value">Railgun.Dano</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="884359463099708" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="281445879753722" type="DmgDeal">
+                            <param id="0" name="Text">Railgun.Dano</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="231352647121965">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="717197554132667" type="UziBala">
+                            <param id="0" name="Object">Enemigos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="806320936396211" type="UziBala" />
+                        <action id="-12" name="Subtract from" sid="299745155153912" type="Enemigos">
+                            <param id="0" name="Instance variable">Vida</param>
+                            <param id="1" name="Value">Uzi.Dano</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="166627488238904" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="525182488245830" type="DmgDeal">
+                            <param id="0" name="Text">Uzi.Dano</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="724099868047933">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="781424176433113" type="Burbuja">
+                            <param id="0" name="Object">Enemigos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="221653868559504" type="Burbuja">
+                            <param id="0" name="Animation">&quot;Destruir&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="895765242241553" type="Enemigos">
+                            <param id="0" name="Instance variable">Vida</param>
+                            <param id="1" name="Value">PistolaBurbuja.Dano</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="552282841506918" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="356611601824409" type="DmgDeal">
+                            <param id="0" name="Text">PistolaBurbuja.Dano</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="752688632835423">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="546157675231617" type="Cuchillo">
+                            <param id="0" name="Object">Enemigos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="498997708966273" type="Enemigos">
+                            <param id="0" name="Instance variable">Vida</param>
+                            <param id="1" name="Value">LanzaCuchillo.Dano</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="529499437556237" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="643858029932398" type="DmgDeal">
+                            <param id="0" name="Text">LanzaCuchillo.Dano</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="713807844475086">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="190546613334921" type="BalaPistolaDoble1">
+                            <param id="0" name="Object">Enemigos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="666139261925458" type="BalaPistolaDoble1" />
+                        <action id="-12" name="Subtract from" sid="241971275094416" type="Enemigos">
+                            <param id="0" name="Instance variable">Vida</param>
+                            <param id="1" name="Value">PistolaDoble.Dano</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="681688010889806" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="703029868903236" type="DmgDeal">
+                            <param id="0" name="Text">PistolaDoble.Dano</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="989633163485088">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="821763106052943" type="BalaPistolaDoble2">
+                            <param id="0" name="Object">Enemigos</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="798535094088099" type="BalaPistolaDoble2" />
+                        <action id="-12" name="Subtract from" sid="169652635643376" type="Enemigos">
+                            <param id="0" name="Instance variable">Vida</param>
+                            <param id="1" name="Value">PistolaDoble.Dano</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="670057409174131" type="Enemigos">
+                            <param id="0" name="Object">DmgDeal</param>
+                            <param id="1" name="Layer">&quot;Enviro&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="153467332511878" type="DmgDeal">
+                            <param id="0" name="Text">PistolaDoble.Dano</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="587200870142397">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="767733935432987" type="laser">
@@ -2979,6 +4067,101 @@
                             <param id="1" name="Image point (optional)">&quot;Arma&quot;</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="718325102060336" type="espada">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="658948966881538">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="215346314102705" type="Player">
+                            <param id="0" name="Instance variable">ArmaActual</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Railgun&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="700347758335474" type="Railgun">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">&quot;Arma&quot;</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="918598613464936" type="Railgun">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="757874292778858">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="418763184746096" type="Player">
+                            <param id="0" name="Instance variable">ArmaActual</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Uzi&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="586248472310302" type="Uzi">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">&quot;Arma&quot;</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="191922967178091" type="Uzi">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="438124879541579">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="931825311946860" type="Player">
+                            <param id="0" name="Instance variable">ArmaActual</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;LanzaCuchillo&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="524160820871310" type="LanzaCuchillo">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">&quot;Arma&quot;</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="755068221593548" type="LanzaCuchillo">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="828810140457570">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="385635661684128" type="Player">
+                            <param id="0" name="Instance variable">ArmaActual</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;PistolaBurbuja&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="769390732263395" type="PistolaBurbuja">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">&quot;Arma&quot;</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="324910421955772" type="PistolaBurbuja">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="143784564347197">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="384432274262838" type="Player">
+                            <param id="0" name="Instance variable">ArmaActual</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;PistolaDoble&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="249672087542127" type="PistolaDoble">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">&quot;Arma&quot;</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="470557450443373" type="PistolaDoble">
                             <param id="0" name="Pin to">Player</param>
                             <param id="1" name="Mode">1</param>
                         </action>
@@ -3507,6 +4690,102 @@
                     <actions>
                         <action behavior="Pin" id="1" name="Unpin" sid="200315334237222" type="Sniper" />
                         <action id="-3" name="Set position" sid="280246286657044" type="Sniper">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="146077877555754">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="494758722764047" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Railgun&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="516931352946414" type="Railgun" />
+                        <action id="-3" name="Set position" sid="833224042059195" type="Railgun">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="234895448403401">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="268840612661188" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Uzi&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="390370226598883" type="Uzi" />
+                        <action id="-3" name="Set position" sid="810551917916122" type="Uzi">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="355799284357609">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="362860640867218" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;LanzaCuchillo&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="398905096067056" type="LanzaCuchillo" />
+                        <action id="-3" name="Set position" sid="617502814988179" type="LanzaCuchillo">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="722596386109175">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="600163511728989" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;PistolaBurbuja&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="390641094149080" type="PistolaBurbuja" />
+                        <action id="-3" name="Set position" sid="424371550290474" type="PistolaBurbuja">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="715033441329891">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="199738036513099" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;PistolaBurbuja&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="803023434128792" type="PistolaBurbuja" />
+                        <action id="-3" name="Set position" sid="756424019505211" type="PistolaBurbuja">
+                            <param id="0" name="X">-271</param>
+                            <param id="1" name="Y">679</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="539607397887450">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="716327477083573" type="Player">
+                            <param id="0" name="Instance variable">ArmaPrevia</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;PistolaDoble&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="287333508034330" type="PistolaDoble" />
+                        <action id="-3" name="Set position" sid="429852832584519" type="PistolaDoble">
                             <param id="0" name="X">-271</param>
                             <param id="1" name="Y">679</param>
                         </action>

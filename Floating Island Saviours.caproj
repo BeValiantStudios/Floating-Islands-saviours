@@ -1796,6 +1796,230 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="BalaPistolaDoble1" sid="972443264262719">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Bullet" sid="894703922461189">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689588570340055" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.125" y="0.125" />
+                                    <point x="0.5" y="0.25" />
+                                    <point x="0.75" y="0.25" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.75" y="0.75" />
+                                    <point x="0.5" y="0.75" />
+                                    <point x="0.125" y="0.875" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.125" y="0.125" />
+                                    <point x="0.5" y="0.25" />
+                                    <point x="0.75" y="0.25" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.75" y="0.75" />
+                                    <point x="0.5" y="0.75" />
+                                    <point x="0.125" y="0.875" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BalaPistolaDoble2" sid="132709541264984">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Bullet" sid="660449804275099">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="963724566662634" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.125" y="0.125" />
+                                    <point x="0.5" y="0.25" />
+                                    <point x="0.75" y="0.25" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.75" y="0.75" />
+                                    <point x="0.5" y="0.75" />
+                                    <point x="0.125" y="0.875" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.125" y="0.125" />
+                                    <point x="0.5" y="0.25" />
+                                    <point x="0.75" y="0.25" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.75" y="0.75" />
+                                    <point x="0.5" y="0.75" />
+                                    <point x="0.125" y="0.875" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Cuchillo" sid="502892584634120">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Golpeando" sid="305385219723055" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Bullet" sid="850104071917731">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                        <behavior-type name="Sine" sid="726543317476796">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653483213507164" speed="33">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.6" original-source="C:\Users\Vermillion\Desktop\cuchillo.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.6">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="UziBala" sid="257763111472117">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Bullet" sid="948235222249858">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="382454949981076" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Burbuja" sid="760390797729669">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Bullet" sid="501744573903298">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="241704302981396" speed="16">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="3" loop="0" name="Destruir" pingpong="0" repeatcount="1" repeatto="0" sid="531733504406910" speed="16">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="RailgunBala" sid="397961835220406">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Ancho" sid="712512912345843" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Bullet" sid="517749148229228">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                        <behavior-type name="Fade" sid="560280310012872">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                        <behavior-type name="Pin" sid="528233321456941">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="856596516242272" speed="10">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="FlashRailgun" sid="297007483869831">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="305274646518441">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="941868461166500" speed="15">
+                            <frame duration="1" hotspotX="0" hotspotY="0.541667">
+                                <collision-poly>
+                                    <point x="0.176471" y="0.125" />
+                                    <point x="0.470588" y="0.166667" />
+                                    <point x="0.411765" y="0.416667" />
+                                    <point x="0.588235" y="0.5" />
+                                    <point x="0.411765" y="0.583333" />
+                                    <point x="0.470588" y="0.833333" />
+                                    <point x="0.294118" y="0.791667" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0.541667">
+                                <collision-poly>
+                                    <point x="0.235294" y="0.166667" />
+                                    <point x="0.470588" y="0.333333" />
+                                    <point x="0.529412" y="0.333333" />
+                                    <point x="0.529412" y="0.5" />
+                                    <point x="0.411765" y="0.583333" />
+                                    <point x="0.470588" y="0.625" />
+                                    <point x="0.235294" y="0.833333" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0.541667">
+                                <collision-poly>
+                                    <point x="0.352941" y="0.25" />
+                                    <point x="0.470588" y="0.333333" />
+                                    <point x="0.529412" y="0.333333" />
+                                    <point x="0.411765" y="0.5" />
+                                    <point x="0.529412" y="0.666667" />
+                                    <point x="0.470588" y="0.666667" />
+                                    <point x="0.470588" y="0.666667" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0.541667">
+                                <collision-poly>
+                                    <point x="0.352941" y="0.5" />
+                                    <point x="0.470588" y="0.625" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0.541667">
+                                <collision-poly>
+                                    <point x="0.176471" y="0.583333" />
+                                    <point x="0.176471" y="0.5" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0" hotspotY="0.541667" />
+                            <frame duration="1" hotspotX="0" hotspotY="0.541667" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Weaponery">
                 <object-type name="AK47" sid="750386333954772">
@@ -1958,6 +2182,107 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="LanzaCuchillo" sid="649736962275599">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="314610834960589" speed="0">
+                            <frame duration="1" hotspotX="0.448276" hotspotY="0.75" original-source="C:\Users\Vermillion\Desktop\lanza cuchillos.png">
+                                <image-point name="Disparo" x="0.965517" y="0.25" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.448276" hotspotY="0.25">
+                                <image-point name="Disparo" x="0.965517" y="0.75" />
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="0" name="SinCuchillo" pingpong="0" repeatcount="1" repeatto="0" sid="485637234187676" speed="0">
+                            <frame duration="1" hotspotX="0.448276" hotspotY="0.75">
+                                <image-point name="Disparo" x="0.965517" y="0.25" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.448276" hotspotY="0.25">
+                                <image-point name="Disparo" x="0.965517" y="0.75" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="PistolaDoble" sid="770913364326978">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148146171426857" speed="5">
+                            <frame duration="1" hotspotX="0.576923" hotspotY="0.636364" original-source="C:\Users\Vermillion\Desktop\pistola doble .png">
+                                <image-point name="Disparo" x="1" y="0.272727" />
+                                <image-point name="Disparo2" x="0" y="0.272727" />
+                                <image-point name="Casquillo" x="0.576923" y="0.0909091" />
+                                <image-point name="Casquillo2" x="0.423077" y="0.0909091" />
+                                <collision-poly>
+                                    <point x="0.0384615" y="0.0909091" />
+                                    <point x="0.961538" y="0.0909091" />
+                                    <point x="0.769231" y="0.454545" />
+                                    <point x="0.769231" y="0.454545" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.230769" y="0.454545" />
+                                    <point x="0.230769" y="0.454545" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.576923" hotspotY="0.363636">
+                                <image-point name="Disparo" x="1" y="0.727273" />
+                                <image-point name="Disparo2" x="0" y="0.727273" />
+                                <image-point name="Casquillo" x="0.576923" y="0.909091" />
+                                <image-point name="Casquillo2" x="0.423077" y="0.909091" />
+                                <collision-poly>
+                                    <point x="0.230769" y="0.545455" />
+                                    <point x="0.230769" y="0.545455" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.769231" y="0.545455" />
+                                    <point x="0.769231" y="0.545455" />
+                                    <point x="0.961538" y="0.909091" />
+                                    <point x="0.0384615" y="0.909091" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Railgun" sid="411104528937114">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="520460179838192" speed="5">
+                            <frame duration="1" hotspotX="0.272727" hotspotY="0.615385" original-source="C:\Users\Vermillion\Desktop\railgun def.png">
+                                <image-point name="Disparo" x="1" y="0.384615" />
+                                <image-point name="Flash" x="1" y="0.384615" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.272727" hotspotY="0.384615">
+                                <image-point name="Disparo" x="1" y="0.615385" />
+                                <image-point name="Flash" x="1" y="0.615385" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Uzi" sid="792822684991811">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="694351172925594" speed="5">
+                            <frame duration="1" hotspotX="0.407407" hotspotY="0.571429" original-source="C:\Users\Vermillion\Desktop\Uzi.png">
+                                <image-point name="Disparo" x="1" y="0.357143" />
+                                <image-point name="Casquillo" x="0.185185" y="0.142857" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.407407" hotspotY="0.428571">
+                                <image-point name="Disparo" x="1" y="0.642857" />
+                                <image-point name="Casquillo" x="0.185185" y="0.857143" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="PistolaBurbuja" sid="689943412020007">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="171919612940273" speed="0">
+                            <frame duration="1" hotspotX="0.285714" hotspotY="0.545455" original-source="C:\Users\Vermillion\Desktop\pistola burbujas.png">
+                                <image-point name="Disparo" x="1" y="0.272727" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.285714" hotspotY="0.454545">
+                                <image-point name="Disparo" x="1" y="0.727273" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-folder name="Casquillos">
                 <object-type name="CasquilloEscopeta" sid="784493863995495">
@@ -1989,6 +2314,22 @@
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="388413123560601" speed="5">
                             <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\CasquilloSniper.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CasquilloPistolaDoble" sid="508923038952991">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="598111489421826" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\CasquilloPistolaDoble.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CasquilloUzi" sid="481558623535934">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513296463835144" speed="5">
+                            <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\CasquilloUzi.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -6068,11 +6409,16 @@
                 <member>escopeta</member>
                 <member>espada</member>
                 <member>LanzaCohetes</member>
+                <member>LanzaCuchillo</member>
                 <member>LanzaGranadas</member>
                 <member>LanzaLlamas</member>
                 <member>Pistola</member>
+                <member>PistolaBurbuja</member>
+                <member>PistolaDoble</member>
                 <member>PistolaLaser</member>
+                <member>Railgun</member>
                 <member>Sniper</member>
+                <member>Uzi</member>
             </members>
             <instance-variables>
                 <instance-variable name="Dano" sid="840788723515855" type="number" />
@@ -6161,11 +6507,17 @@
                 <member>BalaEscopeta</member>
                 <member>BALAMETRALLETA</member>
                 <member>BalaPistola</member>
+                <member>BalaPistolaDoble1</member>
+                <member>BalaPistolaDoble2</member>
                 <member>BalaSniper</member>
+                <member>Burbuja</member>
                 <member>colisionespada</member>
+                <member>Cuchillo</member>
                 <member>Explosion</member>
                 <member>FlechaPrototipo</member>
                 <member>Fuego</member>
+                <member>RailgunBala</member>
+                <member>UziBala</member>
             </members>
         </family>
         <family name="Objetos" plugin-id="Sprite" sid="724486330187670">
@@ -6202,7 +6554,9 @@
                 <member>CasquilloEscopeta</member>
                 <member>CasquilloMetralleta</member>
                 <member>CasquilloPistola</member>
+                <member>CasquilloPistolaDoble</member>
                 <member>CasquilloSniper</member>
+                <member>CasquilloUzi</member>
             </members>
             <behaviors>
                 <behavior-type name="Rotate" sid="791951264200166">
