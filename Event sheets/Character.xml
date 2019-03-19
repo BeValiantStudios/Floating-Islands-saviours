@@ -205,6 +205,81 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="232375186374759">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="804367958473342" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="179474097773586" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;LanzaCuchillo&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="234401428646201">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="463845510900185" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">31</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="669490288879590" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;PistolaBurbuja&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="870371076952588">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="513888623699838" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">32</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="288648276052673" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;PistolaDoble&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="661183402204947">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="639377891147832" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">33</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="580976651493590" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;Railgun&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="579932562070167">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="491621272709041" type="ArrEquipo">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">34</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="217362545222940" type="Player">
+                                    <param id="0" name="Instance variable">Arma1</param>
+                                    <param id="1" name="Value">&quot;Uzi&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>Arma2</comment>
                         <event-block sid="321522567660128">
                             <conditions>
@@ -353,6 +428,81 @@
                                 <action id="-10" name="Set value" sid="178859244664660" type="Player">
                                     <param id="0" name="Instance variable">Arma2</param>
                                     <param id="1" name="Value">&quot;Espada&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="922841485470394">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="293556905639944" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="554402761027231" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;LanzaCuchillo&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="309530883495774">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="700102134827096" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">31</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="113585980050150" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;PistolaBurbuja&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="620382277796434">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="301795865554572" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">32</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="702235583926473" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;PistolaDoble&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="185521335633312">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="629300613353918" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">33</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="597359629257456" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;Railgun&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="917288754570103">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="373369403338969" type="ArrEquipo">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">34</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="223229947314936" type="Player">
+                                    <param id="0" name="Instance variable">Arma2</param>
+                                    <param id="1" name="Value">&quot;Uzi&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

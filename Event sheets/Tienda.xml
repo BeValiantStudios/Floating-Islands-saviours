@@ -12,7 +12,7 @@
         <variable constant="0" name="a6" sid="793458502662520" static="0" type="text"></variable>
         <variable constant="0" name="Sensibility" sid="125101031983413" static="0" type="number">30</variable>
         <variable constant="0" name="PickedItem" sid="206578781829441" static="0" type="text"></variable>
-        <variable constant="1" name="DicArmas" sid="974774594058334" static="0" type="text">{&quot;c2dictionary&quot;:true,&quot;data&quot;:{&quot;16&quot;:&quot;1|3000&quot;,&quot;19&quot;:&quot;1|4500&quot;,&quot;21&quot;:&quot;1|5000&quot;,&quot;23&quot;:&quot;1|2000&quot;}}</variable>
+        <variable constant="1" name="DICARMAS" sid="974774594058334" static="0" type="text">{&quot;c2dictionary&quot;:true,&quot;data&quot;:{&quot;16&quot;:&quot;1|3000&quot;,&quot;19&quot;:&quot;1|4500&quot;,&quot;21&quot;:&quot;1|5000&quot;,&quot;23&quot;:&quot;1|2000&quot;,&quot;30&quot;:&quot;1|100&quot;,&quot;31&quot;:&quot;1|100&quot;,&quot;32&quot;:&quot;1|100&quot;,&quot;33&quot;:&quot;1|100&quot;,&quot;34&quot;:&quot;1|100&quot;}}</variable>
         <variable constant="1" name="DicMateriales" sid="714762938738338" static="0" type="text">{&quot;c2dictionary&quot;:true,&quot;data&quot;:{&quot;1&quot;:&quot;1|300&quot;,&quot;2&quot;:&quot;1|200&quot;,&quot;3&quot;:&quot;1|300&quot;,&quot;4&quot;:&quot;1|400&quot;,&quot;5&quot;:&quot;1|300&quot;,&quot;6&quot;:&quot;1|600&quot;,&quot;7&quot;:&quot;1|500&quot;,&quot;8&quot;:&quot;1|800&quot;}}</variable>
         <variable constant="0" name="CraftPos" sid="726951117142175" static="0" type="number">0</variable>
         <variable constant="1" name="SAT" sid="137714744239151" static="0" type="number">80</variable>
