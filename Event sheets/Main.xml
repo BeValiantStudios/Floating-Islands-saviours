@@ -38,6 +38,19 @@
                         <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="715165878922824" type="Enemigos" />
                     </actions>
                 </event-block>
+                <event-block sid="292699081518910">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="270966335989958" type="System">
+                            <param id="0" name="Object">Fonts</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set web font" sid="247024913839927" type="Fonts">
+                            <param id="0" name="Family name">&quot;ponderosaregular&quot;</param>
+                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-group description="" sid="839258583437842" title="Miscelaneos">
