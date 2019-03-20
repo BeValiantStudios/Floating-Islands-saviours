@@ -140,6 +140,54 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="232701011811106">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="381803045988818" type="esqueletorshadow" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="522360279045658" type="esqueletorshadow">
+                            <param id="0" name="Object">Esqueleto</param>
+                            <param id="1" name="Image point (optional)">&quot;Shadow&quot;</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="555273453580827" type="esqueletorshadow" />
+                        <action behavior="Pin" id="0" name="Pin to object" sid="788479016822040" type="esqueletorshadow">
+                            <param id="0" name="Pin to">Esqueleto</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="223648142520180">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="614070584315697" type="magoldoshadow" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="181988176223702" type="magoldoshadow">
+                            <param id="0" name="Object">Magoldo</param>
+                            <param id="1" name="Image point (optional)">&quot;Shadow&quot;</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="926337594742092" type="magoldoshadow" />
+                        <action behavior="Pin" id="0" name="Pin to object" sid="396877910306075" type="magoldoshadow">
+                            <param id="0" name="Pin to">Magoldo</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="115080359557406">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="348025657948366" type="toportugashadown" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="792884973240467" type="toportugashadown">
+                            <param id="0" name="Object">toportuga</param>
+                            <param id="1" name="Image point (optional)">&quot;Shadow&quot;</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="972006082709957" type="toportugashadown" />
+                        <action behavior="Pin" id="0" name="Pin to object" sid="357146447046385" type="toportugashadown">
+                            <param id="0" name="Pin to">toportuga</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>
