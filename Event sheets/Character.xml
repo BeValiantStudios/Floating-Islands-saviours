@@ -2959,6 +2959,9 @@
                                         <action id="-8" name="Set angle" sid="316272735444484" type="FlechaPrototipo">
                                             <param id="0" name="Angle">cangle2</param>
                                         </action>
+                                        <action id="-18" name="Rotate clockwise" sid="405172856192484" type="FlechaPrototipo">
+                                            <param id="0" name="Degrees">random(abs(Arco.Precision))</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="961149229333277">
@@ -2968,6 +2971,9 @@
                                     <actions>
                                         <action id="-8" name="Set angle" sid="231989230260447" type="BALAMETRALLETA">
                                             <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                        <action id="-18" name="Rotate clockwise" sid="685143759913717" type="BALAMETRALLETA">
+                                            <param id="0" name="Degrees">random(abs(AK47.Precision))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2979,8 +2985,8 @@
                                         <action id="-8" name="Set angle" sid="217362943962120" type="Fuego">
                                             <param id="0" name="Angle">cangle2</param>
                                         </action>
-                                        <action id="-18" name="Rotate clockwise" sid="274011844486826" type="Fuego">
-                                            <param id="0" name="Degrees">random(-5,5)</param>
+                                        <action id="-18" name="Rotate clockwise" sid="591488077526975" type="Fuego">
+                                            <param id="0" name="Degrees">random(abs(LanzaLlamas.Precision))</param>
                                         </action>
                                         <action id="7" name="Set mirrored" sid="655011845305649" type="Fuego">
                                             <param id="0" name="State">0</param>
@@ -2994,6 +3000,9 @@
                                     <actions>
                                         <action id="-8" name="Set angle" sid="865045682704109" type="granada">
                                             <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                        <action id="-18" name="Rotate clockwise" sid="932367532244733" type="granada">
+                                            <param id="0" name="Degrees">random(abs(LanzaGranadas.Precision))</param>
                                         </action>
                                         <action id="-16" name="Wait" sid="508825715949170" type="System">
                                             <param id="0" name="Seconds">0.9</param>
@@ -3045,6 +3054,9 @@
                                         <action id="-8" name="Set angle" sid="703670095119392" type="misil">
                                             <param id="0" name="Angle">cangle2</param>
                                         </action>
+                                        <action id="-18" name="Rotate clockwise" sid="929064899822136" type="misil">
+                                            <param id="0" name="Degrees">random(abs(LanzaCohetes.Precision))</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="636176072384447">
@@ -3054,6 +3066,9 @@
                                     <actions>
                                         <action id="-8" name="Set angle" sid="584426540117482" type="BalaPistola">
                                             <param id="0" name="Angle">cangle2</param>
+                                        </action>
+                                        <action id="-18" name="Rotate clockwise" sid="115927987763890" type="BalaPistola">
+                                            <param id="0" name="Degrees">random(abs(Pistola.Precision))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -3083,6 +3098,9 @@
                                             <param id="0" name="Where">1</param>
                                             <param id="1" name="Object">Sniper</param>
                                         </action>
+                                        <action id="-18" name="Rotate clockwise" sid="661467796271970" type="BalaSniper">
+                                            <param id="0" name="Degrees">random(abs(Sniper.Precision))</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="776929868797667">
@@ -3096,8 +3114,8 @@
                                         <action behavior="Bullet" id="0" name="Set speed" sid="903857724186894" type="BalaEscopeta">
                                             <param id="0" name="Speed">random(180,250)</param>
                                         </action>
-                                        <action id="-18" name="Rotate clockwise" sid="180312981449964" type="BalaEscopeta">
-                                            <param id="0" name="Degrees">random(-12,12)</param>
+                                        <action id="-18" name="Rotate clockwise" sid="910945383939066" type="BalaEscopeta">
+                                            <param id="0" name="Degrees">random(abs(escopeta.Precision))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -3137,6 +3155,9 @@
                                         <action id="-8" name="Set angle" sid="829478166387196" type="RailgunBala">
                                             <param id="0" name="Angle">cangle2</param>
                                         </action>
+                                        <action id="-18" name="Rotate clockwise" sid="212204567468661" type="RailgunBala">
+                                            <param id="0" name="Degrees">random(abs(Railgun.Precision))</param>
+                                        </action>
                                         <action id="-16" name="Wait" sid="164706555811492" type="System">
                                             <param id="0" name="Seconds">0.05</param>
                                         </action>
@@ -3174,6 +3195,9 @@
                                         <action id="-8" name="Set angle" sid="726225342215260" type="UziBala">
                                             <param id="0" name="Angle">cangle2</param>
                                         </action>
+                                        <action id="-18" name="Rotate clockwise" sid="352490757412250" type="UziBala">
+                                            <param id="0" name="Degrees">random(abs(Uzi.Precision))</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="337983027540700">
@@ -3184,15 +3208,8 @@
                                         <action id="-8" name="Set angle" sid="606683553315220" type="Burbuja">
                                             <param id="0" name="Angle">cangle2</param>
                                         </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="431133808618741">
-                                    <conditions>
-                                        <condition id="-18" name="On created" sid="202566131495017" type="Burbuja" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-8" name="Set angle" sid="434429302659254" type="Burbuja">
-                                            <param id="0" name="Angle">cangle2</param>
+                                        <action id="-18" name="Rotate clockwise" sid="511923465936426" type="Burbuja">
+                                            <param id="0" name="Degrees">random(abs(PistolaBurbuja.Precision))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -3204,6 +3221,9 @@
                                         <action id="-8" name="Set angle" sid="106567375150228" type="BalaPistolaDoble1">
                                             <param id="0" name="Angle">cangle2</param>
                                         </action>
+                                        <action id="-18" name="Rotate clockwise" sid="580521547819700" type="BalaPistolaDoble1">
+                                            <param id="0" name="Degrees">random(abs(PistolaDoble.Precision))</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="265932876855410">
@@ -3213,6 +3233,9 @@
                                     <actions>
                                         <action id="-18" name="Rotate clockwise" sid="517069015585106" type="BalaPistolaDoble2">
                                             <param id="0" name="Degrees">180</param>
+                                        </action>
+                                        <action id="-18" name="Rotate clockwise" sid="526778990280585" type="BalaPistolaDoble2">
+                                            <param id="0" name="Degrees">random(abs(PistolaDoble.Precision))</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -3225,6 +3248,9 @@
                                             <param id="0" name="Angle">cangle2</param>
                                         </action>
                                         <action id="2" name="Stop" sid="371368377616897" type="Cuchillo" />
+                                        <action id="-18" name="Rotate clockwise" sid="814355351245676" type="Cuchillo">
+                                            <param id="0" name="Degrees">random(abs(LanzaCuchillo.Precision))</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>

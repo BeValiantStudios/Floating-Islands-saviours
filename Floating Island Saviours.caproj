@@ -6691,6 +6691,7 @@
             <instance-variables>
                 <instance-variable name="Dano" sid="840788723515855" type="number" />
                 <instance-variable name="AtSpeed" sid="595010449369836" type="number" />
+                <instance-variable name="Precision" sid="862746555489541" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="594581540056643">

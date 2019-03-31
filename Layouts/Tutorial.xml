@@ -495,6 +495,7 @@
                     <instance-variables>
                         <Dano>9</Dano>
                         <AtSpeed>0.6</AtSpeed>
+                        <Precision>0</Precision>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -524,6 +525,7 @@
                     <instance-variables>
                         <Dano>30</Dano>
                         <AtSpeed>0.45</AtSpeed>
+                        <Precision>0</Precision>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
