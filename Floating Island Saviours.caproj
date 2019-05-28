@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.chronosphere.fis</app-id>
     <unique-id>3jh3bpbz82u7b</unique-id>
-    <saved-with-version>26500</saved-with-version>
+    <saved-with-version>26700</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -58,7 +58,7 @@
         <height>288</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
-    <preview-effects>1</preview-effects>
+    <preview-effects>0</preview-effects>
     <first-layout>Menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
@@ -291,82 +291,6 @@
             </object-type>
             <object-type name="Mouse" sid="455186150805355">
                 <plugin id="Mouse" />
-            </object-type>
-        </object-folder>
-        <object-folder name="Controles">
-            <object-folder name="Movimiento">
-                <object-type name="MovimientoAreaJoystick" sid="194456411906903">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="418450435574316" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="MovimientoJoystick" sid="478303125181046">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="994455555457434" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\stick.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="MovimientoStik" sid="342840557744925">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="radius" sid="250988234558850" type="number" />
-                        <instance-variable name="XP" sid="447737681794834" type="number" />
-                        <instance-variable name="YP" sid="967609090680227" type="number" />
-                        <instance-variable name="dist" sid="974725210016137" type="number" />
-                        <instance-variable name="conAngle" sid="412085748164547" type="number" />
-                    </instance-variables>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="887061430011771" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\boton stick of.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
-            <object-folder name="Ataque">
-                <object-type name="AtaqueAreaJoystick" sid="827577615474577">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="558703664145057" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="AtaqueJoystick" sid="815052686760252">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="776265676131550" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\stick.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="AtaqueStik" sid="732164958868664">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="radius" sid="459711085099937" type="number" />
-                        <instance-variable name="XP" sid="524702516590697" type="number" />
-                        <instance-variable name="YP" sid="817058104614786" type="number" />
-                        <instance-variable name="dist" sid="880228563377800" type="number" />
-                        <instance-variable name="conAngle" sid="656120824745661" type="number" />
-                    </instance-variables>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="330747645957558" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vermillion\Desktop\boton stick of.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
-            <object-type name="R" sid="391225388589485">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802191036283985" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Player">

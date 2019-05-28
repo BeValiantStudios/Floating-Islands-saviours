@@ -93,7 +93,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -113,8 +113,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-172.346435547</x>
-                        <y>-88.062019348</y>
+                        <x>-175</x>
+                        <y>-82</y>
                         <z>0</z>
                         <width>898</width>
                         <height>484</height>
@@ -135,8 +135,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>360.308746338</x>
-                        <y>220.824630737</y>
+                        <x>366</x>
+                        <y>224</y>
                         <z>0</z>
                         <width>251</width>
                         <height>174</height>
